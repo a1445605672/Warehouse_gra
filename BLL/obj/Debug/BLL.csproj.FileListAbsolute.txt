@@ -1,0 +1,13 @@
+C:\Users\kui\Desktop\毕设\BLL\bin\Debug\BLL.dll
+C:\Users\kui\Desktop\毕设\BLL\bin\Debug\BLL.pdb
+C:\Users\kui\Desktop\毕设\BLL\bin\Debug\DAL.dll
+C:\Users\kui\Desktop\毕设\BLL\bin\Debug\Model.dll
+C:\Users\kui\Desktop\毕设\BLL\bin\Debug\DAL.pdb
+C:\Users\kui\Desktop\毕设\BLL\bin\Debug\Model.pdb
+C:\Users\kui\Desktop\毕设\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\kui\Desktop\毕设\BLL\obj\Debug\BLL.dll
+C:\Users\kui\Desktop\毕设\BLL\obj\Debug\BLL.pdb
+C:\Users\kui\Desktop\毕设\BLL\bin\Debug\Maticsoft.Common.dll
+C:\Users\kui\Desktop\毕设\BLL\bin\Debug\DBUtility.dll
+C:\Users\kui\Desktop\毕设\BLL\bin\Debug\MySql.Data.dll
+C:\Users\kui\Desktop\毕设\BLL\bin\Debug\DBUtility.pdb

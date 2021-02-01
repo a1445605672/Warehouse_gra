@@ -1,0 +1,4 @@
+C:\Users\kui\Desktop\毕设\Model\bin\Debug\Model.dll
+C:\Users\kui\Desktop\毕设\Model\bin\Debug\Model.pdb
+C:\Users\kui\Desktop\毕设\Model\obj\Debug\Model.dll
+C:\Users\kui\Desktop\毕设\Model\obj\Debug\Model.pdb

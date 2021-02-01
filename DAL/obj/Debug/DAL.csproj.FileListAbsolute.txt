@@ -1,0 +1,10 @@
+C:\Users\kui\Desktop\毕设\DAL\bin\Debug\DAL.dll
+C:\Users\kui\Desktop\毕设\DAL\bin\Debug\DAL.pdb
+C:\Users\kui\Desktop\毕设\DAL\bin\Debug\DBUtility.dll
+C:\Users\kui\Desktop\毕设\DAL\bin\Debug\Model.dll
+C:\Users\kui\Desktop\毕设\DAL\bin\Debug\DBUtility.pdb
+C:\Users\kui\Desktop\毕设\DAL\bin\Debug\Model.pdb
+C:\Users\kui\Desktop\毕设\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\kui\Desktop\毕设\DAL\obj\Debug\DAL.dll
+C:\Users\kui\Desktop\毕设\DAL\obj\Debug\DAL.pdb
+C:\Users\kui\Desktop\毕设\DAL\bin\Debug\MySql.Data.dll

@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2A503D9E-48E1-431E-B62F-740695D8D8CF}</ProjectGuid>
+    <ProjectGuid>{87BB2AAA-202D-4C63-A9E5-1549D29A34E6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DAL</RootNamespace>
     <AssemblyName>DAL</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.4.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,7 +43,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="chest.cs" />
+    <Compile Include="chest_type.cs" />
+    <Compile Include="department.cs" />
+    <Compile Include="enter_storage.cs" />
+    <Compile Include="in_storage.cs" />
+    <Compile Include="log_info.cs" />
+    <Compile Include="material_info.cs" />
+    <Compile Include="material_type.cs" />
+    <Compile Include="out_storage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sr_info.cs" />
+    <Compile Include="staff.cs" />
+    <Compile Include="storage.cs" />
+    <Compile Include="storagelocation.cs" />
+    <Compile Include="storagelocation_type.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{4a9fc40b-00f6-42d9-b089-61e56a51ed90}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{e652fc92-9f60-4575-be29-3d9de7316db8}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

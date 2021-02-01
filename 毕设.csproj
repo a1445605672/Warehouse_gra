@@ -47,240 +47,237 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmBakeup.cs">
+    <Compile Include="UI\Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmBakeup.Designer.cs">
-      <DependentUpon>FrmBakeup.cs</DependentUpon>
+    <Compile Include="UI\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmBar.cs">
+    <Compile Include="UI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmBar.Designer.cs">
-      <DependentUpon>FrmBar.cs</DependentUpon>
+    <Compile Include="UI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmBing.cs">
+    <Compile Include="UI\Master.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmBing.Designer.cs">
-      <DependentUpon>FrmBing.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmDepartment.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmDepartment.Designer.cs">
-      <DependentUpon>FrmDepartment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmInAmount.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmInAmount.Designer.cs">
-      <DependentUpon>FrmInAmount.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmInandOut.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmInandOut.Designer.cs">
-      <DependentUpon>FrmInandOut.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmInDaily.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmInDaily.Designer.cs">
-      <DependentUpon>FrmInDaily.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmInIn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmInIn.Designer.cs">
-      <DependentUpon>FrmInIn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmkuguiType.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmkuguiType.Designer.cs">
-      <DependentUpon>FrmkuguiType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frmkuwei.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frmkuwei.Designer.cs">
-      <DependentUpon>Frmkuwei.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMain.Designer.cs">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmOpen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmOpen.Designer.cs">
-      <DependentUpon>FrmOpen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmOutDaily.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmOutDaily.Designer.cs">
-      <DependentUpon>FrmOutDaily.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmOutout.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmOutout.Designer.cs">
-      <DependentUpon>FrmOutout.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmRoom.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmRoom.Designer.cs">
-      <DependentUpon>FrmRoom.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frmshouhuo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frmshouhuo.Designer.cs">
-      <DependentUpon>Frmshouhuo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmStaff.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmStaff.Designer.cs">
-      <DependentUpon>FrmStaff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmSupportMan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmSupportMan.Designer.cs">
-      <DependentUpon>FrmSupportMan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frmkugui.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frmkugui.Designer.cs">
-      <DependentUpon>Frmkugui.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmSysDaily.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmSysDaily.Designer.cs">
-      <DependentUpon>FrmSysDaily.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmUserMan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmUserMan.Designer.cs">
-      <DependentUpon>FrmUserMan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmwuliaoInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmwuliaoInfo.Designer.cs">
-      <DependentUpon>FrmwuliaoInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frmwuliaopan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frmwuliaopan.Designer.cs">
-      <DependentUpon>Frmwuliaopan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmwuliaoType.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmwuliaoType.Designer.cs">
-      <DependentUpon>FrmwuliaoType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Master.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Master.designer.cs">
+    <Compile Include="UI\Master.designer.cs">
       <DependentUpon>Master.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmBakeup.resx">
-      <DependentUpon>FrmBakeup.cs</DependentUpon>
+    <Compile Include="UI\InWareHouse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\InWareHouse.Designer.cs">
+      <DependentUpon>InWareHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\OutWareHouse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\OutWareHouse.Designer.cs">
+      <DependentUpon>OutWareHouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\供应商管理.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\供应商管理.Designer.cs">
+      <DependentUpon>供应商管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\出入库汇总.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\出入库汇总.Designer.cs">
+      <DependentUpon>出入库汇总.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\出库日报.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\出库日报.Designer.cs">
+      <DependentUpon>出库日报.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\在库汇总.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\在库汇总.Designer.cs">
+      <DependentUpon>在库汇总.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\库位管理.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\库位管理.Designer.cs">
+      <DependentUpon>库位管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\库位类型管理.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\库位类型管理.Designer.cs">
+      <DependentUpon>库位类型管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\库柜管理.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\库柜管理.Designer.cs">
+      <DependentUpon>库柜管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\房间管理.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\房间管理.Designer.cs">
+      <DependentUpon>房间管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\收货商管理.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\收货商管理.Designer.cs">
+      <DependentUpon>收货商管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\数据备份.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\数据备份.Designer.cs">
+      <DependentUpon>数据备份.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\物料盘点.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\物料盘点.Designer.cs">
+      <DependentUpon>物料盘点.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\物料类别管理.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\物料类别管理.Designer.cs">
+      <DependentUpon>物料类别管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\用户管理.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\用户管理.Designer.cs">
+      <DependentUpon>用户管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\用户管理注册.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\用户管理注册.Designer.cs">
+      <DependentUpon>用户管理注册.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\系统日志.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\系统日志.Designer.cs">
+      <DependentUpon>系统日志.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\部门人员管理.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\部门人员管理.Designer.cs">
+      <DependentUpon>部门人员管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\部门管理.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\部门管理.Designer.cs">
+      <DependentUpon>部门管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="入库日报.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="入库日报.Designer.cs">
+      <DependentUpon>入库日报.cs</DependentUpon>
+    </Compile>
+    <Compile Include="未完成入库.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="未完成入库.Designer.cs">
+      <DependentUpon>未完成入库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="未完成出库.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="未完成出库.Designer.cs">
+      <DependentUpon>未完成出库.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmBar.resx">
-      <DependentUpon>FrmBar.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmBing.resx">
-      <DependentUpon>FrmBing.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmDepartment.resx">
-      <DependentUpon>FrmDepartment.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmInAmount.resx">
-      <DependentUpon>FrmInAmount.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmInDaily.resx">
-      <DependentUpon>FrmInDaily.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmInIn.resx">
-      <DependentUpon>FrmInIn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frmkugui.resx">
-      <DependentUpon>Frmkugui.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmkuguiType.resx">
-      <DependentUpon>FrmkuguiType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frmkuwei.resx">
-      <DependentUpon>Frmkuwei.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmMain.resx">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmOpen.resx">
-      <DependentUpon>FrmOpen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmOutDaily.resx">
-      <DependentUpon>FrmOutDaily.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmOutout.resx">
-      <DependentUpon>FrmOutout.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmRoom.resx">
-      <DependentUpon>FrmRoom.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frmshouhuo.resx">
-      <DependentUpon>Frmshouhuo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmStaff.resx">
-      <DependentUpon>FrmStaff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmSupportMan.resx">
-      <DependentUpon>FrmSupportMan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmSysDaily.resx">
-      <DependentUpon>FrmSysDaily.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmwuliaoInfo.resx">
-      <DependentUpon>FrmwuliaoInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frmwuliaopan.resx">
-      <DependentUpon>Frmwuliaopan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmwuliaoType.resx">
-      <DependentUpon>FrmwuliaoType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Master.resx">
+    <EmbeddedResource Include="UI\Master.resx">
       <DependentUpon>Master.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\InWareHouse.resx">
+      <DependentUpon>InWareHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\OutWareHouse.resx">
+      <DependentUpon>OutWareHouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\供应商管理.resx">
+      <DependentUpon>供应商管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\出入库汇总.resx">
+      <DependentUpon>出入库汇总.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\出库日报.resx">
+      <DependentUpon>出库日报.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\在库汇总.resx">
+      <DependentUpon>在库汇总.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\库位管理.resx">
+      <DependentUpon>库位管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\库位类型管理.resx">
+      <DependentUpon>库位类型管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\库柜管理.resx">
+      <DependentUpon>库柜管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\房间管理.resx">
+      <DependentUpon>房间管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\收货商管理.resx">
+      <DependentUpon>收货商管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\数据备份.resx">
+      <DependentUpon>数据备份.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\物料盘点.resx">
+      <DependentUpon>物料盘点.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\物料类别管理.resx">
+      <DependentUpon>物料类别管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\用户管理.resx">
+      <DependentUpon>用户管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\用户管理注册.resx">
+      <DependentUpon>用户管理注册.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\系统日志.resx">
+      <DependentUpon>系统日志.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\部门人员管理.resx">
+      <DependentUpon>部门人员管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\部门管理.resx">
+      <DependentUpon>部门管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="入库日报.resx">
+      <DependentUpon>入库日报.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="未完成入库.resx">
+      <DependentUpon>未完成入库.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="未完成出库.resx">
+      <DependentUpon>未完成出库.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -303,5 +300,6 @@
   <ItemGroup>
     <None Include="bin\Debug\Image\login_inputbtn_normal.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
