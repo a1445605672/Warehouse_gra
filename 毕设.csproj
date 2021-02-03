@@ -139,6 +139,12 @@
     <Compile Include="UI\数据备份.Designer.cs">
       <DependentUpon>数据备份.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\柱状图.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\柱状图.Designer.cs">
+      <DependentUpon>柱状图.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\物料盘点.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -169,6 +175,12 @@
     <Compile Include="UI\系统日志.Designer.cs">
       <DependentUpon>系统日志.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\连接设置.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\连接设置.Designer.cs">
+      <DependentUpon>连接设置.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\部门人员管理.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -180,6 +192,12 @@
     </Compile>
     <Compile Include="UI\部门管理.Designer.cs">
       <DependentUpon>部门管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\饼状图.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\饼状图.Designer.cs">
+      <DependentUpon>饼状图.cs</DependentUpon>
     </Compile>
     <Compile Include="入库日报.cs">
       <SubType>UserControl</SubType>
@@ -249,6 +267,9 @@
     <EmbeddedResource Include="UI\数据备份.resx">
       <DependentUpon>数据备份.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\柱状图.resx">
+      <DependentUpon>柱状图.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\物料盘点.resx">
       <DependentUpon>物料盘点.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,11 +285,17 @@
     <EmbeddedResource Include="UI\系统日志.resx">
       <DependentUpon>系统日志.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\连接设置.resx">
+      <DependentUpon>连接设置.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\部门人员管理.resx">
       <DependentUpon>部门人员管理.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\部门管理.resx">
       <DependentUpon>部门管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\饼状图.resx">
+      <DependentUpon>饼状图.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="入库日报.resx">
       <DependentUpon>入库日报.cs</DependentUpon>

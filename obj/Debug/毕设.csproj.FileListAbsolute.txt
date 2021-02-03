@@ -78,3 +78,5 @@ C:\Users\kui\Desktop\毕设\obj\Debug\毕设.入库日报.resources
 C:\Users\kui\Desktop\毕设\obj\Debug\毕设.未完成入库.resources
 C:\Users\kui\Desktop\毕设\obj\Debug\毕设.未完成出库.resources
 C:\Users\kui\Desktop\毕设\obj\Debug\毕设.csproj.GenerateResource.Cache
+D:\Warehouse_gra\obj\Debug\毕设.exe
+D:\Warehouse_gra\obj\Debug\毕设.pdb

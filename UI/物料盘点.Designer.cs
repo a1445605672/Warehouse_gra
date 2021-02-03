@@ -29,31 +29,18 @@ namespace 毕设
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.label1 = new System.Windows.Forms.Label();
-			this.SuspendLayout();
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(33, 79);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(77, 12);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "我是物料盘点";
-			// 
-			// 物料盘点
-			// 
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-			this.Controls.Add(this.label1);
-			this.Name = "物料盘点";
-			this.Size = new System.Drawing.Size(1207, 640);
-			this.ResumeLayout(false);
-			this.PerformLayout();
+            this.SuspendLayout();
+            // 
+            // 物料盘点
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Name = "物料盘点";
+            this.Size = new System.Drawing.Size(1207, 640);
+            this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-		private System.Windows.Forms.Label label1;
-	}
+    }
 }
