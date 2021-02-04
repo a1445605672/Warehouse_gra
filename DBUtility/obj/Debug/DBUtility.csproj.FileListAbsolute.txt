@@ -3,3 +3,10 @@ C:\Users\kui\Desktop\毕设\DBUtility\bin\Debug\DBUtility.pdb
 C:\Users\kui\Desktop\毕设\DBUtility\obj\Debug\DBUtility.dll
 C:\Users\kui\Desktop\毕设\DBUtility\obj\Debug\DBUtility.pdb
 C:\Users\kui\Desktop\毕设\DBUtility\bin\Debug\MySql.Data.dll
+D:\Warehouse_gra\DBUtility\bin\Debug\DBUtility.dll.config
+D:\Warehouse_gra\DBUtility\bin\Debug\DBUtility.dll
+D:\Warehouse_gra\DBUtility\bin\Debug\DBUtility.pdb
+D:\Warehouse_gra\DBUtility\bin\Debug\MySql.Data.dll
+D:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+D:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
+D:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb

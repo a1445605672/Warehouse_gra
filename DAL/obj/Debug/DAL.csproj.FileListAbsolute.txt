@@ -8,3 +8,13 @@ C:\Users\kui\Desktop\毕设\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cac
 C:\Users\kui\Desktop\毕设\DAL\obj\Debug\DAL.dll
 C:\Users\kui\Desktop\毕设\DAL\obj\Debug\DAL.pdb
 C:\Users\kui\Desktop\毕设\DAL\bin\Debug\MySql.Data.dll
+D:\Warehouse_gra\DAL\bin\Debug\DAL.dll
+D:\Warehouse_gra\DAL\bin\Debug\DAL.pdb
+D:\Warehouse_gra\DAL\bin\Debug\DBUtility.dll
+D:\Warehouse_gra\DAL\bin\Debug\Model.dll
+D:\Warehouse_gra\DAL\bin\Debug\MySql.Data.dll
+D:\Warehouse_gra\DAL\bin\Debug\DBUtility.pdb
+D:\Warehouse_gra\DAL\bin\Debug\Model.pdb
+D:\Warehouse_gra\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\Warehouse_gra\DAL\obj\Debug\DAL.dll
+D:\Warehouse_gra\DAL\obj\Debug\DAL.pdb
