@@ -31,11 +31,10 @@ namespace 毕设
 
 			LoginPassWordText.SendToBack(); //登录密码textbox最底层显示
 			
-			RememberPassCheckBox.SendToBack(); //设置是否保存账号
+			RememberPassCheckBox.SendToBack(); //设置是否保存账号最底层显示
 			
 			AcountLabel.Visible = true; //账号label显示
 			AcountLabel.BringToFront(); //账号水印顶层显示
-
 			PwdLabel.Visible = true;
 
 			#region  加载账号XML

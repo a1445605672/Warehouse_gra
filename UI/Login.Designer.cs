@@ -74,6 +74,7 @@ namespace 毕设
             "123",
             "123456",
             "12345678"});
+			this.LoginAcountText.BackColor = System.Drawing.Color.White;
 			this.LoginAcountText.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
 			this.LoginAcountText.Location = new System.Drawing.Point(183, 142);
 			this.LoginAcountText.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
@@ -156,6 +157,7 @@ namespace 毕设
 			// 
 			this.AcountmenuList.Font = new System.Drawing.Font("微软雅黑", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
 			this.AcountmenuList.FormattingEnabled = true;
+			this.AcountmenuList.HorizontalScrollbar = true;
 			this.AcountmenuList.ItemHeight = 19;
 			this.AcountmenuList.Location = new System.Drawing.Point(183, 170);
 			this.AcountmenuList.Name = "AcountmenuList";

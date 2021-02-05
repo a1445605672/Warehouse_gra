@@ -10,18 +10,18 @@ namespace Model
 		public in_storage()
 		{}
 		#region Model
-		private int _enter_num;
-		private int _mat_id;
-		private string _mat_name;
-		private DateTime _in_time;
-		private int? _sl_id;
-		private decimal _in_amount;
-		private decimal _in_weight;
-		private decimal _in_volume;
+		private int _enter_num;		//入库编号
+		private int _mat_id;		//物料ID
+		private string _mat_name;	//物料名称
+		private DateTime _in_time;	//在库时间
+		private int? _sl_id;		//库位编号
+		private decimal _in_amount;	//存量
+		private decimal _in_weight;	//重量
+		private decimal _in_volume;	//体积
 		/// <summary>
 		/// 
 		/// </summary>
-		public int enter_num
+		public int enter_num		//入库编号
 		{
 			set{ _enter_num=value;}
 			get{return _enter_num;}
@@ -29,7 +29,7 @@ namespace Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int mat_id
+		public int mat_id		//物料编号
 		{
 			set{ _mat_id=value;}
 			get{return _mat_id;}
@@ -37,7 +37,7 @@ namespace Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public string mat_name
+		public string mat_name	//物料名称
 		{
 			set{ _mat_name=value;}
 			get{return _mat_name;}
@@ -45,7 +45,7 @@ namespace Model
 		/// <summary>
 		/// on update CURRENT_TIMESTAMP
 		/// </summary>
-		public DateTime in_time
+		public DateTime in_time  //在库时间
 		{
 			set{ _in_time=value;}
 			get{return _in_time;}
