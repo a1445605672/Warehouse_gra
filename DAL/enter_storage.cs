@@ -285,13 +285,13 @@ namespace Maticsoft.DAL
 		public DataSet GetList(string strWhere)
 		{
 			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select enter_id,enter_batch_id,enter_sl_id,enter_amount,enter_unit_bulk,supplier_id,enter_mat_id,enter_mat_name,enter_fengji_num,enter_date,enter_agent_id,enter_agent_name,enter_comment ");
-			strSql.Append(" FROM enter_storage ");
+			strSql.Append("select * ");
+			strSql.Append(" FROM enter_storage");
 			if(strWhere.Trim()!="")
 			{
 				strSql.Append(" where "+strWhere);
 			}
-			return DbHelperMySQL.Query(strSql.ToString());
+			return DbHelperMySQL.Query(strSql.ToString().Trim());
 		}
 
 		/// <summary>

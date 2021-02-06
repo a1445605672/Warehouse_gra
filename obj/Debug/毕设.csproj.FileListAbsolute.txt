@@ -135,7 +135,6 @@ E:\Warehouse_gra\bin\Debug\CSkin.dll
 E:\Warehouse_gra\bin\Debug\Model.dll
 E:\Warehouse_gra\bin\Debug\DAL.dll
 E:\Warehouse_gra\bin\Debug\Maticsoft.Common.dll
-E:\Warehouse_gra\bin\Debug\MySql.Data.dll
 E:\Warehouse_gra\bin\Debug\DBUtility.dll
 E:\Warehouse_gra\bin\Debug\BLL.pdb
 E:\Warehouse_gra\bin\Debug\Model.pdb
