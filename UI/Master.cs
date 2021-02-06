@@ -871,6 +871,9 @@ namespace 毕设
 				WorkPanel.Controls.Add(收获商管理);
 			}
 		}
+
 		#endregion
+
+		
 	}
 }

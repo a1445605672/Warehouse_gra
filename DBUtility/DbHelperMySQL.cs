@@ -376,7 +376,7 @@ namespace DBUtility
                 {
                     connection.Open();
                     MySqlDataAdapter command = new MySqlDataAdapter(SQLString, connection);
-                    command.Fill(ds, "ds");
+                    command.Fill(ds);
                 }
                 catch (MySql.Data.MySqlClient.MySqlException ex)
                 {
