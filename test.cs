@@ -19,12 +19,12 @@ namespace 毕设
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Model.log_info m = new Model.log_info();
-            //m.log_num = 3;
-            //m.log_type = 5;
-            //m.log_describe = "888";
-            //BLL.log_info b = new BLL.log_info();
-            //b.Add(m);
+            Model.log_info m = new Model.log_info();
+            m.log_num = "7";
+            m.log_type = "5";
+            m.log_describe = "888";
+            BLL.log_info b = new BLL.log_info();
+            b.Add(m);
         }
     }
 }
