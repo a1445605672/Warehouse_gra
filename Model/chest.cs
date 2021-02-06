@@ -8,17 +8,18 @@ namespace Model
         public chest()
         { }
         #region Model
-        private int _chest_id;
+        private string _chest_id;
         private string _chest_name;
         private decimal? _chest_remain_volume;
         private int? _chest_remain_seat;
         private DateTime? _chest_create_time;
-        private int? _chest_type;
-        private int _chest_belong_storage;
+        private string _chest_type;
+        private string _chest_belong_storage;
+        private string _chest_sx;
         /// <summary>
-        /// auto_increment
+        /// 
         /// </summary>
-        public int chest_id
+        public string chest_id
         {
             set { _chest_id = value; }
             get { return _chest_id; }
@@ -58,7 +59,7 @@ namespace Model
         /// <summary>
         /// 
         /// </summary>
-        public int? chest_type
+        public string chest_type
         {
             set { _chest_type = value; }
             get { return _chest_type; }
@@ -66,10 +67,18 @@ namespace Model
         /// <summary>
         /// 
         /// </summary>
-        public int chest_belong_storage
+        public string chest_belong_storage
         {
             set { _chest_belong_storage = value; }
             get { return _chest_belong_storage; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string chest_sx
+        {
+            set { _chest_sx = value; }
+            get { return _chest_sx; }
         }
         #endregion Model
 

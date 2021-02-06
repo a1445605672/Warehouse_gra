@@ -15,18 +15,12 @@ namespace BLL
 		{}
 		#region  BasicMethod
 
-		/// <summary>
-		/// 得到最大ID
-		/// </summary>
-		public int GetMaxId()
-		{
-			return dal.GetMaxId();
-		}
+		
 
 		/// <summary>
 		/// 是否存在该记录
 		/// </summary>
-		public bool Exists(int mat_id)
+		public bool Exists(string mat_id)
 		{
 			return dal.Exists(mat_id);
 		}
@@ -50,7 +44,7 @@ namespace BLL
 		/// <summary>
 		/// 删除一条数据
 		/// </summary>
-		public bool Delete(int mat_id)
+		public bool Delete(string mat_id)
 		{
 			
 			return dal.Delete(mat_id);
@@ -66,7 +60,7 @@ namespace BLL
 		/// <summary>
 		/// 得到一个对象实体
 		/// </summary>
-		public Model.material_info GetModel(int mat_id)
+		public Model.material_info GetModel(string mat_id)
 		{
 			
 			return dal.GetModel(mat_id);
@@ -75,7 +69,7 @@ namespace BLL
 		/// <summary>
 		/// 得到一个对象实体，从缓存中
 		/// </summary>
-		public Model.material_info GetModelByCache(int mat_id)
+		public Model.material_info GetModelByCache(string mat_id)
 		{
 			
 			string CacheKey = "material_infoModel-" + mat_id;

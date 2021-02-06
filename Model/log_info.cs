@@ -9,35 +9,35 @@ namespace Model
 	{
 		public log_info()
 		{}
-		#region Model
-		private int _log_num;
-		private int _log_type;
-		private string _log_describe;
-		/// <summary>
-		/// 
-		/// </summary>
-		public int log_num
-		{
-			set{ _log_num=value;}
-			get{return _log_num;}
-		}
-		/// <summary>
-		/// 
-		/// </summary>
-		public int log_type
-		{
-			set{ _log_type=value;}
-			get{return _log_type;}
-		}
-		/// <summary>
-		/// 
-		/// </summary>
-		public string log_describe
-		{
-			set{ _log_describe=value;}
-			get{return _log_describe;}
-		}
-		#endregion Model
+        #region Model
+        private string _log_num;
+        private string _log_type;
+        private string _log_describe;
+        /// <summary>
+        /// 
+        /// </summary>
+        public string log_num
+        {
+            set { _log_num = value; }
+            get { return _log_num; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string log_type
+        {
+            set { _log_type = value; }
+            get { return _log_type; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string log_describe
+        {
+            set { _log_describe = value; }
+            get { return _log_describe; }
+        }
+        #endregion Model
 
 	}
 }

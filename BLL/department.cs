@@ -15,18 +15,12 @@ namespace BLL
 		{}
 		#region  BasicMethod
 
-		/// <summary>
-		/// 得到最大ID
-		/// </summary>
-		public int GetMaxId()
-		{
-			return dal.GetMaxId();
-		}
+		
 
 		/// <summary>
 		/// 是否存在该记录
 		/// </summary>
-		public bool Exists(int dep_id)
+		public bool Exists(string dep_id)
 		{
 			return dal.Exists(dep_id);
 		}
@@ -50,7 +44,7 @@ namespace BLL
 		/// <summary>
 		/// 删除一条数据
 		/// </summary>
-		public bool Delete(int dep_id)
+		public bool Delete(string  dep_id)
 		{
 			
 			return dal.Delete(dep_id);
@@ -66,7 +60,7 @@ namespace BLL
 		/// <summary>
 		/// 得到一个对象实体
 		/// </summary>
-		public Model.department GetModel(int dep_id)
+		public Model.department GetModel(string dep_id)
 		{
 			
 			return dal.GetModel(dep_id);
@@ -75,7 +69,7 @@ namespace BLL
 		/// <summary>
 		/// 得到一个对象实体，从缓存中
 		/// </summary>
-		public Model.department GetModelByCache(int dep_id)
+		public Model.department GetModelByCache(string dep_id)
 		{
 			
 			string CacheKey = "departmentModel-" + dep_id;

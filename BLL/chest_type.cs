@@ -14,19 +14,10 @@ namespace BLL
 		public chest_type()
 		{}
 		#region  BasicMethod
-
-		/// <summary>
-		/// 得到最大ID
-		/// </summary>
-		public int GetMaxId()
-		{
-			return dal.GetMaxId();
-		}
-
 		/// <summary>
 		/// 是否存在该记录
 		/// </summary>
-		public bool Exists(int type_id)
+		public bool Exists(string type_id)
 		{
 			return dal.Exists(type_id);
 		}
@@ -50,7 +41,7 @@ namespace BLL
 		/// <summary>
 		/// 删除一条数据
 		/// </summary>
-		public bool Delete(int type_id)
+		public bool Delete(string type_id)
 		{
 			
 			return dal.Delete(type_id);
@@ -66,7 +57,7 @@ namespace BLL
 		/// <summary>
 		/// 得到一个对象实体
 		/// </summary>
-		public Model.chest_type GetModel(int type_id)
+		public Model.chest_type GetModel(string type_id)
 		{
 			
 			return dal.GetModel(type_id);
@@ -75,7 +66,7 @@ namespace BLL
 		/// <summary>
 		/// 得到一个对象实体，从缓存中
 		/// </summary>
-		public Model.chest_type GetModelByCache(int type_id)
+		public Model.chest_type GetModelByCache(string type_id)
 		{
 			
 			string CacheKey = "chest_typeModel-" + type_id;

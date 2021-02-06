@@ -10,14 +10,15 @@ namespace Model
         public chest_type()
         { }
         #region Model
-        private int _type_id;
+        private string _type_id;
         private decimal? _type_length;
         private decimal? _type_high;
         private decimal? _type_wide;
+        private string _type_sx;
         /// <summary>
         /// 
         /// </summary>
-        public int type_id
+        public string type_id
         {
             set { _type_id = value; }
             get { return _type_id; }
@@ -45,6 +46,14 @@ namespace Model
         {
             set { _type_wide = value; }
             get { return _type_wide; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string type_sx
+        {
+            set { _type_sx = value; }
+            get { return _type_sx; }
         }
         #endregion Model
 
