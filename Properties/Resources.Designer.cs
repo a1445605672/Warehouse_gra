@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace 毕设.Properties {
+namespace Warehouse.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace 毕设.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("毕设.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Warehouse.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,19 +63,9 @@ namespace 毕设.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
-        internal static System.Drawing.Bitmap login_inputbtn_normal {
+        internal static System.Drawing.Bitmap 物料管理 {
             get {
-                object obj = ResourceManager.GetObject("login_inputbtn_normal", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
-        /// </summary>
-        internal static System.Drawing.Bitmap main_10 {
-            get {
-                object obj = ResourceManager.GetObject("main_10", resourceCulture);
+                object obj = ResourceManager.GetObject("物料管理", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

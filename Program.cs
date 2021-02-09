@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace 毕设
+namespace Warehouse
 {
 	static class Program
 	{
@@ -15,7 +15,7 @@ namespace 毕设
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Home());
+			Application.Run(new FMain());
 		}
 	}
 }

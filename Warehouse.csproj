@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9378EACE-420A-4A56-8C50-6ABCD87459E4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Warehouse</RootNamespace>
+    <AssemblyName>Warehouse</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\GraduationProject\Warehouse_gra\bin\Debug\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="SunnyUI">
+      <HintPath>..\..\SunnyUI-master\Bin\net40\SunnyUI.dll</HintPath>
+    </Reference>
+    <Reference Include="SunnyUI.Common">
+      <HintPath>..\..\SunnyUI-master\Bin\net40\SunnyUI.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FMain.designer.cs">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="入库日报.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="入库日报.Designer.cs">
+      <DependentUpon>入库日报.cs</DependentUpon>
+    </Compile>
+    <Compile Include="入库登记.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="入库登记.Designer.cs">
+      <DependentUpon>入库登记.cs</DependentUpon>
+    </Compile>
+    <Compile Include="出入库汇总.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="出入库汇总.Designer.cs">
+      <DependentUpon>出入库汇总.cs</DependentUpon>
+    </Compile>
+    <Compile Include="出库日报.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="出库日报.Designer.cs">
+      <DependentUpon>出库日报.cs</DependentUpon>
+    </Compile>
+    <Compile Include="在库汇总.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="在库汇总.Designer.cs">
+      <DependentUpon>在库汇总.cs</DependentUpon>
+    </Compile>
+    <Compile Include="数据备份.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="数据备份.Designer.cs">
+      <DependentUpon>数据备份.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="供应商管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="供应商管理.Designer.cs">
+      <DependentUpon>供应商管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="出库登记.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="出库登记.designer.cs">
+      <DependentUpon>出库登记.cs</DependentUpon>
+    </Compile>
+    <Compile Include="库位管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="库位管理.Designer.cs">
+      <DependentUpon>库位管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="库位类型管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="库位类型管理.Designer.cs">
+      <DependentUpon>库位类型管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="库柜管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="库柜管理.Designer.cs">
+      <DependentUpon>库柜管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="房间管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="房间管理.Designer.cs">
+      <DependentUpon>房间管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="收货商管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="收货商管理.Designer.cs">
+      <DependentUpon>收货商管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="未完成入库.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="未完成入库.Designer.cs">
+      <DependentUpon>未完成入库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="未完成出库.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="未完成出库.Designer.cs">
+      <DependentUpon>未完成出库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="物料信息管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="物料信息管理.Designer.cs">
+      <DependentUpon>物料信息管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="物料类别管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="物料类别管理.Designer.cs">
+      <DependentUpon>物料类别管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户注册.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户注册.Designer.cs">
+      <DependentUpon>用户注册.cs</DependentUpon>
+    </Compile>
+    <Compile Include="用户管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="用户管理.Designer.cs">
+      <DependentUpon>用户管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="系统日志.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="系统日志.Designer.cs">
+      <DependentUpon>系统日志.cs</DependentUpon>
+    </Compile>
+    <Compile Include="部门人员管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="部门人员管理.Designer.cs">
+      <DependentUpon>部门人员管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="部门管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="部门管理.Designer.cs">
+      <DependentUpon>部门管理.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FMain.resx">
+      <DependentUpon>FMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="出库登记.resx">
+      <DependentUpon>出库登记.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\物料管理.PNG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Data;
 using System.Collections.Generic;
-using Maticsoft.Common;
 using Model;
 namespace BLL
 {
@@ -63,30 +62,7 @@ namespace BLL
 			return dal.GetModel(type_id);
 		}
 
-		/// <summary>
-		/// 得到一个对象实体，从缓存中
-		/// </summary>
-		public Model.chest_type GetModelByCache(string type_id)
-		{
-			
-			string CacheKey = "chest_typeModel-" + type_id;
-			object objModel = Maticsoft.Common.DataCache.GetCache(CacheKey);
-			if (objModel == null)
-			{
-				try
-				{
-					objModel = dal.GetModel(type_id);
-					if (objModel != null)
-					{
-						int ModelCache = Maticsoft.Common.ConfigHelper.GetConfigInt("ModelCache");
-						Maticsoft.Common.DataCache.SetCache(CacheKey, objModel, DateTime.Now.AddMinutes(ModelCache), TimeSpan.Zero);
-					}
-				}
-				catch{}
-			}
-			return (Model.chest_type)objModel;
-		}
-
+		
 		/// <summary>
 		/// 获得数据列表
 		/// </summary>

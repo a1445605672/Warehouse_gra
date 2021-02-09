@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("cc3d6cde-69cc-4cd8-9ac4-3157d3e2a031")]
+[assembly: Guid("6a4501ac-1f28-47d4-aeb3-876f4c0aa394")]
 
 // 程序集的版本信息由下面四个值组成:
 //

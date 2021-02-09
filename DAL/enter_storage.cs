@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Data;
 using System.Text;
 using MySql.Data.MySqlClient;
@@ -233,7 +232,7 @@ namespace Maticsoft.DAL
                 }
                 if (row["enter_sl_id"] != null)
                 {
-                    model.enter_sl_id = row["enter_sl_id"].ToString();
+                    model.enter_sl_id = int.Parse(row["enter_sl_id"].ToString());
                 }
                 if (row["enter_amount"] != null && row["enter_amount"].ToString() != "")
                 {
@@ -245,11 +244,11 @@ namespace Maticsoft.DAL
                 }
                 if (row["supplier_id"] != null)
                 {
-                    model.supplier_id = row["supplier_id"].ToString();
+                    model.supplier_id = int.Parse(row["supplier_id"].ToString());
                 }
                 if (row["enter_mat_id"] != null)
                 {
-                    model.enter_mat_id = row["enter_mat_id"].ToString();
+                    model.enter_mat_id = int.Parse(row["enter_mat_id"].ToString());
                 }
                 if (row["enter_mat_name"] != null)
                 {
@@ -257,7 +256,7 @@ namespace Maticsoft.DAL
                 }
                 if (row["enter_fengji_num"] != null)
                 {
-                    model.enter_fengji_num = row["enter_fengji_num"].ToString();
+                    model.enter_fengji_num = int.Parse(row["enter_fengji_num"].ToString());
                 }
                 if (row["enter_date"] != null && row["enter_date"].ToString() != "")
                 {
@@ -265,7 +264,7 @@ namespace Maticsoft.DAL
                 }
                 if (row["enter_agent_id"] != null)
                 {
-                    model.enter_agent_id = row["enter_agent_id"].ToString();
+                    model.enter_agent_id = int.Parse(row["enter_agent_id"].ToString());
                 }
                 if (row["enter_agent_name"] != null)
                 {
@@ -278,8 +277,6 @@ namespace Maticsoft.DAL
             }
             return model;
         }
-
-<<<<<<< HEAD
         /// <summary>
         /// 获得数据列表
         /// </summary>
@@ -294,23 +291,7 @@ namespace Maticsoft.DAL
             }
             return DbHelperMySQL.Query(strSql.ToString());
         }
-=======
-		/// <summary>
-		/// 获得数据列表
-		/// </summary>
-		public DataSet GetList(string strWhere)
-		{
-			StringBuilder strSql=new StringBuilder();
-			strSql.Append("select * ");
-			strSql.Append(" FROM enter_storage");
-			if(strWhere.Trim()!="")
-			{
-				strSql.Append(" where "+strWhere);
-			}
-			return DbHelperMySQL.Query(strSql.ToString().Trim());
-		}
->>>>>>> d1c317dc459ec410ada7d5f683fc7263e8361416
-
+		
         /// <summary>
         /// 获取记录总数
         /// </summary>
