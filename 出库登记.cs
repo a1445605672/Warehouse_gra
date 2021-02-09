@@ -15,28 +15,42 @@ namespace Warehouse
 		public 出库登记()
 		{
 			InitializeComponent();
+            uiPanel1.BringToFront(); //panel 顶层显示
+            uiPanel1.Visible = false;  //隐藏表单panel
 
+			#region  datagridview添加列
+			uiDataGridView1.AddColumn("Column1", "Column1").SetFixedMode(150);
+			uiDataGridView1.AddColumn("Column2", "Column2").SetFixedMode(150);
+			uiDataGridView1.AddColumn("Column3", "Column3").SetFixedMode(150);
+			uiDataGridView1.AddColumn("Column4", "Column4").SetFixedMode(150);
+            uiDataGridView1.ReadOnly = true;
+			#endregion
 
-			uiDataGridView1.AddColumn("Column1", "Column1").SetFixedMode(200);
-			uiDataGridView1.AddColumn("Column2", "Column2").SetFixedMode(200);
-			uiDataGridView1.AddColumn("Column3", "Column3").SetFixedMode(200);
-			uiDataGridView1.AddColumn("Column4", "Column4").SetFixedMode(200);
-            uiDataGridView1.AddButtonColumn("修改", "修改",20,true);
+			#region   datagridview添加两个按钮
+			DataGridViewButtonColumn but1 = new DataGridViewButtonColumn();
+            but1.SetFixedMode(50); //设置单元格大小
+            but1.HeaderText = "出库";     //设置列表头名称
+            but1.Name = "OutWarehouse";     //指定按钮的名字
+            but1.DefaultCellStyle.NullValue = "手动"; 
+            uiDataGridView1.Columns.Add(but1);
+
             DataGridViewButtonColumn but = new DataGridViewButtonColumn();
-            but.HeaderText = "修改";
-            but.Name = "Update";
-            but.DefaultCellStyle.NullValue = "修改";
+            but.SetFixedMode(50);
+            but.HeaderText = "";
+            but.Name = "AutoOtWarehouse";
+            but.DefaultCellStyle.NullValue = "自动";
+            but.Visible = false;//控件先隐藏 
             uiDataGridView1.Columns.Add(but);
-
-			uiDataGridView1.ReadOnly = true;
+            #endregion
 
             
 
-        }
 
-        
 
-        public class Data
+		}
+
+
+		public class Data
         {
             public string Column1 { get; set; }
 
@@ -52,6 +66,7 @@ namespace Warehouse
             }
         }
 
+		#region  窗体加载事件
 		private void 出库_Load(object sender, EventArgs e)
 		{
             List<Data> datas = new List<Data>();
@@ -67,9 +82,50 @@ namespace Warehouse
             uiPagination1.DataSource = datas;
             uiPagination1.ActivePage = 1;
         }
+		#endregion
+
+		#region 翻页事件
 		private void uiPagination1_PageChanged(object sender, object pagingSource, int pageIndex, int count)
 		{
             uiDataGridView1.DataSource = pagingSource;
         }
+		#endregion
+
+		#region 点击datagridview的按钮事件
+		private void uiDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+            //判断点击的按钮 且行数大于0
+            if (uiDataGridView1.Columns[e.ColumnIndex].Name == "OutWarehouse" && e.RowIndex > 0)
+			{
+                uiPanel1.Visible = true;
+                string label = uiDataGridView1.CurrentRow.Cells[2].Value.ToString();  //获取当前行的列
+                //ShowAskDialog(label);//显示消息框
+			}
+		}
+		#endregion
+
+		#region 返回按钮事件
+		private void ReturnBut_Click(object sender, EventArgs e)
+		{
+            uiPanel1.Visible = false;
+		}
+        #endregion
+
+        #region 未完成出库事件
+        private void SaveBut_Click(object sender, EventArgs e)
+        {
+            ShowAskDialog("我还没有完成出库哦");
+        }
+        #endregion
+
+        #region 出库完成事件
+        private void OutWarehouseBut_Click(object sender, EventArgs e)
+        {
+            ShowAskDialog("完成出库");
+        }
+
+		#endregion
+
+		
 	}
 }

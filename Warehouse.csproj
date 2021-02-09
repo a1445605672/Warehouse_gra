@@ -218,8 +218,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="入库登记.resx">
+      <DependentUpon>入库登记.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="出库登记.resx">
       <DependentUpon>出库登记.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="未完成入库.resx">
+      <DependentUpon>未完成入库.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
