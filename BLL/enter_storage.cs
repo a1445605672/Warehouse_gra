@@ -96,13 +96,7 @@ namespace BLL
 			return (Model.enter_storage)objModel;
 		}
 
-		/// <summary>
-		/// 获得数据列表
-		/// </summary>
-		public DataSet GetList(string strWhere)
-		{
-			return dal.GetList(strWhere);
-		}
+		
 		/// <summary>
 		/// 获得数据列表
 		/// </summary>
@@ -132,15 +126,13 @@ namespace BLL
 			}
 			return modelList;
 		}
-
 		/// <summary>
-		/// 获得数据列表
+		/// 获得数据库数据，返回DataSet数据类型
 		/// </summary>
-		public DataSet GetAllList()
+		public DataSet GetList(string strWhere)
 		{
-			return GetList("");
+			return dal.GetList(strWhere);
 		}
-
 		/// <summary>
 		/// 分页获取数据列表
 		/// </summary>

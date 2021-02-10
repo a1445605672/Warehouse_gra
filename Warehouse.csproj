@@ -227,6 +227,9 @@
     <EmbeddedResource Include="未完成入库.resx">
       <DependentUpon>未完成入库.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="未完成出库.resx">
+      <DependentUpon>未完成出库.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -240,6 +243,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\物料管理.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="BLL\BLL.csproj">
+      <Project>{2ce55747-bba7-4a22-bfa5-a286cb473f53}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="Model\Model.csproj">
+      <Project>{6f9c7777-9814-48c2-bcf2-2c2bf93411bc}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

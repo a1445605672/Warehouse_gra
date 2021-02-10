@@ -224,15 +224,15 @@ namespace Maticsoft.DAL
             {
                 if (row["enter_id"] != null && row["enter_id"].ToString() != "")
                 {
-                    model.enter_id = int.Parse(row["enter_id"].ToString());
+                    model.enter_id = row["enter_id"].ToString();
                 }
                 if (row["enter_batch_id"] != null && row["enter_batch_id"].ToString() != "")
                 {
-                    model.enter_batch_id = int.Parse(row["enter_batch_id"].ToString());
+                    model.enter_batch_id = (row["enter_batch_id"].ToString());
                 }
                 if (row["enter_sl_id"] != null)
                 {
-                    model.enter_sl_id = int.Parse(row["enter_sl_id"].ToString());
+                    model.enter_sl_id = (row["enter_sl_id"].ToString());
                 }
                 if (row["enter_amount"] != null && row["enter_amount"].ToString() != "")
                 {
@@ -244,11 +244,11 @@ namespace Maticsoft.DAL
                 }
                 if (row["supplier_id"] != null)
                 {
-                    model.supplier_id = int.Parse(row["supplier_id"].ToString());
+                    model.supplier_id = (row["supplier_id"].ToString());
                 }
                 if (row["enter_mat_id"] != null)
                 {
-                    model.enter_mat_id = int.Parse(row["enter_mat_id"].ToString());
+                    model.enter_mat_id = (row["enter_mat_id"].ToString());
                 }
                 if (row["enter_mat_name"] != null)
                 {
@@ -256,7 +256,7 @@ namespace Maticsoft.DAL
                 }
                 if (row["enter_fengji_num"] != null)
                 {
-                    model.enter_fengji_num = int.Parse(row["enter_fengji_num"].ToString());
+                    model.enter_fengji_num = (row["enter_fengji_num"].ToString());
                 }
                 if (row["enter_date"] != null && row["enter_date"].ToString() != "")
                 {
@@ -264,7 +264,7 @@ namespace Maticsoft.DAL
                 }
                 if (row["enter_agent_id"] != null)
                 {
-                    model.enter_agent_id = int.Parse(row["enter_agent_id"].ToString());
+                    model.enter_agent_id = (row["enter_agent_id"].ToString());
                 }
                 if (row["enter_agent_name"] != null)
                 {

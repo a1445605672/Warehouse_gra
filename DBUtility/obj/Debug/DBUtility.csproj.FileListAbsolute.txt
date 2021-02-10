@@ -5,3 +5,11 @@ C:\Users\kui\Desktop\ware\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyRef
 C:\Users\kui\Desktop\ware\DBUtility\obj\Debug\DBUtility.dll
 C:\Users\kui\Desktop\ware\DBUtility\obj\Debug\DBUtility.pdb
 C:\Users\kui\Desktop\ware\DBUtility\bin\Debug\Harman.Utility.dll
+E:\Warehouse_gra\DBUtility\bin\Debug\DBUtility.dll
+E:\Warehouse_gra\DBUtility\bin\Debug\DBUtility.pdb
+E:\Warehouse_gra\DBUtility\bin\Debug\Harman.Utility.dll
+E:\Warehouse_gra\DBUtility\bin\Debug\MySql.Data.dll
+E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
+E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
+E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
+E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb

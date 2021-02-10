@@ -90,14 +90,15 @@ namespace BLL
 		}
 
 		/// <summary>
-		/// 获得数据列表
+		/// 获得数据列表,返回Dataset类型数据
 		/// </summary>
 		public DataSet GetList(string strWhere)
 		{
 			return dal.GetList(strWhere);
 		}
 		/// <summary>
-		/// 获得数据列表
+		/// 获得数据列表,返回list类型数据
+		/// <paramref name="strWhere"/>sql查询语句条件
 		/// </summary>
 		public List<Model.in_storage> GetModelList(string strWhere)
 		{
@@ -105,7 +106,12 @@ namespace BLL
 			return DataTableToList(ds.Tables[0]);
 		}
 		/// <summary>
-		/// 获得数据列表
+		/// 
+		/// 
+		/// <paramref name="dt"/>DataTable</DataTable>
+		/// <return>
+		/// <List类型>
+		/// </return>
 		/// </summary>
 		public List<Model.in_storage> DataTableToList(DataTable dt)
 		{

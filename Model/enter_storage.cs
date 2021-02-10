@@ -10,23 +10,23 @@ namespace Model
 		public enter_storage()
 		{}
 		#region Model
-		private int _enter_id;				//入库ID
-		private int? _enter_batch_id;		//批次编号
-		private int? _enter_sl_id;			//库位编号
+		private string  _enter_id;				//入库ID
+		private string _enter_batch_id;		//批次编号
+		private string  _enter_sl_id;			//库位编号
 		private decimal? _enter_amount;		//入库量
 		private decimal? _enter_unit_bulk;	//单位体积
-		private int? _supplier_id;			//供应商编号
-		private int _enter_mat_id;			//物料ID
+		private string  _supplier_id;			//供应商编号
+		private string  _enter_mat_id;			//物料ID
 		private string _enter_mat_name;		//物料名称
-		private int? _enter_fengji_num;		//封记ID
+		private string  _enter_fengji_num;		//封记ID
 		private DateTime? _enter_date;		//入库日期
-		private int _enter_agent_id;		//经办人ID
+		private string  _enter_agent_id;		//经办人ID
 		private string _enter_agent_name;	//经办人姓名
 		private string _enter_comment;		//备注
 		/// <summary>
 		/// 
 		/// </summary>
-		public int enter_id                    //入库ID
+		public string enter_id                    //入库ID
 		{									   
 			set{ _enter_id=value;}			   
 			get{return _enter_id;}			   
@@ -34,7 +34,7 @@ namespace Model
 		/// <summary>						   
 		/// 								   
 		/// </summary>						   
-		public int? enter_batch_id             //批次编号
+		public string enter_batch_id             //批次编号
 		{									   
 			set{ _enter_batch_id=value;}	   
 			get{return _enter_batch_id;}	   
@@ -42,7 +42,7 @@ namespace Model
 		/// <summary>						   
 		/// 								   
 		/// </summary>						   
-		public int? enter_sl_id                //库位编号
+		public string enter_sl_id                //库位编号
 		{									   
 			set{ _enter_sl_id=value;}		   
 			get{return _enter_sl_id;}		   
@@ -66,7 +66,7 @@ namespace Model
 		/// <summary>						   
 		/// 								   
 		/// </summary>						   
-		public int? supplier_id                //供应商编号
+		public string supplier_id                //供应商编号
 		{									   
 			set{ _supplier_id=value;}		   
 			get{return _supplier_id;}		   
@@ -74,7 +74,7 @@ namespace Model
 		/// <summary>						   
 		/// 								   
 		/// </summary>						   
-		public int enter_mat_id                 //物料ID
+		public string enter_mat_id                 //物料ID
 		{										
 			set{ _enter_mat_id=value;}			
 			get{return _enter_mat_id;}			
@@ -90,7 +90,7 @@ namespace Model
 		/// <summary>							
 		/// 
 		/// </summary>
-		public int? enter_fengji_num              //封记ID
+		public string enter_fengji_num              //封记ID
 		{										  
 			set{ _enter_fengji_num=value;}		  
 			get{return _enter_fengji_num;}		  
@@ -106,7 +106,7 @@ namespace Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int enter_agent_id               //经办人ID
+		public string enter_agent_id               //经办人ID
 		{										
 			set{ _enter_agent_id=value;}		
 			get{return _enter_agent_id;}
