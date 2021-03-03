@@ -97,6 +97,16 @@ namespace BLL
 		{
 			return dal.GetList(strWhere);
 		}
+
+		/// <summary>
+		/// 适用于select查询语句
+		/// </summary>
+		/// <param name="strSql">sql语句</param>
+		/// <returns></returns>
+		public DataSet getDataList(string strSql)
+		{
+			return dal.getDataList(strSql);
+		}
 		/// <summary>
 		/// 获得数据列表
 		/// </summary>

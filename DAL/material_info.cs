@@ -314,6 +314,16 @@ namespace DAL
         }
 
         /// <summary>
+        /// 适用于Select语句查询
+        /// </summary>
+        /// <param name="StrSql"传递sql语句
+        /// <returns>返回dataset数据类型</returns>
+        public DataSet getDataList(string StrSql)
+		{
+            return DbHelperMySQL.Query(StrSql.ToString());
+        }
+
+        /// <summary>
         /// 获取记录总数
         /// </summary>
         public int GetRecordCount(string strWhere)

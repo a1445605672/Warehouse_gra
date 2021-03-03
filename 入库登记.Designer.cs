@@ -49,7 +49,7 @@ namespace Warehouse
 			this.InWarwhouseNumberBox = new Sunny.UI.UITextBox();
 			this.uiLabel11 = new Sunny.UI.UILabel();
 			this.uiTextBox11 = new Sunny.UI.UITextBox();
-			this.uiLabel12 = new Sunny.UI.UILabel();
+			this.unitLabel = new Sunny.UI.UILabel();
 			this.uiComboBox1 = new Sunny.UI.UIComboBox();
 			this.ProviderBox = new Sunny.UI.UIComboBox();
 			this.Materialsbox = new Sunny.UI.UIComboBox();
@@ -63,7 +63,7 @@ namespace Warehouse
 			this.PagePanel.Controls.Add(this.Materialsbox);
 			this.PagePanel.Controls.Add(this.ProviderBox);
 			this.PagePanel.Controls.Add(this.uiComboBox1);
-			this.PagePanel.Controls.Add(this.uiLabel12);
+			this.PagePanel.Controls.Add(this.unitLabel);
 			this.PagePanel.Controls.Add(this.uiLabel11);
 			this.PagePanel.Controls.Add(this.uiTextBox11);
 			this.PagePanel.Controls.Add(this.SaveBut);
@@ -367,16 +367,16 @@ namespace Warehouse
 			this.uiTextBox11.TabIndex = 49;
 			this.uiTextBox11.Watermark = "水印文字";
 			// 
-			// uiLabel12
+			// unitLabel
 			// 
-			this.uiLabel12.AutoSize = true;
-			this.uiLabel12.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiLabel12.Location = new System.Drawing.Point(562, 189);
-			this.uiLabel12.Name = "uiLabel12";
-			this.uiLabel12.Size = new System.Drawing.Size(42, 21);
-			this.uiLabel12.TabIndex = 51;
-			this.uiLabel12.Text = "立方";
-			this.uiLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.unitLabel.AutoSize = true;
+			this.unitLabel.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.unitLabel.Location = new System.Drawing.Point(562, 189);
+			this.unitLabel.Name = "unitLabel";
+			this.unitLabel.Size = new System.Drawing.Size(42, 21);
+			this.unitLabel.TabIndex = 51;
+			this.unitLabel.Text = "立方";
+			this.unitLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// uiComboBox1
 			// 
@@ -420,10 +420,7 @@ namespace Warehouse
 			this.Materialsbox.Items.AddRange(new object[] {
             "1",
             "2",
-            "3",
-            "4",
-            "5",
-            "6"});
+            "3"});
 			this.Materialsbox.Location = new System.Drawing.Point(385, 148);
 			this.Materialsbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.Materialsbox.MinimumSize = new System.Drawing.Size(63, 0);
@@ -433,6 +430,7 @@ namespace Warehouse
 			this.Materialsbox.TabIndex = 53;
 			this.Materialsbox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
 			this.Materialsbox.Watermark = "请选择";
+			this.Materialsbox.SelectedIndexChanged += new System.EventHandler(this.Materialsbox_SelectedIndexChanged);
 			// 
 			// edtDate
 			// 
@@ -490,7 +488,7 @@ namespace Warehouse
 		private Sunny.UI.UIComboBox Materialsbox;
 		private Sunny.UI.UIComboBox ProviderBox;
 		private Sunny.UI.UIComboBox uiComboBox1;
-		private Sunny.UI.UILabel uiLabel12;
+		private Sunny.UI.UILabel unitLabel;
 		private Sunny.UI.UILabel uiLabel11;
 		private Sunny.UI.UITextBox uiTextBox11;
 		private Sunny.UI.UIDatePicker edtDate;

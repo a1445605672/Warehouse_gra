@@ -135,6 +135,17 @@ namespace BLL
 		}
 
 		/// <summary>
+		/// 适用于select查询语句
+		/// </summary>
+		/// <param name="strSql">sql语句</param>
+		/// <returns></returns>
+		public DataSet getDataList(string strSql)
+		{
+			return dal.getDataList(strSql);
+		}
+
+
+		/// <summary>
 		/// 分页获取数据列表
 		/// </summary>
 		public int GetRecordCount(string strWhere)
