@@ -98,7 +98,7 @@ namespace BLL
 
 		
 		/// <summary>
-		/// 获得数据列表
+		/// 获得数据库数据，返回List数据类型
 		/// </summary>
 		public List<Model.enter_storage> GetModelList(string strWhere)
 		{
@@ -133,6 +133,7 @@ namespace BLL
 		{
 			return dal.GetList(strWhere);
 		}
+
 		/// <summary>
 		/// 分页获取数据列表
 		/// </summary>

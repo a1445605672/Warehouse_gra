@@ -9,6 +9,7 @@ E:\Warehouse_gra\DBUtility\bin\Debug\DBUtility.dll
 E:\Warehouse_gra\DBUtility\bin\Debug\DBUtility.pdb
 E:\Warehouse_gra\DBUtility\bin\Debug\Harman.Utility.dll
 E:\Warehouse_gra\DBUtility\bin\Debug\MySql.Data.dll
+E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csprojAssemblyReference.cache
 E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
 E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
 E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll

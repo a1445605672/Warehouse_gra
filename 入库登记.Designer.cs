@@ -52,7 +52,7 @@ namespace Warehouse
 			this.uiLabel12 = new Sunny.UI.UILabel();
 			this.uiComboBox1 = new Sunny.UI.UIComboBox();
 			this.ProviderBox = new Sunny.UI.UIComboBox();
-			this.uiComboBox3 = new Sunny.UI.UIComboBox();
+			this.Materialsbox = new Sunny.UI.UIComboBox();
 			this.edtDate = new Sunny.UI.UIDatePicker();
 			this.PagePanel.SuspendLayout();
 			this.SuspendLayout();
@@ -60,7 +60,7 @@ namespace Warehouse
 			// PagePanel
 			// 
 			this.PagePanel.Controls.Add(this.edtDate);
-			this.PagePanel.Controls.Add(this.uiComboBox3);
+			this.PagePanel.Controls.Add(this.Materialsbox);
 			this.PagePanel.Controls.Add(this.ProviderBox);
 			this.PagePanel.Controls.Add(this.uiComboBox1);
 			this.PagePanel.Controls.Add(this.uiLabel12);
@@ -403,13 +403,6 @@ namespace Warehouse
 			// 
 			this.ProviderBox.FillColor = System.Drawing.Color.White;
 			this.ProviderBox.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.ProviderBox.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6"});
 			this.ProviderBox.Location = new System.Drawing.Point(385, 111);
 			this.ProviderBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.ProviderBox.MinimumSize = new System.Drawing.Size(63, 0);
@@ -420,26 +413,26 @@ namespace Warehouse
 			this.ProviderBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
 			this.ProviderBox.Watermark = "请选择";
 			// 
-			// uiComboBox3
+			// Materialsbox
 			// 
-			this.uiComboBox3.FillColor = System.Drawing.Color.White;
-			this.uiComboBox3.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiComboBox3.Items.AddRange(new object[] {
+			this.Materialsbox.FillColor = System.Drawing.Color.White;
+			this.Materialsbox.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.Materialsbox.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4",
             "5",
             "6"});
-			this.uiComboBox3.Location = new System.Drawing.Point(385, 148);
-			this.uiComboBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.uiComboBox3.MinimumSize = new System.Drawing.Size(63, 0);
-			this.uiComboBox3.Name = "uiComboBox3";
-			this.uiComboBox3.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-			this.uiComboBox3.Size = new System.Drawing.Size(221, 29);
-			this.uiComboBox3.TabIndex = 53;
-			this.uiComboBox3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-			this.uiComboBox3.Watermark = "请选择";
+			this.Materialsbox.Location = new System.Drawing.Point(385, 148);
+			this.Materialsbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.Materialsbox.MinimumSize = new System.Drawing.Size(63, 0);
+			this.Materialsbox.Name = "Materialsbox";
+			this.Materialsbox.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+			this.Materialsbox.Size = new System.Drawing.Size(221, 29);
+			this.Materialsbox.TabIndex = 53;
+			this.Materialsbox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+			this.Materialsbox.Watermark = "请选择";
 			// 
 			// edtDate
 			// 
@@ -494,7 +487,7 @@ namespace Warehouse
 		private Sunny.UI.UILabel uiLabel1;
 		private Sunny.UI.UILabel uiLabel2;
 		private Sunny.UI.UITextBox InWarwhouseNumberBox;
-		private Sunny.UI.UIComboBox uiComboBox3;
+		private Sunny.UI.UIComboBox Materialsbox;
 		private Sunny.UI.UIComboBox ProviderBox;
 		private Sunny.UI.UIComboBox uiComboBox1;
 		private Sunny.UI.UILabel uiLabel12;

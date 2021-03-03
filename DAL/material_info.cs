@@ -303,14 +303,14 @@ namespace DAL
         /// </summary>
         public DataSet GetList(string strWhere)
         {
-            StringBuilder strSql = new StringBuilder();
-            strSql.Append("select mat_id,mat_name,mat_father_id,mat_create_time,mat_fengdu,mat_state,mat_colour,mat_smell,mat_type,mat_type_id,mat_purpose,mat_source,mat_suanjianxing,mat_yuansuzhanbi,mat_yuansuliang,mat_sx ");
-            strSql.Append(" FROM material_info ");
-            if (strWhere.Trim() != "")
-            {
-                strSql.Append(" where " + strWhere);
-            }
-            return DbHelperMySQL.Query(strSql.ToString());
+			StringBuilder strSql = new StringBuilder();
+			strSql.Append("select mat_id,mat_name,mat_father_id,mat_create_time,mat_fengdu,mat_state,mat_colour,mat_smell,mat_type,mat_type_id,mat_purpose,mat_source,mat_suanjianxing,mat_yuansuzhanbi,mat_yuansuliang,mat_sx ");
+			strSql.Append(" FROM material_info ");
+			if (strWhere.Trim() != "")
+			{
+				strSql.Append(" where " + strWhere);
+			}
+			return DbHelperMySQL.Query(strSql.ToString());
         }
 
         /// <summary>

@@ -259,8 +259,8 @@ namespace DAL
         public DataSet GetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select sr_id,sr_name,sr_type,sr_resp_name,sr_resp_id,sr_contact_name,sr_contact_phone,sr_place,sr_create_time,sr_update_time,sr_sx ");
-            strSql.Append(" FROM sr_info ");
+            strSql.Append("select sr_id,sr_name,sr_type,sr_resp_name,sr_resp_id,sr_contact_name,sr_contact_phone,sr_place,sr_create_time,sr_update_time,sr_sx");
+            strSql.Append(" FROM sr_info");
             if (strWhere.Trim() != "")
             {
                 strSql.Append(" where " + strWhere);
