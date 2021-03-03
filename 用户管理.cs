@@ -15,5 +15,11 @@ namespace Warehouse
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void uiSymbolButton1_Click(object sender, EventArgs e)
+        {
+			//BLL.staff.
+
+        }
+    }
 }
