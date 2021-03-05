@@ -14,3 +14,12 @@ E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
 E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
 E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
 E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
+C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\DBUtility\bin\Debug\DBUtility.dll
+C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\DBUtility\bin\Debug\DBUtility.pdb
+C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\DBUtility\bin\Debug\Harman.Utility.dll
+C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\DBUtility\bin\Debug\MySql.Data.dll
+C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csprojAssemblyReference.cache
+C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
+C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
+C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
+C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
