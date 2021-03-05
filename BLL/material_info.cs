@@ -107,6 +107,8 @@ namespace BLL
 		{
 			return dal.getDataList(strSql);
 		}
+
+
 		/// <summary>
 		/// 获得数据列表
 		/// </summary>

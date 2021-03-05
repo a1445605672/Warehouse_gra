@@ -9,13 +9,12 @@ using System.Windows.Forms;
 using Sunny.UI;
 using System.Configuration;
 using MySql.Data.MySqlClient;
-
+using Warehouse.表单验证;
 
 namespace Warehouse
 {
 	public partial class 入库登记 : UITitlePage
 	{
-		
 		public 入库登记()
 		{
 			InitializeComponent();
@@ -31,9 +30,17 @@ namespace Warehouse
 		#region 入库事件
 		private void OutWarehouseBut_Click(object sender, EventArgs e)
 		{
+			
+			if
+					(Materialsbox.Text == "" || ProviderBox.Text == "" || volumeBox.Text == ""
+					|| inWarehouseAmount.Text == "" || weightBox.Text == "" || storageLocationBox.Text == ""
+					|| batchNumberBox.Text == "" || staffBox.Text == "" || remarkBox.Text == ""
+					)
+			{
+				ShowAskDialog("您输入的有误请检查");
+			}
 			ShowAskDialog("我已经入库啦");
 		}
-
 		#endregion
 
 		#region  窗体加载事件
@@ -44,10 +51,10 @@ namespace Warehouse
 			string inNum_where = "enter_date=";
 			string time = "yyyy-MM-dd";
 			inNum_where += "'" + DateTime.Now.ToString(time) + "'";
-			string inNumber_Sql = "SELECT enter_id FROM enter_storage WHERE " + inNum_where;
+			string inNumber_Sql = "SELECT enter_id FROM enter_storage WHERE enter_if_accomplish=1 AND  " + inNum_where;
 			DataSet inNumber_ds = enterStoeage.getDataList(inNumber_Sql);
 			string inNumber = DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString().PadLeft(2, '0') + DateTime.Now.Day.ToString().PadLeft(2, '0');//获得今天日期
-			inNumber += inNumber_ds.Tables[0].Rows.Count.ToString().PadLeft(3, '0'); //获得当前行数
+			inNumber += (inNumber_ds.Tables[0].Rows.Count+1).ToString().PadLeft(3, '0'); //获得当前行数
 			InWarwhouseNumberBox.Text = "I" + inNumber;
 			#endregion
 
@@ -70,21 +77,47 @@ namespace Warehouse
 				Materialsbox.Items.Add(ds.Tables[0].Rows[i][0]);
 			}
 			#endregion
+
+			#region 批次编号
+			//根据今天入库天生成批次编号
+			string batchNumber = "I" + DateTime.Now.ToString("yyyy")
+				+ DateTime.Now.ToString("MM")
+			+DateTime.Now.ToString("dd")
+				+ (inNumber_ds.Tables[0].Rows.Count+1).ToString().PadLeft(4, '0');
+			batchNumberBox.Items.Add(batchNumber);
+			//查看是否有未完成入库的批次编号
+			BLL.enter_storage batchNumbe= new BLL.enter_storage();
+			string batchNumber_Sql = "SELECT enter_batch_id FROM enter_storage  WHERE enter_if_accomplish=0";
+			DataSet batchNumber_ds = batchNumbe.getDataList(batchNumber_Sql);
+			
+			if (batchNumber_ds.Tables[0].Rows.Count != 0)
+			{
+				for (int i = 0; i < batchNumber_ds.Tables[0].Rows.Count; i++)
+					batchNumberBox.Items.Add(batchNumber_ds.Tables[0].Rows[0][0]);
+			}
+			#endregion
+
+			#region 获取当前日期
+			edtDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
+			#endregion
+
+
 		}
 		#endregion
 
+		#region 和物品关联 选择物品不同单位随之变化
 		private void Materialsbox_SelectedIndexChanged(object sender, EventArgs e)
 		{
 			string Material_Sql = "SELECT  mat_state FROM material_info WHERE mat_name=";
 			string Material_Where = Materialsbox.Text.ToString();
-			Material_Sql += "\'"+Material_Where+"\'";
+			Material_Sql += "\'" + Material_Where + "\'";
 			BLL.material_info materialInfo = new BLL.material_info();
-			DataSet Material_ds =	materialInfo.getDataList(Material_Sql);
+			DataSet Material_ds = materialInfo.getDataList(Material_Sql);
 
 			switch (Material_ds.Tables[0].Rows[0][0].ToString())
 			{
 				case "固态":
-					unitLabel.Text = "cm"+Convert.ToChar(0x00b3);
+					unitLabel.Text = "cm" + Convert.ToChar(0x00b3);
 					break;
 				case "液态":
 					unitLabel.Text = "mL";
@@ -92,13 +125,73 @@ namespace Warehouse
 				case "气态":
 					unitLabel.Text = "cm" + Convert.ToChar(0x00b3);
 					break;
-				
-
 			}
-			
-				
-				
 		}
+		#endregion
+
+
+		#region  验证下拉框输入是否有误
+		private void ProviderBox_Validated_1(object sender, EventArgs e)
+		{
+			UIComboBox combobox = (UIComboBox)sender;
+			if(combobox.Text=="")//如果下拉框为空则直接返回
+				return;
+			formAuthentication fA = new formAuthentication();
+			switch (combobox.Name)
+			{
+				case "ProviderBox": //验证供应商
+					if (fA.formAuthentication_Combobox(combobox.Text, combobox) == false)
+						ShowErrorTip("供应商输入有误，请选择");
+						
+					break;
+				case "Materialsbox"://验证物品
+					if (fA.formAuthentication_Combobox(combobox.Text, combobox) == false)
+						ShowErrorTip("物品输入有误，请选择");
+					break;
+				case "storageLocationBox"://验证库位
+					if (fA.formAuthentication_Combobox(combobox.Text, combobox) == false)
+						ShowErrorTip("库位输入有误，请选择");
+					break;
+				case "batchNumberBox"://验证批次编号
+					if (fA.formAuthentication_Combobox(combobox.Text, combobox) == false)
+						ShowErrorTip("批次输入有误，请选择");
+					break;
+			}
+		}
+		#endregion
+
+		#region 验证文本框是否有误
+		private void PagePanel_Validated(object sender, EventArgs e)
+		{
+			formAuthentication fA = new formAuthentication();
+			UITextBox textbox = (UITextBox)sender;
+			if (textbox.Text == "")//如果文本框为空则直接返回
+				return;
+			switch(textbox.Name)
+			{
+				case "volumeBox":
+					if (fA.formAuthentication_isIntOrDouble(volumeBox.Text) == false)
+						ShowErrorTip("体积输入有误，请输入数字体积");
+					break;
+				case "inWarehouseAmount":
+					if (fA.formAuthentication_isIntOrDouble(inWarehouseAmount.Text) == false)
+						ShowErrorTip("入库量输入有误，请输入数字体积");
+					break;
+				case "weightBox":
+					if (fA.formAuthentication_isIntOrDouble(weightBox.Text) == false)
+						ShowErrorTip("重量输入有误，请输入数字体积");
+					break;
+				case "staffBox":
+					if (fA.staffChrckout(staffBox.Text)==false)
+						ShowErrorTip("经办人不存在");
+					break;
+				case "remarkBox":
+					if(fA.formAuthentication_remark(remarkBox.Text)==false)
+						ShowErrorTip("请输入汉字");
+					break;
+			}
+		}
+		#endregion
 	}
 }
 

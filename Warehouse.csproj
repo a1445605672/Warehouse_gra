@@ -191,6 +191,7 @@
     <Compile Include="系统日志.Designer.cs">
       <DependentUpon>系统日志.cs</DependentUpon>
     </Compile>
+    <Compile Include="表单验证\formAuthentication.cs" />
     <Compile Include="部门人员管理.cs">
       <SubType>Form</SubType>
     </Compile>
