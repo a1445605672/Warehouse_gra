@@ -99,3 +99,4 @@ C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\obj\Debug\Warehouse.exe
 C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\obj\Debug\Warehouse.pdb
 C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\obj\Debug\Warehouse.用户管理.resources
 C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\obj\Debug\Warehouse.部门人员管理.resources
+C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FEdit_staff.resources

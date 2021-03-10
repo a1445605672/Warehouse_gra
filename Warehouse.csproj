@@ -101,9 +101,11 @@
     <Compile Include="在库汇总.Designer.cs">
       <DependentUpon>在库汇总.cs</DependentUpon>
     </Compile>
-    <Compile Include="工具窗体\StaffEdit.cs" />
-    <Compile Include="工具窗体\StaffEdit.Designer.cs">
-      <DependentUpon>StaffEdit.cs</DependentUpon>
+    <Compile Include="工具窗体\FEdit_staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具窗体\FEdit_staff.Designer.cs">
+      <DependentUpon>FEdit_staff.cs</DependentUpon>
     </Compile>
     <Compile Include="数据备份.cs">
       <SubType>Form</SubType>
@@ -231,6 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="出库登记.resx">
       <DependentUpon>出库登记.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工具窗体\FEdit_staff.resx">
+      <DependentUpon>FEdit_staff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="未完成入库.resx">
       <DependentUpon>未完成入库.cs</DependentUpon>
