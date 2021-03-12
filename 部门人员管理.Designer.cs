@@ -29,6 +29,7 @@ namespace Warehouse
 		/// </summary>
 		private void InitializeComponent()
 		{
+<<<<<<< HEAD
 			this.label1 = new System.Windows.Forms.Label();
 			this.PagePanel.SuspendLayout();
 			this.SuspendLayout();
@@ -63,4 +64,21 @@ namespace Warehouse
 
 		private System.Windows.Forms.Label label1;
 	}
+=======
+            this.SuspendLayout();
+            // 
+            // 部门人员管理
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "部门人员管理";
+            this.Text = "部门人员管理";
+            this.ResumeLayout(false);
+
+		}
+
+        #endregion
+    }
+>>>>>>> 9cf65ed2ce9e3987c247c03a67390eaaf77c1a4d
 }

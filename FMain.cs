@@ -133,6 +133,9 @@ namespace Warehouse
 					case "入库日报":
 						LoadMdiForm(MainTabControl, menuText, typeof(入库日报));
 						break;
+					case "用户管理":
+						LoadMdiForm(MainTabControl, menuText, typeof(用户管理));
+						break;
 					default:
 						break;
 				}

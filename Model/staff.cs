@@ -91,7 +91,12 @@ namespace Model
             set { _staff_sx = value; }
             get { return _staff_sx; }
         }
+
+        public override string ToString()
+        {
+            return staff_name + ", " + staff_age + ", " + staff_sx;
+        }
         #endregion Model
-	}
+    }
 }
 
