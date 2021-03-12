@@ -18,6 +18,62 @@ namespace Warehouse
 		public 入库登记()
 		{
 			InitializeComponent();
+			#region 生成入库编号模块
+			BLL.enter_storage enterStoeage = new BLL.enter_storage();
+			string inNum_where = "enter_date=";
+			string time = "yyyy-MM-dd";
+			inNum_where += "'" + DateTime.Now.ToString(time) + "'";
+			string inNumber_Sql = "SELECT enter_id FROM enter_storage WHERE enter_if_accomplish=1 AND  " + inNum_where;
+			DataSet inNumber_ds = enterStoeage.getDataList(inNumber_Sql);
+			string inNumber = DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString().PadLeft(2, '0') + DateTime.Now.Day.ToString().PadLeft(2, '0');//获得今天日期
+			inNumber += (inNumber_ds.Tables[0].Rows.Count + 1).ToString().PadLeft(3, '0'); //获得当前行数
+			InWarwhouseNumberBox.Text = "I" + inNumber;
+			#endregion
+
+			#region 供应商模块
+			BLL.sr_info srInfor = new BLL.sr_info();
+			string provider_sql = "SELECT  sr_name FROM sr_info WHERE sr_type=\'供应商\'";
+			DataSet Provider_ds = srInfor.getDataList(provider_sql);
+			for (int i = 0; i < Provider_ds.Tables[0].Rows.Count; i++)
+			{
+				ProviderBox.Items.Add(Provider_ds.Tables[0].Rows[i][0].ToString());
+			}
+			#endregion
+
+			#region 物品模块
+			BLL.material_info materialInfo = new BLL.material_info();
+			string Material_Sql = "SELECT  mat_name FROM material_info";
+			DataSet ds = materialInfo.getDataList(Material_Sql);
+			for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+			{
+				Materialsbox.Items.Add(ds.Tables[0].Rows[i][0]);
+			}
+			#endregion
+
+			#region 批次编号
+			//根据今天入库天生成批次编号
+			string batchNumber = "I" + DateTime.Now.ToString("yyyy")
+				+ DateTime.Now.ToString("MM")
+			+ DateTime.Now.ToString("dd")
+				+ (inNumber_ds.Tables[0].Rows.Count + 1).ToString().PadLeft(4, '0');
+			batchNumberBox.Items.Add(batchNumber);
+			//查看是否有未完成入库的批次编号
+			BLL.enter_storage batchNumbe = new BLL.enter_storage();
+			string batchNumber_Sql = "SELECT enter_batch_id FROM enter_storage  WHERE enter_if_accomplish=0";
+			DataSet batchNumber_ds = batchNumbe.getDataList(batchNumber_Sql);
+
+			if (batchNumber_ds.Tables[0].Rows.Count != 0)
+			{
+				for (int i = 0; i < batchNumber_ds.Tables[0].Rows.Count; i++)
+					batchNumberBox.Items.Add(batchNumber_ds.Tables[0].Rows[0][0]);
+			}
+			#endregion
+
+			#region 获取当前日期
+			edtDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
+			#endregion
+
+
 		}
 
 		#region 未完成入库事件
@@ -46,60 +102,7 @@ namespace Warehouse
 		#region  窗体加载事件
 		private void 入库登记_Load(object sender, EventArgs e)
 		{
-			#region 生成入库编号模块
-			BLL.enter_storage enterStoeage = new BLL.enter_storage();
-			string inNum_where = "enter_date=";
-			string time = "yyyy-MM-dd";
-			inNum_where += "'" + DateTime.Now.ToString(time) + "'";
-			string inNumber_Sql = "SELECT enter_id FROM enter_storage WHERE enter_if_accomplish=1 AND  " + inNum_where;
-			DataSet inNumber_ds = enterStoeage.getDataList(inNumber_Sql);
-			string inNumber = DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString().PadLeft(2, '0') + DateTime.Now.Day.ToString().PadLeft(2, '0');//获得今天日期
-			inNumber += (inNumber_ds.Tables[0].Rows.Count+1).ToString().PadLeft(3, '0'); //获得当前行数
-			InWarwhouseNumberBox.Text = "I" + inNumber;
-			#endregion
-
-			#region 供应商模块
-			BLL.sr_info srInfor = new BLL.sr_info();
-			string provider_sql = "SELECT  sr_name FROM sr_info WHERE sr_type=\'供应商\'";
-			DataSet Provider_ds = srInfor.getDataList(provider_sql);
-			for (int i = 0; i < Provider_ds.Tables[0].Rows.Count; i++)
-			{
-				ProviderBox.Items.Add(Provider_ds.Tables[0].Rows[i][0].ToString());
-			}
-			#endregion
-
-			#region 物品模块
-			BLL.material_info materialInfo = new BLL.material_info();
-			string Material_Sql = "SELECT  mat_name FROM material_info";
-			DataSet ds = materialInfo.getDataList(Material_Sql);
-			for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
-			{
-				Materialsbox.Items.Add(ds.Tables[0].Rows[i][0]);
-			}
-			#endregion
-
-			#region 批次编号
-			//根据今天入库天生成批次编号
-			string batchNumber = "I" + DateTime.Now.ToString("yyyy")
-				+ DateTime.Now.ToString("MM")
-			+DateTime.Now.ToString("dd")
-				+ (inNumber_ds.Tables[0].Rows.Count+1).ToString().PadLeft(4, '0');
-			batchNumberBox.Items.Add(batchNumber);
-			//查看是否有未完成入库的批次编号
-			BLL.enter_storage batchNumbe= new BLL.enter_storage();
-			string batchNumber_Sql = "SELECT enter_batch_id FROM enter_storage  WHERE enter_if_accomplish=0";
-			DataSet batchNumber_ds = batchNumbe.getDataList(batchNumber_Sql);
 			
-			if (batchNumber_ds.Tables[0].Rows.Count != 0)
-			{
-				for (int i = 0; i < batchNumber_ds.Tables[0].Rows.Count; i++)
-					batchNumberBox.Items.Add(batchNumber_ds.Tables[0].Rows[0][0]);
-			}
-			#endregion
-
-			#region 获取当前日期
-			edtDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
-			#endregion
 
 
 		}

@@ -131,7 +131,7 @@ namespace Warehouse
 			this.OutWarehouseBut.Style = Sunny.UI.UIStyle.Red;
 			this.OutWarehouseBut.StyleCustomMode = true;
 			this.OutWarehouseBut.TabIndex = 47;
-			this.OutWarehouseBut.Text = "出库";
+			this.OutWarehouseBut.Text = "入库";
 			this.OutWarehouseBut.Click += new System.EventHandler(this.OutWarehouseBut_Click);
 			// 
 			// uiLabel10

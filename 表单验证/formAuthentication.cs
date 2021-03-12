@@ -35,7 +35,7 @@ namespace Warehouse.表单验证
 
 		#region 验证下拉框
 		/// <summary>
-		/// 验证下拉框，输入值是否有效
+		/// 验证下拉框输入的值是否在下拉框列表内，如果不在则报错
 		/// </summary>
 		/// <param name="str"></param>
 		/// <param name="comboBox"></param>

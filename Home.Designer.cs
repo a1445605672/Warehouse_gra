@@ -41,7 +41,7 @@ namespace Warehouse
 			this.uiSymbolButton1.Name = "uiSymbolButton1";
 			this.uiSymbolButton1.Size = new System.Drawing.Size(100, 35);
 			this.uiSymbolButton1.TabIndex = 0;
-			this.uiSymbolButton1.Text = "uiSymbolButton1";
+			this.uiSymbolButton1.Text = "工作区";
 			// 
 			// Home
 			// 

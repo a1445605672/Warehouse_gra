@@ -232,6 +232,9 @@
     <EmbeddedResource Include="未完成出库.resx">
       <DependentUpon>未完成出库.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="部门人员管理.resx">
+      <DependentUpon>部门人员管理.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

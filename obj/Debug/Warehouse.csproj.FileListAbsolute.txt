@@ -69,3 +69,4 @@ E:\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyComplete
 E:\Warehouse_gra\obj\Debug\Warehouse.exe
 E:\Warehouse_gra\obj\Debug\Warehouse.pdb
 E:\Warehouse_gra\bin\Debug\MySql.Data.dll
+E:\Warehouse_gra\obj\Debug\Warehouse.部门人员管理.resources
