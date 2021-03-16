@@ -7,3 +7,4 @@ E:\Warehouse_gra\Model\bin\Debug\Model.pdb
 E:\Warehouse_gra\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 E:\Warehouse_gra\Model\obj\Debug\Model.dll
 E:\Warehouse_gra\Model\obj\Debug\Model.pdb
+E:\Warehouse_gra\Model\obj\Debug\Model.csprojAssemblyReference.cache

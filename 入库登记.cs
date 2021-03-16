@@ -144,20 +144,33 @@ namespace Warehouse
 			{
 				case "ProviderBox": //验证供应商
 					if (fA.formAuthentication_Combobox(combobox.Text, combobox) == false)
+
+					{
+						ProviderBox.Text = "";
 						ShowErrorTip("供应商输入有误，请选择");
+					}
 						
 					break;
 				case "Materialsbox"://验证物品
 					if (fA.formAuthentication_Combobox(combobox.Text, combobox) == false)
+					{
+						Materialsbox.Text = "";
 						ShowErrorTip("物品输入有误，请选择");
+					}
 					break;
 				case "storageLocationBox"://验证库位
 					if (fA.formAuthentication_Combobox(combobox.Text, combobox) == false)
+					{
+						storageLocationBox.Text = "";
 						ShowErrorTip("库位输入有误，请选择");
+					}
 					break;
 				case "batchNumberBox"://验证批次编号
 					if (fA.formAuthentication_Combobox(combobox.Text, combobox) == false)
+					{
+						batchNumberBox.Text = "";
 						ShowErrorTip("批次输入有误，请选择");
+					}
 					break;
 			}
 		}
@@ -173,24 +186,39 @@ namespace Warehouse
 			switch(textbox.Name)
 			{
 				case "volumeBox":
-					if (fA.formAuthentication_isIntOrDouble(volumeBox.Text) == false)
-						ShowErrorTip("体积输入有误，请输入数字体积");
+					if (fA.formAuthentication_isIntOrDouble(textbox.Text) == false)
+					{
+						textbox.Text = "";
+						ShowErrorTip("体积输入有误，请输入数字体积"); 
+					}
 					break;
 				case "inWarehouseAmount":
-					if (fA.formAuthentication_isIntOrDouble(inWarehouseAmount.Text) == false)
+					if (fA.formAuthentication_isIntOrDouble(textbox.Text) == false)
+					{
+						textbox.Text = "";
 						ShowErrorTip("入库量输入有误，请输入数字体积");
+					}
 					break;
 				case "weightBox":
-					if (fA.formAuthentication_isIntOrDouble(weightBox.Text) == false)
+					if (fA.formAuthentication_isIntOrDouble(textbox.Text) == false)
+					{
+						textbox.Text = "";
 						ShowErrorTip("重量输入有误，请输入数字体积");
+					}
 					break;
 				case "staffBox":
-					if (fA.staffChrckout(staffBox.Text)==false)
+					if (fA.staffChrckout(textbox.Text) == false)
+					{
+						textbox.Text = "";
 						ShowErrorTip("经办人不存在");
+					}
 					break;
 				case "remarkBox":
-					if(fA.formAuthentication_remark(remarkBox.Text)==false)
+					if (fA.formAuthentication_remark(textbox.Text) == false)
+					{
+						textbox.Text = "";
 						ShowErrorTip("请输入汉字");
+					}
 					break;
 			}
 		}

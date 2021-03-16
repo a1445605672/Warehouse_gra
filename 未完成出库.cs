@@ -11,12 +11,19 @@ namespace Warehouse
 		{
 			InitializeComponent();
 
+			#region  datagridview添加列
+			//第一个参数是列表头，第二个参数用于绑定数据
+			uiDataGridView1.AddColumn("出库编号", "enter_num").SetFixedMode(130);
+			uiDataGridView1.AddColumn("物料编号", "mat_id").SetFixedMode(150);
+			uiDataGridView1.AddColumn("物料名称", "mat_name").SetFixedMode(160);
+			uiDataGridView1.AddColumn("出库量", "in_time").SetFixedMode(130);
+			uiDataGridView1.AddColumn("批次编号", "sl_id").SetFixedMode(100);
+			uiDataGridView1.AddColumn("出库日期", "in_amount").SetFixedMode(60);
+			uiDataGridView1.AddColumn("经办人编号", "in_weight").SetFixedMode(60);
+			uiDataGridView1.AddColumn("经办人姓名", "in_volume").SetFixedMode(60);
+	
 			uiDataGridView1.ReadOnly = true;
-			uiDataGridView1.BringToFront();
-			uiDataGridView1.AddColumn("Column1", "Column1").SetFixedMode(150);
-			uiDataGridView1.AddColumn("Column2", "Column2").SetFixedMode(150);
-			uiDataGridView1.AddColumn("Column3", "Column3").SetFixedMode(150);
-			uiDataGridView1.AddColumn("Column4", "Column4").SetFixedMode(150);
+			#endregion
 
 			#region  添加删除，修改两个按钮
 			DataGridViewButtonColumn but = new DataGridViewButtonColumn();
@@ -34,6 +41,15 @@ namespace Warehouse
 			uiDataGridView1.Columns.Add(but1);
 			#endregion
 
+			#region 在库，数据绑定到datagridview
+			List<Model.out_storage> datas = new List<Model.out_storage>();
+			BLL.out_storage out_Storage = new BLL.out_storage();
+			string Where = "out_if_accomplish=0";
+			datas = out_Storage.GetModelList(Where);
+			uiPagination1.DataSource = datas;//绑定到在库数据绑定到datagridview
+			uiPagination1.ActivePage = 1;
+			
+			#endregion
 
 		}
 		#region  窗体加载事件

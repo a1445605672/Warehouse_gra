@@ -250,7 +250,7 @@ namespace DAL
         public DataSet GetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select out_id,out_mat_id,out_mat_name,out_account,out_batch_id,out_data,out_staff_id,out_staff_name,num ");
+            strSql.Append("select out_id,out_mat_id,out_mat_name,out_account,out_batch_id,out_data,out_staff_id,out_staff_name");
             strSql.Append(" FROM out_storage ");
             if (strWhere.Trim() != "")
             {
