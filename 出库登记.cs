@@ -49,6 +49,7 @@ namespace Warehouse
 			uiDataGridView1.Columns.Add(but);
 			#endregion
 
+
 			#region 在库，数据绑定到datagridview
 			List<Model.in_storage> datas = new List<Model.in_storage>();
 			BLL.in_storage instorage = new BLL.in_storage();
@@ -75,6 +76,10 @@ namespace Warehouse
 
 
 			#region 出库编号
+
+			
+		
+
 
 			BLL.out_storage out_Storage = new BLL.out_storage();
 			string OutWarehouseNumber_sql = "select * from out_storage Where out_data="
