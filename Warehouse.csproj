@@ -111,6 +111,12 @@
     <Compile Include="工具窗体\FEdit_staff.Designer.cs">
       <DependentUpon>FEdit_staff.cs</DependentUpon>
     </Compile>
+    <Compile Include="折线图.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="折线图.Designer.cs">
+      <DependentUpon>折线图.cs</DependentUpon>
+    </Compile>
     <Compile Include="数据备份.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,12 @@
     </Compile>
     <Compile Include="未完成出库.Designer.cs">
       <DependentUpon>未完成出库.cs</DependentUpon>
+    </Compile>
+    <Compile Include="柱状图.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="柱状图.Designer.cs">
+      <DependentUpon>柱状图.cs</DependentUpon>
     </Compile>
     <Compile Include="物料信息管理.cs">
       <SubType>Form</SubType>
@@ -247,11 +259,17 @@
     <EmbeddedResource Include="工具窗体\FEdit_staff.resx">
       <DependentUpon>FEdit_staff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="折线图.resx">
+      <DependentUpon>折线图.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="未完成入库.resx">
       <DependentUpon>未完成入库.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="未完成出库.resx">
       <DependentUpon>未完成出库.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="柱状图.resx">
+      <DependentUpon>柱状图.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="用户管理.resx">
       <DependentUpon>用户管理.cs</DependentUpon>

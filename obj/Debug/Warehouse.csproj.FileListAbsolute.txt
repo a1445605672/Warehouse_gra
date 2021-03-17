@@ -136,3 +136,5 @@ D:\Warehouse_gra\obj\Debug\Warehouse.csproj.CoreCompileInputs.cache
 D:\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyComplete
 D:\Warehouse_gra\obj\Debug\Warehouse.入库日报.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.出库日报.resources
+D:\Warehouse_gra\obj\Debug\Warehouse.柱状图.resources
+D:\Warehouse_gra\obj\Debug\Warehouse.折线图.resources

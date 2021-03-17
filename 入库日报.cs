@@ -15,22 +15,28 @@ namespace Warehouse
 		{
 			InitializeComponent();
 			//GridView添加属性
-			uiDataGridView1.AddColumn("入库ID", "enter_num");
-			uiDataGridView1.AddColumn("商品编号", "mat_id");
-			uiDataGridView1.AddColumn("商品名称", "mat_name");
-			uiDataGridView1.AddColumn("入库时间", "in_time");
-			uiDataGridView1.AddColumn("入库量","in_amount");
-			uiDataGridView1.AddColumn("入库重量", "in_weight");
-			uiDataGridView1.AddColumn("入库体积", "in_volume");
-			//自适应列距离
-			for (int i = 0; i < uiDataGridView1.ColumnCount; i++) { uiDataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; }
+			uiDataGridView1.AddColumn("入库ID", "enter_id");
+			uiDataGridView1.AddColumn("入库批次编号", "enter_batch_id");
+			uiDataGridView1.AddColumn("库位编号", "enter_sl_id");
+			uiDataGridView1.AddColumn("入库量", "enter_amount");
+            uiDataGridView1.AddColumn("入库体积", "enter_unit_bulk");
+            uiDataGridView1.AddColumn("供应商编号", "supplier_id");
+			uiDataGridView1.AddColumn("入库物料id", "enter_mat_id");
+			uiDataGridView1.AddColumn("物料名称", "enter_mat_name");
+            uiDataGridView1.AddColumn("封记号", "enter_fengji_num");
+            uiDataGridView1.AddColumn("入库日期", "enter_date");
+            uiDataGridView1.AddColumn("经办人id", "enter_agent_id");
+            uiDataGridView1.AddColumn("经办人姓名", "enter_agent_name");
+            uiDataGridView1.AddColumn("备注", "enter_comment");
+            //自适应列距离
+            for (int i = 0; i < uiDataGridView1.ColumnCount; i++) { uiDataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; }
 
 			AddRow();
 		}
 		// 为gridview填充值
 		private void AddRow()
 		{
-			BLL.in_storage  istr = new BLL.in_storage();
+			BLL.enter_storage istr = new BLL.enter_storage();
 			this.uiDataGridView1.DataSource = istr.GetModelList("");
 		}
 		//根据日期进行查询
@@ -39,7 +45,7 @@ namespace Warehouse
 			//获取日期输入
 			string newtime = uiDatePicker1.Text.Trim();
 			//拿到业务逻辑层
-			BLL.in_storage istr = new BLL.in_storage();
+			BLL.enter_storage istr = new BLL.enter_storage();
 			//数据绑定
 			this.uiDataGridView1.DataSource = istr.GetModel(newtime);
 

@@ -52,6 +52,8 @@ namespace Warehouse
 			Aside.CreateChildNode(StatisticalStatementBut, 61665, 24, "在库汇总", ++pageIndex);
 			Aside.CreateChildNode(StatisticalStatementBut, 61932,24, "出库日报", ++pageIndex);
 			Aside.CreateChildNode(StatisticalStatementBut, 61555,24,"入库日报", ++pageIndex);
+			Aside.CreateChildNode(StatisticalStatementBut, 61585, 24,"柱状图", ++pageIndex);
+			Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "折线图", ++pageIndex);
 			Aside.SelectFirst();
 		}
 
@@ -135,6 +137,12 @@ namespace Warehouse
 						break;
 					case "用户管理":
 						LoadMdiForm(MainTabControl, menuText, typeof(用户管理));
+						break;
+					case "柱状图":
+						LoadMdiForm(MainTabControl, menuText, typeof(柱状图));
+						break;
+					case "折线图":
+						LoadMdiForm(MainTabControl, menuText, typeof(折线图));
 						break;
 					default:
 						break;
