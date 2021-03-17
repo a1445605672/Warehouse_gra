@@ -35,6 +35,10 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.3.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\MySql.Data.dll</HintPath>
@@ -233,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="入库登记.resx">
       <DependentUpon>入库登记.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="出库日报.resx">
+      <DependentUpon>出库日报.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="出库登记.resx">
       <DependentUpon>出库登记.cs</DependentUpon>
