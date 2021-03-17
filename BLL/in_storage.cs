@@ -59,10 +59,10 @@ namespace BLL
 		/// <summary>
 		/// 得到一个对象实体
 		/// </summary>
-		public Model.in_storage GetModel(string enter_num)
+		public Model.in_storage GetModel(string in_time)
 		{
 			
-			return dal.GetModel(enter_num);
+			return dal.GetModel(in_time);
 		}
 
 		/// <summary>

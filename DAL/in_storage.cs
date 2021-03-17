@@ -158,15 +158,15 @@ namespace DAL
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public Model.in_storage GetModel(string enter_num)
+        public Model.in_storage GetModel(string in_time)
         {
 
             StringBuilder strSql = new StringBuilder();
             strSql.Append("select enter_num,mat_id,mat_name,in_time,sl_id,in_amount,in_weight,in_volume from in_storage ");
-            strSql.Append(" where enter_num=@enter_num ");
+            strSql.Append(" where in_time=@in_time ");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@enter_num", MySqlDbType.VarChar,128)			};
-            parameters[0].Value = enter_num;
+					new MySqlParameter("@in_time", MySqlDbType.VarChar,128)			};
+            parameters[0].Value = in_time;
 
             Model.in_storage model = new Model.in_storage();
             DataSet ds = DbHelperMySQL.Query(strSql.ToString(), parameters);

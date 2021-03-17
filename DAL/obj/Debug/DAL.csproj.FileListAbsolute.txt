@@ -32,3 +32,15 @@ C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\DAL\obj\Debug\DAL.csproj.Core
 C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\DAL\obj\Debug\DAL.dll
 C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\DAL\obj\Debug\DAL.pdb
+D:\Warehouse_gra\DAL\bin\Debug\DAL.dll
+D:\Warehouse_gra\DAL\bin\Debug\DAL.pdb
+D:\Warehouse_gra\DAL\bin\Debug\DBUtility.dll
+D:\Warehouse_gra\DAL\bin\Debug\Model.dll
+D:\Warehouse_gra\DAL\bin\Debug\MySql.Data.dll
+D:\Warehouse_gra\DAL\bin\Debug\DBUtility.pdb
+D:\Warehouse_gra\DAL\bin\Debug\Model.pdb
+D:\Warehouse_gra\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+D:\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\Warehouse_gra\DAL\obj\Debug\DAL.dll
+D:\Warehouse_gra\DAL\obj\Debug\DAL.pdb

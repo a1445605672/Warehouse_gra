@@ -23,3 +23,12 @@ C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\DBUtility\obj\Debug\DBUtility
 C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
 C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
 E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csprojAssemblyReference.cache
+D:\Warehouse_gra\DBUtility\bin\Debug\DBUtility.dll
+D:\Warehouse_gra\DBUtility\bin\Debug\DBUtility.pdb
+D:\Warehouse_gra\DBUtility\bin\Debug\Harman.Utility.dll
+D:\Warehouse_gra\DBUtility\bin\Debug\MySql.Data.dll
+D:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csprojAssemblyReference.cache
+D:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
+D:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
+D:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
+D:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb

@@ -228,6 +228,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="入库日报.resx">
+      <DependentUpon>入库日报.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="入库登记.resx">
       <DependentUpon>入库登记.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,11 +246,9 @@
     <EmbeddedResource Include="未完成出库.resx">
       <DependentUpon>未完成出库.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="用户管理.resx">
       <DependentUpon>用户管理.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="部门人员管理.resx">
       <DependentUpon>部门人员管理.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +277,8 @@
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
