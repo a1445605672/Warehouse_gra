@@ -76,9 +76,10 @@ namespace Warehouse
 			this.uiDataGridView1.EnableHeadersVisualStyles = false;
 			this.uiDataGridView1.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-			this.uiDataGridView1.Location = new System.Drawing.Point(0, 35);
+			this.uiDataGridView1.Location = new System.Drawing.Point(0, 0);
 			this.uiDataGridView1.MultiSelect = false;
 			this.uiDataGridView1.Name = "uiDataGridView1";
+			this.uiDataGridView1.ReadOnly = true;
 			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
 			dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -94,9 +95,10 @@ namespace Warehouse
 			this.uiDataGridView1.SelectedIndex = -1;
 			this.uiDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.uiDataGridView1.ShowRect = false;
-			this.uiDataGridView1.Size = new System.Drawing.Size(800, 380);
+			this.uiDataGridView1.Size = new System.Drawing.Size(800, 415);
 			this.uiDataGridView1.TabIndex = 4;
 			this.uiDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.uiDataGridView1_CellContentClick);
+			this.uiDataGridView1.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.uiDataGridView1_EditingControlShowing);
 			// 
 			// uiPagination1
 			// 

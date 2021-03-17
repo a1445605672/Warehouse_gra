@@ -52,7 +52,6 @@ E:\Warehouse_gra\bin\Debug\Maticsoft.Common.dll
 E:\Warehouse_gra\bin\Debug\DBUtility.dll
 E:\Warehouse_gra\bin\Debug\BLL.pdb
 E:\Warehouse_gra\bin\Debug\Model.pdb
-E:\Warehouse_gra\bin\Debug\SunnyUI.pdb
 E:\Warehouse_gra\bin\Debug\DAL.pdb
 E:\Warehouse_gra\bin\Debug\DBUtility.pdb
 E:\Warehouse_gra\obj\Debug\Warehouse.csprojAssemblyReference.cache
@@ -69,9 +68,7 @@ E:\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyComplete
 E:\Warehouse_gra\obj\Debug\Warehouse.exe
 E:\Warehouse_gra\obj\Debug\Warehouse.pdb
 E:\Warehouse_gra\bin\Debug\MySql.Data.dll
-<<<<<<< HEAD
 E:\Warehouse_gra\obj\Debug\Warehouse.部门人员管理.resources
-=======
 C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\bin\Debug\Warehouse.exe.config
 C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\bin\Debug\Warehouse.exe
 C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\bin\Debug\Warehouse.pdb
@@ -103,6 +100,5 @@ C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\obj\Debug\Warehouse.pdb
 C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\obj\Debug\Warehouse.用户管理.resources
 C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\obj\Debug\Warehouse.部门人员管理.resources
 C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FEdit_staff.resources
->>>>>>> 9cf65ed2ce9e3987c247c03a67390eaaf77c1a4d
 E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FEdit_staff.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.用户管理.resources

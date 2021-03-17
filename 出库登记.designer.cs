@@ -39,6 +39,10 @@ namespace Warehouse
 			this.uiDataGridView1 = new Sunny.UI.UIDataGridView();
 			this.uiPagination1 = new Sunny.UI.UIPagination();
 			this.uiPanel1 = new Sunny.UI.UIPanel();
+			this.outWarehouseAmountLabel = new Sunny.UI.UILabel();
+			this.storageLocationBox = new Sunny.UI.UITextBox();
+			this.Materialsbox = new Sunny.UI.UITextBox();
+			this.Material_ID_Label = new Sunny.UI.UILabel();
 			this.OutWarwhouseNumberBox = new Sunny.UI.UITextBox();
 			this.remarkBox = new Sunny.UI.UITextBox();
 			this.staffBox = new Sunny.UI.UITextBox();
@@ -61,10 +65,6 @@ namespace Warehouse
 			this.SelectMaterialsbox = new Sunny.UI.UIComboBox();
 			this.uiLabel11 = new Sunny.UI.UILabel();
 			this.SearchBut = new Sunny.UI.UIButton();
-			this.Material_ID_Label = new Sunny.UI.UILabel();
-			this.Materialsbox = new Sunny.UI.UITextBox();
-			this.storageLocationBox = new Sunny.UI.UITextBox();
-			this.outWarehouseAmountLabel = new Sunny.UI.UILabel();
 			this.PagePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).BeginInit();
 			this.uiPanel1.SuspendLayout();
@@ -188,6 +188,65 @@ namespace Warehouse
 			this.uiPanel1.Name = "uiPanel1";
 			this.uiPanel1.Size = new System.Drawing.Size(950, 625);
 			this.uiPanel1.TabIndex = 0;
+			this.uiPanel1.Text = null;
+			// 
+			// outWarehouseAmountLabel
+			// 
+			this.outWarehouseAmountLabel.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.outWarehouseAmountLabel.Location = new System.Drawing.Point(687, 246);
+			this.outWarehouseAmountLabel.Name = "outWarehouseAmountLabel";
+			this.outWarehouseAmountLabel.Size = new System.Drawing.Size(157, 25);
+			this.outWarehouseAmountLabel.TabIndex = 63;
+			this.outWarehouseAmountLabel.Text = "出库数量，隐藏显示";
+			this.outWarehouseAmountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.outWarehouseAmountLabel.Visible = false;
+			// 
+			// storageLocationBox
+			// 
+			this.storageLocationBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.storageLocationBox.Enabled = false;
+			this.storageLocationBox.FillColor = System.Drawing.Color.White;
+			this.storageLocationBox.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.storageLocationBox.Location = new System.Drawing.Point(395, 204);
+			this.storageLocationBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.storageLocationBox.Maximum = 2147483647D;
+			this.storageLocationBox.Minimum = -2147483648D;
+			this.storageLocationBox.MinimumSize = new System.Drawing.Size(1, 1);
+			this.storageLocationBox.Name = "storageLocationBox";
+			this.storageLocationBox.Padding = new System.Windows.Forms.Padding(5);
+			this.storageLocationBox.ReadOnly = true;
+			this.storageLocationBox.Size = new System.Drawing.Size(221, 29);
+			this.storageLocationBox.TabIndex = 62;
+			this.storageLocationBox.Watermark = "水印文字";
+			// 
+			// Materialsbox
+			// 
+			this.Materialsbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.Materialsbox.Enabled = false;
+			this.Materialsbox.FillColor = System.Drawing.Color.White;
+			this.Materialsbox.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.Materialsbox.Location = new System.Drawing.Point(395, 166);
+			this.Materialsbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.Materialsbox.Maximum = 2147483647D;
+			this.Materialsbox.Minimum = -2147483648D;
+			this.Materialsbox.MinimumSize = new System.Drawing.Size(1, 1);
+			this.Materialsbox.Name = "Materialsbox";
+			this.Materialsbox.Padding = new System.Windows.Forms.Padding(5);
+			this.Materialsbox.ReadOnly = true;
+			this.Materialsbox.Size = new System.Drawing.Size(221, 29);
+			this.Materialsbox.TabIndex = 62;
+			this.Materialsbox.Watermark = "水印文字";
+			// 
+			// Material_ID_Label
+			// 
+			this.Material_ID_Label.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.Material_ID_Label.Location = new System.Drawing.Point(683, 91);
+			this.Material_ID_Label.Name = "Material_ID_Label";
+			this.Material_ID_Label.Size = new System.Drawing.Size(177, 28);
+			this.Material_ID_Label.TabIndex = 62;
+			this.Material_ID_Label.Text = "物料编号，隐藏显示";
+			this.Material_ID_Label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.Material_ID_Label.Visible = false;
 			// 
 			// OutWarwhouseNumberBox
 			// 
@@ -517,64 +576,6 @@ namespace Warehouse
 			this.SearchBut.TabIndex = 56;
 			this.SearchBut.Text = "搜  索";
 			this.SearchBut.Click += new System.EventHandler(this.SearchBut_Click);
-			// 
-			// Material_ID_Label
-			// 
-			this.Material_ID_Label.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.Material_ID_Label.Location = new System.Drawing.Point(683, 91);
-			this.Material_ID_Label.Name = "Material_ID_Label";
-			this.Material_ID_Label.Size = new System.Drawing.Size(177, 28);
-			this.Material_ID_Label.TabIndex = 62;
-			this.Material_ID_Label.Text = "物料编号，隐藏显示";
-			this.Material_ID_Label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.Material_ID_Label.Visible = false;
-			// 
-			// Materialsbox
-			// 
-			this.Materialsbox.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.Materialsbox.Enabled = false;
-			this.Materialsbox.FillColor = System.Drawing.Color.White;
-			this.Materialsbox.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.Materialsbox.Location = new System.Drawing.Point(395, 166);
-			this.Materialsbox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.Materialsbox.Maximum = 2147483647D;
-			this.Materialsbox.Minimum = -2147483648D;
-			this.Materialsbox.MinimumSize = new System.Drawing.Size(1, 1);
-			this.Materialsbox.Name = "Materialsbox";
-			this.Materialsbox.Padding = new System.Windows.Forms.Padding(5);
-			this.Materialsbox.ReadOnly = true;
-			this.Materialsbox.Size = new System.Drawing.Size(221, 29);
-			this.Materialsbox.TabIndex = 62;
-			this.Materialsbox.Watermark = "水印文字";
-			// 
-			// storageLocationBox
-			// 
-			this.storageLocationBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.storageLocationBox.Enabled = false;
-			this.storageLocationBox.FillColor = System.Drawing.Color.White;
-			this.storageLocationBox.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-			this.storageLocationBox.Location = new System.Drawing.Point(395, 204);
-			this.storageLocationBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.storageLocationBox.Maximum = 2147483647D;
-			this.storageLocationBox.Minimum = -2147483648D;
-			this.storageLocationBox.MinimumSize = new System.Drawing.Size(1, 1);
-			this.storageLocationBox.Name = "storageLocationBox";
-			this.storageLocationBox.Padding = new System.Windows.Forms.Padding(5);
-			this.storageLocationBox.ReadOnly = true;
-			this.storageLocationBox.Size = new System.Drawing.Size(221, 29);
-			this.storageLocationBox.TabIndex = 62;
-			this.storageLocationBox.Watermark = "水印文字";
-			// 
-			// outWarehouseAmountLabel
-			// 
-			this.outWarehouseAmountLabel.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.outWarehouseAmountLabel.Location = new System.Drawing.Point(687, 246);
-			this.outWarehouseAmountLabel.Name = "outWarehouseAmountLabel";
-			this.outWarehouseAmountLabel.Size = new System.Drawing.Size(157, 25);
-			this.outWarehouseAmountLabel.TabIndex = 63;
-			this.outWarehouseAmountLabel.Text = "出库数量，隐藏显示";
-			this.outWarehouseAmountLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.outWarehouseAmountLabel.Visible = false;
 			// 
 			// 出库登记
 			// 

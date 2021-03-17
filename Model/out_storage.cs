@@ -18,7 +18,6 @@ namespace Model
         private DateTime _out_data;
         private string _out_staff_id;
         private string _out_staff_name;
-        private int _num;
         /// <summary>
         /// 
         /// </summary>
@@ -86,11 +85,7 @@ namespace Model
         /// <summary>
         /// auto_increment
         /// </summary>
-        public int num
-        {
-            set { _num = value; }
-            get { return _num; }
-        }
+        
         #endregion Model
 
     }

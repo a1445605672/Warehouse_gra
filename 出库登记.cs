@@ -76,11 +76,6 @@ namespace Warehouse
 
 
 			#region 出库编号
-
-			
-		
-
-
 			BLL.out_storage out_Storage = new BLL.out_storage();
 			string OutWarehouseNumber_sql = "select * from out_storage Where out_data="
 			+ "\'" + DateTime.Now.ToString("yyyy-MM-dd") + "\'"

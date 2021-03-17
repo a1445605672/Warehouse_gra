@@ -112,7 +112,7 @@ namespace DAL
             parameters[5].Value = model.out_data;
             parameters[6].Value = model.out_staff_id;
             parameters[7].Value = model.out_staff_name;
-            parameters[8].Value = model.num;
+            
 
             int rows = DbHelperMySQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -236,10 +236,7 @@ namespace DAL
                 {
                     model.out_staff_name = row["out_staff_name"].ToString();
                 }
-                if (row["num"] != null && row["num"].ToString() != "")
-                {
-                    model.num = int.Parse(row["num"].ToString());
-                }
+                
             }
             return model;
         }
