@@ -52,7 +52,6 @@ namespace Warehouse
 			this.uiDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.uiDataGridView1.BackgroundColor = System.Drawing.Color.White;
 			this.uiDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.uiDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.uiDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
 			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
 			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
@@ -76,7 +75,7 @@ namespace Warehouse
 			this.uiDataGridView1.EnableHeadersVisualStyles = false;
 			this.uiDataGridView1.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-			this.uiDataGridView1.Location = new System.Drawing.Point(0, 0);
+			this.uiDataGridView1.Location = new System.Drawing.Point(0, 35);
 			this.uiDataGridView1.MultiSelect = false;
 			this.uiDataGridView1.Name = "uiDataGridView1";
 			this.uiDataGridView1.ReadOnly = true;
@@ -92,10 +91,12 @@ namespace Warehouse
 			dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
 			this.uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
 			this.uiDataGridView1.RowTemplate.Height = 29;
+			this.uiDataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
 			this.uiDataGridView1.SelectedIndex = -1;
 			this.uiDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+			this.uiDataGridView1.ShowGridLine = true;
 			this.uiDataGridView1.ShowRect = false;
-			this.uiDataGridView1.Size = new System.Drawing.Size(800, 415);
+			this.uiDataGridView1.Size = new System.Drawing.Size(800, 380);
 			this.uiDataGridView1.TabIndex = 4;
 			this.uiDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.uiDataGridView1_CellContentClick);
 			this.uiDataGridView1.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.uiDataGridView1_EditingControlShowing);

@@ -191,15 +191,15 @@ namespace Maticsoft.DAL
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
-        public Model.enter_storage GetModel(int enter_id)
+        public Model.enter_storage GetModel(string enter_date)
         {
 
             StringBuilder strSql = new StringBuilder();
             strSql.Append("select enter_id,enter_batch_id,enter_sl_id,enter_amount,enter_unit_bulk,supplier_id,enter_mat_id,enter_mat_name,enter_fengji_num,enter_date,enter_agent_id,enter_agent_name,enter_comment from enter_storage ");
-            strSql.Append(" where enter_id=@enter_id ");
+            strSql.Append(" where enter_date=@enter_date ");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@enter_id", MySqlDbType.Int32,32)			};
-            parameters[0].Value = enter_id;
+					new MySqlParameter("@enter_date", MySqlDbType.VarChar,6)			};
+            parameters[0].Value = enter_date;
 
             Model.enter_storage model = new Model.enter_storage();
             DataSet ds = DbHelperMySQL.Query(strSql.ToString(), parameters);

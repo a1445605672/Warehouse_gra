@@ -66,25 +66,25 @@ namespace BLL
 		/// <summary>
 		/// 得到一个对象实体
 		/// </summary>
-		public Model.enter_storage GetModel(int enter_id)
+		public Model.enter_storage GetModel(string enter_date)
 		{
 			
-			return dal.GetModel(enter_id);
+			return dal.GetModel(enter_date);
 		}
 
 		/// <summary>
 		/// 得到一个对象实体，从缓存中
 		/// </summary>
-		public Model.enter_storage GetModelByCache(int enter_id)
+		public Model.enter_storage GetModelByCache(string enter_date)
 		{
 			
-			string CacheKey = "enter_storageModel-" + enter_id;
+			string CacheKey = "enter_storageModel-" + enter_date;
 			object objModel = Maticsoft.Common.DataCache.GetCache(CacheKey);
 			if (objModel == null)
 			{
 				try
 				{
-					objModel = dal.GetModel(enter_id);
+					objModel = dal.GetModel(enter_date);
 					if (objModel != null)
 					{
 						int ModelCache = Maticsoft.Common.ConfigHelper.GetConfigInt("ModelCache");

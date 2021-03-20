@@ -35,6 +35,10 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.3.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\MySql.Data.dll</HintPath>
@@ -71,6 +75,12 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdataFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdataFrm.Designer.cs">
+      <DependentUpon>UpdataFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="入库日报.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +116,12 @@
     </Compile>
     <Compile Include="工具窗体\FEdit_staff.Designer.cs">
       <DependentUpon>FEdit_staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="折线图.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="折线图.Designer.cs">
+      <DependentUpon>折线图.cs</DependentUpon>
     </Compile>
     <Compile Include="数据备份.cs">
       <SubType>Form</SubType>
@@ -169,6 +185,12 @@
     <Compile Include="未完成出库.Designer.cs">
       <DependentUpon>未完成出库.cs</DependentUpon>
     </Compile>
+    <Compile Include="柱状图.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="柱状图.Designer.cs">
+      <DependentUpon>柱状图.cs</DependentUpon>
+    </Compile>
     <Compile Include="物料信息管理.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,8 +250,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UpdataFrm.resx">
+      <DependentUpon>UpdataFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="入库日报.resx">
+      <DependentUpon>入库日报.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="入库登记.resx">
       <DependentUpon>入库登记.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="出库日报.resx">
+      <DependentUpon>出库日报.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="出库登记.resx">
       <DependentUpon>出库登记.cs</DependentUpon>
@@ -237,17 +268,21 @@
     <EmbeddedResource Include="工具窗体\FEdit_staff.resx">
       <DependentUpon>FEdit_staff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="折线图.resx">
+      <DependentUpon>折线图.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="未完成入库.resx">
       <DependentUpon>未完成入库.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="未完成出库.resx">
       <DependentUpon>未完成出库.cs</DependentUpon>
     </EmbeddedResource>
-
+    <EmbeddedResource Include="柱状图.resx">
+      <DependentUpon>柱状图.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="用户管理.resx">
       <DependentUpon>用户管理.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="部门人员管理.resx">
       <DependentUpon>部门人员管理.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +311,8 @@
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

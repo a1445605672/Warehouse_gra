@@ -5,15 +5,18 @@ using System.Windows.Forms;
 
 namespace Warehouse
 {
+	
 	public partial class 未完成出库 : UITitlePage
 	{
+		
 		public 未完成出库()
 		{
+			
 			InitializeComponent();
 			uiDataGridView1.BringToFront();
 			#region  datagridview添加列
 			//第一个参数是列表头，第二个参数用于绑定数据
-			uiDataGridView1.AddColumn("出库编号", "out_id").SetFixedMode(130);
+			uiDataGridView1.AddColumn("出库编号", "out_id").SetFixedMode(140);
 			//uiDataGridView1.AddColumn("物料编号", "out_mat_id").SetFixedMode(150);
 			uiDataGridView1.AddColumn("物料名称", "out_mat_name").SetFixedMode(160);
 			uiDataGridView1.AddColumn("出库量", "out_account").SetFixedMode(130);
@@ -45,13 +48,14 @@ namespace Warehouse
 			BLL.out_storage out_Storage = new BLL.out_storage();
 			string Where = "out_if_accomplish=0";
 			datas = out_Storage.GetModelList(Where);
-			//this.uiDataGridView1.DataSource = datas;
 			this.uiPagination1.DataSource = datas;//绑定到在库数据绑定到datagridview
 			this.uiPagination1.ActivePage = 1;
 			
 			#endregion
 
 		}
+
+		
 		#region  窗体加载事件
 		private void 未完成出库_Load(object sender, EventArgs e)
 		{
@@ -72,8 +76,13 @@ namespace Warehouse
 
 			if (uiDataGridView1.Columns[e.ColumnIndex].Name == "UpDate" && e.RowIndex >= 0)
 			{
-				this.uiDataGridView1.BeginEdit(true);
-				ShowAskDialog("我要修改内容");
+				
+
+
+				UpdataFrm updatafrm = new UpdataFrm();
+				updatafrm.TopLevel = true;
+				updatafrm.ShowDialog();
+				
 			}
 			if (uiDataGridView1.Columns[e.ColumnIndex].Name == "Delete" && e.RowIndex >= 0)
 			{
@@ -88,6 +97,7 @@ namespace Warehouse
 			}
 		}
 		#endregion
+		
 
 		private void uiDataGridView1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
 		{
