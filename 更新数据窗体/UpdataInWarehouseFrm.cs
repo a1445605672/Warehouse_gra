@@ -9,17 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Sunny.UI;
 
-namespace Warehouse
+namespace Warehouse.更新数据窗体
 {
-	
-	public partial class UpdataFrm : UITitlePage
+	public partial class UpdataInWarehouseFrm : UITitlePage
 	{
-		
-		public UpdataFrm()
+		public UpdataInWarehouseFrm()
 		{
-			
 			InitializeComponent();
-
 		}
 
 		private void uiButton13_Click(object sender, EventArgs e)
@@ -27,13 +23,9 @@ namespace Warehouse
 			this.Close();
 		}
 
-		private void UpdataFrm_Load(object sender, EventArgs e)
+		private void uiButton17_Click(object sender, EventArgs e)
 		{
-			
-			
-			//noWarehouse.mydelegate += new Mydelegate(Add);
+			ShowAskDialog("修改成功");
 		}
-		
-		
 	}
 }

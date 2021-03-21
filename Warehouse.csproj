@@ -75,11 +75,11 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="UpdataFrm.cs">
+    <Compile Include="更新数据窗体\UpdataOutWarehouseFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdataFrm.Designer.cs">
-      <DependentUpon>UpdataFrm.cs</DependentUpon>
+    <Compile Include="更新数据窗体\UpdataOutWarehouseFrm.Designer.cs">
+      <DependentUpon>UpdataOutWarehouseFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="入库日报.cs">
       <SubType>Form</SubType>
@@ -173,6 +173,12 @@
     <Compile Include="收货商管理.Designer.cs">
       <DependentUpon>收货商管理.cs</DependentUpon>
     </Compile>
+    <Compile Include="更新数据窗体\UpdataInWarehouseFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="更新数据窗体\UpdataInWarehouseFrm.Designer.cs">
+      <DependentUpon>UpdataInWarehouseFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="未完成入库.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,8 +256,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UpdataFrm.resx">
-      <DependentUpon>UpdataFrm.cs</DependentUpon>
+    <EmbeddedResource Include="更新数据窗体\UpdataInWarehouseFrm.resx">
+      <DependentUpon>UpdataInWarehouseFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="更新数据窗体\UpdataOutWarehouseFrm.resx">
+      <DependentUpon>UpdataOutWarehouseFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="入库日报.resx">
       <DependentUpon>入库日报.cs</DependentUpon>
@@ -314,5 +323,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

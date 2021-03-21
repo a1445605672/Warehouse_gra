@@ -10,7 +10,7 @@ namespace Model
         public out_storage()
         { }
         #region Model
-        private int _out_id;
+        private string _out_id;
         private string _out_mat_id;
         private string _out_mat_name;
         private decimal _out_account;
@@ -21,7 +21,7 @@ namespace Model
         /// <summary>
         /// 
         /// </summary>
-        public int out_id
+        public string out_id
         {
             set { _out_id = value; }
             get { return _out_id; }

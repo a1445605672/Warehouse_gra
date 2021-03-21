@@ -17,6 +17,7 @@ namespace Warehouse
 			#region  datagridview添加列
 			//第一个参数是列表头，第二个参数用于绑定数据
 			uiDataGridView1.AddColumn("出库编号", "out_id").SetFixedMode(140);
+			//uiDataGridView1.AddColumn("收货商", "").SetFixedMode(150);
 			//uiDataGridView1.AddColumn("物料编号", "out_mat_id").SetFixedMode(150);
 			uiDataGridView1.AddColumn("物料名称", "out_mat_name").SetFixedMode(160);
 			uiDataGridView1.AddColumn("出库量", "out_account").SetFixedMode(130);
@@ -77,10 +78,24 @@ namespace Warehouse
 			if (uiDataGridView1.Columns[e.ColumnIndex].Name == "UpDate" && e.RowIndex >= 0)
 			{
 				
+				
 
 
 				UpdataFrm updatafrm = new UpdataFrm();
 				updatafrm.TopLevel = true;
+				//出库编号
+				updatafrm.OutWarwhouseNumberBox.Text = uiDataGridView1.CurrentRow.Cells[2].Value.ToString();
+				//物料名称
+				updatafrm.Materialsbox.Text = uiDataGridView1.CurrentRow.Cells[4].Value.ToString();
+				//出库量
+				updatafrm.outWarehouseAmountBox.Text = uiDataGridView1.CurrentRow.Cells[5].Value.ToString();
+				//批次
+				updatafrm.batchNumberBox.Text = uiDataGridView1.CurrentRow.Cells[6].Value.ToString();
+				//日期
+				updatafrm.edtDate.Text =Convert.ToDateTime( uiDataGridView1.CurrentRow.Cells[7].Value.ToString()).ToString("yyyy-MM-dd");
+				//经办人
+				updatafrm.staffBox.Text = uiDataGridView1.CurrentRow.Cells[9].Value.ToString();
+				
 				updatafrm.ShowDialog();
 				
 			}

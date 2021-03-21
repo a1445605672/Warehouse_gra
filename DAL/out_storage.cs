@@ -206,7 +206,7 @@ namespace DAL
             {
                 if (row["out_id"] != null && row["out_id"].ToString() != "")
                 {
-                    model.out_id = int.Parse(row["out_id"].ToString());
+                    model.out_id = row["out_id"].ToString();
                 }
                 if (row["out_mat_id"] != null)
                 {

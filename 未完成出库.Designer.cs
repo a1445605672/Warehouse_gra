@@ -139,8 +139,7 @@ namespace Warehouse
 		}
 
 		#endregion
-
-		private Sunny.UI.UIDataGridView uiDataGridView1;
 		private Sunny.UI.UIPagination uiPagination1;
+		public Sunny.UI.UIDataGridView uiDataGridView1;
 	}
 }
