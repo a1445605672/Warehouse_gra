@@ -17,7 +17,7 @@ namespace Warehouse
 			InitializeComponent();
 
 			uiDataGridView1.ReadOnly = true;
-
+			#region 列表头
 			uiDataGridView1.AddColumn("编号", "enter_id").SetFixedMode(124);
 			uiDataGridView1.AddColumn("批次", "enter_batch_id").SetFixedMode(123);
 			uiDataGridView1.AddColumn("库位", "enter_sl_id").SetFixedMode(100);
@@ -27,7 +27,9 @@ namespace Warehouse
 			uiDataGridView1.AddColumn("物料", "enter_mat_name").SetFixedMode(130);
 			uiDataGridView1.AddColumn("日期", "enter_date").SetFixedMode(90);
 			uiDataGridView1.AddColumn("经办人", "enter_agent_name").SetFixedMode(70);
+			#endregion
 
+			#region 绑定数据
 			BLL.enter_storage enter_Storage = new BLL.enter_storage();
 			string sql = "SELECT enter_storage.enter_id,  enter_storage.enter_batch_id,  enter_storage.enter_sl_id," +
 				"enter_storage.enter_amount,  enter_storage.enter_unit_bulk,  sr_info.sr_name," +
@@ -37,6 +39,7 @@ namespace Warehouse
 			
 			uiPagination1.DataSource = ds.Tables[0];
 			uiPagination1.ActivePage = 1;
+			#endregion
 
 			#region  添加删除，修改两个按钮
 			DataGridViewButtonColumn but = new DataGridViewButtonColumn();
@@ -56,6 +59,7 @@ namespace Warehouse
 
 
 		}
+
 		#region  窗体加载事件
 		private void 未完成入库_Load(object sender, EventArgs e)
 		{
@@ -64,16 +68,14 @@ namespace Warehouse
 		}
 		#endregion
 
-
-
-		
-
 		#region 翻页事件
 		private void uiPagination1_PageChanged(object sender, object pagingSource, int pageIndex, int count)
 		{
 			uiDataGridView1.DataSource = pagingSource;
 		}
 		#endregion
+
+
 		#region 点击datagridview按钮事件
 		private void uiDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
@@ -81,9 +83,29 @@ namespace Warehouse
 			if(uiDataGridView1.Columns[e.ColumnIndex].Name== "UpDate" && e.RowIndex>=0)
 			{
 				UpdataInWarehouseFrm UpF = new UpdataInWarehouseFrm();
+			
+				#region 窗体传值
+				//编号
+				UpF.NumberBox.Text = uiDataGridView1.CurrentRow.Cells[2].Value.ToString();
+				//物料
+				UpF.MaterialBox.Text= uiDataGridView1.CurrentRow.Cells[8].Value.ToString();
+				//库位
+				UpF.StorageLocationBox.Text= uiDataGridView1.CurrentRow.Cells[4].Value.ToString();
+				//入库量
+				UpF.InWarehouseAccountBox.Text= uiDataGridView1.CurrentRow.Cells[5].Value.ToString();
+				//体积
+				UpF.VolumeBox.Text= uiDataGridView1.CurrentRow.Cells[6].Value.ToString();
+				//供应商
+				UpF.ProviderBox.Text= uiDataGridView1.CurrentRow.Cells[7].Value.ToString();
+				//批次
+				UpF.batchBox.Text= uiDataGridView1.CurrentRow.Cells[3].Value.ToString();
+				//日期
+				UpF.DateBox.Text=Convert.ToDateTime(uiDataGridView1.CurrentRow.Cells[9].Value.ToString()).ToString("yyyy-MM-dd");
+				#endregion
+
 				UpF.TopLevel = true;
 				UpF.ShowDialog();
-				//ShowAskDialog("我要修改内容");
+				
 			}
 			if(uiDataGridView1.Columns[e.ColumnIndex].Name == "Delete" && e.RowIndex >= 0)
 			{

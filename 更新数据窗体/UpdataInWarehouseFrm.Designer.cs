@@ -31,14 +31,14 @@ namespace Warehouse.更新数据窗体
 		{
 			this.uiButton17 = new Sunny.UI.UIButton();
 			this.uiButton13 = new Sunny.UI.UIButton();
-			this.uiDatePicker1 = new Sunny.UI.UIDatePicker();
-			this.uiComboBox3 = new Sunny.UI.UIComboBox();
-			this.uiComboBox2 = new Sunny.UI.UIComboBox();
-			this.uiTextBox5 = new Sunny.UI.UITextBox();
-			this.uiTextBox4 = new Sunny.UI.UITextBox();
-			this.uiTextBox3 = new Sunny.UI.UITextBox();
-			this.uiTextBox2 = new Sunny.UI.UITextBox();
-			this.uiTextBox1 = new Sunny.UI.UITextBox();
+			this.DateBox = new Sunny.UI.UIDatePicker();
+			this.batchBox = new Sunny.UI.UIComboBox();
+			this.ProviderBox = new Sunny.UI.UIComboBox();
+			this.staffBox = new Sunny.UI.UITextBox();
+			this.VolumeBox = new Sunny.UI.UITextBox();
+			this.InWarehouseAccountBox = new Sunny.UI.UITextBox();
+			this.StorageLocationBox = new Sunny.UI.UITextBox();
+			this.NumberBox = new Sunny.UI.UITextBox();
 			this.uiLabel9 = new Sunny.UI.UILabel();
 			this.uiLabel7 = new Sunny.UI.UILabel();
 			this.uiLabel8 = new Sunny.UI.UILabel();
@@ -48,27 +48,27 @@ namespace Warehouse.更新数据窗体
 			this.uiLabel4 = new Sunny.UI.UILabel();
 			this.uiLabel2 = new Sunny.UI.UILabel();
 			this.uiLabel1 = new Sunny.UI.UILabel();
-			this.uiTextBox6 = new Sunny.UI.UITextBox();
+			this.remarkBox = new Sunny.UI.UITextBox();
 			this.uiLabel10 = new Sunny.UI.UILabel();
-			this.uiTextBox7 = new Sunny.UI.UITextBox();
+			this.MaterialBox = new Sunny.UI.UITextBox();
 			this.PagePanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// PagePanel
 			// 
-			this.PagePanel.Controls.Add(this.uiTextBox7);
-			this.PagePanel.Controls.Add(this.uiTextBox6);
+			this.PagePanel.Controls.Add(this.MaterialBox);
+			this.PagePanel.Controls.Add(this.remarkBox);
 			this.PagePanel.Controls.Add(this.uiLabel10);
 			this.PagePanel.Controls.Add(this.uiButton17);
 			this.PagePanel.Controls.Add(this.uiButton13);
-			this.PagePanel.Controls.Add(this.uiDatePicker1);
-			this.PagePanel.Controls.Add(this.uiComboBox3);
-			this.PagePanel.Controls.Add(this.uiComboBox2);
-			this.PagePanel.Controls.Add(this.uiTextBox5);
-			this.PagePanel.Controls.Add(this.uiTextBox4);
-			this.PagePanel.Controls.Add(this.uiTextBox3);
-			this.PagePanel.Controls.Add(this.uiTextBox2);
-			this.PagePanel.Controls.Add(this.uiTextBox1);
+			this.PagePanel.Controls.Add(this.DateBox);
+			this.PagePanel.Controls.Add(this.batchBox);
+			this.PagePanel.Controls.Add(this.ProviderBox);
+			this.PagePanel.Controls.Add(this.staffBox);
+			this.PagePanel.Controls.Add(this.VolumeBox);
+			this.PagePanel.Controls.Add(this.InWarehouseAccountBox);
+			this.PagePanel.Controls.Add(this.StorageLocationBox);
+			this.PagePanel.Controls.Add(this.NumberBox);
 			this.PagePanel.Controls.Add(this.uiLabel9);
 			this.PagePanel.Controls.Add(this.uiLabel7);
 			this.PagePanel.Controls.Add(this.uiLabel8);
@@ -79,6 +79,7 @@ namespace Warehouse.更新数据窗体
 			this.PagePanel.Controls.Add(this.uiLabel2);
 			this.PagePanel.Controls.Add(this.uiLabel1);
 			this.PagePanel.Size = new System.Drawing.Size(466, 437);
+			this.PagePanel.Validated += new System.EventHandler(this.PagePanel_Validated);
 			// 
 			// uiButton17
 			// 
@@ -119,141 +120,148 @@ namespace Warehouse.更新数据窗体
 			this.uiButton13.Text = "取 消";
 			this.uiButton13.Click += new System.EventHandler(this.uiButton13_Click);
 			// 
-			// uiDatePicker1
+			// DateBox
 			// 
-			this.uiDatePicker1.FillColor = System.Drawing.Color.White;
-			this.uiDatePicker1.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiDatePicker1.Location = new System.Drawing.Point(201, 262);
-			this.uiDatePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.uiDatePicker1.MaxLength = 10;
-			this.uiDatePicker1.MinimumSize = new System.Drawing.Size(63, 0);
-			this.uiDatePicker1.Name = "uiDatePicker1";
-			this.uiDatePicker1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-			this.uiDatePicker1.Size = new System.Drawing.Size(150, 29);
-			this.uiDatePicker1.SymbolDropDown = 61555;
-			this.uiDatePicker1.SymbolNormal = 61555;
-			this.uiDatePicker1.TabIndex = 39;
-			this.uiDatePicker1.Text = "2021-03-20";
-			this.uiDatePicker1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-			this.uiDatePicker1.Value = new System.DateTime(2021, 3, 20, 19, 28, 3, 26);
+			this.DateBox.FillColor = System.Drawing.Color.White;
+			this.DateBox.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.DateBox.Location = new System.Drawing.Point(201, 262);
+			this.DateBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.DateBox.MaxLength = 10;
+			this.DateBox.MinimumSize = new System.Drawing.Size(63, 0);
+			this.DateBox.Name = "DateBox";
+			this.DateBox.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+			this.DateBox.Size = new System.Drawing.Size(150, 29);
+			this.DateBox.SymbolDropDown = 61555;
+			this.DateBox.SymbolNormal = 61555;
+			this.DateBox.TabIndex = 39;
+			this.DateBox.Text = "2021-03-20";
+			this.DateBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+			this.DateBox.Value = new System.DateTime(2021, 3, 20, 19, 28, 3, 26);
 			// 
-			// uiComboBox3
+			// batchBox
 			// 
-			this.uiComboBox3.DisplayMember = "请选择";
-			this.uiComboBox3.FillColor = System.Drawing.Color.White;
-			this.uiComboBox3.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiComboBox3.Location = new System.Drawing.Point(201, 226);
-			this.uiComboBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.uiComboBox3.MinimumSize = new System.Drawing.Size(63, 0);
-			this.uiComboBox3.Name = "uiComboBox3";
-			this.uiComboBox3.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-			this.uiComboBox3.Size = new System.Drawing.Size(150, 29);
-			this.uiComboBox3.TabIndex = 38;
-			this.uiComboBox3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-			this.uiComboBox3.ValueMember = "请选择";
+			this.batchBox.DisplayMember = "请选择";
+			this.batchBox.FillColor = System.Drawing.Color.White;
+			this.batchBox.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.batchBox.Location = new System.Drawing.Point(201, 226);
+			this.batchBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.batchBox.MinimumSize = new System.Drawing.Size(63, 0);
+			this.batchBox.Name = "batchBox";
+			this.batchBox.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+			this.batchBox.Size = new System.Drawing.Size(150, 29);
+			this.batchBox.TabIndex = 38;
+			this.batchBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+			this.batchBox.ValueMember = "请选择";
+			this.batchBox.DropDown += new System.EventHandler(this.batchBox_DropDown);
+			this.batchBox.Validated += new System.EventHandler(this.ProviderBox_Validated);
 			// 
-			// uiComboBox2
+			// ProviderBox
 			// 
-			this.uiComboBox2.DisplayMember = "请选择";
-			this.uiComboBox2.FillColor = System.Drawing.Color.White;
-			this.uiComboBox2.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiComboBox2.Location = new System.Drawing.Point(201, 190);
-			this.uiComboBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.uiComboBox2.MinimumSize = new System.Drawing.Size(63, 0);
-			this.uiComboBox2.Name = "uiComboBox2";
-			this.uiComboBox2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-			this.uiComboBox2.Size = new System.Drawing.Size(150, 29);
-			this.uiComboBox2.TabIndex = 37;
-			this.uiComboBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-			this.uiComboBox2.ValueMember = "请选择";
+			this.ProviderBox.DisplayMember = "请选择";
+			this.ProviderBox.FillColor = System.Drawing.Color.White;
+			this.ProviderBox.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.ProviderBox.Location = new System.Drawing.Point(201, 190);
+			this.ProviderBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.ProviderBox.MinimumSize = new System.Drawing.Size(63, 0);
+			this.ProviderBox.Name = "ProviderBox";
+			this.ProviderBox.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+			this.ProviderBox.Size = new System.Drawing.Size(150, 29);
+			this.ProviderBox.TabIndex = 37;
+			this.ProviderBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+			this.ProviderBox.ValueMember = "请选择";
+			this.ProviderBox.DropDown += new System.EventHandler(this.ProviderBox_DropDown);
+			this.ProviderBox.Validated += new System.EventHandler(this.ProviderBox_Validated);
 			// 
-			// uiTextBox5
+			// staffBox
 			// 
-			this.uiTextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.uiTextBox5.FillColor = System.Drawing.Color.White;
-			this.uiTextBox5.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiTextBox5.Location = new System.Drawing.Point(201, 298);
-			this.uiTextBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.uiTextBox5.Maximum = 2147483647D;
-			this.uiTextBox5.Minimum = -2147483648D;
-			this.uiTextBox5.MinimumSize = new System.Drawing.Size(1, 1);
-			this.uiTextBox5.Name = "uiTextBox5";
-			this.uiTextBox5.Padding = new System.Windows.Forms.Padding(5);
-			this.uiTextBox5.Size = new System.Drawing.Size(150, 29);
-			this.uiTextBox5.TabIndex = 34;
-			this.uiTextBox5.Watermark = "请输入经办人编号";
+			this.staffBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.staffBox.FillColor = System.Drawing.Color.White;
+			this.staffBox.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.staffBox.Location = new System.Drawing.Point(201, 298);
+			this.staffBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.staffBox.Maximum = 2147483647D;
+			this.staffBox.Minimum = -2147483648D;
+			this.staffBox.MinimumSize = new System.Drawing.Size(1, 1);
+			this.staffBox.Name = "staffBox";
+			this.staffBox.Padding = new System.Windows.Forms.Padding(5);
+			this.staffBox.Size = new System.Drawing.Size(150, 29);
+			this.staffBox.TabIndex = 34;
+			this.staffBox.Watermark = "请输入经办人编号";
+			this.staffBox.Validated += new System.EventHandler(this.PagePanel_Validated);
 			// 
-			// uiTextBox4
+			// VolumeBox
 			// 
-			this.uiTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.uiTextBox4.FillColor = System.Drawing.Color.White;
-			this.uiTextBox4.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiTextBox4.Location = new System.Drawing.Point(201, 154);
-			this.uiTextBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.uiTextBox4.Maximum = 2147483647D;
-			this.uiTextBox4.Minimum = -2147483648D;
-			this.uiTextBox4.MinimumSize = new System.Drawing.Size(1, 1);
-			this.uiTextBox4.Name = "uiTextBox4";
-			this.uiTextBox4.Padding = new System.Windows.Forms.Padding(5);
-			this.uiTextBox4.Size = new System.Drawing.Size(150, 29);
-			this.uiTextBox4.TabIndex = 33;
-			this.uiTextBox4.Watermark = "请输入单位体积";
+			this.VolumeBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.VolumeBox.FillColor = System.Drawing.Color.White;
+			this.VolumeBox.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.VolumeBox.Location = new System.Drawing.Point(201, 154);
+			this.VolumeBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.VolumeBox.Maximum = 2147483647D;
+			this.VolumeBox.Minimum = -2147483648D;
+			this.VolumeBox.MinimumSize = new System.Drawing.Size(1, 1);
+			this.VolumeBox.Name = "VolumeBox";
+			this.VolumeBox.Padding = new System.Windows.Forms.Padding(5);
+			this.VolumeBox.Size = new System.Drawing.Size(150, 29);
+			this.VolumeBox.TabIndex = 33;
+			this.VolumeBox.Watermark = "请输入单位体积";
+			this.VolumeBox.Validated += new System.EventHandler(this.PagePanel_Validated);
 			// 
-			// uiTextBox3
+			// InWarehouseAccountBox
 			// 
-			this.uiTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.uiTextBox3.FillColor = System.Drawing.Color.White;
-			this.uiTextBox3.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiTextBox3.Location = new System.Drawing.Point(201, 118);
-			this.uiTextBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.uiTextBox3.Maximum = 2147483647D;
-			this.uiTextBox3.Minimum = -2147483648D;
-			this.uiTextBox3.MinimumSize = new System.Drawing.Size(1, 1);
-			this.uiTextBox3.Name = "uiTextBox3";
-			this.uiTextBox3.Padding = new System.Windows.Forms.Padding(5);
-			this.uiTextBox3.Size = new System.Drawing.Size(150, 29);
-			this.uiTextBox3.TabIndex = 35;
-			this.uiTextBox3.Watermark = "请输入入库量";
+			this.InWarehouseAccountBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.InWarehouseAccountBox.FillColor = System.Drawing.Color.White;
+			this.InWarehouseAccountBox.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.InWarehouseAccountBox.Location = new System.Drawing.Point(201, 118);
+			this.InWarehouseAccountBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.InWarehouseAccountBox.Maximum = 2147483647D;
+			this.InWarehouseAccountBox.Minimum = -2147483648D;
+			this.InWarehouseAccountBox.MinimumSize = new System.Drawing.Size(1, 1);
+			this.InWarehouseAccountBox.Name = "InWarehouseAccountBox";
+			this.InWarehouseAccountBox.Padding = new System.Windows.Forms.Padding(5);
+			this.InWarehouseAccountBox.Size = new System.Drawing.Size(150, 29);
+			this.InWarehouseAccountBox.TabIndex = 35;
+			this.InWarehouseAccountBox.Watermark = "请输入入库量";
+			this.InWarehouseAccountBox.Validated += new System.EventHandler(this.PagePanel_Validated);
 			// 
-			// uiTextBox2
+			// StorageLocationBox
 			// 
-			this.uiTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.uiTextBox2.Enabled = false;
-			this.uiTextBox2.FillColor = System.Drawing.Color.White;
-			this.uiTextBox2.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiTextBox2.Location = new System.Drawing.Point(201, 82);
-			this.uiTextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.uiTextBox2.Maximum = 2147483647D;
-			this.uiTextBox2.Minimum = -2147483648D;
-			this.uiTextBox2.MinimumSize = new System.Drawing.Size(1, 1);
-			this.uiTextBox2.Name = "uiTextBox2";
-			this.uiTextBox2.Padding = new System.Windows.Forms.Padding(5);
-			this.uiTextBox2.ReadOnly = true;
-			this.uiTextBox2.Size = new System.Drawing.Size(150, 29);
-			this.uiTextBox2.TabIndex = 32;
+			this.StorageLocationBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.StorageLocationBox.Enabled = false;
+			this.StorageLocationBox.FillColor = System.Drawing.Color.White;
+			this.StorageLocationBox.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.StorageLocationBox.Location = new System.Drawing.Point(201, 82);
+			this.StorageLocationBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.StorageLocationBox.Maximum = 2147483647D;
+			this.StorageLocationBox.Minimum = -2147483648D;
+			this.StorageLocationBox.MinimumSize = new System.Drawing.Size(1, 1);
+			this.StorageLocationBox.Name = "StorageLocationBox";
+			this.StorageLocationBox.Padding = new System.Windows.Forms.Padding(5);
+			this.StorageLocationBox.ReadOnly = true;
+			this.StorageLocationBox.Size = new System.Drawing.Size(150, 29);
+			this.StorageLocationBox.TabIndex = 32;
 			// 
-			// uiTextBox1
+			// NumberBox
 			// 
-			this.uiTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.uiTextBox1.Enabled = false;
-			this.uiTextBox1.FillColor = System.Drawing.Color.White;
-			this.uiTextBox1.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiTextBox1.Location = new System.Drawing.Point(201, 10);
-			this.uiTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.uiTextBox1.Maximum = 2147483647D;
-			this.uiTextBox1.Minimum = -2147483648D;
-			this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
-			this.uiTextBox1.Name = "uiTextBox1";
-			this.uiTextBox1.Padding = new System.Windows.Forms.Padding(5);
-			this.uiTextBox1.ReadOnly = true;
-			this.uiTextBox1.Size = new System.Drawing.Size(150, 29);
-			this.uiTextBox1.TabIndex = 31;
+			this.NumberBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.NumberBox.Enabled = false;
+			this.NumberBox.FillColor = System.Drawing.Color.White;
+			this.NumberBox.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.NumberBox.Location = new System.Drawing.Point(201, 10);
+			this.NumberBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.NumberBox.Maximum = 2147483647D;
+			this.NumberBox.Minimum = -2147483648D;
+			this.NumberBox.MinimumSize = new System.Drawing.Size(1, 1);
+			this.NumberBox.Name = "NumberBox";
+			this.NumberBox.Padding = new System.Windows.Forms.Padding(5);
+			this.NumberBox.ReadOnly = true;
+			this.NumberBox.Size = new System.Drawing.Size(150, 29);
+			this.NumberBox.TabIndex = 31;
 			// 
 			// uiLabel9
 			// 
 			this.uiLabel9.AutoSize = true;
 			this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiLabel9.Location = new System.Drawing.Point(114, 302);
+			this.uiLabel9.Location = new System.Drawing.Point(114, 303);
 			this.uiLabel9.Name = "uiLabel9";
 			this.uiLabel9.Size = new System.Drawing.Size(74, 21);
 			this.uiLabel9.TabIndex = 30;
@@ -348,21 +356,22 @@ namespace Warehouse.更新数据窗体
 			this.uiLabel1.Text = "编  号：";
 			this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
-			// uiTextBox6
+			// remarkBox
 			// 
-			this.uiTextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.uiTextBox6.FillColor = System.Drawing.Color.White;
-			this.uiTextBox6.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiTextBox6.Location = new System.Drawing.Point(201, 334);
-			this.uiTextBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.uiTextBox6.Maximum = 2147483647D;
-			this.uiTextBox6.Minimum = -2147483648D;
-			this.uiTextBox6.MinimumSize = new System.Drawing.Size(1, 1);
-			this.uiTextBox6.Name = "uiTextBox6";
-			this.uiTextBox6.Padding = new System.Windows.Forms.Padding(5);
-			this.uiTextBox6.Size = new System.Drawing.Size(150, 29);
-			this.uiTextBox6.TabIndex = 36;
-			this.uiTextBox6.Watermark = "请输入汉字";
+			this.remarkBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.remarkBox.FillColor = System.Drawing.Color.White;
+			this.remarkBox.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.remarkBox.Location = new System.Drawing.Point(201, 334);
+			this.remarkBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.remarkBox.Maximum = 2147483647D;
+			this.remarkBox.Minimum = -2147483648D;
+			this.remarkBox.MinimumSize = new System.Drawing.Size(1, 1);
+			this.remarkBox.Name = "remarkBox";
+			this.remarkBox.Padding = new System.Windows.Forms.Padding(5);
+			this.remarkBox.Size = new System.Drawing.Size(150, 29);
+			this.remarkBox.TabIndex = 36;
+			this.remarkBox.Watermark = "请输入汉字";
+			this.remarkBox.Validated += new System.EventHandler(this.PagePanel_Validated);
 			// 
 			// uiLabel10
 			// 
@@ -375,21 +384,21 @@ namespace Warehouse.更新数据窗体
 			this.uiLabel10.Text = "备  注：";
 			this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
-			// uiTextBox7
+			// MaterialBox
 			// 
-			this.uiTextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.uiTextBox7.Enabled = false;
-			this.uiTextBox7.FillColor = System.Drawing.Color.White;
-			this.uiTextBox7.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiTextBox7.Location = new System.Drawing.Point(201, 46);
-			this.uiTextBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.uiTextBox7.Maximum = 2147483647D;
-			this.uiTextBox7.Minimum = -2147483648D;
-			this.uiTextBox7.MinimumSize = new System.Drawing.Size(1, 1);
-			this.uiTextBox7.Name = "uiTextBox7";
-			this.uiTextBox7.Padding = new System.Windows.Forms.Padding(5);
-			this.uiTextBox7.Size = new System.Drawing.Size(150, 29);
-			this.uiTextBox7.TabIndex = 37;
+			this.MaterialBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.MaterialBox.Enabled = false;
+			this.MaterialBox.FillColor = System.Drawing.Color.White;
+			this.MaterialBox.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.MaterialBox.Location = new System.Drawing.Point(201, 46);
+			this.MaterialBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.MaterialBox.Maximum = 2147483647D;
+			this.MaterialBox.Minimum = -2147483648D;
+			this.MaterialBox.MinimumSize = new System.Drawing.Size(1, 1);
+			this.MaterialBox.Name = "MaterialBox";
+			this.MaterialBox.Padding = new System.Windows.Forms.Padding(5);
+			this.MaterialBox.Size = new System.Drawing.Size(150, 29);
+			this.MaterialBox.TabIndex = 37;
 			// 
 			// UpdataInWarehouseFrm
 			// 
@@ -399,7 +408,7 @@ namespace Warehouse.更新数据窗体
 			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "UpdataInWarehouseFrm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-			this.Text = "UpdataInWarehouseFrm";
+			this.Text = "更新";
 			this.PagePanel.ResumeLayout(false);
 			this.PagePanel.PerformLayout();
 			this.ResumeLayout(false);
@@ -407,19 +416,9 @@ namespace Warehouse.更新数据窗体
 		}
 
 		#endregion
-
-		private Sunny.UI.UITextBox uiTextBox6;
 		private Sunny.UI.UILabel uiLabel10;
 		private Sunny.UI.UIButton uiButton17;
 		private Sunny.UI.UIButton uiButton13;
-		private Sunny.UI.UIDatePicker uiDatePicker1;
-		private Sunny.UI.UIComboBox uiComboBox3;
-		private Sunny.UI.UIComboBox uiComboBox2;
-		private Sunny.UI.UITextBox uiTextBox5;
-		private Sunny.UI.UITextBox uiTextBox4;
-		private Sunny.UI.UITextBox uiTextBox3;
-		private Sunny.UI.UITextBox uiTextBox2;
-		private Sunny.UI.UITextBox uiTextBox1;
 		private Sunny.UI.UILabel uiLabel9;
 		private Sunny.UI.UILabel uiLabel7;
 		private Sunny.UI.UILabel uiLabel8;
@@ -429,6 +428,15 @@ namespace Warehouse.更新数据窗体
 		private Sunny.UI.UILabel uiLabel4;
 		private Sunny.UI.UILabel uiLabel2;
 		private Sunny.UI.UILabel uiLabel1;
-		private Sunny.UI.UITextBox uiTextBox7;
+		public Sunny.UI.UITextBox remarkBox;
+		public Sunny.UI.UIDatePicker DateBox;
+		public Sunny.UI.UIComboBox batchBox;
+		public Sunny.UI.UIComboBox ProviderBox;
+		public Sunny.UI.UITextBox staffBox;
+		public Sunny.UI.UITextBox VolumeBox;
+		public Sunny.UI.UITextBox InWarehouseAccountBox;
+		public Sunny.UI.UITextBox StorageLocationBox;
+		public Sunny.UI.UITextBox NumberBox;
+		public Sunny.UI.UITextBox MaterialBox;
 	}
 }

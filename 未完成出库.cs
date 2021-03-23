@@ -83,6 +83,7 @@ namespace Warehouse
 
 				UpdataFrm updatafrm = new UpdataFrm();
 				updatafrm.TopLevel = true;
+				#region 窗体传值
 				//出库编号
 				updatafrm.OutWarwhouseNumberBox.Text = uiDataGridView1.CurrentRow.Cells[2].Value.ToString();
 				//物料名称
@@ -95,19 +96,26 @@ namespace Warehouse
 				updatafrm.edtDate.Text =Convert.ToDateTime( uiDataGridView1.CurrentRow.Cells[7].Value.ToString()).ToString("yyyy-MM-dd");
 				//经办人
 				updatafrm.staffBox.Text = uiDataGridView1.CurrentRow.Cells[9].Value.ToString();
-				
+				#endregion
 				updatafrm.ShowDialog();
 				
 			}
 			if (uiDataGridView1.Columns[e.ColumnIndex].Name == "Delete" && e.RowIndex >= 0)
 			{
-				if (ShowAskDialog("我要删除你"))
+				if (ShowAskDialog("您确定要删除吗？"))
 				{
-					ShowSuccessTip("您点击了确定按钮");
+					BLL.out_storage out_storage = new BLL.out_storage();
+					if(out_storage.Delete(uiDataGridView1.CurrentRow.Cells[2].Value.ToString()))
+					ShowErrorTip("您已删除");
+					else
+					{
+						ShowSuccessTip("删除失败");
+					}
 				}
 				else
 				{
-					ShowErrorTip("您点击了取消按钮");
+					ShowSuccessTip("您已取消");
+					
 				}
 			}
 		}

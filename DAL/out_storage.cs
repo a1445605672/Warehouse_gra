@@ -128,14 +128,17 @@ namespace DAL
         /// <summary>
         /// 删除一条数据
         /// </summary>
-        public bool Delete(int num)
+        public bool Delete(string num)
         {
 
             StringBuilder strSql = new StringBuilder();
             strSql.Append("delete from out_storage ");
-            strSql.Append(" where num=@num");
+            strSql.Append(" where num=");
+            strSql.Append("\'");
+            strSql.Append(num);
+            strSql.Append("\'");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@num", MySqlDbType.Int32)
+					new MySqlParameter(num, MySqlDbType.String)
 			};
             parameters[0].Value = num;
 

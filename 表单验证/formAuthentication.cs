@@ -21,9 +21,9 @@ namespace Warehouse.表单验证
 		{
 				try
 				{
-					int i = Convert.ToInt32(str);
-				double d = Convert.ToDouble(str);
-				return true;
+				
+				double d = Convert.ToDouble(str);	
+					return true;
 				}
 			catch
 			{
