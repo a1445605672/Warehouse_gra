@@ -79,7 +79,40 @@ namespace Warehouse
 		#region 未完成入库事件
 		private void SaveBut_Click(object sender, EventArgs e)
 		{
-			ShowAskDialog("我还没有完成入库");
+			#region 获取物品编号
+			BLL.material_info material_Info = new BLL.material_info();
+			string materialSql = "select mat_id from material_info where mat_name=";
+			string materialWhere = "\'" + Materialsbox.Text + "\'";
+			materialSql += materialWhere;
+			DataSet material_ds = material_Info.getDataList(materialSql);
+			#endregion
+
+			#region 获取供应商编号
+			BLL.sr_info srInfor = new BLL.sr_info();
+			string provider_sql = "SELECT  sr_id FROM sr_info WHERE sr_type=\'供应商\' and sr_name=\'"+ ProviderBox.Text+"\'";
+			DataSet Provider_ds = srInfor.getDataList(provider_sql);
+			#endregion
+
+			BLL.enter_storage enter_Storage = new BLL.enter_storage();
+			Model.enter_storage data = new Model.enter_storage();
+
+			data.enter_id = InWarwhouseNumberBox.Text.Trim();
+			data.enter_batch_id = batchNumberBox.Text.Trim();
+			data.enter_sl_id = storageLocationBox.Text.Trim();
+			data.enter_amount = inWarehouseAmount.Text.Trim();
+			data.enter_unit_bulk = volumeBox.Text.Trim();
+			data.supplier_id = Provider_ds.Tables[0].Rows[0][0].ToString().Trim();
+			data.enter_mat_id = material_ds.Tables[0].Rows[0][0].ToString().Trim();
+			data.enter_mat_name = Materialsbox.Text.Trim();
+			data.enter_fengji_num = "";
+			data.enter_date = Convert.ToDateTime(edtDate.Text.Trim());
+			data.enter_agent_id = staffBox.Text.Trim();
+			data.enter_comment = remarkBox.Text.Trim();
+			data.enter_if_accomplish = 0;
+			enter_Storage.Add(data);
+
+
+			ShowAskDialog("保存完成");
 		}
 		#endregion
 

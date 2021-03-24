@@ -120,11 +120,5 @@ namespace Warehouse
 			}
 		}
 		#endregion
-		
-
-		private void uiDataGridView1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-		{
-
-		}
 	}
 }

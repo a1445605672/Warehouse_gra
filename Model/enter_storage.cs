@@ -13,8 +13,8 @@ namespace Model
 		private string  _enter_id;				//入库ID
 		private string _enter_batch_id;		//批次编号
 		private string  _enter_sl_id;			//库位编号
-		private decimal? _enter_amount;		//入库量
-		private decimal? _enter_unit_bulk;	//单位体积
+		private string  _enter_amount;		//入库量
+		private string  _enter_unit_bulk;	//单位体积
 		private string  _supplier_id;			//供应商编号
 		private string  _enter_mat_id;			//物料ID
 		private string _enter_mat_name;		//物料名称
@@ -22,7 +22,8 @@ namespace Model
 		private DateTime? _enter_date;		//入库日期
 		private string  _enter_agent_id;		//经办人ID
 		private string _enter_agent_name;	//经办人姓名
-		private string _enter_comment;		//备注
+		private string _enter_comment;      //备注
+		private int _enter_if_accomplish;    //是否完成入库
 		/// <summary>
 		/// 
 		/// </summary>
@@ -50,7 +51,7 @@ namespace Model
 		/// <summary>						   
 		/// 								   
 		/// </summary>						   
-		public decimal? enter_amount           //入库量
+		public string  enter_amount           //入库量
 		{									   
 			set{ _enter_amount=value;}		   
 			get{return _enter_amount;}		   
@@ -58,7 +59,7 @@ namespace Model
 		/// <summary>						   
 		/// 								   
 		/// </summary>						   
-		public decimal? enter_unit_bulk        //单位体积
+		public string  enter_unit_bulk        //单位体积
 		{									   
 			set{ _enter_unit_bulk=value;}	   
 			get{return _enter_unit_bulk;}	   
@@ -126,6 +127,12 @@ namespace Model
 		{
 			set{ _enter_comment=value;}
 			get{return _enter_comment;}
+		}
+
+		public int enter_if_accomplish
+		{
+			set { _enter_if_accomplish = value; }
+			get { return _enter_if_accomplish; }
 		}
 		#endregion Model
 

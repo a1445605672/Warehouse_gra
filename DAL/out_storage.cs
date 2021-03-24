@@ -128,21 +128,22 @@ namespace DAL
         /// <summary>
         /// 删除一条数据
         /// </summary>
-        public bool Delete(string num)
+        public bool Delete(string out_id)
         {
 
             StringBuilder strSql = new StringBuilder();
             strSql.Append("delete from out_storage ");
-            strSql.Append(" where num=");
+            strSql.Append(" where  out_id=");
             strSql.Append("\'");
-            strSql.Append(num);
+            strSql.Append(out_id);
             strSql.Append("\'");
-            MySqlParameter[] parameters = {
-					new MySqlParameter(num, MySqlDbType.String)
-			};
-            parameters[0].Value = num;
+   //         MySqlParameter[] parameters = {
+			//		new MySqlParameter(num, MySqlDbType.String)
+			//};
+   //         parameters[0].Value = num;
 
-            int rows = DbHelperMySQL.ExecuteSql(strSql.ToString(), parameters);
+           // int rows = DbHelperMySQL.ExecuteSql(strSql.ToString(), parameters);
+            int rows = DbHelperMySQL.ExecuteSql(strSql.ToString());
             if (rows > 0)
             {
                 return true;
@@ -155,11 +156,11 @@ namespace DAL
         /// <summary>
         /// 批量删除数据
         /// </summary>
-        public bool DeleteList(string numlist)
+        public bool DeleteList(string out_idlist)
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("delete from out_storage ");
-            strSql.Append(" where num in (" + numlist + ")  ");
+            strSql.Append(" where num in (" + out_idlist + ")  ");
             int rows = DbHelperMySQL.ExecuteSql(strSql.ToString());
             if (rows > 0)
             {

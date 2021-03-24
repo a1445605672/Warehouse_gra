@@ -99,7 +99,6 @@ namespace Warehouse
 			this.uiDataGridView1.Size = new System.Drawing.Size(800, 380);
 			this.uiDataGridView1.TabIndex = 4;
 			this.uiDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.uiDataGridView1_CellContentClick);
-			this.uiDataGridView1.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.uiDataGridView1_EditingControlShowing);
 			// 
 			// uiPagination1
 			// 

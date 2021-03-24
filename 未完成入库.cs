@@ -109,13 +109,22 @@ namespace Warehouse
 			}
 			if(uiDataGridView1.Columns[e.ColumnIndex].Name == "Delete" && e.RowIndex >= 0)
 			{
-				if(ShowAskDialog("我要删除你"))
+				if(ShowAskDialog("您确定要删除吗？"))
 				{
-					ShowSuccessTip("您点击了确定按钮");
+					BLL.enter_storage enter_Storage = new BLL.enter_storage();
+					if (enter_Storage.Delete(uiDataGridView1.CurrentRow.Cells[2].Value.ToString()))
+					{
+						ShowErrorTip("删除成功");
+					}
+					else
+					{
+						ShowSuccessTip("删除失败");
+					}
 				}
 				else
 				{
-					ShowErrorTip("您点击了取消按钮");
+					
+					ShowSuccessTip("您已取消");
 				}
 			}
 		}

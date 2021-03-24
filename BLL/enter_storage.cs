@@ -50,7 +50,7 @@ namespace BLL
 		/// <summary>
 		/// 删除一条数据
 		/// </summary>
-		public bool Delete(int enter_id)
+		public bool Delete(string  enter_id)
 		{
 			
 			return dal.Delete(enter_id);
