@@ -11,8 +11,10 @@ namespace Warehouse
 		
 		public 未完成出库()
 		{
-			
+			ShowStatusForm(100, "数据加载中......");
 			InitializeComponent();
+			for (int i = 0; i < 10; i++)
+				StatusFormStepIt();
 			uiDataGridView1.BringToFront();
 			#region  datagridview添加列
 			//第一个参数是列表头，第二个参数用于绑定数据
@@ -27,7 +29,8 @@ namespace Warehouse
 			uiDataGridView1.AddColumn("经办人", "out_staff_name").SetFixedMode(130);
 			uiDataGridView1.ReadOnly = true;
 			#endregion
-
+			for (int i = 0; i < 30; i++)
+				StatusFormStepIt();
 			#region  添加删除，修改两个按钮
 			DataGridViewButtonColumn but = new DataGridViewButtonColumn();
 			but.HeaderText = "操作";  //设置列表头的名字
@@ -43,7 +46,8 @@ namespace Warehouse
 			but1.DefaultCellStyle.NullValue = "删除";
 			uiDataGridView1.Columns.Add(but1);
 			#endregion
-
+			for (int i = 0; i < 30; i++)
+				StatusFormStepIt();
 			#region 出库，数据绑定到datagridview
 			List<Model.out_storage> datas = new List<Model.out_storage>();
 			BLL.out_storage out_Storage = new BLL.out_storage();
@@ -51,9 +55,11 @@ namespace Warehouse
 			datas = out_Storage.GetModelList(Where);
 			this.uiPagination1.DataSource = datas;//绑定到在库数据绑定到datagridview
 			this.uiPagination1.ActivePage = 1;
-			
-			#endregion
 
+			#endregion
+			for (int i = 0; i < 30; i++)
+				StatusFormStepIt();
+			HideStatusForm();
 		}
 
 		
@@ -74,13 +80,8 @@ namespace Warehouse
 		#region 点击datagridview按钮事件
 		private void uiDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
-
 			if (uiDataGridView1.Columns[e.ColumnIndex].Name == "UpDate" && e.RowIndex >= 0)
 			{
-				
-				
-
-
 				UpdataFrm updatafrm = new UpdataFrm();
 				updatafrm.TopLevel = true;
 				#region 窗体传值
@@ -105,12 +106,27 @@ namespace Warehouse
 				if (ShowAskDialog("您确定要删除吗？"))
 				{
 					BLL.out_storage out_storage = new BLL.out_storage();
-					if(out_storage.Delete(uiDataGridView1.CurrentRow.Cells[2].Value.ToString()))
-					ShowErrorTip("您已删除");
+					#region 真正删除
+					//if (out_storage.Delete(uiDataGridView1.CurrentRow.Cells[2].Value.ToString()))
+					//{
+					//	ShowErrorTip("您已删除");
+					//}
+					//else
+					//{
+					//	ShowSuccessTip("删除失败");
+					//}
+					#endregion
+					#region 假删除   需要专门清除缓存
+					string deleteSql = "update out_storage set out_if_accomplish=3 where out_id=" + "\'" + uiDataGridView1.CurrentRow.Cells[2].Value.ToString() + "\'";
+					if (out_storage.Update(deleteSql))
+					{
+						ShowErrorTip("您已删除");
+					}
 					else
 					{
 						ShowSuccessTip("删除失败");
 					}
+					#endregion
 				}
 				else
 				{

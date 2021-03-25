@@ -140,3 +140,5 @@ E:\Warehouse_gra\obj\Debug\Warehouse.折线图.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.柱状图.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.UpdataFrm.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.更新数据窗体.UpdataInWarehouseFrm.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.清理缓存.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.系统日志.resources

@@ -17,18 +17,29 @@ namespace Warehouse
 	{
 		public 入库登记()
 		{
+			ShowStatusForm(100, "数据加载中......");
+			
 			InitializeComponent();
+			for(int i=0;i<10;i++)
+				StatusFormStepIt();
 			#region 生成入库编号模块
+			/*
+			 * 生成规则，根据日期生成入库编号，sql语句查询今天入库的条目，然后加一就是新的入库编号
+			 */
 			BLL.enter_storage enterStoeage = new BLL.enter_storage();
-			string inNum_where = "enter_date=";
+			string inNum_where = "enter_date=";//入库时间
 			string time = "yyyy-MM-dd";
 			inNum_where += "'" + DateTime.Now.ToString(time) + "'";
-			string inNumber_Sql = "SELECT enter_id FROM enter_storage WHERE enter_if_accomplish=1 AND  " + inNum_where;
+			string inNumber_Sql = "SELECT enter_id FROM enter_storage WHERE    " + inNum_where;
 			DataSet inNumber_ds = enterStoeage.getDataList(inNumber_Sql);
 			string inNumber = DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString().PadLeft(2, '0') + DateTime.Now.Day.ToString().PadLeft(2, '0');//获得今天日期
 			inNumber += (inNumber_ds.Tables[0].Rows.Count + 1).ToString().PadLeft(3, '0'); //获得当前行数
 			InWarwhouseNumberBox.Text = "I" + inNumber;
 			#endregion
+
+			for (int i = 0; i < 20; i++)
+				StatusFormStepIt();
+
 
 			#region 供应商模块
 			BLL.sr_info srInfor = new BLL.sr_info();
@@ -50,6 +61,15 @@ namespace Warehouse
 			}
 			#endregion
 
+			for (int i = 0; i < 10; i++)
+				StatusFormStepIt();
+			#region 库位编号
+
+			#endregion
+
+
+			for (int i = 0; i < 20; i++)
+				StatusFormStepIt();
 			#region 批次编号
 			//根据今天入库天生成批次编号
 			string batchNumber = "I" + DateTime.Now.ToString("yyyy")
@@ -68,17 +88,32 @@ namespace Warehouse
 					batchNumberBox.Items.Add(batchNumber_ds.Tables[0].Rows[0][0]);
 			}
 			#endregion
-
+			for (int i = 0; i < 20; i++)
+				StatusFormStepIt();
 			#region 获取当前日期
 			edtDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
 			#endregion
-
-
+			for (int i = 0; i < 20; i++)
+				StatusFormStepIt();
+			HideStatusForm();
 		}
 
 		#region 未完成入库事件
 		private void SaveBut_Click(object sender, EventArgs e)
 		{
+			/*如果批次一样，物品编号也一样，则把这把着两次未完成入库合并到一起
+			 *合并需要考虑库位大小是否能够装下合并过后的物品，
+			 *若能装下则合并，若不能则生成两个入库编号
+			 */
+			if
+					(Materialsbox.Text == "" || ProviderBox.Text == "" || volumeBox.Text == ""
+					|| inWarehouseAmount.Text == "" || weightBox.Text == "" || storageLocationBox.Text == ""
+					|| batchNumberBox.Text == "" || staffBox.Text == "" || remarkBox.Text == ""
+					)
+			{
+				ShowAskDialog("您输入的有误请检查");
+			}
+
 			#region 获取物品编号
 			BLL.material_info material_Info = new BLL.material_info();
 			string materialSql = "select mat_id from material_info where mat_name=";
@@ -86,7 +121,6 @@ namespace Warehouse
 			materialSql += materialWhere;
 			DataSet material_ds = material_Info.getDataList(materialSql);
 			#endregion
-
 			#region 获取供应商编号
 			BLL.sr_info srInfor = new BLL.sr_info();
 			string provider_sql = "SELECT  sr_id FROM sr_info WHERE sr_type=\'供应商\' and sr_name=\'"+ ProviderBox.Text+"\'";
@@ -105,8 +139,9 @@ namespace Warehouse
 			data.enter_mat_id = material_ds.Tables[0].Rows[0][0].ToString().Trim();
 			data.enter_mat_name = Materialsbox.Text.Trim();
 			data.enter_fengji_num = "";
-			data.enter_date = Convert.ToDateTime(edtDate.Text.Trim());
+			data.enter_date = (edtDate.Text.Trim());
 			data.enter_agent_id = staffBox.Text.Trim();
+			data.enter_agent_name = "";
 			data.enter_comment = remarkBox.Text.Trim();
 			data.enter_if_accomplish = 0;
 			enter_Storage.Add(data);
@@ -119,7 +154,13 @@ namespace Warehouse
 		#region 入库事件
 		private void OutWarehouseBut_Click(object sender, EventArgs e)
 		{
-			
+			/*完成入库解决方案
+			 * 
+			 * 1.让库柜根据类型不同，大小不同进行升序（空间大小）
+			 * 2.根据物品的类型进行选择库柜，选择最能接近本次存储物品大小的库柜，
+			 * 3.或者进行分库柜进行存放，生成两次入库编号？
+			 */
+
 			if
 					(Materialsbox.Text == "" || ProviderBox.Text == "" || volumeBox.Text == ""
 					|| inWarehouseAmount.Text == "" || weightBox.Text == "" || storageLocationBox.Text == ""
@@ -191,13 +232,13 @@ namespace Warehouse
 						ShowErrorTip("物品输入有误，请选择");
 					}
 					break;
-				case "storageLocationBox"://验证库位
-					if (fA.formAuthentication_Combobox(combobox.Text, combobox) == false)
-					{
-						storageLocationBox.Text = "";
-						ShowErrorTip("库位输入有误，请选择");
-					}
-					break;
+				//case "storageLocationBox"://验证库位
+				//	if (fA.formAuthentication_Combobox(combobox.Text, combobox) == false)
+				//	{
+				//		storageLocationBox.Text = "";
+				//		ShowErrorTip("库位输入有误，请选择");
+				//	}
+				//	break;
 				case "batchNumberBox"://验证批次编号
 					if (fA.formAuthentication_Combobox(combobox.Text, combobox) == false)
 					{

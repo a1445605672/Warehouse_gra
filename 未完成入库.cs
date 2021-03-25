@@ -14,8 +14,10 @@ namespace Warehouse
 	{
 		public 未完成入库()
 		{
+			ShowStatusForm(100, "数据加载中......");
 			InitializeComponent();
-
+			for (int i = 0; i < 10; i++)
+				StatusFormStepIt();
 			uiDataGridView1.ReadOnly = true;
 			#region 列表头
 			uiDataGridView1.AddColumn("编号", "enter_id").SetFixedMode(124);
@@ -28,18 +30,20 @@ namespace Warehouse
 			uiDataGridView1.AddColumn("日期", "enter_date").SetFixedMode(90);
 			uiDataGridView1.AddColumn("经办人", "enter_agent_name").SetFixedMode(70);
 			#endregion
-
+			for (int i = 0; i < 30; i++)
+				StatusFormStepIt();
 			#region 绑定数据
 			BLL.enter_storage enter_Storage = new BLL.enter_storage();
 			string sql = "SELECT enter_storage.enter_id,  enter_storage.enter_batch_id,  enter_storage.enter_sl_id," +
 				"enter_storage.enter_amount,  enter_storage.enter_unit_bulk,  sr_info.sr_name," +
 				"  enter_storage.enter_mat_name,  enter_storage.enter_date,  enter_storage.enter_agent_name " +
-				"FROM sr_info,  enter_storage WHERE sr_info.sr_id = enter_storage.supplier_id ";
+				"FROM sr_info,  enter_storage WHERE sr_info.sr_id = enter_storage.supplier_id and enter_if_accomplish=0  ";
 				DataSet ds=enter_Storage.getDataList(sql);
-			
 			uiPagination1.DataSource = ds.Tables[0];
 			uiPagination1.ActivePage = 1;
 			#endregion
+			for (int i = 0; i < 30; i++)
+				StatusFormStepIt();
 
 			#region  添加删除，修改两个按钮
 			DataGridViewButtonColumn but = new DataGridViewButtonColumn();
@@ -57,7 +61,9 @@ namespace Warehouse
 			uiDataGridView1.Columns.Add(but1);
 			#endregion
 
-
+			for (int i = 0; i < 30; i++)
+				StatusFormStepIt();
+			HideStatusForm();
 		}
 
 		#region  窗体加载事件
@@ -112,7 +118,21 @@ namespace Warehouse
 				if(ShowAskDialog("您确定要删除吗？"))
 				{
 					BLL.enter_storage enter_Storage = new BLL.enter_storage();
-					if (enter_Storage.Delete(uiDataGridView1.CurrentRow.Cells[2].Value.ToString()))
+
+					#region 真删除
+					//if (enter_Storage.Delete(uiDataGridView1.CurrentRow.Cells[2].Value.ToString()))
+					//{
+					//	ShowErrorTip("删除成功");
+					//}
+					//else
+					//{
+					//	ShowSuccessTip("删除失败");
+					//}
+					#endregion
+
+					#region 假删除  需要专门清理缓存
+					string deleteSql= "update enter_storage set enter_if_accomplish=3 where enter_id=" + "\'"+ uiDataGridView1.CurrentRow.Cells[2].Value.ToString() + "\'";
+					if (enter_Storage.Update(deleteSql))
 					{
 						ShowErrorTip("删除成功");
 					}
@@ -120,6 +140,8 @@ namespace Warehouse
 					{
 						ShowSuccessTip("删除失败");
 					}
+					#endregion
+
 				}
 				else
 				{

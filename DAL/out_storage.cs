@@ -47,18 +47,22 @@ namespace DAL
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("insert into out_storage(");
-            strSql.Append("out_id,out_mat_id,out_mat_name,out_account,out_batch_id,out_data,out_staff_id,out_staff_name)");
+            strSql.Append("out_id,out_mat_id,out_mat_name,out_account,out_batch_id,out_data,out_staff_id,out_staff_name,out_if_accomplish,out_sr_id,remark)");
             strSql.Append(" values (");
-            strSql.Append("@out_id,@out_mat_id,@out_mat_name,@out_account,@out_batch_id,@out_data,@out_staff_id,@out_staff_name)");
+            strSql.Append("@out_id,@out_mat_id,@out_mat_name,@out_account,@out_batch_id,@out_data,@out_staff_id,@out_staff_name,@out_if_accomplish,@out_sr_id,@remark)");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@out_id", MySqlDbType.Int32,128),
+					new MySqlParameter("@out_id", MySqlDbType.String ,128),
 					new MySqlParameter("@out_mat_id", MySqlDbType.VarChar,128),
 					new MySqlParameter("@out_mat_name", MySqlDbType.VarChar,32),
 					new MySqlParameter("@out_account", MySqlDbType.Decimal,15),
 					new MySqlParameter("@out_batch_id", MySqlDbType.VarChar,128),
-					new MySqlParameter("@out_data", MySqlDbType.DateTime),
+					new MySqlParameter("@out_data", MySqlDbType.VarChar,128),
 					new MySqlParameter("@out_staff_id", MySqlDbType.VarChar,128),
-					new MySqlParameter("@out_staff_name", MySqlDbType.VarChar,64)};
+					new MySqlParameter("@out_staff_name", MySqlDbType.VarChar,64),
+            new MySqlParameter("@out_if_accomplish", MySqlDbType.Int32,8),
+            new MySqlParameter("@out_sr_id", MySqlDbType.VarChar,128),
+            new MySqlParameter("@remark",MySqlDbType.VarChar,128)};
+
             parameters[0].Value = model.out_id;
             parameters[1].Value = model.out_mat_id;
             parameters[2].Value = model.out_mat_name;
@@ -67,7 +71,9 @@ namespace DAL
             parameters[5].Value = model.out_data;
             parameters[6].Value = model.out_staff_id;
             parameters[7].Value = model.out_staff_name;
-
+            parameters[8].Value = model.out_if_accomplish;
+            parameters[9].Value = model.out_sr_id;
+            parameters[10].Value = model.remark;
             int rows = DbHelperMySQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
             {
@@ -113,8 +119,25 @@ namespace DAL
             parameters[6].Value = model.out_staff_id;
             parameters[7].Value = model.out_staff_name;
             
-
             int rows = DbHelperMySQL.ExecuteSql(strSql.ToString(), parameters);
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 更新一条数据
+        /// </summary>
+        /// <param name="Sql">sql语句</param>
+        /// <returns>boolean</returns>
+        public bool Update(string Sql)
+		{
+            int rows = DbHelperMySQL.ExecuteSql(Sql);
             if (rows > 0)
             {
                 return true;
@@ -230,7 +253,7 @@ namespace DAL
                 }
                 if (row["out_data"] != null && row["out_data"].ToString() != "")
                 {
-                    model.out_data = DateTime.Parse(row["out_data"].ToString());
+                    model.out_data = (row["out_data"].ToString());
                 }
                 if (row["out_staff_id"] != null)
                 {

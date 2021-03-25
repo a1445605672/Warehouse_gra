@@ -102,6 +102,7 @@ namespace BLL
 		/// </summary>
 		public List<Model.in_storage> GetModelList(string strWhere)
 		{
+			
 			DataSet ds = dal.GetList(strWhere);
 			return DataTableToList(ds.Tables[0]);
 		}

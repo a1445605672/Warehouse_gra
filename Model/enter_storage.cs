@@ -19,7 +19,7 @@ namespace Model
 		private string  _enter_mat_id;			//物料ID
 		private string _enter_mat_name;		//物料名称
 		private string  _enter_fengji_num;		//封记ID
-		private DateTime? _enter_date;		//入库日期
+		private string _enter_date;		//入库日期
 		private string  _enter_agent_id;		//经办人ID
 		private string _enter_agent_name;	//经办人姓名
 		private string _enter_comment;      //备注
@@ -99,7 +99,7 @@ namespace Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public DateTime? enter_date             //入库日期
+		public string enter_date             //入库日期
 		{										
 			set{ _enter_date=value;}			
 			get{return _enter_date;}			

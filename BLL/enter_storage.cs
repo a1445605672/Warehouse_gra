@@ -42,9 +42,9 @@ namespace BLL
 		/// <summary>
 		/// 更新一条数据
 		/// </summary>
-		public bool Update(Model.enter_storage model)
+		public bool Update(string Sql)
 		{
-			return dal.Update(model);
+			return dal.Update(Sql);
 		}
 
 		/// <summary>

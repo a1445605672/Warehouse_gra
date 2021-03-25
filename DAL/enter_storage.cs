@@ -45,12 +45,12 @@ namespace Maticsoft.DAL
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("insert into enter_storage(");
-            strSql.Append("enter_id,enter_batch_id,enter_sl_id,enter_amount,enter_unit_bulk,supplier_id,enter_mat_id,enter_mat_name,enter_fengji_num,enter_date,enter_agent_id,enter_agent_name,enter_comment)");
+            strSql.Append("enter_id,enter_batch_id,enter_sl_id,enter_amount,enter_unit_bulk,supplier_id,enter_mat_id,enter_mat_name,enter_fengji_num,enter_date,enter_agent_id,enter_agent_name,enter_comment,enter_if_accomplish)");
             strSql.Append(" values (");
             strSql.Append("@enter_id,@enter_batch_id,@enter_sl_id,@enter_amount,@enter_unit_bulk,@supplier_id,@enter_mat_id,@enter_mat_name,@enter_fengji_num,@enter_date,@enter_agent_id,@enter_agent_name,@enter_comment,@enter_if_accomplish)");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@enter_id", MySqlDbType.Int32,32),
-					new MySqlParameter("@enter_batch_id", MySqlDbType.Int32,32),
+					new MySqlParameter("@enter_id", MySqlDbType.VarChar,128),
+					new MySqlParameter("@enter_batch_id", MySqlDbType.VarChar,128),
 					new MySqlParameter("@enter_sl_id", MySqlDbType.VarChar,128),
 					new MySqlParameter("@enter_amount", MySqlDbType.Decimal,15),
 					new MySqlParameter("@enter_unit_bulk", MySqlDbType.Decimal,15),
@@ -58,11 +58,11 @@ namespace Maticsoft.DAL
 					new MySqlParameter("@enter_mat_id", MySqlDbType.VarChar,128),
 					new MySqlParameter("@enter_mat_name", MySqlDbType.VarChar,255),
 					new MySqlParameter("@enter_fengji_num", MySqlDbType.VarChar,128),
-					new MySqlParameter("@enter_date", MySqlDbType.DateTime),
+					new MySqlParameter("@enter_date", MySqlDbType.VarChar,128),
 					new MySqlParameter("@enter_agent_id", MySqlDbType.VarChar,128),
 					new MySqlParameter("@enter_agent_name", MySqlDbType.VarChar,64),
 					new MySqlParameter("@enter_comment", MySqlDbType.VarChar,255),
-            new MySqlParameter("enter_if_accomplish", MySqlDbType.Int32,32)};
+            new MySqlParameter("enter_if_accomplish", MySqlDbType.Int32,8)};
             parameters[0].Value = model.enter_id;
             parameters[1].Value = model.enter_batch_id;
             parameters[2].Value = model.enter_sl_id;
@@ -147,9 +147,28 @@ namespace Maticsoft.DAL
         }
 
         /// <summary>
-        /// 删除一条数据
+        /// 更新一条数据
         /// </summary>
-        public bool Delete(string  enter_id)
+        /// <param name="Sql">Sql语句</param>
+        /// <returns>boolean</returns>
+        public bool Update(string Sql)
+        {
+            int rows = DbHelperMySQL.ExecuteSql(Sql);
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
+            /// <summary>
+            /// 删除一条数据
+            /// </summary>
+            public bool Delete(string  enter_id)
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("delete from enter_storage ");
@@ -259,7 +278,7 @@ namespace Maticsoft.DAL
                 }
                 if (row["enter_date"] != null && row["enter_date"].ToString() != "")
                 {
-                    model.enter_date = DateTime.Parse(row["enter_date"].ToString());
+                    model.enter_date = (row["enter_date"].ToString());
                 }
                 if (row["enter_agent_id"] != null)
                 {

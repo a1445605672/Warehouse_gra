@@ -15,9 +15,12 @@ namespace Model
         private string _out_mat_name;
         private decimal _out_account;
         private string _out_batch_id;
-        private DateTime _out_data;
+        private string  _out_data;
         private string _out_staff_id;
         private string _out_staff_name;
+        private int  _out_if_accomplish;
+        private string _out_sr_id;
+        private string _remark;
         /// <summary>
         /// 
         /// </summary>
@@ -61,7 +64,7 @@ namespace Model
         /// <summary>
         /// 
         /// </summary>
-        public DateTime out_data
+        public string  out_data
         {
             set { _out_data = value; }
             get { return _out_data; }
@@ -86,7 +89,23 @@ namespace Model
         /// auto_increment
         /// </summary>
         
-        #endregion Model
+        public int  out_if_accomplish
+		{
+			set { _out_if_accomplish = value; }
+			get { return _out_if_accomplish; }
+		}
+        public string out_sr_id
+		{
+			set { _out_sr_id = value; }
+			get { return _out_sr_id; }
+        }
+        public string remark
+        {
+            set { _remark = value; }
+            get { return _remark; }
+        }
+
+        #endregion
 
     }
 }

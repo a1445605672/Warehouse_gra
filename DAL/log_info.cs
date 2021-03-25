@@ -38,16 +38,14 @@ namespace DAL
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("insert into log_info(");
-            strSql.Append("log_num,log_type,log_describe)");
+            strSql.Append("log_type,log_describe)");
             strSql.Append(" values (");
-            strSql.Append("@log_num,@log_type,@log_describe)");
+            strSql.Append("@log_type,@log_describe)");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@log_num", MySqlDbType.VarChar,128),
 					new MySqlParameter("@log_type", MySqlDbType.VarChar,128),
 					new MySqlParameter("@log_describe", MySqlDbType.VarChar,255)};
-            parameters[0].Value = model.log_num;
-            parameters[1].Value = model.log_type;
-            parameters[2].Value = model.log_describe;
+            parameters[0].Value = model.log_type;
+            parameters[1].Value = model.log_describe;
 
             int rows = DbHelperMySQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -68,14 +66,14 @@ namespace DAL
             strSql.Append("update log_info set ");
             strSql.Append("log_type=@log_type,");
             strSql.Append("log_describe=@log_describe");
-            strSql.Append(" where log_num=@log_num ");
+
             MySqlParameter[] parameters = {
-					new MySqlParameter("@log_type", MySqlDbType.VarChar,128),
-					new MySqlParameter("@log_describe", MySqlDbType.VarChar,255),
-					new MySqlParameter("@log_num", MySqlDbType.VarChar,128)};
+                    new MySqlParameter("@log_type", MySqlDbType.VarChar,128),
+                    new MySqlParameter("@log_describe", MySqlDbType.VarChar,255)};
+					
             parameters[0].Value = model.log_type;
             parameters[1].Value = model.log_describe;
-            parameters[2].Value = model.log_num;
+           
 
             int rows = DbHelperMySQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -165,13 +163,10 @@ namespace DAL
             Model.log_info model = new Model.log_info();
             if (row != null) 
             {
-                if (row["log_num"] != null)
-                {
-                    model.log_num = row["log_num"].ToString();
-                }
+               
                 if (row["log_type"] != null)
                 {
-                    model.log_type = row["log_type"].ToString();
+                    model.log_type =Convert.ToInt32(row["log_type"].ToString());
                 }
                 if (row["log_describe"] != null)
                 {

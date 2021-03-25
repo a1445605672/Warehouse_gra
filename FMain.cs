@@ -70,83 +70,8 @@ namespace Warehouse
 						return;
 					}
 				}
-				switch (menuText)
-				{
-					case "首页":
-						LoadMdiForm(MainTabControl, menuText, typeof(Home));
-						break;
-					case "房间管理":
-						LoadMdiForm(MainTabControl, menuText, typeof(房间管理));
-						break;
-					case "库柜管理":
-						LoadMdiForm(MainTabControl, menuText, typeof(库柜管理));
-						break;
-					case "库位管理":
-						LoadMdiForm(MainTabControl, menuText, typeof(库位管理));
-						break;
-					case "库位类型管理":
-						LoadMdiForm(MainTabControl, menuText, typeof(库位类型管理));
-						break;
-					case "物料信息管理":
-						LoadMdiForm(MainTabControl, menuText, typeof(物料信息管理));
-						break;
-					case "物料类别管理":
-						LoadMdiForm(MainTabControl, menuText, typeof(物料类别管理));
-						break;
-					case "部门管理":
-						LoadMdiForm(MainTabControl, menuText, typeof(部门管理));
-						break;
-					case "部门人员管理":
-						LoadMdiForm(MainTabControl, menuText, typeof(部门人员管理));
-						break;
-					case "供应商管理":
-						LoadMdiForm(MainTabControl, menuText, typeof(供应商管理));
-						break;
-					case "收货商管理":
-						LoadMdiForm(MainTabControl, menuText, typeof(收货商管理));
-						break;
-					case "数据备份":
-						LoadMdiForm(MainTabControl, menuText, typeof(数据备份));
-						break;
-					case "系统日志":
-						LoadMdiForm(MainTabControl, menuText, typeof(系统日志));
-						break;
-					case "入库登记":
-						LoadMdiForm(MainTabControl, menuText, typeof(入库登记));
-						break;
-					case "出库登记":
-						LoadMdiForm(MainTabControl, menuText, typeof(出库登记));
-						break;
-					case "未完成出库":
-						LoadMdiForm(MainTabControl, menuText, typeof(未完成出库));
-						break;
-					case "未完成入库":
-						LoadMdiForm(MainTabControl, menuText, typeof(未完成入库));
-						break;
-					case "出入库汇总":
-						LoadMdiForm(MainTabControl, menuText, typeof(出入库汇总));
-						break;
-					case "在库汇总":
-						LoadMdiForm(MainTabControl, menuText, typeof(在库汇总));
-						break;
-					case "出库日报":
-						LoadMdiForm(MainTabControl, menuText, typeof(出库日报));
-						break;
-					case "入库日报":
-						LoadMdiForm(MainTabControl, menuText, typeof(入库日报));
-						break;
-					case "用户管理":
-						LoadMdiForm(MainTabControl, menuText, typeof(用户管理));
-						break;
-					case "柱状图":
-						LoadMdiForm(MainTabControl, menuText, typeof(柱状图));
-						break;
-					case "折线图":
-						LoadMdiForm(MainTabControl, menuText, typeof(折线图));
-						break;
-					default:
-						break;
-				}
+				uiLabel2.Text = menuText;
+				switchFrm(menuText);
 			}
 		}
 
@@ -164,6 +89,92 @@ namespace Warehouse
 			MainTabControl.SelectedTab = sTabPag;
 			frm.Show();
 			return frm;
+		}
+
+		private void UpdateButton_Click(object sender, EventArgs e)
+		{
+			switchFrm(uiLabel2.Text);	
+		}
+
+		private void switchFrm(string text)
+		{
+			switch (text)
+			{
+				case "首页":
+					LoadMdiForm(MainTabControl, text, typeof(Home));
+					break;
+				case "房间管理":
+					LoadMdiForm(MainTabControl, text, typeof(房间管理));
+					break;
+				case "库柜管理":
+					LoadMdiForm(MainTabControl, text, typeof(库柜管理));
+					break;
+				case "库位管理":
+					LoadMdiForm(MainTabControl, text, typeof(库位管理));
+					break;
+				case "库位类型管理":
+					LoadMdiForm(MainTabControl, text, typeof(库位类型管理));
+					break;
+				case "物料信息管理":
+					LoadMdiForm(MainTabControl, text, typeof(物料信息管理));
+					break;
+				case "物料类别管理":
+					LoadMdiForm(MainTabControl, text, typeof(物料类别管理));
+					break;
+				case "部门管理":
+					LoadMdiForm(MainTabControl, text, typeof(部门管理));
+					break;
+				case "部门人员管理":
+					LoadMdiForm(MainTabControl, text, typeof(部门人员管理));
+					break;
+				case "供应商管理":
+					LoadMdiForm(MainTabControl, text, typeof(供应商管理));
+					break;
+				case "收货商管理":
+					LoadMdiForm(MainTabControl, text, typeof(收货商管理));
+					break;
+				case "数据备份":
+					LoadMdiForm(MainTabControl, text, typeof(数据备份));
+					break;
+				case "系统日志":
+					LoadMdiForm(MainTabControl, text, typeof(系统日志));
+					break;
+				case "入库登记":
+					LoadMdiForm(MainTabControl, text, typeof(入库登记));
+					break;
+				case "出库登记":
+					LoadMdiForm(MainTabControl, text, typeof(出库登记));
+					break;
+				case "未完成出库":
+					LoadMdiForm(MainTabControl, text, typeof(未完成出库));
+					break;
+				case "未完成入库":
+					LoadMdiForm(MainTabControl, text, typeof(未完成入库));
+					break;
+				case "出入库汇总":
+					LoadMdiForm(MainTabControl, text, typeof(出入库汇总));
+					break;
+				case "在库汇总":
+					LoadMdiForm(MainTabControl, text, typeof(在库汇总));
+					break;
+				case "出库日报":
+					LoadMdiForm(MainTabControl, text, typeof(出库日报));
+					break;
+				case "入库日报":
+					LoadMdiForm(MainTabControl, text, typeof(入库日报));
+					break;
+				case "用户管理":
+					LoadMdiForm(MainTabControl, text, typeof(用户管理));
+					break;
+				case "柱状图":
+					LoadMdiForm(MainTabControl, text, typeof(柱状图));
+					break;
+				case "折线图":
+					LoadMdiForm(MainTabControl, text, typeof(折线图));
+					break;
+				default:
+					break;
+			}
 		}
 	}
 }

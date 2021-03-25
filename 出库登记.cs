@@ -15,10 +15,13 @@ namespace Warehouse
 	{
 		public 出库登记()
 		{
+			ShowStatusForm(100, "数据加载中......");
 			InitializeComponent();
+
 			uiPanel1.BringToFront(); //panel 顶层显示
 			uiPanel1.Visible = false;  //隐藏表单panel
-
+			for (int i = 0; i < 10; i++)
+				StatusFormStepIt();
 			#region  datagridview添加列
 			//第一个参数是列表头，第二个参数用于绑定数据
 			uiDataGridView1.AddColumn("入库编号", "enter_num").SetFixedMode(130);
@@ -31,7 +34,8 @@ namespace Warehouse
 			uiDataGridView1.AddColumn("体积", "in_volume").SetFixedMode(60);
 			uiDataGridView1.ReadOnly = true;
 			#endregion
-
+			for (int i = 0; i < 20; i++)
+				StatusFormStepIt();
 			#region   datagridview添加两个按钮
 			DataGridViewButtonColumn but1 = new DataGridViewButtonColumn();
 			but1.SetFixedMode(50); //设置单元格大小
@@ -62,7 +66,7 @@ namespace Warehouse
 				SelectMaterialsbox.Items.Add(datas[i].mat_name);//绑定到Materialsbox（物品）中
 			}
 			#endregion
-
+			
 			#region 收货商
 			BLL.sr_info sr_Info = new BLL.sr_info();
 			string provider_sql = "SELECT  sr_name FROM sr_info WHERE sr_type=\'收货商\'";
@@ -73,24 +77,29 @@ namespace Warehouse
 				ProviderBox.Items.Add(Provider_ds.Tables[0].Rows[i][0].ToString());
 			}
 			#endregion
-
+			for (int i = 0; i < 10; i++)
+				StatusFormStepIt();
 
 			#region 出库编号
 			BLL.out_storage out_Storage = new BLL.out_storage();
 			string OutWarehouseNumber_sql = "select * from out_storage Where out_data="
-			+ "\'" + DateTime.Now.ToString("yyyy-MM-dd") + "\'"
-			+ "AND out_if_accomplish=1";
+			+ "\'" + DateTime.Now.ToString("yyyy-MM-dd") + "\'";
 			DataSet OutWarehouseNumber_ds = out_Storage.getDataList(OutWarehouseNumber_sql);
 			int count = OutWarehouseNumber_ds.Tables[0].Rows.Count + 1;
-			OutWarwhouseNumberBox.Text = "O" + count.ToString().PadLeft(3, '0');
+			OutWarwhouseNumberBox.Text = "O" + DateTime.Now.ToString("yyyy")
+				+ DateTime.Now.ToString("MM")
+				+ DateTime.Now.ToString("dd")
+				+ count.ToString().PadLeft(3, '0');
 
 			#endregion
 
+			for (int i = 0; i < 30; i++)
+				StatusFormStepIt();
 			#region 批次编号
 			string BatchNumber = "O" + DateTime.Now.ToString("yyyy")
 				+ DateTime.Now.ToString("MM")
 				+ DateTime.Now.ToString("dd")
-				+ count.ToString().PadLeft(3, '0');
+				+ (count+1).ToString().PadLeft(3, '0');
 			batchNumberBox.Items.Add(BatchNumber);
 
 			//如果有未完成入库的物料，则加载未完成入库的批次编号
@@ -102,8 +111,9 @@ namespace Warehouse
 				batchNumberBox.Items.Add(OutBatchNumber_ds.Tables[0].Rows[i][0].ToString());
 			}
 			#endregion
-
-
+			for (int i = 0; i < 20; i++)
+				StatusFormStepIt();
+			HideStatusForm();
 		}
 
 
@@ -136,7 +146,7 @@ namespace Warehouse
 				storageLocationBox.Text = uiDataGridView1.CurrentRow.Cells[6].Value.ToString();//获取当前行的库物编号
 				Material_ID_Label.Text = uiDataGridView1.CurrentRow.Cells[3].Value.ToString();  //获取当前行的行的物料ID
 				outWarehouseAmountLabel.Text= uiDataGridView1.CurrentRow.Cells[7].Value.ToString();
-				Material_ID_Label.Visible = false;//物料编号隐藏
+				//Material_ID_Label.Text = uiDataGridView1.CurrentRow.Cells[5].Value.ToString();//物料编号隐藏
 			}
 		}
 		#endregion
@@ -151,7 +161,26 @@ namespace Warehouse
 		#region 未完成出库事件
 		private void SaveBut_Click(object sender, EventArgs e)
 		{
-			ShowAskDialog("我还没有完成出库哦");
+			BLL.staff staff = new BLL.staff();
+			string sql = "select staff_name from staff where staff_id=" + "\'" + staffBox.Text.Trim() + "\'";
+			
+			Model.out_storage data = new Model.out_storage();
+			data.out_id = OutWarwhouseNumberBox.Text.Trim();
+			data.out_mat_id = Material_ID_Label.Text.Trim();
+			data.out_mat_name = Materialsbox.Text.Trim();
+			data.out_account =Convert.ToDecimal( outWarehouseAmountBox.Text.Trim());
+			data.out_batch_id = batchNumberBox.Text.Trim();
+			data.out_data = edtDate.Text.Trim();
+			data.out_staff_id = staffBox.Text.Trim();
+			data.out_staff_name = staff.getDataList(sql).Tables[0].Rows[0][0].ToString();
+			data.out_if_accomplish = 0;
+			data.out_sr_id = storageLocationBox.Text.Trim();
+			data.remark = remarkBox.Text;
+			BLL.out_storage out_storage = new BLL.out_storage();
+			if(out_storage.Add(data))
+			{
+				ShowAskDialog("保存成功");
+			}
 		}
 		#endregion
 
@@ -222,16 +251,19 @@ namespace Warehouse
 			switch (textbox.Name)
 			{
 				case "outWarehouseAmountBox":
+					if(Convert.ToDouble(textbox.Text)>Convert.ToDouble(outWarehouseAmountLabel.Text)|| Convert.ToDouble(textbox.Text)<=0)
+						{
+						textbox.Text = "";
+						ShowErrorTip("出库量不在有效范围内");
+						return;
+					}
 					if (fA.formAuthentication_isIntOrDouble(textbox.Text) == false)
 					{
 						textbox.Text = "";
 						ShowErrorTip("出库量输入有误，请输入阿拉伯数字");
 						return;
 					}
-					if (Convert.ToInt32(outWarehouseAmountBox.Text)<00|| Convert.ToInt32(outWarehouseAmountBox.Text)>Convert.ToInt32( outWarehouseAmountLabel.Text))
-					{
-						ShowErrorTip("出库量输入有误，超过上限值");
-					}
+					
 					break;
 				case "staffBox":
 					if (fA.staffChrckout(textbox.Text) == false)
