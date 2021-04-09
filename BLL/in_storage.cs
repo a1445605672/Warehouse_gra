@@ -94,7 +94,7 @@ namespace BLL
 		/// </summary>
 		public DataSet GetList(string strWhere)
 		{
-			return dal.GetList(strWhere);
+			return dal.GetList(strWhere,0);
 		}
 		/// <summary>
 		/// 获得数据列表,返回list类型数据

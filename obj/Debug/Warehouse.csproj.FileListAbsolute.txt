@@ -116,7 +116,6 @@ D:\Warehouse_gra\bin\Debug\BLL.pdb
 D:\Warehouse_gra\bin\Debug\Model.pdb
 D:\Warehouse_gra\bin\Debug\DAL.pdb
 D:\Warehouse_gra\bin\Debug\DBUtility.pdb
-D:\Warehouse_gra\obj\Debug\Warehouse.csprojAssemblyReference.cache
 D:\Warehouse_gra\obj\Debug\Warehouse.FMain.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.Home.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.Properties.Resources.resources
@@ -128,11 +127,8 @@ D:\Warehouse_gra\obj\Debug\Warehouse.未完成出库.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.用户管理.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.部门人员管理.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.csproj.GenerateResource.cache
-D:\Warehouse_gra\obj\Debug\Warehouse.csproj.CoreCompileInputs.cache
-D:\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyComplete
 D:\Warehouse_gra\obj\Debug\Warehouse.入库日报.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.出库日报.resources
-D:\Warehouse_gra\obj\Debug\Warehouse.柱状图.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.折线图.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.入库日报.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.出库日报.resources
@@ -142,3 +138,14 @@ E:\Warehouse_gra\obj\Debug\Warehouse.UpdataFrm.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.更新数据窗体.UpdataInWarehouseFrm.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.清理缓存.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.系统日志.resources
+D:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.清理缓存.resources
+D:\Warehouse_gra\obj\Debug\Warehouse.更新数据窗体.UpdataInWarehouseFrm.resources
+D:\Warehouse_gra\obj\Debug\Warehouse.UpdataFrm.resources
+D:\Warehouse_gra\obj\Debug\Warehouse.系统日志.resources
+D:\Warehouse_gra\obj\Debug\Warehouse.csprojAssemblyReference.cache
+D:\Warehouse_gra\obj\Debug\Warehouse.csproj.CoreCompileInputs.cache
+D:\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyComplete
+D:\Warehouse_gra\obj\Debug\Warehouse.图形化展示.resources
+D:\Warehouse_gra\bin\Debug\Newtonsoft.Json.dll
+D:\Warehouse_gra\bin\Debug\Newtonsoft.Json.xml
+D:\Warehouse_gra\obj\Debug\Warehouse.柱状图.resources

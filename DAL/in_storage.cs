@@ -225,6 +225,10 @@ namespace DAL
             return model;
         }
 
+        public DataSet GetList(string strWhere,int num)
+        {
+            return DbHelperMySQL.Query(strWhere.ToString());
+        }
         /// <summary>
         /// 获得数据列表
         /// </summary>

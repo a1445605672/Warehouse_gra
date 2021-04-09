@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>测试调用winform后台方法页面</title>
+    
+    <script type="text/javascript">
+        
+       window.onload=function(){
+
+var btn=document.getElementById('btnCallCSharpMethod');
+btn.onclick=function(){
+
+window.external.ShowMessage('成功调用winform类中的方法！');//此处window.external相当于winform中设置的webBrowser.ObjectForScripting对象
+
+}
+
+}
+    </script>
+
+</head>
+<body style='text-align:center;'>
+   <input type='button' id='btnCallCSharpMethod' value='调用winform类中的方法' />
+</body>
+</html>
+
