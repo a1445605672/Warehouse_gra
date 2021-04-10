@@ -16,17 +16,13 @@ namespace Warehouse
 		{
 			InitializeComponent();
 		}
-
+		SystemLog log = new SystemLog();
 		private void 系统日志_Load(object sender, EventArgs e)
 		{
-			SystemLog log = new SystemLog();
-			if(log.WriteLog(1,"冯家振","2021-03-25","日志页面","查看日志"))
-				{
-				ShowAskDialog("插入成功");
-			}
-			else
+
+			if (log.WriteLog(1, "冯家振", "2021-03-25", "日志页面", "查看日志", "I000000001") == 0)
 			{
-				ShowAskDialog("插入失败");
+				ShowAskDialog("插入成功");
 			}
 		}
 	}

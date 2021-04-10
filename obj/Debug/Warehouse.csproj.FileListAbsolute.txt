@@ -150,3 +150,7 @@ D:\Warehouse_gra\bin\Debug\Newtonsoft.Json.dll
 D:\Warehouse_gra\bin\Debug\Newtonsoft.Json.xml
 D:\Warehouse_gra\obj\Debug\Warehouse.柱状图.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.在库汇总.resources
+E:\Warehouse_gra\bin\Debug\Newtonsoft.Json.dll
+E:\Warehouse_gra\bin\Debug\Newtonsoft.Json.xml
+E:\Warehouse_gra\obj\Debug\Warehouse.图形化展示.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.在库汇总.resources
