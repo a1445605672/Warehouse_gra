@@ -35,24 +35,19 @@ namespace Warehouse
 		{
 			BLL.in_storage istr = new BLL.in_storage();
 			this.uiDataGridView1.DataSource = istr.GetModelList("");
+			
 		}
 		//查询
         private void uiButton2_Click(object sender, EventArgs e)
         {
 			string wheresql = "select * from in_storage where 1=1";
-			List<in_storage> ins = null;
 			if (uiTextBox1.Text!="")
 			{
-				wheresql+="and mat_name='" + uiTextBox1.Text.ToString() + "'";
+				wheresql+=" and mat_name='" + uiTextBox1.Text.ToString() + "'";
 			}
-			ins = new BLL.in_storage().GetModelList(wheresql);
-			if (ins.Count == 0)
-			{
-				
-			}
-			uiDataGridView1.DataSource = ins;
+			this.uiDataGridView1.DataSource = new BLL.in_storage().GetList(wheresql);
 
-        }
+		}
 		
 
         private void uiDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
