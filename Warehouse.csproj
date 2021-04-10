@@ -277,6 +277,9 @@
     <EmbeddedResource Include="图形化展示.resx">
       <DependentUpon>图形化展示.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="在库汇总.resx">
+      <DependentUpon>在库汇总.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="工具窗体\清理缓存.resx">
       <DependentUpon>清理缓存.cs</DependentUpon>
     </EmbeddedResource>
