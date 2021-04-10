@@ -64,6 +64,14 @@ namespace BLL
 			return dal.DeleteList(Maticsoft.Common.PageValidate.SafeLongFilter(enter_numlist, 0));
 		}
 
+		///<summary>
+		///通过mat_name查询
+		///</summary>
+		public Model.in_storage Getmat_name(string matname)
+		{
+			return dal.GetModelBymat_name(matname);
+		}
+
 		/// <summary>
 		/// 得到一个对象实体
 		/// </summary>

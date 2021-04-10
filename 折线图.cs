@@ -22,8 +22,8 @@ namespace Warehouse
             option.ToolTip.Visible = true;
             // 设置标题
             option.Title = new UITitle();
-            option.Title.Text = "SunnyUI";
-            option.Title.SubText = "LineChart";
+            option.Title.Text = "在库物料汇总";
+            option.Title.SubText = "折线图";
 
             // 横坐标数据类型
             option.XAxisType = UIAxisType.Value;
@@ -47,14 +47,14 @@ namespace Warehouse
 
 
             // 设置系列2
-            series = option.AddSeries(new UILineSeries("Line2", Color.Lime));
+            //series = option.AddSeries(new UILineSeries("Line2", Color.Lime));
 
-            float[] x2 = { 1, 2, 3, 4, 5, 6, 7 };
-            float[] y2 = { 3, 6, 9, 12, 15, 18, 21 };
-            for (int i = 0; i < x.Length; i++)
-            {
-                series.Add(x2[i], y2[i]);
-            }
+            //float[] x2 = { 1, 2, 3, 4, 5, 6, 7 };
+            //float[] y2 = { 3, 6, 9, 12, 15, 18, 21 };
+            //for (int i = 0; i < x.Length; i++)
+            //{
+            //    series.Add(x2[i], y2[i]);
+            //}
             // 点的图标
             series.Symbol = UILinePointSymbol.Star;
             // 图标大小
@@ -67,11 +67,11 @@ namespace Warehouse
             series.Smooth = true;
 
             // 设置纵坐标上限红线
-            option.GreaterWarningArea = new UILineWarningArea(3.5);
+            //option.GreaterWarningArea = new UILineWarningArea(3.5);
             // 设置纵坐标下线黄线
-            option.LessWarningArea = new UILineWarningArea(2.2, Color.Gold);
-            option.YAxisScaleLines.Add(new UIScaleLine() { Color = Color.Red, Name = "上限", Value = 3.5 });
-            option.YAxisScaleLines.Add(new UIScaleLine() { Color = Color.Gold, Name = "下限", Value = 2.2 });
+            //option.LessWarningArea = new UILineWarningArea(2.2, Color.Gold);
+            //option.YAxisScaleLines.Add(new UIScaleLine() { Color = Color.Red, Name = "上限", Value = 3.5 });
+            //option.YAxisScaleLines.Add(new UIScaleLine() { Color = Color.Gold, Name = "下限", Value = 2.2 });
 
             // 横坐标名称
             option.XAxis.Name = "事件";
