@@ -29,25 +29,25 @@ namespace Warehouse
         /// </summary>
         private void InitializeComponent()
         {
-            this.uiBarChart1 = new Sunny.UI.UIBarChart();
+            this.BarChart = new Sunny.UI.UIBarChart();
             this.PagePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // PagePanel
             // 
-            this.PagePanel.Controls.Add(this.uiBarChart1);
+            this.PagePanel.Controls.Add(this.BarChart);
             // 
-            // uiBarChart1
+            // BarChart
             // 
-            this.uiBarChart1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
-            this.uiBarChart1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiBarChart1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
-            this.uiBarChart1.Location = new System.Drawing.Point(137, 29);
-            this.uiBarChart1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiBarChart1.Name = "uiBarChart1";
-            this.uiBarChart1.Size = new System.Drawing.Size(498, 362);
-            this.uiBarChart1.TabIndex = 0;
-            this.uiBarChart1.Text = "uiBarChart1";
+            this.BarChart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(244)))), ((int)(((byte)(244)))));
+            this.BarChart.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.BarChart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(54)))), ((int)(((byte)(54)))));
+            this.BarChart.Location = new System.Drawing.Point(137, 29);
+            this.BarChart.MinimumSize = new System.Drawing.Size(1, 1);
+            this.BarChart.Name = "BarChart";
+            this.BarChart.Size = new System.Drawing.Size(498, 362);
+            this.BarChart.TabIndex = 0;
+            this.BarChart.Text = "uiBarChart1";
             // 
             // 柱状图
             // 
@@ -63,6 +63,6 @@ namespace Warehouse
 
         #endregion
 
-        private Sunny.UI.UIBarChart uiBarChart1;
+        private Sunny.UI.UIBarChart BarChart;
     }
 }

@@ -112,6 +112,14 @@ namespace DAL
             }
         }
 
+        ///<summary>
+        ///用于柱状图和折线图的绘制
+        ///</summary>
+        public DataSet getDataChart(string sql)
+        {
+            return DbHelperMySQL.Query(sql.ToString());
+        }
+
         /// <summary>
         /// 删除一条数据
         /// </summary>
