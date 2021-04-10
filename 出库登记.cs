@@ -57,6 +57,7 @@ namespace Warehouse
 			#region 在库，数据绑定到datagridview
 			List<Model.in_storage> datas = new List<Model.in_storage>();
 			BLL.in_storage instorage = new BLL.in_storage();
+
 			datas = instorage.GetModelList("");
 
 			uiPagination1.DataSource = datas;//绑定到在库数据绑定到datagridview

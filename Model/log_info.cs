@@ -13,6 +13,10 @@ namespace Model
        
         private int  _log_type;
         private string _log_describe;
+        private string _enter_num;
+        private string _log_time;
+        private string _page;
+        private string _staff_id;
         
         /// <summary>
         /// 
@@ -30,6 +34,30 @@ namespace Model
             set { _log_describe = value; }
             get { return _log_describe; }
         }
+
+        public string enter_num
+		{
+			set { _enter_num = value; }
+			get { return _enter_num; }
+		}
+
+        public string log_time
+		{
+			set { _log_time = value; }
+			get { return _log_time; }
+        }
+
+             public string page
+        { 
+            set { _page = value; }
+			get { return _page; }
+		}
+        public string staff_id
+		{
+			set { _staff_id = value; }
+			get { return  _staff_id; }
+		}
+
         #endregion Model
 
 	}

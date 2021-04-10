@@ -38,14 +38,25 @@ namespace DAL
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("insert into log_info(");
-            strSql.Append("log_type,log_describe)");
+            strSql.Append("log_type,log_describe,enter_num,log_time,page,staff_id)");
             strSql.Append(" values (");
-            strSql.Append("@log_type,@log_describe)");
+            strSql.Append("@log_type,@log_describe,@enter_num,@log_time,@page,@staff_id)");
             MySqlParameter[] parameters = {
 					new MySqlParameter("@log_type", MySqlDbType.VarChar,128),
-					new MySqlParameter("@log_describe", MySqlDbType.VarChar,255)};
+					new MySqlParameter("@log_describe", MySqlDbType.VarChar,255),
+            new MySqlParameter("@enter_num", MySqlDbType.VarChar,128),
+            new MySqlParameter("@log_time", MySqlDbType.VarChar,128),
+            new MySqlParameter("@page", MySqlDbType.VarChar,128),
+             new MySqlParameter("@staff_id", MySqlDbType.VarChar,128),
+            };
+
             parameters[0].Value = model.log_type;
             parameters[1].Value = model.log_describe;
+            parameters[2].Value = model.enter_num;
+            parameters[3].Value = model.log_time;
+            parameters[4].Value = model.page;
+            parameters[5].Value = model.staff_id;
+
 
             int rows = DbHelperMySQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -69,7 +80,7 @@ namespace DAL
 
             MySqlParameter[] parameters = {
                     new MySqlParameter("@log_type", MySqlDbType.VarChar,128),
-                    new MySqlParameter("@log_describe", MySqlDbType.VarChar,255)};
+                    new MySqlParameter("@log_describe", MySqlDbType.VarChar,255),};
 					
             parameters[0].Value = model.log_type;
             parameters[1].Value = model.log_describe;

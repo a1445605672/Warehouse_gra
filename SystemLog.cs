@@ -8,33 +8,49 @@ namespace Warehouse
 {
 	public class SystemLog
 	{
-
+		BLL.log_info log_Info = new BLL.log_info();
+		Model.log_info data = new Model.log_info();
 		/// <summary>
-		/// 写入日志
+		/// 写入日志  
 		/// </summary>
-		/// <param name="type">日志类型</param>
-		/// <param name="staffname">人物</param>
+		/// <param name="type">日志类型 0：系统错误，1：增，2：删，3：改，4查，5：出库，6入库</param>
+		/// <param name="staffId">人物</param>
 		/// <param name="time">时间</param>
 		/// <param name="where">地点</param>
 		/// <param name="Doing">做了什么</param>
-		/// <returns></returns>
-		public bool WriteLog(int type, string staffname, string time, string where, string Doing)
+		/// <param name="page">页面名称</param>
+		/// <param name="enter_number">入库编号，和出入库无关的操作，此项可以为空字符串</param>
+		/// <returns>1：表示传入字符串不符合规则，-1：表示存储失败 0：表示存储成功</returns>
+		public int WriteLog(int type, string staffId, string time, string page, string Doing, string enter_number)
 		{
-			string Log = staffname + "," + time + "," + where + "," + Doing;
-			BLL.log_info log_Info = new BLL.log_info();
-
-
-			Model.log_info data = new Model.log_info();
+			//判断传入的参数是否符合规则
+			if (type >= 6 && type <= 0)
+			{
+				return 1;
+			}
+			if (staffId == "" || time == "" ||  Doing == "" || page == "")
+			{
+				return 1;
+			}
+			string Log = Doing;
 			data.log_type = type;
 			data.log_describe = Log;
+			data.log_time = time;
+			data.page = page;
+			data.staff_id = staffId;
+			if (enter_number == "")
+			{
+				data.enter_num = "";
+			}
+			data.enter_num = enter_number;
 
 			if (log_Info.Add(data))
 			{
-				return true;
+				return 0;
 			}
 			else
 			{
-				return false;
+				return -1;
 			}
 		}
 	}

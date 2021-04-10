@@ -20,7 +20,7 @@ namespace Warehouse
 		private void 系统日志_Load(object sender, EventArgs e)
 		{
 
-			if (log.WriteLog(1, "冯家振", "2021-03-25", "日志页面", "查看日志", "I000000001") == 0)
+			if (log.WriteLog(1,"冯家振","2021-04-10","系统日志","查看日志","") == 0)
 			{
 				ShowAskDialog("插入成功");
 			}
