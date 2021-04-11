@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace Warehouse
 {
@@ -10,6 +11,9 @@ namespace Warehouse
 	{
 		BLL.log_info log_Info = new BLL.log_info();
 		Model.log_info data = new Model.log_info();
+		
+		#region 写入日志
+
 		/// <summary>
 		/// 写入日志  
 		/// </summary>
@@ -53,6 +57,18 @@ namespace Warehouse
 				return -1;
 			}
 		}
+		#endregion
+
+		#region 读取日志
+		public List<Model.log_info> readLog()
+		{
+			
+			return log_Info.GetModelList("");
+		}
+
+
+		#endregion
+
 	}
 
 }

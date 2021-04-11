@@ -92,11 +92,15 @@ namespace Warehouse
 			return frm;
 		}
 
+
+
+		//页面刷新按钮
 		private void UpdateButton_Click(object sender, EventArgs e)
 		{
 			switchFrm(uiLabel2.Text);	
 		}
 
+		//根据用户匹配窗体
 		private void switchFrm(string text)
 		{
 			switch (text)
@@ -180,5 +184,15 @@ namespace Warehouse
 					break;
 			}
 		}
+
+		#region 关闭主窗口
+		private void FMain_FormClosed(object sender, FormClosedEventArgs e)
+		{
+			FLogin fLogin = new FLogin();
+
+			//彻底退出进程
+			System.Environment.Exit(0);
+		}
+		#endregion
 	}
 }

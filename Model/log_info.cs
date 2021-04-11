@@ -10,7 +10,7 @@ namespace Model
 		public log_info()
 		{}
         #region Model
-       
+        private int _log_num;
         private int  _log_type;
         private string _log_describe;
         private string _enter_num;
@@ -18,6 +18,11 @@ namespace Model
         private string _page;
         private string _staff_id;
         
+
+        public int log_num
+		{ set { _log_num = value; }
+            get { return  _log_num; }
+        }
         /// <summary>
         /// 
         /// </summary>

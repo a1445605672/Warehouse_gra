@@ -40,11 +40,13 @@ namespace Warehouse
 		//查询
         private void uiButton2_Click(object sender, EventArgs e)
         {
+			Model.in_storage in_Storage = new Model.in_storage();
 			string wheresql = "select * from in_storage where 1=1";
 			if (uiTextBox1.Text!="")
 			{
 				wheresql+=" and mat_name='" + uiTextBox1.Text.ToString() + "'";
 			}
+
 			this.uiDataGridView1.DataSource = new BLL.in_storage().GetList(wheresql);
 
 		}

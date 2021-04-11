@@ -1,0 +1,5 @@
+E:\Warehouse_gra\Login\obj\Debug\Login.csprojAssemblyReference.cache
+E:\Warehouse_gra\Login\obj\Debug\Sunny.UI.Demo.FLogin.resources
+E:\Warehouse_gra\Login\obj\Debug\Login.Properties.Resources.resources
+E:\Warehouse_gra\Login\obj\Debug\Login.csproj.GenerateResource.cache
+E:\Warehouse_gra\Login\obj\Debug\Login.csproj.CoreCompileInputs.cache

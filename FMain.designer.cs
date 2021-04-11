@@ -114,6 +114,7 @@ namespace Warehouse
 			this.MaximizeBox = false;
 			this.Name = "FMain";
 			this.Text = "物料管理系统";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FMain_FormClosed);
 			this.Header.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.uiImageButton1)).EndInit();
 			this.ResumeLayout(false);

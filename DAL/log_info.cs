@@ -177,12 +177,34 @@ namespace DAL
                
                 if (row["log_type"] != null)
                 {
-                    model.log_type =Convert.ToInt32(row["log_type"].ToString());
+                    model.log_type =Convert.ToInt32( row["log_type"].ToString());
                 }
                 if (row["log_describe"] != null)
                 {
                     model.log_describe = row["log_describe"].ToString();
                 }
+                if (row["log_num"] != null)
+                {
+                    model.log_num = Convert.ToInt32(row["log_num"].ToString());
+                }
+                
+                if (row["enter_num"] != null)
+                {
+                    model.enter_num = row["enter_num"].ToString();
+                }
+                if (row["log_time"] != null)
+                {
+                    model.log_time = row["log_time"].ToString();
+                }
+                if (row["page"] != null)
+                {
+                    model.page = row["page"].ToString();
+                }
+                if (row["staff_id"] != null)
+                {
+                    model.staff_id = row["staff_id"].ToString();
+                }
+
             }
             return model;
         }
@@ -193,7 +215,7 @@ namespace DAL
         public DataSet GetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select log_num,log_type,log_describe ");
+            strSql.Append("select log_num, log_type,enter_num,log_describe,log_time ,page,staff_id");
             strSql.Append(" FROM log_info ");
             if (strWhere.Trim() != "")
             {

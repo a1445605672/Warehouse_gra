@@ -74,6 +74,12 @@
     <Compile Include="FMain.designer.cs">
       <DependentUpon>FMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FLogin.Designer.cs">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,7 @@
     <Compile Include="图形化展示.Designer.cs">
       <DependentUpon>图形化展示.cs</DependentUpon>
     </Compile>
+    <Compile Include="工具窗体\Session.cs" />
     <Compile Include="工具窗体\清理缓存.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -353,6 +360,5 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
