@@ -10,12 +10,12 @@ namespace BLL
 	/// </summary>
 	public partial class in_storage
 	{
-		private readonly DAL.in_storage dal=new DAL.in_storage();
+		private readonly DAL.in_storage dal = new DAL.in_storage();
 		public in_storage()
-		{}
+		{ }
 		#region  BasicMethod
 
-		
+
 		/// <summary>
 		/// 是否存在该记录
 		/// </summary>
@@ -32,6 +32,14 @@ namespace BLL
 			return dal.Add(model);
 		}
 
+		///<summary>
+		///画图用到的两个数据
+		///</summary>
+		public DataSet Getdata1(string sql)
+		{
+			return dal.getDataChart(sql);
+		}
+
 		/// <summary>
 		/// 更新一条数据
 		/// </summary>
@@ -45,15 +53,23 @@ namespace BLL
 		/// </summary>
 		public bool Delete(string enter_num)
 		{
-			
+
 			return dal.Delete(enter_num);
 		}
 		/// <summary>
 		/// 删除一条数据
 		/// </summary>
-		public bool DeleteList(string enter_numlist )
+		public bool DeleteList(string enter_numlist)
 		{
-			return dal.DeleteList(Maticsoft.Common.PageValidate.SafeLongFilter(enter_numlist,0) );
+			return dal.DeleteList(Maticsoft.Common.PageValidate.SafeLongFilter(enter_numlist, 0));
+		}
+
+		///<summary>
+		///通过mat_name查询
+		///</summary>
+		public Model.in_storage Getmat_name(string matname)
+		{
+			return dal.GetModelBymat_name(matname);
 		}
 
 		/// <summary>
@@ -61,7 +77,7 @@ namespace BLL
 		/// </summary>
 		public Model.in_storage GetModel(string in_time)
 		{
-			
+
 			return dal.GetModel(in_time);
 		}
 
@@ -70,7 +86,7 @@ namespace BLL
 		/// </summary>
 		public Model.in_storage GetModelByCache(string enter_num)
 		{
-			
+
 			string CacheKey = "in_storageModel-" + enter_num;
 			object objModel = Maticsoft.Common.DataCache.GetCache(CacheKey);
 			if (objModel == null)
@@ -84,7 +100,7 @@ namespace BLL
 						Maticsoft.Common.DataCache.SetCache(CacheKey, objModel, DateTime.Now.AddMinutes(ModelCache), TimeSpan.Zero);
 					}
 				}
-				catch{}
+				catch { }
 			}
 			return (Model.in_storage)objModel;
 		}
@@ -94,7 +110,7 @@ namespace BLL
 		/// </summary>
 		public DataSet GetList(string strWhere)
 		{
-			return dal.GetList(strWhere,0);
+			return dal.GetList(strWhere, 0);
 		}
 		/// <summary>
 		/// 获得数据列表,返回list类型数据
@@ -102,7 +118,7 @@ namespace BLL
 		/// </summary>
 		public List<Model.in_storage> GetModelList(string strWhere)
 		{
-			
+
 			DataSet ds = dal.GetList(strWhere);
 			return DataTableToList(ds.Tables[0]);
 		}
@@ -153,14 +169,14 @@ namespace BLL
 		/// </summary>
 		public DataSet GetListByPage(string strWhere, string orderby, int startIndex, int endIndex)
 		{
-			return dal.GetListByPage( strWhere,  orderby,  startIndex,  endIndex);
+			return dal.GetListByPage(strWhere, orderby, startIndex, endIndex);
 		}
 		/// <summary>
 		/// 分页获取数据列表
 		/// </summary>
 		//public DataSet GetList(int PageSize,int PageIndex,string strWhere)
 		//{
-			//return dal.GetList(PageSize,PageIndex,strWhere);
+		//return dal.GetList(PageSize,PageIndex,strWhere);
 		//}
 
 		#endregion  BasicMethod

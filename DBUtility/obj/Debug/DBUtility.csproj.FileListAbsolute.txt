@@ -23,6 +23,7 @@ D:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
 D:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
 D:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
 D:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
+<<<<<<< HEAD
 E:\Warehouse_gra\DBUtility\bin\Debug\DBUtility.dll
 E:\Warehouse_gra\DBUtility\bin\Debug\DBUtility.pdb
 E:\Warehouse_gra\DBUtility\bin\Debug\Harman.Utility.dll
@@ -31,3 +32,14 @@ E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
 E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
 E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
 E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
+=======
+C:\Users\kui\Desktop\Warehouse_gra\DBUtility\bin\Debug\DBUtility.dll
+C:\Users\kui\Desktop\Warehouse_gra\DBUtility\bin\Debug\DBUtility.pdb
+C:\Users\kui\Desktop\Warehouse_gra\DBUtility\bin\Debug\Harman.Utility.dll
+C:\Users\kui\Desktop\Warehouse_gra\DBUtility\bin\Debug\MySql.Data.dll
+C:\Users\kui\Desktop\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csprojAssemblyReference.cache
+C:\Users\kui\Desktop\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
+C:\Users\kui\Desktop\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
+C:\Users\kui\Desktop\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
+C:\Users\kui\Desktop\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
+>>>>>>> 9b4f192cc139411c8c92b1086aaeed180fd66628

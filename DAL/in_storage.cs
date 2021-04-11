@@ -112,6 +112,14 @@ namespace DAL
             }
         }
 
+        ///<summary>
+        ///用于柱状图和折线图的绘制
+        ///</summary>
+        public DataSet getDataChart(string sql)
+        {
+            return DbHelperMySQL.Query(sql.ToString());
+        }
+
         /// <summary>
         /// 删除一条数据
         /// </summary>
@@ -154,6 +162,30 @@ namespace DAL
             }
         }
 
+        /// <summary>
+        /// 得到一个对象实体
+        /// </summary>
+        public Model.in_storage GetModelBymat_name(string mat_name)
+        {
+
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select enter_num,mat_id,mat_name,in_time,sl_id,in_amount,in_weight,in_volume from in_storage ");
+            strSql.Append(" where mat_name=@mat_name ");
+            MySqlParameter[] parameters = {
+                    new MySqlParameter("@mat_name", MySqlDbType.VarChar,128)         };
+            parameters[0].Value = mat_name;
+
+            Model.in_storage model = new Model.in_storage();
+            DataSet ds = DbHelperMySQL.Query(strSql.ToString(), parameters);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return DataRowToModel(ds.Tables[0].Rows[0]);
+            }
+            else
+            {
+                return null;
+            }
+        }
 
         /// <summary>
         /// 得到一个对象实体
