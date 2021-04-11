@@ -93,6 +93,7 @@
     <Compile Include="图形化展示.Designer.cs">
       <DependentUpon>图形化展示.cs</DependentUpon>
     </Compile>
+    <Compile Include="工具窗体\Class1.cs" />
     <Compile Include="工具窗体\Session.cs" />
     <Compile Include="工具窗体\清理缓存.cs">
       <SubType>Form</SubType>
