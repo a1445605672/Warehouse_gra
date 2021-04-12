@@ -194,7 +194,7 @@ namespace DAL
                 }
                 if (row["log_time"] != null)
                 {
-                    model.log_time = row["log_time"].ToString();
+                    model.log_time =Convert.ToDateTime(row["log_time"].ToString()).ToString("yyyy-MM-dd");
                 }
                 if (row["page"] != null)
                 {

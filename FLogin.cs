@@ -39,7 +39,8 @@ namespace Warehouse
                 fmain.Show();
                
                 this.Hide();
-                
+                SystemLog log = new SystemLog();
+                log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "登录页面", "登录成功", "");
             }
             else
             {

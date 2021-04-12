@@ -60,10 +60,10 @@ namespace Warehouse
 		#endregion
 
 		#region 读取日志
-		public List<Model.log_info> readLog()
+		public List<Model.log_info> readLog(string where)
 		{
 			
-			return log_Info.GetModelList("");
+			return log_Info.GetModelList(where);
 		}
 
 

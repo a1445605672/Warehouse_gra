@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Sunny.UI;
+using Warehouse.工具窗体;
 
 namespace Warehouse
 {
 	public partial class FMain : UIHeaderAsideMainFrame
 	{
+		SystemLog log = new SystemLog();
+		Session session = new Session();
 		public FMain()
 		{
 			InitializeComponent();
@@ -143,18 +146,23 @@ namespace Warehouse
 					break;
 				case "系统日志":
 					LoadMdiForm(MainTabControl, text, typeof(系统日志));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "系统日志", "打开系统日志页面", "");
 					break;
 				case "入库登记":
 					LoadMdiForm(MainTabControl, text, typeof(入库登记));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "入库登记", "打开入库登记页面", "");
 					break;
 				case "出库登记":
 					LoadMdiForm(MainTabControl, text, typeof(出库登记));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出库登记", "打开出库登记页面", "");
 					break;
 				case "未完成出库":
 					LoadMdiForm(MainTabControl, text, typeof(未完成出库));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "未完成出库", "打开未完成出库页面", "");
 					break;
 				case "未完成入库":
 					LoadMdiForm(MainTabControl, text, typeof(未完成入库));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "未完成入库", "打开未完成入库页面", "");
 					break;
 				case "出入库汇总":
 					LoadMdiForm(MainTabControl, text, typeof(出入库汇总));

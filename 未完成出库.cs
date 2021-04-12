@@ -99,7 +99,8 @@ namespace Warehouse
 				updatafrm.staffBox.Text = uiDataGridView1.CurrentRow.Cells[9].Value.ToString();
 				#endregion
 				updatafrm.ShowDialog();
-				
+				//log.WriteLog(6, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出库登记", "搜索在" + SelectMaterialsbox.Text + "在库物料", "");
+
 			}
 			if (uiDataGridView1.Columns[e.ColumnIndex].Name == "Delete" && e.RowIndex >= 0)
 			{
@@ -127,6 +128,7 @@ namespace Warehouse
 						ShowSuccessTip("删除失败");
 					}
 					#endregion
+					//log.WriteLog(6, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出库登记", "搜索在" + SelectMaterialsbox.Text + "在库物料", "");
 				}
 				else
 				{

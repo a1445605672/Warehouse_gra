@@ -10,6 +10,7 @@ using Sunny.UI;
 using System.Configuration;
 using MySql.Data.MySqlClient;
 using Warehouse.表单验证;
+using Warehouse.工具窗体;
 
 namespace Warehouse
 {
@@ -98,6 +99,7 @@ namespace Warehouse
 			HideStatusForm();
 		}
 
+		SystemLog log = new SystemLog();
 		#region 未完成入库事件
 		private void SaveBut_Click(object sender, EventArgs e)
 		{
@@ -146,7 +148,7 @@ namespace Warehouse
 			data.enter_if_accomplish = 0;
 			enter_Storage.Add(data);
 
-
+			log.WriteLog(6, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "入库登记", "未完成入库", InWarwhouseNumberBox.Text.Trim());
 			ShowAskDialog("保存完成");
 		}
 		#endregion
@@ -169,6 +171,7 @@ namespace Warehouse
 			{
 				ShowAskDialog("您输入的有误请检查");
 			}
+			log.WriteLog(6, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "入库登记", "完成入库", InWarwhouseNumberBox.Text.Trim());
 			ShowAskDialog("我已经入库啦");
 		}
 		#endregion

@@ -8,11 +8,13 @@ using System.Text;
 using System.Windows.Forms;
 using Sunny.UI;
 using Warehouse.表单验证;
+using Warehouse.工具窗体;
 
 namespace Warehouse
 {
 	public partial class 出库登记 : UITitlePage
 	{
+		SystemLog log = new SystemLog();
 		public 出库登记()
 		{
 			ShowStatusForm(100, "数据加载中......");
@@ -147,6 +149,7 @@ namespace Warehouse
 				storageLocationBox.Text = uiDataGridView1.CurrentRow.Cells[6].Value.ToString();//获取当前行的库物编号
 				Material_ID_Label.Text = uiDataGridView1.CurrentRow.Cells[3].Value.ToString();  //获取当前行的行的物料ID
 				outWarehouseAmountLabel.Text= uiDataGridView1.CurrentRow.Cells[7].Value.ToString();
+				InWearhouseNumber.Text= uiDataGridView1.CurrentRow.Cells[2].Value.ToString();//入库编号
 				//Material_ID_Label.Text = uiDataGridView1.CurrentRow.Cells[5].Value.ToString();//物料编号隐藏
 			}
 		}
@@ -180,6 +183,7 @@ namespace Warehouse
 			BLL.out_storage out_storage = new BLL.out_storage();
 			if(out_storage.Add(data))
 			{
+				log.WriteLog(6, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出库登记", "未完成出库", InWearhouseNumber.Text.Trim());
 				ShowAskDialog("保存成功");
 			}
 		}
@@ -188,6 +192,7 @@ namespace Warehouse
 		#region 出库完成事件
 		private void OutWarehouseBut_Click(object sender, EventArgs e)
 		{
+			log.WriteLog(6, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出库登记", "完成出库", InWearhouseNumber.Text.Trim());
 			ShowAskDialog("完成出库");
 		}
 
@@ -208,6 +213,7 @@ namespace Warehouse
 			}
 			else
 			{
+				log.WriteLog(6, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出库登记", "搜索在"+ SelectMaterialsbox .Text+ "在库物料", "");
 				uiPagination1.DataSource = datas;//绑定到在库数据绑定到datagridview
 				uiPagination1.ActivePage = 1;
 			}

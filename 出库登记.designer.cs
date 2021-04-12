@@ -65,6 +65,7 @@ namespace Warehouse
 			this.SelectMaterialsbox = new Sunny.UI.UIComboBox();
 			this.uiLabel11 = new Sunny.UI.UILabel();
 			this.SearchBut = new Sunny.UI.UIButton();
+			this.InWearhouseNumber = new Sunny.UI.UILabel();
 			this.PagePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).BeginInit();
 			this.uiPanel1.SuspendLayout();
@@ -158,6 +159,7 @@ namespace Warehouse
 			// 
 			// uiPanel1
 			// 
+			this.uiPanel1.Controls.Add(this.InWearhouseNumber);
 			this.uiPanel1.Controls.Add(this.outWarehouseAmountLabel);
 			this.uiPanel1.Controls.Add(this.storageLocationBox);
 			this.uiPanel1.Controls.Add(this.Materialsbox);
@@ -577,6 +579,17 @@ namespace Warehouse
 			this.SearchBut.Text = "搜  索";
 			this.SearchBut.Click += new System.EventHandler(this.SearchBut_Click);
 			// 
+			// InWearhouseNumber
+			// 
+			this.InWearhouseNumber.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.InWearhouseNumber.Location = new System.Drawing.Point(683, 144);
+			this.InWearhouseNumber.Name = "InWearhouseNumber";
+			this.InWearhouseNumber.Size = new System.Drawing.Size(177, 28);
+			this.InWearhouseNumber.TabIndex = 64;
+			this.InWearhouseNumber.Text = "入库编号，隐藏显示";
+			this.InWearhouseNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.InWearhouseNumber.Visible = false;
+			// 
 			// 出库登记
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -633,5 +646,6 @@ namespace Warehouse
 		private Sunny.UI.UITextBox storageLocationBox;
 		private Sunny.UI.UITextBox Materialsbox;
 		private Sunny.UI.UILabel outWarehouseAmountLabel;
+		private Sunny.UI.UILabel InWearhouseNumber;
 	}
 }

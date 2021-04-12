@@ -265,6 +265,9 @@
     <Compile Include="部门管理.Designer.cs">
       <DependentUpon>部门管理.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FLogin.resx">
+      <DependentUpon>FLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FMain.resx">
       <DependentUpon>FMain.cs</DependentUpon>
     </EmbeddedResource>

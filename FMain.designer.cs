@@ -78,21 +78,21 @@ namespace Warehouse
             this.UpdateButton.RadiusSides = ((Sunny.UI.UICornerRadiusSides)((Sunny.UI.UICornerRadiusSides.RightTop | Sunny.UI.UICornerRadiusSides.RightBottom)));
             this.UpdateButton.RectSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)(((System.Windows.Forms.ToolStripStatusLabelBorderSides.Top | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
             | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
-<<<<<<< HEAD
+
 			this.UpdateButton.Size = new System.Drawing.Size(58, 42);
 			this.UpdateButton.Symbol = 61473;
 			this.UpdateButton.TabIndex = 45;
 			this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
-			// 
-			// uiLabel1
-			// 
-			this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiLabel1.Location = new System.Drawing.Point(0, 0);
-			this.uiLabel1.Name = "uiLabel1";
-			this.uiLabel1.Size = new System.Drawing.Size(100, 23);
-			this.uiLabel1.TabIndex = 46;
-			this.uiLabel1.Text = "uiLabel1";
-			this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			//// 
+			//// uiLabel1
+			//// 
+			//this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
+			//this.uiLabel1.Location = new System.Drawing.Point(0, 0);
+			//this.uiLabel1.Name = "uiLabel1";
+			//this.uiLabel1.Size = new System.Drawing.Size(100, 23);
+			//this.uiLabel1.TabIndex = 46;
+			//this.uiLabel1.Text = "uiLabel1";
+			//this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// uiLabel2
 			// 
@@ -117,7 +117,7 @@ namespace Warehouse
 			this.Header.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.uiImageButton1)).EndInit();
 			this.ResumeLayout(false);
-=======
+
             this.UpdateButton.Size = new System.Drawing.Size(58, 42);
             this.UpdateButton.Symbol = 61473;
             this.UpdateButton.TabIndex = 45;
@@ -145,8 +145,6 @@ namespace Warehouse
             this.Header.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton1)).EndInit();
             this.ResumeLayout(false);
->>>>>>> 9b4f192cc139411c8c92b1086aaeed180fd66628
-
 		}
 
 		#endregion
