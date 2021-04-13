@@ -118,10 +118,10 @@ namespace Warehouse
 			((System.ComponentModel.ISupportInitialize)(this.uiImageButton1)).EndInit();
 			this.ResumeLayout(false);
 
-            this.UpdateButton.Size = new System.Drawing.Size(58, 42);
-            this.UpdateButton.Symbol = 61473;
-            this.UpdateButton.TabIndex = 45;
-            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
+            //this.UpdateButton.Size = new System.Drawing.Size(58, 42);
+            //this.UpdateButton.Symbol = 61473;
+            //this.UpdateButton.TabIndex = 45;
+            //this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // uiLabel2
             // 

@@ -8,10 +8,13 @@ using System.Text;
 using System.Windows.Forms;
 using Sunny.UI;
 using Warehouse.更新数据窗体;
+using Warehouse.工具窗体;
+
 namespace Warehouse
 {
 	public partial class 未完成入库 : UITitlePage
 	{
+		SystemLog log = new SystemLog();
 		public 未完成入库()
 		{
 			ShowStatusForm(100, "数据加载中......");
@@ -88,6 +91,7 @@ namespace Warehouse
 
 			if(uiDataGridView1.Columns[e.ColumnIndex].Name== "UpDate" && e.RowIndex>=0)
 			{
+				//更新
 				UpdataInWarehouseFrm UpF = new UpdataInWarehouseFrm();
 			
 				#region 窗体传值
@@ -113,6 +117,7 @@ namespace Warehouse
 				UpF.ShowDialog();
 				
 			}
+			//删除
 			if(uiDataGridView1.Columns[e.ColumnIndex].Name == "Delete" && e.RowIndex >= 0)
 			{
 				if(ShowAskDialog("您确定要删除吗？"))
@@ -134,6 +139,7 @@ namespace Warehouse
 					string deleteSql= "update enter_storage set enter_if_accomplish=3 where enter_id=" + "\'"+ uiDataGridView1.CurrentRow.Cells[2].Value.ToString() + "\'";
 					if (enter_Storage.Update(deleteSql))
 					{
+						log.WriteLog(2, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "未完成出库", "删除未完成入库信息", uiDataGridView1.CurrentRow.Cells[2].Value.ToString());
 						ShowErrorTip("删除成功");
 					}
 					else

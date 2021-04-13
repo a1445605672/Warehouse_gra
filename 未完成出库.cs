@@ -2,13 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Warehouse.工具窗体;
 
 namespace Warehouse
 {
 	
 	public partial class 未完成出库 : UITitlePage
 	{
-		
+		SystemLog log = new SystemLog();
 		public 未完成出库()
 		{
 			ShowStatusForm(100, "数据加载中......");
@@ -18,10 +19,10 @@ namespace Warehouse
 			uiDataGridView1.BringToFront();
 			#region  datagridview添加列
 			//第一个参数是列表头，第二个参数用于绑定数据
-			uiDataGridView1.AddColumn("出库编号", "out_id").SetFixedMode(140);
+			uiDataGridView1.AddColumn("出库编号", "out_id").SetFixedMode(140);//140
 			//uiDataGridView1.AddColumn("收货商", "").SetFixedMode(150);
 			//uiDataGridView1.AddColumn("物料编号", "out_mat_id").SetFixedMode(150);
-			uiDataGridView1.AddColumn("物料名称", "out_mat_name").SetFixedMode(160);
+			uiDataGridView1.AddColumn("物料名称", "out_mat_name").SetFixedMode(160);//160
 			uiDataGridView1.AddColumn("出库量", "out_account").SetFixedMode(130);
 			uiDataGridView1.AddColumn("批次", "out_batch_id").SetFixedMode(130);
 			uiDataGridView1.AddColumn("出库日期", "out_data").SetFixedMode(160);
@@ -99,7 +100,7 @@ namespace Warehouse
 				updatafrm.staffBox.Text = uiDataGridView1.CurrentRow.Cells[9].Value.ToString();
 				#endregion
 				updatafrm.ShowDialog();
-				//log.WriteLog(6, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出库登记", "搜索在" + SelectMaterialsbox.Text + "在库物料", "");
+				log.WriteLog(3, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "未完成入库", "修改物料信息", uiDataGridView1.CurrentRow.Cells[13].Value.ToString());
 
 			}
 			if (uiDataGridView1.Columns[e.ColumnIndex].Name == "Delete" && e.RowIndex >= 0)
@@ -128,7 +129,7 @@ namespace Warehouse
 						ShowSuccessTip("删除失败");
 					}
 					#endregion
-					//log.WriteLog(6, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出库登记", "搜索在" + SelectMaterialsbox.Text + "在库物料", "");
+					log.WriteLog(2, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "未完成出库", "删除物料", uiDataGridView1.CurrentRow.Cells[13].Value.ToString());
 				}
 				else
 				{

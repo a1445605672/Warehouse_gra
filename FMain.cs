@@ -15,6 +15,7 @@ namespace Warehouse
 	{
 		SystemLog log = new SystemLog();
 		Session session = new Session();
+		
 		public FMain()
 		{
 			InitializeComponent();
@@ -63,9 +64,11 @@ namespace Warehouse
 
 		private void Aside_MenuItemClick(TreeNode node, NavMenuItem item, int pageIndex)
 		{
-	 		if(item!=null)
+			string menuText = item.Text;
+			uiLabel2.Text = item.Text;
+			if (item!=null)
 			{
-				string menuText = item.Text;
+				
 				foreach (TabPage tab in MainTabControl.TabPages)
 				{
 					if (tab.Text == menuText)
@@ -74,7 +77,7 @@ namespace Warehouse
 						return;
 					}
 				}
-				uiLabel2.Text = menuText;
+				
 				switchFrm(menuText);
 			}
 		}

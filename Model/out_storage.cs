@@ -21,6 +21,7 @@ namespace Model
         private int  _out_if_accomplish;
         private string _out_sr_id;
         private string _remark;
+        private string _enter_id;
         /// <summary>
         /// 
         /// </summary>
@@ -103,6 +104,11 @@ namespace Model
         {
             set { _remark = value; }
             get { return _remark; }
+        }
+        public string enter_id
+		{
+			set { _enter_id = value; }
+			get { return _enter_id; }
         }
 
         #endregion

@@ -47,9 +47,9 @@ namespace DAL
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("insert into out_storage(");
-            strSql.Append("out_id,out_mat_id,out_mat_name,out_account,out_batch_id,out_data,out_staff_id,out_staff_name,out_if_accomplish,out_sr_id,remark)");
+            strSql.Append("out_id,out_mat_id,out_mat_name,out_account,out_batch_id,out_data,out_staff_id,out_staff_name,out_if_accomplish,out_sr_id,remark,enter_id)");
             strSql.Append(" values (");
-            strSql.Append("@out_id,@out_mat_id,@out_mat_name,@out_account,@out_batch_id,@out_data,@out_staff_id,@out_staff_name,@out_if_accomplish,@out_sr_id,@remark)");
+            strSql.Append("@out_id,@out_mat_id,@out_mat_name,@out_account,@out_batch_id,@out_data,@out_staff_id,@out_staff_name,@out_if_accomplish,@out_sr_id,@remark,@enter_id)");
             MySqlParameter[] parameters = {
 					new MySqlParameter("@out_id", MySqlDbType.String ,128),
 					new MySqlParameter("@out_mat_id", MySqlDbType.VarChar,128),
@@ -59,9 +59,10 @@ namespace DAL
 					new MySqlParameter("@out_data", MySqlDbType.VarChar,128),
 					new MySqlParameter("@out_staff_id", MySqlDbType.VarChar,128),
 					new MySqlParameter("@out_staff_name", MySqlDbType.VarChar,64),
-            new MySqlParameter("@out_if_accomplish", MySqlDbType.Int32,8),
-            new MySqlParameter("@out_sr_id", MySqlDbType.VarChar,128),
-            new MySqlParameter("@remark",MySqlDbType.VarChar,128)};
+                    new MySqlParameter("@out_if_accomplish", MySqlDbType.Int32,8),
+                    new MySqlParameter("@out_sr_id", MySqlDbType.VarChar,128),
+                    new MySqlParameter("@remark",MySqlDbType.VarChar,128),
+                    new MySqlParameter("@enter_id",MySqlDbType.VarChar,128)};
 
             parameters[0].Value = model.out_id;
             parameters[1].Value = model.out_mat_id;
@@ -74,6 +75,7 @@ namespace DAL
             parameters[8].Value = model.out_if_accomplish;
             parameters[9].Value = model.out_sr_id;
             parameters[10].Value = model.remark;
+            parameters[11].Value = model.enter_id;
             int rows = DbHelperMySQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
             {
@@ -263,7 +265,11 @@ namespace DAL
                 {
                     model.out_staff_name = row["out_staff_name"].ToString();
                 }
-                
+                if (row["enter_id"] != null)
+                {
+                    model.enter_id = row["enter_id"].ToString();
+                }
+
             }
             return model;
         }
@@ -274,7 +280,7 @@ namespace DAL
         public DataSet GetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select out_id,out_mat_id,out_mat_name,out_account,out_batch_id,out_data,out_staff_id,out_staff_name");
+            strSql.Append("select out_id,out_mat_id,out_mat_name,out_account,out_batch_id,out_data,out_staff_id,out_staff_name,enter_id");
             strSql.Append(" FROM out_storage ");
             if (strWhere.Trim() != "")
             {

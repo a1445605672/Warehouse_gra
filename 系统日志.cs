@@ -19,13 +19,13 @@ namespace Warehouse
 			InitializeComponent();
 
 			#region 给gridview添加列
-			uiDataGridView1.AddColumn("编号", "log_num").SetFixedMode(60);
+			uiDataGridView1.AddColumn("编号", "log_num").SetFixedMode(80);
 			uiDataGridView1.AddColumn("类型", "log_type").SetFixedMode(60);
 			uiDataGridView1.AddColumn("入库编号", "enter_num").SetFixedMode(110);
-			uiDataGridView1.AddColumn("描述", "log_describe").SetFixedMode(400);
+			uiDataGridView1.AddColumn("描述", "log_describe").SetFixedMode(370);
 			uiDataGridView1.AddColumn("时间", "log_time").SetFixedMode(110);
 			uiDataGridView1.AddColumn("页面", "page").SetFixedMode(90);
-			uiDataGridView1.AddColumn("用户编号", "staff_id").SetFixedMode(80);
+			uiDataGridView1.AddColumn("用户名", "staff_id").SetFixedMode(90);
 			uiDataGridView1.ReadOnly = true;
 			#endregion
 			#region gridview加载列

@@ -96,13 +96,18 @@ namespace Warehouse
 
 			#endregion
 
+			#region 日期
+			edtDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
+			#endregion
+
 			for (int i = 0; i < 30; i++)
 				StatusFormStepIt();
 			#region 批次编号
+			//
 			string BatchNumber = "O" + DateTime.Now.ToString("yyyy")
 				+ DateTime.Now.ToString("MM")
 				+ DateTime.Now.ToString("dd")
-				+ (count+1).ToString().PadLeft(3, '0');
+				+ (count).ToString().PadLeft(3, '0');
 			batchNumberBox.Items.Add(BatchNumber);
 
 			//如果有未完成入库的物料，则加载未完成入库的批次编号
@@ -124,7 +129,7 @@ namespace Warehouse
 		private void 出库_Load(object sender, EventArgs e)
 		{
 
-
+			ShowErrorTip("你加载我了");
 		}
 		#endregion
 
@@ -144,13 +149,14 @@ namespace Warehouse
 			//判断点击的按钮 且行数大于0
 			if (uiDataGridView1.Columns[e.ColumnIndex].Name == "OutWarehouse" && e.RowIndex >= 0)
 			{
-				uiPanel1.Visible = true;
+				
 				Materialsbox.Text = uiDataGridView1.CurrentRow.Cells[4].Value.ToString();//获取当前行的行的物品你名称
 				storageLocationBox.Text = uiDataGridView1.CurrentRow.Cells[6].Value.ToString();//获取当前行的库物编号
 				Material_ID_Label.Text = uiDataGridView1.CurrentRow.Cells[3].Value.ToString();  //获取当前行的行的物料ID
 				outWarehouseAmountLabel.Text= uiDataGridView1.CurrentRow.Cells[7].Value.ToString();
 				InWearhouseNumber.Text= uiDataGridView1.CurrentRow.Cells[2].Value.ToString();//入库编号
-				//Material_ID_Label.Text = uiDataGridView1.CurrentRow.Cells[5].Value.ToString();//物料编号隐藏
+			    //Material_ID_Label.Text = uiDataGridView1.CurrentRow.Cells[5].Value.ToString();//物料编号隐藏
+				uiPanel1.Visible = true;
 			}
 		}
 		#endregion
@@ -165,10 +171,18 @@ namespace Warehouse
 		#region 未完成出库事件
 		private void SaveBut_Click(object sender, EventArgs e)
 		{
+
+			//验证文本框是否有空
+			if (ProviderBox.Text == "" || outWarehouseAmountBox.Text == "" || batchNumberBox.Text == "" || staffBox.Text == "") 
+			{
+				ShowErrorTip("物料信息请填写完整！");
+				return;
+			}
 			BLL.staff staff = new BLL.staff();
 			string sql = "select staff_name from staff where staff_id=" + "\'" + staffBox.Text.Trim() + "\'";
 			
 			Model.out_storage data = new Model.out_storage();
+			data.enter_id = InWearhouseNumber.Text.Trim();
 			data.out_id = OutWarwhouseNumberBox.Text.Trim();
 			data.out_mat_id = Material_ID_Label.Text.Trim();
 			data.out_mat_name = Materialsbox.Text.Trim();
@@ -185,6 +199,7 @@ namespace Warehouse
 			{
 				log.WriteLog(6, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出库登记", "未完成出库", InWearhouseNumber.Text.Trim());
 				ShowAskDialog("保存成功");
+				uiPanel1.Visible = false;
 			}
 		}
 		#endregion
