@@ -17,88 +17,59 @@ namespace Warehouse
         public 折线图()
         {
             InitializeComponent();
-            // 配置LineChart
-            option = new UILineOption();
-            option.ToolTip.Visible = true;
-            // 设置标题
+            var option = new UIPieOption();
+
+            //设置Title
             option.Title = new UITitle();
             option.Title.Text = "在库物料汇总";
-            option.Title.SubText = "折线图";
+            option.Title.SubText = "饼状图";
+            option.Title.Left = UILeftAlignment.Center;
 
-            // 横坐标数据类型
-            option.XAxisType = UIAxisType.Value;
+            //设置ToolTip
+            option.ToolTip.Visible = true;
 
-            // 设置系列1
-            var series = option.AddSeries(new UILineSeries("Line1"));
-            float[] x = { 1, 2, 3, 4, 5, 6, 7 };
-            float[] y = { 2, 4, 6, 8, 10, 12, 14 };
-            for (int i = 0; i < x.Length; i++)
+            //设置Legend
+            option.Legend = new UILegend();
+            option.Legend.Orient = UIOrient.Vertical;
+            option.Legend.Top = UITopAlignment.Top;
+            option.Legend.Left = UILeftAlignment.Left;
+
+
+
+
+
+            //设置Series
+            var series = new UIPieSeries();
+            series.Name = "信息详情";
+            series.Center = new UICenter(50, 55);
+            series.Radius = 70;
+            series.Label.Show = true;
+
+            BLL.in_storage bllin = new BLL.in_storage();
+            string sql = "SELECT mat_name,SUM(in_amount) AS acount FROM in_storage GROUP BY mat_name";
+            DataSet ds = bllin.Getdata1(sql);
+            int count1 = ds.Tables[0].Rows.Count;
+            for (int i = 0; i < count1; i++)
             {
-                series.Add(x[i], y[i]);
+                option.Legend.AddData(Convert.ToString(ds.Tables[0].Rows[i][0]));
+                series.AddData(Convert.ToString(ds.Tables[0].Rows[i][0]), Convert.ToInt32(ds.Tables[0].Rows[i][1]));
+                option.Series.Add(series);
             }
-            // 点的图标
-            series.Symbol = UILinePointSymbol.Square;
-            // 图标大小
-            series.SymbolSize = 4;
-            // 折线宽度
-            series.SymbolLineWidth = 2;
-            // 图标颜色
-            series.SymbolColor = Color.Red;
 
+            //增加数据
+            //series.AddData("2020-05-19", 38);
+            //series.AddData("2020-05-20", 21);
+            //series.AddData("2020-05-21", 11);
+            //series.AddData("2020-05-22", 52);
+            //series.AddData("2020-05-23", 23);
+            //series.AddData("2020-05-24", 26);
+            //series.AddData("2020-05-25", 27);
 
-            // 设置系列2
-            //series = option.AddSeries(new UILineSeries("Line2", Color.Lime));
+            //增加Series
+            //option.Series.Add(series);
 
-            //float[] x2 = { 1, 2, 3, 4, 5, 6, 7 };
-            //float[] y2 = { 3, 6, 9, 12, 15, 18, 21 };
-            //for (int i = 0; i < x.Length; i++)
-            //{
-            //    series.Add(x2[i], y2[i]);
-            //}
-            // 点的图标
-            series.Symbol = UILinePointSymbol.Star;
-            // 图标大小
-            series.SymbolSize = 4;
-            // 折线宽度
-            series.SymbolLineWidth = 2;
-            // 折线颜色
-            series.SymbolColor = Color.Red;
-            // 平滑曲线
-            series.Smooth = true;
-
-            // 设置纵坐标上限红线
-            //option.GreaterWarningArea = new UILineWarningArea(3.5);
-            // 设置纵坐标下线黄线
-            //option.LessWarningArea = new UILineWarningArea(2.2, Color.Gold);
-            //option.YAxisScaleLines.Add(new UIScaleLine() { Color = Color.Red, Name = "上限", Value = 3.5 });
-            //option.YAxisScaleLines.Add(new UIScaleLine() { Color = Color.Gold, Name = "下限", Value = 2.2 });
-
-            // 横坐标名称
-            option.XAxis.Name = "事件";
-            // 纵坐标名称
-            option.YAxis.Name = "数值";
-            option.XAxis.AxisLabel.DateTimeFormat = DateTimeEx.DateTimeFormat;
-            // 设置竖向的红线
-            option.XAxisScaleLines.Add(new UIScaleLine() { Color = Color.Red, Name = "x上界", Value = 50 });
-            option.XAxisScaleLines.Add(new UIScaleLine() { Color = Color.Red, Name = "x下界", Value = -50 });
-            // 更新配置
-            uiLineChart1.SetOption(option);
-        }
-
-        private void uiButton1_Click(object sender, EventArgs e)
-        {
-            // 更新数据
-            // 注意，两个系列的长度不要差太多，否则会抛出内存溢出的异常
-            UILineSeries serie = option.Series["Line1"];
-            // 添加5个点
-            for (int i = 0; i < 5; i++)
-            {
-                double newX = serie.XData[serie.XData.Count - 1] * 1.5;
-                double newY = serie.XData[serie.YData.Count - 1] * 1.5;
-                serie.Add(newX, newY);
-            }
-            option.Series["Line1"] = serie;
-            uiLineChart1.SetOption(option);
+            //设置Option
+            uiPieChart1.SetOption(option);
         }
     }
 }

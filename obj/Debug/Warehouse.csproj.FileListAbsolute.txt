@@ -198,3 +198,4 @@ E:\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyComplete
 E:\Warehouse_gra\obj\Debug\Warehouse.exe
 E:\Warehouse_gra\obj\Debug\Warehouse.pdb
 E:\Warehouse_gra\obj\Debug\Warehouse.FLogin.resources
+D:\Warehouse_gra\obj\Debug\Warehouse.FLogin.resources
