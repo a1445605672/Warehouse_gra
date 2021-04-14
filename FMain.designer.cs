@@ -78,50 +78,10 @@ namespace Warehouse
             this.UpdateButton.RadiusSides = ((Sunny.UI.UICornerRadiusSides)((Sunny.UI.UICornerRadiusSides.RightTop | Sunny.UI.UICornerRadiusSides.RightBottom)));
             this.UpdateButton.RectSides = ((System.Windows.Forms.ToolStripStatusLabelBorderSides)(((System.Windows.Forms.ToolStripStatusLabelBorderSides.Top | System.Windows.Forms.ToolStripStatusLabelBorderSides.Right) 
             | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
-
-			this.UpdateButton.Size = new System.Drawing.Size(58, 42);
-			this.UpdateButton.Symbol = 61473;
-			this.UpdateButton.TabIndex = 45;
-			this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
-			//// 
-			//// uiLabel1
-			//// 
-			//this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
-			//this.uiLabel1.Location = new System.Drawing.Point(0, 0);
-			//this.uiLabel1.Name = "uiLabel1";
-			//this.uiLabel1.Size = new System.Drawing.Size(100, 23);
-			//this.uiLabel1.TabIndex = 46;
-			//this.uiLabel1.Text = "uiLabel1";
-			//this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// uiLabel2
-			// 
-			this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiLabel2.Location = new System.Drawing.Point(1036, 48);
-			this.uiLabel2.Name = "uiLabel2";
-			this.uiLabel2.Size = new System.Drawing.Size(100, 23);
-			this.uiLabel2.TabIndex = 47;
-			this.uiLabel2.Text = "uiLabel2";
-			this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.uiLabel2.Visible = false;
-			// 
-			// FMain
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1200, 766);
-			this.MaximizeBox = false;
-			this.Name = "FMain";
-			this.Text = "物料管理系统";
-			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FMain_FormClosed);
-			this.Header.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.uiImageButton1)).EndInit();
-			this.ResumeLayout(false);
-
-            //this.UpdateButton.Size = new System.Drawing.Size(58, 42);
-            //this.UpdateButton.Symbol = 61473;
-            //this.UpdateButton.TabIndex = 45;
-            //this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
+            this.UpdateButton.Size = new System.Drawing.Size(58, 42);
+            this.UpdateButton.Symbol = 61473;
+            this.UpdateButton.TabIndex = 45;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // uiLabel2
             // 
@@ -142,9 +102,11 @@ namespace Warehouse
             this.MaximizeBox = false;
             this.Name = "FMain";
             this.Text = "物料管理系统";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FMain_FormClosed);
             this.Header.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.uiImageButton1)).EndInit();
             this.ResumeLayout(false);
+
 		}
 
 		#endregion

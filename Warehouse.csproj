@@ -94,6 +94,18 @@
       <DependentUpon>图形化展示.cs</DependentUpon>
     </Compile>
     <Compile Include="工具窗体\Class1.cs" />
+    <Compile Include="工具窗体\FormEditRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具窗体\FormEditRoom.Designer.cs">
+      <DependentUpon>FormEditRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工具窗体\Search.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="工具窗体\Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
     <Compile Include="工具窗体\Session.cs" />
     <Compile Include="工具窗体\清理缓存.cs">
       <SubType>Form</SubType>
@@ -291,8 +303,17 @@
     <EmbeddedResource Include="在库汇总.resx">
       <DependentUpon>在库汇总.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="工具窗体\FormEditRoom.resx">
+      <DependentUpon>FormEditRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工具窗体\Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="工具窗体\清理缓存.resx">
       <DependentUpon>清理缓存.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="房间管理.resx">
+      <DependentUpon>房间管理.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="更新数据窗体\UpdataInWarehouseFrm.resx">
       <DependentUpon>UpdataInWarehouseFrm.cs</DependentUpon>
