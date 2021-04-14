@@ -113,83 +113,103 @@ namespace Warehouse
 			{
 				case "首页":
 					LoadMdiForm(MainTabControl, text, typeof(Home));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "首页", "进入首页页面", "");
 					break;
 				case "房间管理":
 					LoadMdiForm(MainTabControl, text, typeof(房间管理));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "房间管理", "进入房间管理页面", "");
 					break;
 				case "库柜管理":
 					LoadMdiForm(MainTabControl, text, typeof(库柜管理));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "库柜管理", "进入库柜管理页面", "");
 					break;
 				case "库位管理":
 					LoadMdiForm(MainTabControl, text, typeof(库位管理));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "库位管理", "进入库位管理页面", "");
 					break;
 				case "库位类型管理":
 					LoadMdiForm(MainTabControl, text, typeof(库位类型管理));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "库位类型管理", "进入库位类型管理页面", "");
 					break;
 				case "物料信息管理":
 					LoadMdiForm(MainTabControl, text, typeof(物料信息管理));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "物料信息管理", "进入物料信息管理页面", "");
 					break;
 				case "物料类别管理":
 					LoadMdiForm(MainTabControl, text, typeof(物料类别管理));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "物料类别管理", "进入物料类别管理页面", "");
 					break;
 				case "部门管理":
 					LoadMdiForm(MainTabControl, text, typeof(部门管理));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "部门管理", "进入部门管理页面", "");
 					break;
 				case "部门人员管理":
 					LoadMdiForm(MainTabControl, text, typeof(部门人员管理));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "部门人员管理", "进入部门人员管理页面", "");
 					break;
 				case "供应商管理":
 					LoadMdiForm(MainTabControl, text, typeof(供应商管理));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "供应商管理", "进入供应商管理页面", "");
 					break;
 				case "收货商管理":
 					LoadMdiForm(MainTabControl, text, typeof(收货商管理));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "收货商管理", "进入收货商管理页面", "");
 					break;
 				case "数据备份":
 					LoadMdiForm(MainTabControl, text, typeof(数据备份));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "数据备份", "进入数据备份页面", "");
 					break;
 				case "系统日志":
 					LoadMdiForm(MainTabControl, text, typeof(系统日志));
-					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "系统日志", "打开系统日志页面", "");
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "系统日志", "进入系统日志页面", "");
 					break;
 				case "入库登记":
 					LoadMdiForm(MainTabControl, text, typeof(入库登记));
-					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "入库登记", "打开入库登记页面", "");
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "入库登记", "进入入库登记页面", "");
 					break;
 				case "出库登记":
 					LoadMdiForm(MainTabControl, text, typeof(出库登记));
-					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出库登记", "打开出库登记页面", "");
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出库登记", "进入出库登记页面", "");
 					break;
 				case "未完成出库":
 					LoadMdiForm(MainTabControl, text, typeof(未完成出库));
-					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "未完成出库", "打开未完成出库页面", "");
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "未完成出库", "进入未完成出库页面", "");
 					break;
 				case "未完成入库":
 					LoadMdiForm(MainTabControl, text, typeof(未完成入库));
-					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "未完成入库", "打开未完成入库页面", "");
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "未完成入库", "进入未完成入库页面", "");
 					break;
 				case "出入库汇总":
 					LoadMdiForm(MainTabControl, text, typeof(出入库汇总));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出入库汇总", "进入出入库汇总页面", "");
 					break;
 				case "在库汇总":
 					LoadMdiForm(MainTabControl, text, typeof(在库汇总));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "在库汇总", "进入在库汇总页面", "");
 					break;
 				case "出库日报":
 					LoadMdiForm(MainTabControl, text, typeof(出库日报));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出库日报", "进入出库日报页面", "");
 					break;
 				case "入库日报":
 					LoadMdiForm(MainTabControl, text, typeof(入库日报));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "入库日报", "进入入库日报页面", "");
 					break;
 				case "用户管理":
 					LoadMdiForm(MainTabControl, text, typeof(用户管理));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "用户管理", "进入用户管理页面", "");
 					break;
 				case "柱状图":
 					LoadMdiForm(MainTabControl, text, typeof(柱状图));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "柱状图", "进入柱状图页面", "");
 					break;
 				case "折线图":
 					LoadMdiForm(MainTabControl, text, typeof(折线图));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "折线图", "进入折线图页面", "");
 					break;
 				case "图形化展示":
 					LoadMdiForm(MainTabControl, text, typeof(图形化展示));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "图形化展示", "进入图形化展示页面", "");
 					break;
 				default:
 					break;
