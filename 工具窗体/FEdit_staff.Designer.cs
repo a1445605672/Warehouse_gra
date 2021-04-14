@@ -48,8 +48,8 @@ namespace Warehouse.工具窗体
             // 
             // pnlBtm
             // 
-            this.pnlBtm.Location = new System.Drawing.Point(1, 447);
-            this.pnlBtm.Size = new System.Drawing.Size(526, 55);
+            this.pnlBtm.Location = new System.Drawing.Point(1, 463);
+            this.pnlBtm.Size = new System.Drawing.Size(526, 39);
             // 
             // edtName
             // 
@@ -63,7 +63,7 @@ namespace Warehouse.工具窗体
             this.edtName.MinimumSize = new System.Drawing.Size(1, 1);
             this.edtName.Name = "edtName";
             this.edtName.Padding = new System.Windows.Forms.Padding(5);
-            this.edtName.Size = new System.Drawing.Size(150, 34);
+            this.edtName.Size = new System.Drawing.Size(150, 39);
             this.edtName.TabIndex = 2;
             // 
             // uiLabel1
@@ -71,7 +71,7 @@ namespace Warehouse.工具窗体
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel1.Location = new System.Drawing.Point(49, 78);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(100, 23);
+            this.uiLabel1.Size = new System.Drawing.Size(100, 39);
             this.uiLabel1.TabIndex = 3;
             this.uiLabel1.Text = " 姓名";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -81,7 +81,7 @@ namespace Warehouse.工具窗体
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel2.Location = new System.Drawing.Point(49, 121);
             this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(100, 23);
+            this.uiLabel2.Size = new System.Drawing.Size(100, 39);
             this.uiLabel2.TabIndex = 3;
             this.uiLabel2.Text = " 年龄";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -91,7 +91,7 @@ namespace Warehouse.工具窗体
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel3.Location = new System.Drawing.Point(49, 174);
             this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(100, 23);
+            this.uiLabel3.Size = new System.Drawing.Size(100, 39);
             this.uiLabel3.TabIndex = 3;
             this.uiLabel3.Text = " 性别";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -101,7 +101,7 @@ namespace Warehouse.工具窗体
             this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel4.Location = new System.Drawing.Point(49, 335);
             this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(100, 23);
+            this.uiLabel4.Size = new System.Drawing.Size(100, 39);
             this.uiLabel4.TabIndex = 3;
             this.uiLabel4.Text = " 身份证";
             this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -111,7 +111,7 @@ namespace Warehouse.工具窗体
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel5.Location = new System.Drawing.Point(49, 276);
             this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(100, 23);
+            this.uiLabel5.Size = new System.Drawing.Size(100, 39);
             this.uiLabel5.TabIndex = 3;
             this.uiLabel5.Text = " 手机号";
             this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -121,7 +121,7 @@ namespace Warehouse.工具窗体
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel6.Location = new System.Drawing.Point(49, 231);
             this.uiLabel6.Name = "uiLabel6";
-            this.uiLabel6.Size = new System.Drawing.Size(100, 23);
+            this.uiLabel6.Size = new System.Drawing.Size(100, 39);
             this.uiLabel6.TabIndex = 3;
             this.uiLabel6.Text = " 部门";
             this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -131,7 +131,7 @@ namespace Warehouse.工具窗体
             this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel7.Location = new System.Drawing.Point(49, 394);
             this.uiLabel7.Name = "uiLabel7";
-            this.uiLabel7.Size = new System.Drawing.Size(100, 23);
+            this.uiLabel7.Size = new System.Drawing.Size(100, 39);
             this.uiLabel7.TabIndex = 3;
             this.uiLabel7.Text = " 入职时间";
             this.uiLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -148,7 +148,7 @@ namespace Warehouse.工具窗体
             this.editAge.MinimumSize = new System.Drawing.Size(1, 1);
             this.editAge.Name = "editAge";
             this.editAge.Padding = new System.Windows.Forms.Padding(5);
-            this.editAge.Size = new System.Drawing.Size(150, 34);
+            this.editAge.Size = new System.Drawing.Size(150, 39);
             this.editAge.TabIndex = 4;
             this.editAge.Text = " ";
             // 
@@ -161,7 +161,7 @@ namespace Warehouse.工具窗体
             this.rbMale.MinimumSize = new System.Drawing.Size(1, 1);
             this.rbMale.Name = "rbMale";
             this.rbMale.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.rbMale.Size = new System.Drawing.Size(52, 29);
+            this.rbMale.Size = new System.Drawing.Size(52, 39);
             this.rbMale.TabIndex = 1;
             this.rbMale.Text = " 男";
             // 
@@ -173,7 +173,7 @@ namespace Warehouse.工具窗体
             this.rbFemale.MinimumSize = new System.Drawing.Size(1, 1);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.rbFemale.Size = new System.Drawing.Size(52, 29);
+            this.rbFemale.Size = new System.Drawing.Size(52, 39);
             this.rbFemale.TabIndex = 2;
             this.rbFemale.Text = " 女";
             // 
@@ -186,7 +186,7 @@ namespace Warehouse.工具窗体
             this.cbDepartment.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbDepartment.Name = "cbDepartment";
             this.cbDepartment.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbDepartment.Size = new System.Drawing.Size(150, 34);
+            this.cbDepartment.Size = new System.Drawing.Size(150, 39);
             this.cbDepartment.TabIndex = 5;
             this.cbDepartment.Text = " ";
             this.cbDepartment.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -203,7 +203,7 @@ namespace Warehouse.工具窗体
             this.phone.MinimumSize = new System.Drawing.Size(1, 1);
             this.phone.Name = "phone";
             this.phone.Padding = new System.Windows.Forms.Padding(5);
-            this.phone.Size = new System.Drawing.Size(214, 34);
+            this.phone.Size = new System.Drawing.Size(214, 39);
             this.phone.TabIndex = 6;
             // 
             // idcard
@@ -218,7 +218,7 @@ namespace Warehouse.工具窗体
             this.idcard.MinimumSize = new System.Drawing.Size(1, 1);
             this.idcard.Name = "idcard";
             this.idcard.Padding = new System.Windows.Forms.Padding(5);
-            this.idcard.Size = new System.Drawing.Size(258, 34);
+            this.idcard.Size = new System.Drawing.Size(258, 39);
             this.idcard.TabIndex = 7;
             // 
             // hire_date
@@ -231,7 +231,7 @@ namespace Warehouse.工具窗体
             this.hire_date.MinimumSize = new System.Drawing.Size(63, 0);
             this.hire_date.Name = "hire_date";
             this.hire_date.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.hire_date.Size = new System.Drawing.Size(150, 34);
+            this.hire_date.Size = new System.Drawing.Size(150, 39);
             this.hire_date.SymbolDropDown = 61555;
             this.hire_date.SymbolNormal = 61555;
             this.hire_date.TabIndex = 8;
@@ -241,7 +241,7 @@ namespace Warehouse.工具窗体
             // 
             // FEdit_staff
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(528, 505);
             this.Controls.Add(this.hire_date);

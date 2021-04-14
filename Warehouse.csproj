@@ -100,6 +100,18 @@
     <Compile Include="工具窗体\FormEditRoom.Designer.cs">
       <DependentUpon>FormEditRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="工具窗体\kugui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具窗体\kugui.Designer.cs">
+      <DependentUpon>kugui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工具窗体\kuguitype.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具窗体\kuguitype.Designer.cs">
+      <DependentUpon>kuguitype.cs</DependentUpon>
+    </Compile>
     <Compile Include="工具窗体\Search.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -306,11 +318,23 @@
     <EmbeddedResource Include="工具窗体\FormEditRoom.resx">
       <DependentUpon>FormEditRoom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="工具窗体\kugui.resx">
+      <DependentUpon>kugui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工具窗体\kuguitype.resx">
+      <DependentUpon>kuguitype.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="工具窗体\Search.resx">
       <DependentUpon>Search.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="工具窗体\清理缓存.resx">
       <DependentUpon>清理缓存.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="库位类型管理.resx">
+      <DependentUpon>库位类型管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="库柜管理.resx">
+      <DependentUpon>库柜管理.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="房间管理.resx">
       <DependentUpon>房间管理.cs</DependentUpon>

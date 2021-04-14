@@ -6,15 +6,16 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Warehouse
+namespace Warehouse.工具窗体
 {
-	public partial class 库位类型管理 : UITitlePage
-	{
-		public 库位类型管理()
-		{
-			InitializeComponent();
-		}
-	}
+    public partial class kugui : UIEditForm
+    {
+        public kugui()
+        {
+            InitializeComponent();
+        }
+    }
 }

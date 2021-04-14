@@ -202,3 +202,4 @@ D:\Warehouse_gra\obj\Debug\Warehouse.FLogin.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.房间管理.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.Search.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FormEditRoom.resources
+D:\Warehouse_gra\obj\Debug\Warehouse.库柜管理.resources
