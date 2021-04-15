@@ -36,11 +36,11 @@ namespace Warehouse
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grid = new Sunny.UI.UIDataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.search1 = new Warehouse.工具窗体.Search();
             this.uiPagination1 = new Sunny.UI.UIPagination();
             this.uiContextMenuStrip2 = new Sunny.UI.UIContextMenuStrip();
             this.delete_sr = new System.Windows.Forms.ToolStripMenuItem();
             this.update_sr = new System.Windows.Forms.ToolStripMenuItem();
+            this.search1 = new Warehouse.工具窗体.Search();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.uiContextMenuStrip2.SuspendLayout();
@@ -109,14 +109,6 @@ namespace Warehouse
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 415);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
-            // search1
-            // 
-            this.search1.Location = new System.Drawing.Point(4, 5);
-            this.search1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.search1.Name = "search1";
-            this.search1.Size = new System.Drawing.Size(792, 44);
-            this.search1.TabIndex = 0;
-            // 
             // uiPagination1
             // 
             this.uiPagination1.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -137,19 +129,27 @@ namespace Warehouse
             this.delete_sr,
             this.update_sr});
             this.uiContextMenuStrip2.Name = "uiContextMenuStrip2";
-            this.uiContextMenuStrip2.Size = new System.Drawing.Size(137, 76);
+            this.uiContextMenuStrip2.Size = new System.Drawing.Size(137, 80);
             // 
             // delete_sr
             // 
             this.delete_sr.Name = "delete_sr";
-            this.delete_sr.Size = new System.Drawing.Size(136, 36);
+            this.delete_sr.Size = new System.Drawing.Size(136, 38);
             this.delete_sr.Text = "删除";
             // 
             // update_sr
             // 
             this.update_sr.Name = "update_sr";
-            this.update_sr.Size = new System.Drawing.Size(136, 36);
+            this.update_sr.Size = new System.Drawing.Size(136, 38);
             this.update_sr.Text = "编辑";
+            // 
+            // search1
+            // 
+            this.search1.Location = new System.Drawing.Point(4, 5);
+            this.search1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.search1.Name = "search1";
+            this.search1.Size = new System.Drawing.Size(792, 44);
+            this.search1.TabIndex = 0;
             // 
             // 库位类型管理
             // 
