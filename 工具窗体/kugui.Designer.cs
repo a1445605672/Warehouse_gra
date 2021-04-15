@@ -42,6 +42,7 @@ namespace Warehouse.工具窗体
             this.kuweileft = new Sunny.UI.UITextBox();
             this.uiLabel5 = new Sunny.UI.UILabel();
             this.kuguitype = new Sunny.UI.UITextBox();
+            this.uiButton1 = new Sunny.UI.UIButton();
             this.SuspendLayout();
             // 
             // pnlBtm
@@ -58,7 +59,7 @@ namespace Warehouse.工具窗体
             this.uiRichTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiRichTextBox1.Name = "uiRichTextBox1";
             this.uiRichTextBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.uiRichTextBox1.Size = new System.Drawing.Size(253, 290);
+            this.uiRichTextBox1.Size = new System.Drawing.Size(216, 248);
             this.uiRichTextBox1.TabIndex = 2;
             // 
             // uiLabel1
@@ -74,7 +75,8 @@ namespace Warehouse.工具窗体
             // RoomID
             // 
             this.RoomID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.RoomID.FillColor = System.Drawing.Color.White;
+            this.RoomID.Enabled = false;
+            this.RoomID.FillColor = System.Drawing.Color.Gray;
             this.RoomID.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.RoomID.Location = new System.Drawing.Point(470, 68);
             this.RoomID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -84,7 +86,9 @@ namespace Warehouse.工具窗体
             this.RoomID.Name = "RoomID";
             this.RoomID.Padding = new System.Windows.Forms.Padding(5);
             this.RoomID.Size = new System.Drawing.Size(150, 39);
+            this.RoomID.Style = Sunny.UI.UIStyle.Custom;
             this.RoomID.TabIndex = 4;
+            this.RoomID.Text = "左侧选择房间";
             // 
             // 库柜编号
             // 
@@ -98,7 +102,10 @@ namespace Warehouse.工具窗体
             // 
             // chestID
             // 
+            this.chestID.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.chestID.BackColor = System.Drawing.Color.White;
             this.chestID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.chestID.Enabled = false;
             this.chestID.FillColor = System.Drawing.Color.White;
             this.chestID.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.chestID.Location = new System.Drawing.Point(470, 117);
@@ -110,6 +117,7 @@ namespace Warehouse.工具窗体
             this.chestID.Padding = new System.Windows.Forms.Padding(5);
             this.chestID.Size = new System.Drawing.Size(150, 39);
             this.chestID.TabIndex = 4;
+            this.chestID.Text = "左侧选择房间";
             // 
             // uiLabel2
             // 
@@ -211,11 +219,23 @@ namespace Warehouse.工具窗体
             this.kuguitype.Size = new System.Drawing.Size(150, 39);
             this.kuguitype.TabIndex = 4;
             // 
+            // uiButton1
+            // 
+            this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton1.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiButton1.Location = new System.Drawing.Point(88, 319);
+            this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton1.Name = "uiButton1";
+            this.uiButton1.Size = new System.Drawing.Size(158, 47);
+            this.uiButton1.TabIndex = 5;
+            this.uiButton1.Text = "获取房间编号";
+            // 
             // kugui
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.uiButton1);
             this.Controls.Add(this.kuguitype);
             this.Controls.Add(this.uiLabel5);
             this.Controls.Add(this.kuweileft);
@@ -245,6 +265,7 @@ namespace Warehouse.工具窗体
             this.Controls.SetChildIndex(this.kuweileft, 0);
             this.Controls.SetChildIndex(this.uiLabel5, 0);
             this.Controls.SetChildIndex(this.kuguitype, 0);
+            this.Controls.SetChildIndex(this.uiButton1, 0);
             this.ResumeLayout(false);
 
         }
@@ -264,5 +285,6 @@ namespace Warehouse.工具窗体
         private Sunny.UI.UITextBox kuweileft;
         private Sunny.UI.UILabel uiLabel5;
         private Sunny.UI.UITextBox kuguitype;
+        private Sunny.UI.UIButton uiButton1;
     }
 }

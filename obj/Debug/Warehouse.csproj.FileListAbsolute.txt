@@ -210,3 +210,6 @@ E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.Search.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.库位类型管理.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.库柜管理.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.房间管理.resources
+D:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.kugui.resources
+D:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.kuguitype.resources
+D:\Warehouse_gra\obj\Debug\Warehouse.库位类型管理.resources
