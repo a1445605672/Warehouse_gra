@@ -37,7 +37,7 @@ namespace Warehouse
 		{
 
 			BLL.chest_type bsta = new BLL.chest_type();
-			
+			grid.DataSource= bsta.GetModelList("");
 			uiPagination1.DataSource = bsta.GetModelList("");
 			uiPagination1.ActivePage = 1;
 

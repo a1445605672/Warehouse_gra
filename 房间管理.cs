@@ -41,6 +41,7 @@ namespace Warehouse
 
 			BLL.storage bsta = new BLL.storage();
 			this.grid.DataSource = bsta.GetModelList("");
+			uiPagination1.DataSource = bsta.GetModelList("");
 			uiPagination1.ActivePage = 1;
 
 		}
