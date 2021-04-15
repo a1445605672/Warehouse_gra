@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using Warehouse.工具窗体;
 namespace Warehouse
 {
 	public partial class 物料信息管理 : UITitlePage
@@ -70,12 +70,12 @@ namespace Warehouse
 		}
 		private void search1_AddEvent(object sender, EventArgs e)
 		{
-			FormEditRoom room = new FormEditRoom();
-			room.ShowDialog();
-			if (room.IsOK)
+			Frmaterial mat = new Frmaterial();
+			mat.ShowDialog();
+			if (mat.IsOK)
 			{
-				BLL.storage sr_ = new BLL.storage();
-				bool m = sr_.Add(room.StorageModel);
+				BLL.material_info sr_ = new BLL.material_info();
+				bool m = sr_.Add(mat.materialModel);
 				if (m == true)
 				{
 					UIMessageBox.ShowSuccess("新增成功");
