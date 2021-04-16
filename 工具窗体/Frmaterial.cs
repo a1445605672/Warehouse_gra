@@ -16,6 +16,8 @@ namespace Warehouse.工具窗体
         public Frmaterial()
         {
             InitializeComponent();
+            BLL.material_type blltype = new BLL.material_type();
+            uiRichTextBox1.Text=blltype.GetType
         }
         public Model.material_info materialModel;
         public Model.material_info MaterialModel
