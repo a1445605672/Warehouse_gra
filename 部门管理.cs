@@ -10,11 +10,13 @@ using Sunny.UI;
 
 namespace Warehouse
 {
-	public partial class 部门管理 : UIPage
+	public partial class 部门管理 : UITitlePage
 	{
 		public 部门管理()
 		{
 			InitializeComponent();
+			
+			
 		}
 	}
 }
