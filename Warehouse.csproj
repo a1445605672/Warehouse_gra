@@ -125,6 +125,18 @@
     <Compile Include="工具窗体\Frmaterial.Designer.cs">
       <DependentUpon>Frmaterial.cs</DependentUpon>
     </Compile>
+    <Compile Include="工具窗体\FrmmaterType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具窗体\FrmmaterType.Designer.cs">
+      <DependentUpon>FrmmaterType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工具窗体\FrmStorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具窗体\FrmStorage.Designer.cs">
+      <DependentUpon>FrmStorage.cs</DependentUpon>
+    </Compile>
     <Compile Include="工具窗体\kugui.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -346,6 +358,12 @@
     <EmbeddedResource Include="工具窗体\Frmaterial.resx">
       <DependentUpon>Frmaterial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="工具窗体\FrmmaterType.resx">
+      <DependentUpon>FrmmaterType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工具窗体\FrmStorage.resx">
+      <DependentUpon>FrmStorage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="工具窗体\kugui.resx">
       <DependentUpon>kugui.cs</DependentUpon>
     </EmbeddedResource>
@@ -357,6 +375,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="工具窗体\清理缓存.resx">
       <DependentUpon>清理缓存.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="库位管理.resx">
+      <DependentUpon>库位管理.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="库位类型管理.resx">
       <DependentUpon>库位类型管理.cs</DependentUpon>
@@ -402,6 +423,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="物料信息管理.resx">
       <DependentUpon>物料信息管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="物料类别管理.resx">
+      <DependentUpon>物料类别管理.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="用户管理.resx">
       <DependentUpon>用户管理.cs</DependentUpon>
