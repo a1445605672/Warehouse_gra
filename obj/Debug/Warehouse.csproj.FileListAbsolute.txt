@@ -221,22 +221,11 @@ E:\Warehouse_gra\obj\Debug\Warehouse.exe
 E:\Warehouse_gra\obj\Debug\Warehouse.pdb
 <<<<<<< HEAD
 =======
-E:\Warehouse_gra\obj\Debug\Warehouse.FLogin.resources
-D:\Warehouse_gra\obj\Debug\Warehouse.FLogin.resources
-D:\Warehouse_gra\obj\Debug\Warehouse.房间管理.resources
-D:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.Search.resources
-D:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FormEditRoom.resources
-D:\Warehouse_gra\obj\Debug\Warehouse.库柜管理.resources
-E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FormEditRoom.resources
-E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.kugui.resources
-E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.kuguitype.resources
-E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.Search.resources
-E:\Warehouse_gra\obj\Debug\Warehouse.库位类型管理.resources
-E:\Warehouse_gra\obj\Debug\Warehouse.库柜管理.resources
-E:\Warehouse_gra\obj\Debug\Warehouse.房间管理.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.kugui.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.kuguitype.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.库位类型管理.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.Frmaterial.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.物料信息管理.resources
 >>>>>>> c327687e2acdb3d7144488d464936895852e1510
+E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.Frmaterial.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.物料信息管理.resources

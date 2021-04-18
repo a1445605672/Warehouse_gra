@@ -198,7 +198,7 @@ namespace Warehouse
 			if(out_storage.Add(data))
 			{
 				log.WriteLog(6, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出库登记", "未完成出库", InWearhouseNumber.Text.Trim());
-				ShowAskDialog("保存成功");
+				ShowSuccessDialog("保存成功");
 				uiPanel1.Visible = false;
 			}
 		}
