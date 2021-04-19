@@ -56,3 +56,15 @@ E:\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 E:\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CopyComplete
 E:\Warehouse_gra\DAL\obj\Debug\DAL.dll
 E:\Warehouse_gra\DAL\obj\Debug\DAL.pdb
+E:\git版本\Warehouse_gra\DAL\bin\Debug\DAL.dll
+E:\git版本\Warehouse_gra\DAL\bin\Debug\DAL.pdb
+E:\git版本\Warehouse_gra\DAL\bin\Debug\DBUtility.dll
+E:\git版本\Warehouse_gra\DAL\bin\Debug\Model.dll
+E:\git版本\Warehouse_gra\DAL\bin\Debug\MySql.Data.dll
+E:\git版本\Warehouse_gra\DAL\bin\Debug\DBUtility.pdb
+E:\git版本\Warehouse_gra\DAL\bin\Debug\Model.pdb
+E:\git版本\Warehouse_gra\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+E:\git版本\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\git版本\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\git版本\Warehouse_gra\DAL\obj\Debug\DAL.dll
+E:\git版本\Warehouse_gra\DAL\obj\Debug\DAL.pdb

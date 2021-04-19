@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Configuration;
+
 namespace DBUtility
 {
     public class PubConstant
@@ -14,13 +15,32 @@ namespace DBUtility
         {
             get
             {
-                string _connectionString = ConfigurationManager.AppSettings["ConnectionString"];
-                string ConStringEncrypt = ConfigurationManager.AppSettings["ConStringEncrypt"];
-                if (ConStringEncrypt == "true")
+                if(Config.connect_type == 0)
                 {
-                    _connectionString = DESEncrypt.Decrypt(_connectionString);
+                    string _connectionString = ConfigurationManager.AppSettings["ConnectionString"];
+                    string ConStringEncrypt = ConfigurationManager.AppSettings["ConStringEncrypt"];
+                    if (ConStringEncrypt == "true")
+                    {
+                        _connectionString = DESEncrypt.Decrypt(_connectionString);
+                    }
+                    return _connectionString;
                 }
-                return _connectionString;
+                else
+                {
+                    string _connectionString = "server=localhost;uid=root;pwd=nokia500;database=warehouse;Port=3306;charset=utf8";
+                    string ConStringEncrypt = ConfigurationManager.AppSettings["ConStringEncrypt"];
+                    if (ConStringEncrypt == "true")
+                    {
+                        _connectionString = DESEncrypt.Decrypt(_connectionString);
+                    }
+                    return _connectionString;
+                }
+                    
+              
+               
+
+                
+               
             }
         }
 
