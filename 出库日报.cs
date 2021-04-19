@@ -24,6 +24,8 @@ namespace Warehouse
         //查询
         private void uiButton1_Click(object sender, EventArgs e)
         {
+            //获取到时间
+            string strtime = uiDatePicker1.Text.Trim();
 
         }
 

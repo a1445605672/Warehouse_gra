@@ -15,7 +15,7 @@ namespace Warehouse
 		public 房间管理()
 		{
 			InitializeComponent();
-
+			grid.ClearAll();
 			//窗体初始化绑定数据
 			grid.AddColumn("仓库id", "storage_id");
 			grid.AddColumn("仓库名", "storage_name");
@@ -38,12 +38,10 @@ namespace Warehouse
 		//赋值
 		private void AddRow()
 		{
-
 			BLL.storage bsta = new BLL.storage();
 			this.grid.DataSource = bsta.GetModelList("");
-			//uiPagination1.DataSource = bsta.GetModelList("");
+			uiPagination1.DataSource = bsta.GetModelList("");
 			uiPagination1.ActivePage = 1;
-
 		}
 		//搜索
 		private void search1_SearchEvent(object sender, EventArgs e)
@@ -69,7 +67,7 @@ namespace Warehouse
 			if (room.IsOK)
 			{
 				BLL.storage sr_ = new BLL.storage();
-				bool m = sr_.Add(room.StorageModel);
+				bool m = sr_.Add(room.storageModel);
 				if (m == true)
 				{
 					UIMessageBox.ShowSuccess("新增成功");
