@@ -10,7 +10,6 @@ C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\Model\obj\Debug\Model.dll
 C:\Users\秦睿\Desktop\毕设项目\Warehouse_gra\Model\obj\Debug\Model.pdb
 D:\Warehouse_gra\Model\bin\Debug\Model.dll
 D:\Warehouse_gra\Model\bin\Debug\Model.pdb
-D:\Warehouse_gra\Model\obj\Debug\Model.csprojAssemblyReference.cache
 D:\Warehouse_gra\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 D:\Warehouse_gra\Model\obj\Debug\Model.dll
 D:\Warehouse_gra\Model\obj\Debug\Model.pdb

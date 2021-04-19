@@ -105,6 +105,12 @@
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
     <Compile Include="SystemLog.cs" />
+    <Compile Include="入库汇总.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="入库汇总.Designer.cs">
+      <DependentUpon>入库汇总.cs</DependentUpon>
+    </Compile>
     <Compile Include="图形化展示.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,11 +186,11 @@
     <Compile Include="入库登记.Designer.cs">
       <DependentUpon>入库登记.cs</DependentUpon>
     </Compile>
-    <Compile Include="出入库汇总.cs">
+    <Compile Include="出库汇总.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="出入库汇总.Designer.cs">
-      <DependentUpon>出入库汇总.cs</DependentUpon>
+    <Compile Include="出库汇总.Designer.cs">
+      <DependentUpon>出库汇总.cs</DependentUpon>
     </Compile>
     <Compile Include="出库日报.cs">
       <SubType>Form</SubType>
@@ -346,6 +352,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="入库汇总.resx">
+      <DependentUpon>入库汇总.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="出库汇总.resx">
+      <DependentUpon>出库汇总.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="图形化展示.resx">
       <DependentUpon>图形化展示.cs</DependentUpon>
     </EmbeddedResource>

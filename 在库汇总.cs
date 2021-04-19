@@ -17,16 +17,6 @@ namespace Warehouse
 		public 在库汇总()
 		{
 			InitializeComponent();
-			AddRow();
-			data = bllenter.GetModelList("");
-			this.uiDataGridView1.DataSource = data;
-			this.uiPagination1.DataSource = data;
-			uiPagination1.ActivePage = 1;
-		}
-		// 为gridview填充值
-		private void AddRow()
-		{
-			//GridView添加属性
 			uiDataGridView1.ClearAll();
 			uiDataGridView1.AddColumn("入库编号", "enter_num");
 			uiDataGridView1.AddColumn("物料id", "mat_id");
@@ -37,8 +27,20 @@ namespace Warehouse
 			uiDataGridView1.AddColumn("存量", "in_amount");
 			uiDataGridView1.AddColumn("重量", "in_weight");
 			uiDataGridView1.AddColumn("体积", "in_volume");
+			for (int i = 0; i < uiDataGridView1.ColumnCount; i++) { uiDataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; }
+			AddRow();
+			
+		}
+		// 为gridview填充值
+		private void AddRow()
+		{
+			//GridView添加属性
+			data = bllenter.GetModelList("");
+			this.uiDataGridView1.DataSource = data;
+			this.uiPagination1.DataSource = data;
+			uiPagination1.ActivePage = 1;
 			//自适应列距离
-			//for (int i = 0; i < uiDataGridView1.ColumnCount; i++) { uiDataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; }
+			
 			//BLL.in_storage istr = new BLL.in_storage();
 			//this.uiDataGridView1.DataSource = istr.GetModelList("");
 			

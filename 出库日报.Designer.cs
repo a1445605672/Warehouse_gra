@@ -38,6 +38,7 @@ namespace Warehouse
             this.uiDatePicker1 = new Sunny.UI.UIDatePicker();
             this.uiButton1 = new Sunny.UI.UIButton();
             this.uiButton2 = new Sunny.UI.UIButton();
+            this.uiPagination1 = new Sunny.UI.UIPagination();
             this.uiDataGridView1 = new Sunny.UI.UIDataGridView();
             this.PagePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).BeginInit();
@@ -45,6 +46,7 @@ namespace Warehouse
             // 
             // PagePanel
             // 
+            this.PagePanel.Controls.Add(this.uiPagination1);
             this.PagePanel.Controls.Add(this.uiDataGridView1);
             this.PagePanel.Controls.Add(this.uiButton2);
             this.PagePanel.Controls.Add(this.uiButton1);
@@ -76,7 +78,7 @@ namespace Warehouse
             this.uiDatePicker1.SymbolDropDown = 61555;
             this.uiDatePicker1.SymbolNormal = 61555;
             this.uiDatePicker1.TabIndex = 1;
-            this.uiDatePicker1.Text = "uiDatePicker1";
+            this.uiDatePicker1.Text = "2021-03-17";
             this.uiDatePicker1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiDatePicker1.Value = new System.DateTime(2021, 3, 17, 11, 22, 25, 332);
             // 
@@ -104,6 +106,18 @@ namespace Warehouse
             this.uiButton2.Text = "导出";
             this.uiButton2.Click += new System.EventHandler(this.uiButton2_Click);
             // 
+            // uiPagination1
+            // 
+            this.uiPagination1.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiPagination1.Location = new System.Drawing.Point(7, 423);
+            this.uiPagination1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPagination1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPagination1.Name = "uiPagination1";
+            this.uiPagination1.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
+            this.uiPagination1.Size = new System.Drawing.Size(774, 35);
+            this.uiPagination1.TabIndex = 7;
+            this.uiPagination1.Text = "uiPagination1";
+            // 
             // uiDataGridView1
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
@@ -130,7 +144,7 @@ namespace Warehouse
             this.uiDataGridView1.EnableHeadersVisualStyles = false;
             this.uiDataGridView1.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiDataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            this.uiDataGridView1.Location = new System.Drawing.Point(42, 111);
+            this.uiDataGridView1.Location = new System.Drawing.Point(12, 117);
             this.uiDataGridView1.Name = "uiDataGridView1";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
@@ -146,8 +160,8 @@ namespace Warehouse
             this.uiDataGridView1.RowTemplate.Height = 29;
             this.uiDataGridView1.SelectedIndex = -1;
             this.uiDataGridView1.ShowGridLine = true;
-            this.uiDataGridView1.Size = new System.Drawing.Size(854, 422);
-            this.uiDataGridView1.TabIndex = 3;
+            this.uiDataGridView1.Size = new System.Drawing.Size(830, 286);
+            this.uiDataGridView1.TabIndex = 6;
             // 
             // 出库日报
             // 
@@ -168,6 +182,7 @@ namespace Warehouse
         private Sunny.UI.UIDatePicker uiDatePicker1;
         private Sunny.UI.UIButton uiButton2;
         private Sunny.UI.UIButton uiButton1;
+        private Sunny.UI.UIPagination uiPagination1;
         private Sunny.UI.UIDataGridView uiDataGridView1;
     }
 }

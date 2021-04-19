@@ -15,6 +15,11 @@ namespace Warehouse
 		public 房间管理()
 		{
 			InitializeComponent();
+			//给search控件赋值
+			search1.uiComboBox1.Items.Add("房间ID");
+			search1.uiComboBox1.Items.Add("房子名字");
+			//search1.uiComboBox1.Items.Add("负责人名称");
+			search1.uiComboBox1.SelectedIndex = 0;
 			grid.ClearAll();
 			//窗体初始化绑定数据
 			grid.AddColumn("仓库id", "storage_id");
@@ -26,11 +31,7 @@ namespace Warehouse
 			grid.AddColumn("仓库备注信息", "storage_comment");
 			for (int i = 0; i < grid.ColumnCount; i++) { grid.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; }
 			AddRow();
-			//给search控件赋值
-			search1.uiComboBox1.Items.Add("房间ID");
-			search1.uiComboBox1.Items.Add("房子名字");
-			//search1.uiComboBox1.Items.Add("负责人名称");
-			search1.uiComboBox1.SelectedIndex = 0;
+			
 			//确定按钮和搜索按钮赋值
 			search1.uiButton1.Click += new EventHandler(this.search1_AddEvent);
 			search1.SearchButton.Click += new EventHandler(this.search1_SearchEvent);

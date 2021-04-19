@@ -37,7 +37,10 @@ namespace Warehouse
 		private void AddRow()
 		{
 			BLL.enter_storage istr = new BLL.enter_storage();
-			this.uiDataGridView1.DataSource = istr.GetModelList("");
+            this.uiDataGridView1.DataSource = istr.GetModelList("");
+			this.uiPagination1.DataSource = istr.GetModelList("");
+            uiPagination1.ActivePage = 1;
+
 		}
 		//根据日期进行查询
         private void uiButton1_Click(object sender, EventArgs e)
@@ -46,8 +49,8 @@ namespace Warehouse
 			string newtime = uiDatePicker1.Text.Trim();
 			//拿到业务逻辑层
 			BLL.enter_storage istr = new BLL.enter_storage();
-			//数据绑定
-			this.uiDataGridView1.DataSource = istr.GetModel(newtime);
+            //数据绑定
+            this.uiPagination1.DataSource = istr.GetModelList(newtime);
 
 			//List<Model.in_storage> datas = new List<Model.in_storage>();
 			//BLL.in_storage instorage = new BLL.in_storage();

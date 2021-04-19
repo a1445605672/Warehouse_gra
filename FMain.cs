@@ -52,7 +52,8 @@ namespace Warehouse
 
 			pageIndex = 4000;
 			TreeNode StatisticalStatementBut = Aside.CreateNode("统计报表", 61950, 24, pageIndex);
-			Aside.CreateChildNode(StatisticalStatementBut, 62029, 24 ,"出入库汇总", ++pageIndex);
+			Aside.CreateChildNode(StatisticalStatementBut, 62029, 24 ,"入库汇总", ++pageIndex);
+			Aside.CreateChildNode(StatisticalStatementBut, 62059, 24, "出库汇总", ++pageIndex);
 			Aside.CreateChildNode(StatisticalStatementBut, 61665, 24, "在库汇总", ++pageIndex);
 			Aside.CreateChildNode(StatisticalStatementBut, 61932,24, "出库日报", ++pageIndex);
 			Aside.CreateChildNode(StatisticalStatementBut, 61555,24,"入库日报", ++pageIndex);
@@ -179,9 +180,13 @@ namespace Warehouse
 					LoadMdiForm(MainTabControl, text, typeof(未完成入库));
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "未完成入库", "进入未完成入库页面", "");
 					break;
-				case "出入库汇总":
-					LoadMdiForm(MainTabControl, text, typeof(出入库汇总));
-					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出入库汇总", "进入出入库汇总页面", "");
+				case "入库汇总":
+					LoadMdiForm(MainTabControl, text, typeof(入库汇总));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "入库汇总", "进入入库汇总页面", "");
+					break;
+				case "出库汇总":
+					LoadMdiForm(MainTabControl, text, typeof(出库汇总));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出库汇总", "进入出库汇总页面", "");
 					break;
 				case "在库汇总":
 					LoadMdiForm(MainTabControl, text, typeof(在库汇总));

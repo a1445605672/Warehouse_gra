@@ -240,3 +240,5 @@ D:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmmaterType.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.物料类别管理.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmStorage.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.库位管理.resources
+D:\Warehouse_gra\obj\Debug\Warehouse.出库汇总.resources
+D:\Warehouse_gra\obj\Debug\Warehouse.入库汇总.resources
