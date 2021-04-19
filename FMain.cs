@@ -181,7 +181,7 @@ namespace Warehouse
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "未完成入库", "进入未完成入库页面", "");
 					break;
 				case "入库汇总":
-					LoadMdiForm(MainTabControl, text, typeof(入库汇总));
+					LoadMdiForm(MainTabControl, text, typeof(new_入库汇总));
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "入库汇总", "进入入库汇总页面", "");
 					break;
 				case "出库汇总":

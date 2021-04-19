@@ -37,10 +37,10 @@ namespace Warehouse
             this.uiPagination1 = new Sunny.UI.UIPagination();
             this.grid = new Sunny.UI.UIDataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.search1 = new Warehouse.工具窗体.Search();
             this.uiContextMenuStrip1 = new Sunny.UI.UIContextMenuStrip();
             this.delete = new System.Windows.Forms.ToolStripMenuItem();
             this.update = new System.Windows.Forms.ToolStripMenuItem();
+            this.search1 = new Warehouse.工具窗体.Search();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.uiContextMenuStrip1.SuspendLayout();
@@ -126,14 +126,6 @@ namespace Warehouse
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 415);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
-            // search1
-            // 
-            this.search1.Location = new System.Drawing.Point(4, 5);
-            this.search1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.search1.Name = "search1";
-            this.search1.Size = new System.Drawing.Size(780, 31);
-            this.search1.TabIndex = 2;
-            // 
             // uiContextMenuStrip1
             // 
             this.uiContextMenuStrip1.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -142,19 +134,27 @@ namespace Warehouse
             this.delete,
             this.update});
             this.uiContextMenuStrip1.Name = "uiContextMenuStrip1";
-            this.uiContextMenuStrip1.Size = new System.Drawing.Size(137, 76);
+            this.uiContextMenuStrip1.Size = new System.Drawing.Size(137, 80);
             // 
             // delete
             // 
             this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(136, 36);
+            this.delete.Size = new System.Drawing.Size(136, 38);
             this.delete.Text = "删除";
             // 
             // update
             // 
             this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(136, 36);
+            this.update.Size = new System.Drawing.Size(136, 38);
             this.update.Text = "编辑";
+            // 
+            // search1
+            // 
+            this.search1.Location = new System.Drawing.Point(8, 9);
+            this.search1.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.search1.Name = "search1";
+            this.search1.Size = new System.Drawing.Size(784, 23);
+            this.search1.TabIndex = 2;
             // 
             // 入库汇总
             // 
@@ -178,9 +178,9 @@ namespace Warehouse
         private Sunny.UI.UIPagination uiPagination1;
         private Sunny.UI.UIDataGridView grid;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private 工具窗体.Search search1;
         private Sunny.UI.UIContextMenuStrip uiContextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem delete;
         private System.Windows.Forms.ToolStripMenuItem update;
+        private 工具窗体.Search search1;
     }
 }
