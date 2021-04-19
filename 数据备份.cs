@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Sunny.UI;
 
 namespace Warehouse
 {
@@ -14,6 +15,7 @@ namespace Warehouse
 		public 数据备份()
 		{
 			InitializeComponent();
+			UIMessageBox.ShowError("一点一点来");
 		}
 	}
 }
