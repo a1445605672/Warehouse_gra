@@ -67,3 +67,5 @@ E:\git版本\Warehouse_gra\obj\Debug\Warehouse.csproj.CoreCompileInputs.cache
 E:\git版本\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyComplete
 E:\git版本\Warehouse_gra\obj\Debug\Warehouse.exe
 E:\git版本\Warehouse_gra\obj\Debug\Warehouse.pdb
+E:\git版本\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FEdit_department.resources
+E:\git版本\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FEdit_sr.resources

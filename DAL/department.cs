@@ -167,6 +167,29 @@ namespace DAL
         }
 
 
+        public Model.department GetModel_Name(string dep_name)
+        {
+
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select dep_id,dep_name,dep_principal_name,dep_principal_id,dep_sx from department ");
+            strSql.Append(" where dep_name=@dep_name ");
+            MySqlParameter[] parameters = {
+                    new MySqlParameter("@dep_name", MySqlDbType.VarChar,64)          };
+            parameters[0].Value = dep_name;
+
+            Model.department model = new Model.department();
+            DataSet ds = DbHelperMySQL.Query(strSql.ToString(), parameters);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return DataRowToModel(ds.Tables[0].Rows[0]);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+
         /// <summary>
         /// 得到一个对象实体
         /// </summary>
@@ -220,12 +243,13 @@ namespace DAL
         public int GetRecordCount(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select count(1) FROM department ");
+            strSql.Append("select count(*) FROM department ");
             if (strWhere.Trim() != "")
             {
                 strSql.Append(" where " + strWhere);
             }
-            object obj = DbHelperSQL.GetSingle(strSql.ToString());
+            //object obj = DbHelperSQL.GetSingle(strSql.ToString());
+            object obj = DbHelperMySQL.GetSingle(strSql.ToString());
             if (obj == null)
             {
                 return 0;

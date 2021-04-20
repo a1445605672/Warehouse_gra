@@ -185,6 +185,27 @@ namespace DAL
             }
         }
 
+        public Model.staff GetModel_Name(string staff_id)
+        {
+
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select staff_id,staff_name,staff_sex,staff_identity_card,staff_phone_number,staff_age,staff_hire_date,staff_belong_dep_id,staff_sx from staff ");
+            strSql.Append(" where staff_name=@staff_id ");
+            MySqlParameter[] parameters = {
+                    new MySqlParameter("@staff_id", MySqlDbType.VarChar,64)            };
+            parameters[0].Value = staff_id;
+
+            Model.staff model = new Model.staff();
+            DataSet ds = DbHelperMySQL.Query(strSql.ToString(), parameters);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return DataRowToModel(ds.Tables[0].Rows[0]);
+            }
+            else
+            {
+                return null;
+            }
+        }
 
         /// <summary>
         /// 得到一个对象实体
@@ -259,6 +280,13 @@ namespace DAL
         {
             return DbHelperMySQL.Query(StrSql.ToString());
         }
+
+        //public DataTable getDataList_table(string StrSql)
+        //{
+        //    return DbHelperMySQL.Query(StrSql.ToString());
+        //}
+
+
 
         /// <summary>
         /// 获取记录总数

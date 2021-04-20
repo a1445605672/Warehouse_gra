@@ -66,6 +66,14 @@ namespace BLL
 			return dal.GetModel(staff_id);
 		}
 
+		public Model.staff GetModel_Name(string staff_name)
+		{
+
+			return dal.GetModel_Name(staff_name);
+		}
+
+
+
 		/// <summary>
 		/// 得到一个对象实体，从缓存中
 		/// </summary>

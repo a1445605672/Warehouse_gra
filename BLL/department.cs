@@ -24,6 +24,14 @@ namespace BLL
 			return dal.Exists(dep_id);
 		}
 
+		///<summary>
+		///查询数据条数
+		/// </summary>
+		public int Count_data(string amount)
+        {
+			return dal.GetRecordCount(amount);
+        }
+
 		/// <summary>
 		/// 增加一条数据
 		/// </summary>
@@ -63,6 +71,12 @@ namespace BLL
 		{
 			
 			return dal.GetModel(dep_id);
+		}
+
+		public Model.department GetModel_Name(string name)
+		{
+
+			return dal.GetModel_Name(name);
 		}
 
 		/// <summary>
