@@ -138,3 +138,4 @@ C:\Users\kui\Desktop\Warehouse_gra\bin\Debug\ICSharpCode.SharpZipLib.xml
 C:\Users\kui\Desktop\Warehouse_gra\bin\Debug\Newtonsoft.Json.xml
 C:\Users\kui\Desktop\Warehouse_gra\bin\Debug\DAL.pdb
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyComplete
+C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.new_出库汇总.resources

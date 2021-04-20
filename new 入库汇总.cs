@@ -124,7 +124,10 @@ namespace Warehouse
         //重置
         private void uiButton1_Click(object sender, EventArgs e)
         {
-
+            comBatch.Text = "";
+            comMatName.Text = "";
+            comStorage.Text = "";
+            comStaffName.Text = "";
         }
         //加载物品名称
         private void comMatName_Load(object sender, EventArgs e)
@@ -153,6 +156,11 @@ namespace Warehouse
             comBatch.DataSource = bllenter.GetModelList("");
             comBatch.DisplayMember = "enter_batch_id";
             comBatch.ValueMember = "enter_batch_id";
+        }
+        //导出数据
+        private void uiButton3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

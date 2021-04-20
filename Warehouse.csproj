@@ -110,6 +110,12 @@
     <Compile Include="new 入库汇总.Designer.cs">
       <DependentUpon>new 入库汇总.cs</DependentUpon>
     </Compile>
+    <Compile Include="new_出库汇总.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_出库汇总.Designer.cs">
+      <DependentUpon>new_出库汇总.cs</DependentUpon>
+    </Compile>
     <Compile Include="SystemLog.cs" />
     <Compile Include="入库汇总.cs">
       <SubType>Form</SubType>
@@ -359,6 +365,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="new 入库汇总.resx">
       <DependentUpon>new 入库汇总.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_出库汇总.resx">
+      <DependentUpon>new_出库汇总.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
