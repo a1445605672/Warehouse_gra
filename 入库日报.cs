@@ -37,8 +37,8 @@ namespace Warehouse
 		private void AddRow()
 		{
 			BLL.enter_storage istr = new BLL.enter_storage();
-            this.uiDataGridView1.DataSource = istr.GetModelList("");
-			this.uiPagination1.DataSource = istr.GetModelList("");
+            this.uiDataGridView1.DataSource = istr.GetModelList(1);
+			this.uiPagination1.DataSource = istr.GetModelList(1);
             uiPagination1.ActivePage = 1;
 
 		}
@@ -47,31 +47,59 @@ namespace Warehouse
         {
 			//获取日期输入
 			string newtime = uiDatePicker1.Text.Trim();
+            //数据库语句
+            string strSql = "";
+            if (newtime != "")
+            {
+                //UNIX_TIMESTAMP('"+(startTime1.Text.ToString())+"')
+                //SELECT * FROM enter_storage WHERE UNIX_TIMESTAMP(enter_date)=UNIX_TIMESTAMP('2021-03-24')
+                strSql += "UNIX_TIMESTAMP(enter_date)=UNIX_TIMESTAMP('"+ uiDatePicker1.Text.ToString() + "')";
+            }
+            else
+            {
+                UIMessageBox.ShowSuccess("请选择时间");
+            }
 			//拿到业务逻辑层
 			BLL.enter_storage istr = new BLL.enter_storage();
+            uiDataGridView1.ClearAll();
+            uiDataGridView1.AddColumn("入库ID", "enter_id");
+            uiDataGridView1.AddColumn("入库批次编号", "enter_batch_id");
+            uiDataGridView1.AddColumn("库位编号", "enter_sl_id");
+            uiDataGridView1.AddColumn("入库量", "enter_amount");
+            uiDataGridView1.AddColumn("入库体积", "enter_unit_bulk");
+            uiDataGridView1.AddColumn("供应商编号", "supplier_id");
+            uiDataGridView1.AddColumn("入库物料id", "enter_mat_id");
+            uiDataGridView1.AddColumn("物料名称", "enter_mat_name");
+            uiDataGridView1.AddColumn("封记号", "enter_fengji_num");
+            uiDataGridView1.AddColumn("入库日期", "enter_date");
+            uiDataGridView1.AddColumn("经办人id", "enter_agent_id");
+            uiDataGridView1.AddColumn("经办人姓名", "enter_agent_name");
+            uiDataGridView1.AddColumn("备注", "enter_comment");
+            //自适应列距离
+            for (int i = 0; i < uiDataGridView1.ColumnCount; i++) { uiDataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; }
             //数据绑定
-            this.uiPagination1.DataSource = istr.GetModelList(newtime);
-
-			//List<Model.in_storage> datas = new List<Model.in_storage>();
-			//BLL.in_storage instorage = new BLL.in_storage();
-			//string sql= "SELECT enter_num,mat_id,mat_name,in_time,sl_id,in_amount,in_weight,in_volume FROM in_storage WHERE in_time="+newtime"";
-			//datas = instorage.GetModelList(sql);
-			//if (datas.Count == 0)
-			//{
-			//	ShowAskDialog("搜索结果为空！");
-			//	return;
-			//}
-			//else
-			//{
-			//	uiDataGridView1.DataSource = datas;//绑定到在库数据绑定到datagridview
-			//}
-		}
+            this.uiPagination1.DataSource = istr.GetModelList(strSql);
+            this.uiDataGridView1.DataSource= istr.GetModelList(strSql);
+            //List<Model.in_storage> datas = new List<Model.in_storage>();
+            //BLL.in_storage instorage = new BLL.in_storage();
+            //string sql= "SELECT enter_num,mat_id,mat_name,in_time,sl_id,in_amount,in_weight,in_volume FROM in_storage WHERE in_time="+newtime"";
+            //datas = instorage.GetModelList(sql);
+            //if (datas.Count == 0)
+            //{
+            //	ShowAskDialog("搜索结果为空！");
+            //	return;
+            //}
+            //else
+            //{
+            //	uiDataGridView1.DataSource = datas;//绑定到在库数据绑定到datagridview
+            //}
+        }
 
 		//导出功能
         private void uiButton2_Click(object sender, EventArgs e)
         {
             //文件位置
-            string a = "D:" + "\\KKHMD.xls";
+            string a = "D:" + "\\入库日报.xls";
             //调用文件导出函数
             ExportExcels(a, uiDataGridView1);
         }
@@ -129,6 +157,31 @@ namespace Warehouse
             xlApp.Quit();
             GC.Collect();//强行销毁
             MessageBox.Show("文件： " + fileName + ".xls 保存成功", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void uiLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PagePanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uiDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void uiDatePicker1_ValueChanged(object sender, DateTime value)
+        {
+
+        }
+
+        private void uiPagination1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

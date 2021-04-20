@@ -52,6 +52,7 @@ namespace Warehouse
             this.PagePanel.Controls.Add(this.uiButton2);
             this.PagePanel.Controls.Add(this.uiButton1);
             this.PagePanel.Controls.Add(this.uiLabel1);
+            this.PagePanel.Click += new System.EventHandler(this.PagePanel_Click);
             // 
             // uiLabel1
             // 
@@ -62,6 +63,7 @@ namespace Warehouse
             this.uiLabel1.TabIndex = 0;
             this.uiLabel1.Text = "入库日期：";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiLabel1.Click += new System.EventHandler(this.uiLabel1_Click);
             // 
             // uiButton1
             // 
@@ -131,6 +133,7 @@ namespace Warehouse
             this.uiDataGridView1.ShowGridLine = true;
             this.uiDataGridView1.Size = new System.Drawing.Size(830, 286);
             this.uiDataGridView1.TabIndex = 3;
+            this.uiDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.uiDataGridView1_CellContentClick);
             // 
             // uiDatePicker1
             // 
@@ -149,6 +152,7 @@ namespace Warehouse
             this.uiDatePicker1.Text = "2021-03-17";
             this.uiDatePicker1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiDatePicker1.Value = new System.DateTime(2021, 3, 17, 10, 9, 26, 240);
+            this.uiDatePicker1.ValueChanged += new Sunny.UI.UIDatePicker.OnDateTimeChanged(this.uiDatePicker1_ValueChanged);
             // 
             // uiPagination1
             // 
@@ -161,6 +165,7 @@ namespace Warehouse
             this.uiPagination1.Size = new System.Drawing.Size(774, 35);
             this.uiPagination1.TabIndex = 5;
             this.uiPagination1.Text = "uiPagination1";
+            this.uiPagination1.Click += new System.EventHandler(this.uiPagination1_Click);
             // 
             // 入库日报
             // 
