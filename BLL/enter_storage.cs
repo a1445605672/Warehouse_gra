@@ -95,6 +95,14 @@ namespace BLL
 			}
 			return (Model.enter_storage)objModel;
 		}
+		///<summary>
+		///用于日报的排序
+		///</summary>>
+		public List<Model.enter_storage> GetModelList(int num)
+		{
+			DataSet ds = dal.GetList(num);
+			return DataTableToList(ds.Tables[0]);
+		}
 
 		
 		/// <summary>

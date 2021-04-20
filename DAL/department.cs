@@ -6,13 +6,13 @@ using MySql.Data.MySqlClient;
 using DBUtility;//Please add references
 namespace DAL
 {
-	/// <summary>
-	/// 数据访问类:department
-	/// </summary>
-	public partial class department
-	{
-		public department()
-		{}
+    /// <summary>
+    /// 数据访问类:department
+    /// </summary>
+    public partial class department
+    {
+        public department()
+        { }
         #region  BasicMethod
 
         /// <summary>
@@ -24,7 +24,7 @@ namespace DAL
             strSql.Append("select count(1) from department");
             strSql.Append(" where dep_id=@dep_id ");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@dep_id", MySqlDbType.VarChar,128)			};
+                    new MySqlParameter("@dep_id", MySqlDbType.VarChar,128)          };
             parameters[0].Value = dep_id;
 
             return DbHelperMySQL.Exists(strSql.ToString(), parameters);
@@ -42,11 +42,11 @@ namespace DAL
             strSql.Append(" values (");
             strSql.Append("@dep_id,@dep_name,@dep_principal_name,@dep_principal_id,@dep_sx)");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@dep_id", MySqlDbType.VarChar,128),
-					new MySqlParameter("@dep_name", MySqlDbType.VarChar,64),
-					new MySqlParameter("@dep_principal_name", MySqlDbType.VarChar,64),
-					new MySqlParameter("@dep_principal_id", MySqlDbType.VarChar,128),
-					new MySqlParameter("@dep_sx", MySqlDbType.VarChar,64)};
+                    new MySqlParameter("@dep_id", MySqlDbType.VarChar,128),
+                    new MySqlParameter("@dep_name", MySqlDbType.VarChar,64),
+                    new MySqlParameter("@dep_principal_name", MySqlDbType.VarChar,64),
+                    new MySqlParameter("@dep_principal_id", MySqlDbType.VarChar,128),
+                    new MySqlParameter("@dep_sx", MySqlDbType.VarChar,64)};
             parameters[0].Value = model.dep_id;
             parameters[1].Value = model.dep_name;
             parameters[2].Value = model.dep_principal_name;
@@ -76,11 +76,11 @@ namespace DAL
             strSql.Append("dep_sx=@dep_sx");
             strSql.Append(" where dep_id=@dep_id ");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@dep_name", MySqlDbType.VarChar,64),
-					new MySqlParameter("@dep_principal_name", MySqlDbType.VarChar,64),
-					new MySqlParameter("@dep_principal_id", MySqlDbType.VarChar,128),
-					new MySqlParameter("@dep_sx", MySqlDbType.VarChar,64),
-					new MySqlParameter("@dep_id", MySqlDbType.VarChar,128)};
+                    new MySqlParameter("@dep_name", MySqlDbType.VarChar,64),
+                    new MySqlParameter("@dep_principal_name", MySqlDbType.VarChar,64),
+                    new MySqlParameter("@dep_principal_id", MySqlDbType.VarChar,128),
+                    new MySqlParameter("@dep_sx", MySqlDbType.VarChar,64),
+                    new MySqlParameter("@dep_id", MySqlDbType.VarChar,128)};
             parameters[0].Value = model.dep_name;
             parameters[1].Value = model.dep_principal_name;
             parameters[2].Value = model.dep_principal_id;
@@ -108,7 +108,7 @@ namespace DAL
             strSql.Append("delete from department ");
             strSql.Append(" where dep_id=@dep_id ");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@dep_id", MySqlDbType.VarChar,128)			};
+                    new MySqlParameter("@dep_id", MySqlDbType.VarChar,128)          };
             parameters[0].Value = dep_id;
 
             int rows = DbHelperMySQL.ExecuteSql(strSql.ToString(), parameters);
@@ -151,7 +151,7 @@ namespace DAL
             strSql.Append("select dep_id,dep_name,dep_principal_name,dep_principal_id,dep_sx from department ");
             strSql.Append(" where dep_id=@dep_id ");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@dep_id", MySqlDbType.VarChar,128)			};
+                    new MySqlParameter("@dep_id", MySqlDbType.VarChar,128)          };
             parameters[0].Value = dep_id;
 
             Model.department model = new Model.department();
@@ -311,9 +311,9 @@ namespace DAL
         }*/
 
         #endregion  BasicMethod
-		#region  ExtensionMethod
+        #region  ExtensionMethod
 
-		#endregion  ExtensionMethod
-	}
+        #endregion  ExtensionMethod
+    }
 }
 

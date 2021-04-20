@@ -1,14 +1,14 @@
 ﻿using System;
 namespace Model
 {
-	/// <summary>
-	/// department:实体类(属性说明自动提取数据库字段的描述信息)
-	/// </summary>
-	[Serializable]
-	public partial class department
-	{
-		public department()
-		{}
+    /// <summary>
+    /// department:实体类(属性说明自动提取数据库字段的描述信息)
+    /// </summary>
+    [Serializable]
+    public partial class department
+    {
+        public department()
+        { }
         #region Model
         private string _dep_id;
         private string _dep_name;
@@ -57,6 +57,6 @@ namespace Model
         }
         #endregion Model
 
-	}
+    }
 }
 

@@ -296,6 +296,17 @@ namespace Maticsoft.DAL
             return model;
         }
         /// <summary>
+        /// 用于入库日报，根据时间排序
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
+        public DataSet GetList(int num)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("SELECT * FROM enter_storage ORDER BY enter_date DESC");
+            return DbHelperMySQL.Query(strSql.ToString());
+        }
+        /// <summary>
         /// 获得数据列表
         /// </summary>
         public DataSet GetList(string strWhere)
