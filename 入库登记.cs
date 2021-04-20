@@ -18,7 +18,7 @@ namespace Warehouse
 	{
 		BLL.enter_storage enterStoeage = new BLL.enter_storage();
 		BLL.sr_info srInfor = new BLL.sr_info();
-		List<KeyValuePair<string, int>> list;//存储库位大小
+		List<KeyValuePair<string, double>> list;//存储库位大小
 		public 入库登记()
 		{
 			ShowStatusForm(100, "数据加载中......");
@@ -268,7 +268,7 @@ namespace Warehouse
 					if (inWarehouseAmount.Text != "" && Materialsbox.Text != "")
 					{
 						//自动推荐入库
-						storageLocation(Materialsbox.Text, Convert.ToInt32(inWarehouseAmount.Text));
+						storageLocation(Materialsbox.Text, inWarehouseAmount.Text);
 					}
 					break;
 				//case "storageLocationBox"://验证库位
@@ -315,7 +315,7 @@ namespace Warehouse
 					if(inWarehouseAmount.Text!="" && Materialsbox.Text!="")
 					{
 						//自动推荐入库
-						storageLocation(Materialsbox.Text, Convert.ToInt32(inWarehouseAmount.Text));
+						storageLocation(Materialsbox.Text, inWarehouseAmount.Text);
 					}
 					break;
 				case "weightBox":
@@ -356,32 +356,62 @@ namespace Warehouse
 		/// <param name="materiaName">物品名称</param>
 		/// <param name="inStorageNumber"></param>
 		/// <returns></returns>
-		private string storageLocation(string materiaName,float inStorageNumber)
+		private string storageLocation(string materiaName,string  inStorageNumber)
 		{
 			
 			string storageAreaSQL = "SELECT DISTINCT (storagelocation.sl_store_area) ,storagelocation.sl_id " +
 				"FROM storagelocation,StorageMaterialType WHERE StorageMaterialType.`mat_id`=(SELECT mat_id FROM  material_info WHERE mat_name=\'"+ materiaName + "\')ORDER BY  storagelocation.sl_store_area";
 			DataSet ds=enterStoeage.getDataList(storageAreaSQL);
-			list = new List<KeyValuePair<string, int>>();
-			KeyValuePair<string, int> keyValuePair;
+			list = new List<KeyValuePair<string, double>>();
+			KeyValuePair<string, double> keyValuePair;
 			for (int i=0;i<ds.Tables[0].Rows.Count;i++)
 			{
-				float storageArea = (float)ds.Tables[0].Rows[0][0].ToString();
+				double storageArea =Convert.ToDouble( ds.Tables[0].Rows[0][0].ToString());
 				string storageLocationId = ds.Tables[0].Rows[0][1].ToString();
-				keyValuePair = new KeyValuePair<string, int>(storageLocationId, storageArea);
+				keyValuePair = new KeyValuePair<string, double>(storageLocationId, storageArea);
 				list.Add(keyValuePair);
 			}
-			if(list[1].Value<inStorageNumber)
+			if(list[1].Value< Convert.ToDouble(inStorageNumber))
 			{
-				if(ShowAskDialog("是否分多个库位进行入库"))
+				if (ShowAskDialog("是否分多个库位进行入库"))
 				{//确定事件处理
-					
+					double sum = 0;
+					for (int i = 0; i < list.Count; i++)
+					{
+						sum += list[1].Value;
+						if (sum > Convert.ToDouble(inStorageNumber))
+						{
+							storageLocationBox.Text += list[i].Key;
+							break;
+						}
+						else
+						{
+							storageLocationBox.Text += list[i].Key + ",";
+						}
 
+					}
+					//设置字体大小
+					storageLocationBox.Font = new Font("微软雅黑", 7.5F);
 				}
 				else
 				{
-					//取消事件处理
+					int i = 0;
+					for (; i < list.Count; i++)
+					{
+						if(Convert.ToDouble(inStorageNumber)< list[1].Value)
+						{
+							storageLocationBox.Text += list[i].Key;
+						}
+					}
+					if(i== list.Count)
+					{
+						ShowSuccessDialog("没有合适的柜子，请添加");
+					}
 				}
+			}
+			else
+			{
+				storageLocationBox.Text += list[1].Key；
 			}
 			return null;
 		}

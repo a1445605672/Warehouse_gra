@@ -204,7 +204,6 @@ E:\Warehouse_gra\bin\Debug\DBUtility.pdb
 E:\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyComplete
 E:\Warehouse_gra\obj\Debug\Warehouse.exe
 E:\Warehouse_gra\obj\Debug\Warehouse.pdb
-<<<<<<< HEAD
 =======
 D:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.kugui.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.kuguitype.resources
@@ -232,6 +231,11 @@ E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmmaterType.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmStorage.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.库位管理.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.物料类别管理.resources
-=======
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.new_出库汇总.resources
 >>>>>>> 62d900515e2fb7ab72afdc05e43ef6940972fc42
+E:\Warehouse_gra\obj\Debug\Warehouse.new_入库汇总.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.new_出库汇总.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.入库汇总.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.出库汇总.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FEdit_department.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FEdit_sr.resources
