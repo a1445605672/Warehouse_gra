@@ -10,12 +10,12 @@ namespace BLL
 	/// </summary>
 	public partial class staff
 	{
-		private readonly DAL.staff dal=new DAL.staff();
+		private readonly DAL.staff dal = new DAL.staff();
 		public staff()
-		{}
+		{ }
 		#region  BasicMethod
 
-		
+
 
 		/// <summary>
 		/// 是否存在该记录
@@ -46,15 +46,15 @@ namespace BLL
 		/// </summary>
 		public bool Delete(string staff_id)
 		{
-			
+
 			return dal.Delete(staff_id);
 		}
 		/// <summary>
 		/// 删除一条数据
 		/// </summary>
-		public bool DeleteList(string staff_idlist )
+		public bool DeleteList(string staff_idlist)
 		{
-			return dal.DeleteList(Maticsoft.Common.PageValidate.SafeLongFilter(staff_idlist,0) );
+			return dal.DeleteList(Maticsoft.Common.PageValidate.SafeLongFilter(staff_idlist, 0));
 		}
 
 		/// <summary>
@@ -62,16 +62,24 @@ namespace BLL
 		/// </summary>
 		public Model.staff GetModel(string staff_id)
 		{
-			
+
 			return dal.GetModel(staff_id);
 		}
+
+		public Model.staff GetModel_Name(string staff_name)
+		{
+
+			return dal.GetModel_Name(staff_name);
+		}
+
+
 
 		/// <summary>
 		/// 得到一个对象实体，从缓存中
 		/// </summary>
 		public Model.staff GetModelByCache(string staff_id)
 		{
-			
+
 			string CacheKey = "staffModel-" + staff_id;
 			object objModel = Maticsoft.Common.DataCache.GetCache(CacheKey);
 			if (objModel == null)
@@ -85,7 +93,7 @@ namespace BLL
 						Maticsoft.Common.DataCache.SetCache(CacheKey, objModel, DateTime.Now.AddMinutes(ModelCache), TimeSpan.Zero);
 					}
 				}
-				catch{}
+				catch { }
 			}
 			return (Model.staff)objModel;
 		}
@@ -107,6 +115,8 @@ namespace BLL
 		{
 			return dal.getDataList(strSql);
 		}
+
+
 
 		/// <summary>
 		/// 获得数据列表
@@ -158,14 +168,14 @@ namespace BLL
 		/// </summary>
 		public DataSet GetListByPage(string strWhere, string orderby, int startIndex, int endIndex)
 		{
-			return dal.GetListByPage( strWhere,  orderby,  startIndex,  endIndex);
+			return dal.GetListByPage(strWhere, orderby, startIndex, endIndex);
 		}
 		/// <summary>
 		/// 分页获取数据列表
 		/// </summary>
 		//public DataSet GetList(int PageSize,int PageIndex,string strWhere)
 		//{
-			//return dal.GetList(PageSize,PageIndex,strWhere);
+		//return dal.GetList(PageSize,PageIndex,strWhere);
 		//}
 
 		#endregion  BasicMethod

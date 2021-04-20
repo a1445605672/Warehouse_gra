@@ -5,13 +5,13 @@ using MySql.Data.MySqlClient;
 using DBUtility;//Please add references
 namespace DAL
 {
-	/// <summary>
-	/// 数据访问类:staff
-	/// </summary>
-	public partial class staff
-	{
-		public staff()
-		{}
+    /// <summary>
+    /// 数据访问类:staff
+    /// </summary>
+    public partial class staff
+    {
+        public staff()
+        { }
         #region  BasicMethod
 
         /// <summary>
@@ -23,7 +23,7 @@ namespace DAL
             strSql.Append("select count(1) from staff");
             strSql.Append(" where staff_id=@staff_id ");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@staff_id", MySqlDbType.VarChar,128)			};
+                    new MySqlParameter("@staff_id", MySqlDbType.VarChar,128)            };
             parameters[0].Value = staff_id;
 
             return DbHelperMySQL.Exists(strSql.ToString(), parameters);
@@ -41,15 +41,15 @@ namespace DAL
             strSql.Append(" values (");
             strSql.Append("@staff_id,@staff_name,@staff_sex,@staff_identity_card,@staff_phone_number,@staff_age,@staff_hire_date,@staff_belong_dep_id,@staff_sx)");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@staff_id", MySqlDbType.VarChar,128),
-					new MySqlParameter("@staff_name", MySqlDbType.VarChar,64),
-					new MySqlParameter("@staff_sex", MySqlDbType.VarChar,2),
-					new MySqlParameter("@staff_identity_card", MySqlDbType.VarChar,18),
-					new MySqlParameter("@staff_phone_number", MySqlDbType.VarChar,11),
-					new MySqlParameter("@staff_age", MySqlDbType.Int32,4),
-					new MySqlParameter("@staff_hire_date", MySqlDbType.DateTime),
-					new MySqlParameter("@staff_belong_dep_id", MySqlDbType.VarChar,128),
-					new MySqlParameter("@staff_sx", MySqlDbType.VarChar,64)};
+                    new MySqlParameter("@staff_id", MySqlDbType.VarChar,128),
+                    new MySqlParameter("@staff_name", MySqlDbType.VarChar,64),
+                    new MySqlParameter("@staff_sex", MySqlDbType.VarChar,2),
+                    new MySqlParameter("@staff_identity_card", MySqlDbType.VarChar,18),
+                    new MySqlParameter("@staff_phone_number", MySqlDbType.VarChar,11),
+                    new MySqlParameter("@staff_age", MySqlDbType.Int32,4),
+                    new MySqlParameter("@staff_hire_date", MySqlDbType.DateTime),
+                    new MySqlParameter("@staff_belong_dep_id", MySqlDbType.VarChar,128),
+                    new MySqlParameter("@staff_sx", MySqlDbType.VarChar,64)};
             parameters[0].Value = model.staff_id;
             parameters[1].Value = model.staff_name;
             parameters[2].Value = model.staff_sex;
@@ -87,15 +87,15 @@ namespace DAL
             strSql.Append("staff_sx=@staff_sx");
             strSql.Append(" where staff_id=@staff_id ");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@staff_name", MySqlDbType.VarChar,64),
-					new MySqlParameter("@staff_sex", MySqlDbType.VarChar,2),
-					new MySqlParameter("@staff_identity_card", MySqlDbType.VarChar,18),
-					new MySqlParameter("@staff_phone_number", MySqlDbType.VarChar,11),
-					new MySqlParameter("@staff_age", MySqlDbType.Int32,4),
-					new MySqlParameter("@staff_hire_date", MySqlDbType.DateTime),
-					new MySqlParameter("@staff_belong_dep_id", MySqlDbType.VarChar,128),
-					new MySqlParameter("@staff_sx", MySqlDbType.VarChar,64),
-					new MySqlParameter("@staff_id", MySqlDbType.VarChar,128)};
+                    new MySqlParameter("@staff_name", MySqlDbType.VarChar,64),
+                    new MySqlParameter("@staff_sex", MySqlDbType.VarChar,2),
+                    new MySqlParameter("@staff_identity_card", MySqlDbType.VarChar,18),
+                    new MySqlParameter("@staff_phone_number", MySqlDbType.VarChar,11),
+                    new MySqlParameter("@staff_age", MySqlDbType.Int32,4),
+                    new MySqlParameter("@staff_hire_date", MySqlDbType.DateTime),
+                    new MySqlParameter("@staff_belong_dep_id", MySqlDbType.VarChar,128),
+                    new MySqlParameter("@staff_sx", MySqlDbType.VarChar,64),
+                    new MySqlParameter("@staff_id", MySqlDbType.VarChar,128)};
             parameters[0].Value = model.staff_name;
             parameters[1].Value = model.staff_sex;
             parameters[2].Value = model.staff_identity_card;
@@ -127,7 +127,7 @@ namespace DAL
             strSql.Append("delete from staff ");
             strSql.Append(" where staff_id=@staff_id ");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@staff_id", MySqlDbType.VarChar,128)			};
+                    new MySqlParameter("@staff_id", MySqlDbType.VarChar,128)            };
             parameters[0].Value = staff_id;
 
             int rows = DbHelperMySQL.ExecuteSql(strSql.ToString(), parameters);
@@ -170,7 +170,7 @@ namespace DAL
             strSql.Append("select staff_id,staff_name,staff_sex,staff_identity_card,staff_phone_number,staff_age,staff_hire_date,staff_belong_dep_id,staff_sx from staff ");
             strSql.Append(" where staff_id=@staff_id ");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@staff_id", MySqlDbType.VarChar,128)			};
+                    new MySqlParameter("@staff_id", MySqlDbType.VarChar,128)            };
             parameters[0].Value = staff_id;
 
             Model.staff model = new Model.staff();
@@ -185,6 +185,27 @@ namespace DAL
             }
         }
 
+        public Model.staff GetModel_Name(string staff_id)
+        {
+
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select staff_id,staff_name,staff_sex,staff_identity_card,staff_phone_number,staff_age,staff_hire_date,staff_belong_dep_id,staff_sx from staff ");
+            strSql.Append(" where staff_name=@staff_id ");
+            MySqlParameter[] parameters = {
+                    new MySqlParameter("@staff_id", MySqlDbType.VarChar,64)            };
+            parameters[0].Value = staff_id;
+
+            Model.staff model = new Model.staff();
+            DataSet ds = DbHelperMySQL.Query(strSql.ToString(), parameters);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return DataRowToModel(ds.Tables[0].Rows[0]);
+            }
+            else
+            {
+                return null;
+            }
+        }
 
         /// <summary>
         /// 得到一个对象实体
@@ -260,6 +281,13 @@ namespace DAL
             return DbHelperMySQL.Query(StrSql.ToString());
         }
 
+        //public DataTable getDataList_table(string StrSql)
+        //{
+        //    return DbHelperMySQL.Query(StrSql.ToString());
+        //}
+
+
+
         /// <summary>
         /// 获取记录总数
         /// </summary>
@@ -333,9 +361,9 @@ namespace DAL
         }*/
 
         #endregion  BasicMethod
-		#region  ExtensionMethod
+        #region  ExtensionMethod
 
-		#endregion  ExtensionMethod
-	}
+        #endregion  ExtensionMethod
+    }
 }
 
