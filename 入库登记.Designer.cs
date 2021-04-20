@@ -54,13 +54,17 @@ namespace Warehouse
 			this.Materialsbox = new Sunny.UI.UIComboBox();
 			this.edtDate = new Sunny.UI.UIDatePicker();
 			this.uiLabel12 = new Sunny.UI.UILabel();
-			this.storageLocationBox = new Sunny.UI.UIComboBox();
+			this.bulkStorage = new Sunny.UI.UIButton();
+			this.uiButton1 = new Sunny.UI.UIButton();
+			this.storageLocationBox = new Sunny.UI.UITextBox();
 			this.PagePanel.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// PagePanel
 			// 
 			this.PagePanel.Controls.Add(this.storageLocationBox);
+			this.PagePanel.Controls.Add(this.uiButton1);
+			this.PagePanel.Controls.Add(this.bulkStorage);
 			this.PagePanel.Controls.Add(this.uiLabel12);
 			this.PagePanel.Controls.Add(this.edtDate);
 			this.PagePanel.Controls.Add(this.Materialsbox);
@@ -445,20 +449,74 @@ namespace Warehouse
 			this.uiLabel12.Text = "g";
 			this.uiLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
+			// bulkStorage
+			// 
+			this.bulkStorage.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.bulkStorage.FillColor = System.Drawing.Color.White;
+			this.bulkStorage.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+			this.bulkStorage.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+			this.bulkStorage.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+			this.bulkStorage.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.bulkStorage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
+			this.bulkStorage.ForeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+			this.bulkStorage.ForePressColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
+			this.bulkStorage.ForeSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
+			this.bulkStorage.Location = new System.Drawing.Point(797, 74);
+			this.bulkStorage.MinimumSize = new System.Drawing.Size(1, 1);
+			this.bulkStorage.Name = "bulkStorage";
+			this.bulkStorage.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(219)))), ((int)(((byte)(227)))));
+			this.bulkStorage.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+			this.bulkStorage.ShowFocusLine = true;
+			this.bulkStorage.Size = new System.Drawing.Size(100, 35);
+			this.bulkStorage.Style = Sunny.UI.UIStyle.White;
+			this.bulkStorage.StyleCustomMode = true;
+			this.bulkStorage.TabIndex = 55;
+			this.bulkStorage.Text = "批量入库";
+			this.bulkStorage.TipsText = "1";
+			this.bulkStorage.Click += new System.EventHandler(this.bulkStorage_Click);
+			// 
+			// uiButton1
+			// 
+			this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.uiButton1.FillColor = System.Drawing.Color.White;
+			this.uiButton1.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+			this.uiButton1.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+			this.uiButton1.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+			this.uiButton1.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.uiButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
+			this.uiButton1.ForeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+			this.uiButton1.ForePressColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
+			this.uiButton1.ForeSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
+			this.uiButton1.Location = new System.Drawing.Point(29, 78);
+			this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
+			this.uiButton1.Name = "uiButton1";
+			this.uiButton1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(219)))), ((int)(((byte)(227)))));
+			this.uiButton1.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+			this.uiButton1.ShowFocusLine = true;
+			this.uiButton1.Size = new System.Drawing.Size(100, 35);
+			this.uiButton1.Style = Sunny.UI.UIStyle.White;
+			this.uiButton1.StyleCustomMode = true;
+			this.uiButton1.TabIndex = 56;
+			this.uiButton1.Text = "批量入库";
+			this.uiButton1.TipsText = "1";
+			// 
 			// storageLocationBox
 			// 
+			this.storageLocationBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.storageLocationBox.Enabled = false;
 			this.storageLocationBox.FillColor = System.Drawing.Color.White;
-			this.storageLocationBox.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.storageLocationBox.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
 			this.storageLocationBox.Location = new System.Drawing.Point(385, 296);
 			this.storageLocationBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.storageLocationBox.MinimumSize = new System.Drawing.Size(63, 0);
+			this.storageLocationBox.Maximum = 2147483647D;
+			this.storageLocationBox.Minimum = -2147483648D;
+			this.storageLocationBox.MinimumSize = new System.Drawing.Size(1, 1);
 			this.storageLocationBox.Name = "storageLocationBox";
-			this.storageLocationBox.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+			this.storageLocationBox.Padding = new System.Windows.Forms.Padding(5);
+			this.storageLocationBox.ReadOnly = true;
 			this.storageLocationBox.Size = new System.Drawing.Size(221, 29);
-			this.storageLocationBox.TabIndex = 53;
-			this.storageLocationBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-			this.storageLocationBox.Watermark = "请选择";
-			this.storageLocationBox.Validated += new System.EventHandler(this.ProviderBox_Validated_1);
+			this.storageLocationBox.TabIndex = 28;
+			this.storageLocationBox.Watermark = "";
 			// 
 			// 入库登记
 			// 
@@ -501,6 +559,8 @@ namespace Warehouse
 		private Sunny.UI.UITextBox volumeBox;
 		private Sunny.UI.UIDatePicker edtDate;
 		private Sunny.UI.UILabel uiLabel12;
-		private Sunny.UI.UIComboBox storageLocationBox;
+		private Sunny.UI.UIButton bulkStorage;
+		private Sunny.UI.UITextBox storageLocationBox;
+		private Sunny.UI.UIButton uiButton1;
 	}
 }

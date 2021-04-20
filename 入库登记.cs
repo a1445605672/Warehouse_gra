@@ -16,6 +16,9 @@ namespace Warehouse
 {
 	public partial class 入库登记 : UITitlePage
 	{
+		BLL.enter_storage enterStoeage = new BLL.enter_storage();
+		BLL.sr_info srInfor = new BLL.sr_info();
+		List<KeyValuePair<string, int>> list;//存储库位大小
 		public 入库登记()
 		{
 			ShowStatusForm(100, "数据加载中......");
@@ -27,7 +30,7 @@ namespace Warehouse
 			/*
 			 * 生成规则，根据日期生成入库编号，sql语句查询今天入库的条目，然后加一就是新的入库编号
 			 */
-			BLL.enter_storage enterStoeage = new BLL.enter_storage();
+			
 			string inNum_where = "enter_date=";//入库时间
 			string time = "yyyy-MM-dd";
 			inNum_where += "'" + DateTime.Now.ToString(time) + "'";
@@ -43,8 +46,8 @@ namespace Warehouse
 
 
 			#region 供应商模块
-			BLL.sr_info srInfor = new BLL.sr_info();
-			string provider_sql = "SELECT  sr_name FROM sr_info WHERE sr_type=\'供应商\'";
+			
+			string provider_sql = "SELECT  sr_name FROM sr_info WHERE sr_type=\'供货商\'";
 			DataSet Provider_ds = srInfor.getDataList(provider_sql);
 			for (int i = 0; i < Provider_ds.Tables[0].Rows.Count; i++)
 			{
@@ -65,6 +68,11 @@ namespace Warehouse
 			for (int i = 0; i < 10; i++)
 				StatusFormStepIt();
 			#region 库位编号
+
+			
+
+
+
 
 			#endregion
 
@@ -171,6 +179,28 @@ namespace Warehouse
 			{
 				ShowAskDialog("您输入的有误请检查");
 			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			log.WriteLog(6, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "入库登记", "完成入库", InWarwhouseNumberBox.Text.Trim());
 			ShowAskDialog("我已经入库啦");
 		}
@@ -233,6 +263,12 @@ namespace Warehouse
 					{
 						Materialsbox.Text = "";
 						ShowErrorTip("物品输入有误，请选择");
+						return;
+					}
+					if (inWarehouseAmount.Text != "" && Materialsbox.Text != "")
+					{
+						//自动推荐入库
+						storageLocation(Materialsbox.Text, Convert.ToInt32(inWarehouseAmount.Text));
 					}
 					break;
 				//case "storageLocationBox"://验证库位
@@ -274,6 +310,12 @@ namespace Warehouse
 					{
 						textbox.Text = "";
 						ShowErrorTip("入库量输入有误，请输入数字体积");
+						return;
+					}
+					if(inWarehouseAmount.Text!="" && Materialsbox.Text!="")
+					{
+						//自动推荐入库
+						storageLocation(Materialsbox.Text, Convert.ToInt32(inWarehouseAmount.Text));
 					}
 					break;
 				case "weightBox":
@@ -300,7 +342,52 @@ namespace Warehouse
 			}
 		}
 		#endregion
+
+
+		#region 批量入库
+		private void bulkStorage_Click(object sender, EventArgs e)
+		{
+
+		}
+		#endregion
+		/// <summary>
+		/// 推荐库位
+		/// </summary>
+		/// <param name="materiaName">物品名称</param>
+		/// <param name="inStorageNumber"></param>
+		/// <returns></returns>
+		private string storageLocation(string materiaName,float inStorageNumber)
+		{
+			
+			string storageAreaSQL = "SELECT DISTINCT (storagelocation.sl_store_area) ,storagelocation.sl_id " +
+				"FROM storagelocation,StorageMaterialType WHERE StorageMaterialType.`mat_id`=(SELECT mat_id FROM  material_info WHERE mat_name=\'"+ materiaName + "\')ORDER BY  storagelocation.sl_store_area";
+			DataSet ds=enterStoeage.getDataList(storageAreaSQL);
+			list = new List<KeyValuePair<string, int>>();
+			KeyValuePair<string, int> keyValuePair;
+			for (int i=0;i<ds.Tables[0].Rows.Count;i++)
+			{
+				float storageArea = (float)ds.Tables[0].Rows[0][0].ToString();
+				string storageLocationId = ds.Tables[0].Rows[0][1].ToString();
+				keyValuePair = new KeyValuePair<string, int>(storageLocationId, storageArea);
+				list.Add(keyValuePair);
+			}
+			if(list[1].Value<inStorageNumber)
+			{
+				if(ShowAskDialog("是否分多个库位进行入库"))
+				{//确定事件处理
+					
+
+				}
+				else
+				{
+					//取消事件处理
+				}
+			}
+			return null;
+		}
 	}
+
+
 }
 
 

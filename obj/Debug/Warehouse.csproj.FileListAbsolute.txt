@@ -227,10 +227,8 @@ D:\Warehouse_gra\obj\Debug\Warehouse.库位类型管理.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.Frmaterial.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.物料信息管理.resources
 >>>>>>> c327687e2acdb3d7144488d464936895852e1510
-<<<<<<< HEAD
 E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.Frmaterial.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.物料信息管理.resources
-=======
 D:\Warehouse_gra\bin\Debug\BouncyCastle.Crypto.dll
 D:\Warehouse_gra\bin\Debug\ICSharpCode.SharpZipLib.dll
 D:\Warehouse_gra\bin\Debug\NPOI.dll
@@ -245,3 +243,7 @@ D:\Warehouse_gra\obj\Debug\Warehouse.物料类别管理.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmStorage.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.库位管理.resources
 >>>>>>> 0f8a75bca656c1f759fe671b8789f10827c02d42
+E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmmaterType.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmStorage.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.库位管理.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.物料类别管理.resources
