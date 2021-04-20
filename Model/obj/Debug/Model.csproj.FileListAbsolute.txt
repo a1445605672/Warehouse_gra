@@ -29,4 +29,3 @@ E:\git版本\Warehouse_gra\Model\bin\Debug\Model.pdb
 E:\git版本\Warehouse_gra\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 E:\git版本\Warehouse_gra\Model\obj\Debug\Model.dll
 E:\git版本\Warehouse_gra\Model\obj\Debug\Model.pdb
-E:\git版本\Warehouse_gra\Model\obj\Debug\Model.csprojAssemblyReference.cache
