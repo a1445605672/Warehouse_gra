@@ -106,6 +106,11 @@ namespace BLL
 			return (Model.out_storage)objModel;
 		}
 
+		public DataSet GetList(string columnname,int num)
+		{
+			return dal.GetList(columnname,num);
+		}
+
 		/// <summary>
 		/// 获得数据列表
 		/// </summary>
@@ -123,8 +128,14 @@ namespace BLL
 			return dal.getDataList(strSql);
 		}
 
-
-
+		///<summary>
+		///用于填充下拉框
+		///</summary>>
+		public List<Model.out_storage> GetModelList(string strWhere,int num)
+		{
+			DataSet ds = dal.GetList(strWhere,0);
+			return DataTableToList(ds.Tables[0]);
+		}
 
 
 

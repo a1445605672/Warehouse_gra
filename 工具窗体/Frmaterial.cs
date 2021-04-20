@@ -44,8 +44,22 @@ namespace Warehouse.工具窗体
             }
             set
             {
-                
+
             }
+        }
+        //在ListBox中添加值
+        private void uiListBox1_Load(object sender, EventArgs e)
+        {
+            BLL.chest_type blltype = new BLL.chest_type();
+            DataSet ds = new DataSet();
+            ds=blltype.GetList(0);
+            int num = ds.Tables[0].Rows.Count;
+            for (int i = 0; i < num; i++)
+            {
+                uiListBox1.Items.Add(ds.Tables[0].Rows[i][0]);
+                //ds.Tables[0].Rows[i][0];  
+            }
+            //uiListBox1.DataSource = ds.Tables[0].DefaultView;
         }
     }
 }

@@ -15,25 +15,72 @@ namespace Warehouse
 		public 出库日报()
 		{
 			InitializeComponent();
-		}
+            grid.AddColumn("出库编号", "out_id");
+            grid.AddColumn("物料编号", "out_mat_id");
+            grid.AddColumn("物料名称", "out_mat_name");
+            grid.AddColumn("出库量", "out_account");
+            grid.AddColumn("批次编号", "out_batch_id");
+            grid.AddColumn("出库日期", "out_data");
+            grid.AddColumn("经办人id", "out_staff_id");
+            grid.AddColumn("经办人姓名", "out_staff_name");
+            grid.AddColumn("收货商编号", "out_sr_id");
+            grid.AddColumn("备注", "remark");
+            grid.AddColumn("入库编号", "enter_id");
+            //自适应列距离
+            for (int i = 0; i < grid.ColumnCount; i++) { grid.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; }
 
-        private void uiLabel1_Click(object sender, EventArgs e)
+            AddRow();
+        }
+        // 为gridview填充值
+        private void AddRow()
         {
-
+            BLL.out_storage bllout = new BLL.out_storage();
+            this.grid.DataSource = bllout.GetModelList("");
+            uiPagination1.DataSource = bllout.GetModelList("");
+            uiPagination1.ActivePage = 1;
         }
         //查询
         private void uiButton1_Click(object sender, EventArgs e)
         {
-
+            //获取日期输入
+            string newtime = uiDatePicker1.Text.Trim();
+            //数据库语句
+            string strSql = "";
+            if (newtime != "")
+            {
+                //UNIX_TIMESTAMP('"+(startTime1.Text.ToString())+"')
+                //SELECT * FROM enter_storage WHERE UNIX_TIMESTAMP(enter_date)=UNIX_TIMESTAMP('2021-03-24')
+                strSql += "UNIX_TIMESTAMP(out_data)=UNIX_TIMESTAMP('" + uiDatePicker1.Text.ToString() + "')";
+            }
+            else
+            {
+                UIMessageBox.ShowSuccess("请选择时间");
+            }
+            BLL.out_storage bllout = new BLL.out_storage();
+            grid.AddColumn("出库编号", "out_id");
+            grid.AddColumn("物料编号", "out_mat_id");
+            grid.AddColumn("物料名称", "out_mat_name");
+            grid.AddColumn("出库量", "out_account");
+            grid.AddColumn("批次编号", "out_batch_id");
+            grid.AddColumn("出库日期", "out_data");
+            grid.AddColumn("经办人id", "out_staff_id");
+            grid.AddColumn("经办人姓名", "out_staff_name");
+            grid.AddColumn("收货商编号", "out_sr_id");
+            grid.AddColumn("备注", "remark");
+            grid.AddColumn("入库编号", "enter_id");
+            //自适应列距离
+            for (int i = 0; i < grid.ColumnCount; i++) { grid.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; }
+            this.uiPagination1.DataSource = bllout.GetModelList(strSql);
+            this.grid.DataSource = bllout.GetModelList(strSql);
         }
 
         //导出
         private void uiButton2_Click(object sender, EventArgs e)
         {
             //文件位置
-            string a = "D:" + "\\KKHMD.xls";
+            string a = "D:" + "\\出库日报.xls";
             //调用文件导出函数
-            ExportExcels(a, uiDataGridView1);
+            ExportExcels(a, grid);
         }
         /// <summary>
         ///
@@ -89,6 +136,11 @@ namespace Warehouse
             xlApp.Quit();
             GC.Collect();//强行销毁
             MessageBox.Show("文件： " + fileName + ".xls 保存成功", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        //导出
+        private void uiButton2_ClientSizeChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -38,7 +38,7 @@ namespace Warehouse
 		private void AddRow()
 		{
 			BLL.storagelocation bsta = new BLL.storagelocation();
-			grid.DataSource = bsta.GetModelList("");
+			this.grid.DataSource = bsta.GetModelList("");
 			uiPagination1.DataSource = bsta.GetModelList("");
 			uiPagination1.ActivePage = 1;
 		}

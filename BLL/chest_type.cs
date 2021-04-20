@@ -61,8 +61,10 @@ namespace BLL
 			
 			return dal.GetModel(type_id);
 		}
-
-		
+		public DataSet GetList(int num)
+		{
+			return dal.GetList(num);
+		}
 		/// <summary>
 		/// 获得数据列表
 		/// </summary>

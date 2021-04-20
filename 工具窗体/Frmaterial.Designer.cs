@@ -29,7 +29,6 @@ namespace Warehouse.工具窗体
         /// </summary>
         private void InitializeComponent()
         {
-            this.uiRichTextBox1 = new Sunny.UI.UIRichTextBox();
             this.uiButton1 = new Sunny.UI.UIButton();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.txtID = new Sunny.UI.UITextBox();
@@ -55,25 +54,13 @@ namespace Warehouse.工具窗体
             this.comColor1 = new Sunny.UI.UIComboBox();
             this.comSmell = new Sunny.UI.UIComboBox();
             this.comsuan = new Sunny.UI.UIComboBox();
+            this.uiListBox1 = new Sunny.UI.UIListBox();
             this.SuspendLayout();
             // 
             // pnlBtm
             // 
             this.pnlBtm.Location = new System.Drawing.Point(1, 729);
             this.pnlBtm.Size = new System.Drawing.Size(730, 55);
-            // 
-            // uiRichTextBox1
-            // 
-            this.uiRichTextBox1.AutoWordSelection = true;
-            this.uiRichTextBox1.FillColor = System.Drawing.Color.White;
-            this.uiRichTextBox1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiRichTextBox1.Location = new System.Drawing.Point(57, 158);
-            this.uiRichTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiRichTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiRichTextBox1.Name = "uiRichTextBox1";
-            this.uiRichTextBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.uiRichTextBox1.Size = new System.Drawing.Size(210, 225);
-            this.uiRichTextBox1.TabIndex = 2;
             // 
             // uiButton1
             // 
@@ -379,11 +366,28 @@ namespace Warehouse.工具窗体
             this.comsuan.TabIndex = 7;
             this.comsuan.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // uiListBox1
+            // 
+            this.uiListBox1.FillColor = System.Drawing.Color.White;
+            this.uiListBox1.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiListBox1.FormatString = "";
+            this.uiListBox1.ItemSelectForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.uiListBox1.Location = new System.Drawing.Point(46, 111);
+            this.uiListBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiListBox1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiListBox1.Name = "uiListBox1";
+            this.uiListBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.uiListBox1.Size = new System.Drawing.Size(230, 249);
+            this.uiListBox1.TabIndex = 8;
+            this.uiListBox1.Text = "uiListBox1";
+            this.uiListBox1.Load += new System.EventHandler(this.uiListBox1_Load);
+            // 
             // Frmaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(732, 787);
+            this.Controls.Add(this.uiListBox1);
             this.Controls.Add(this.comsuan);
             this.Controls.Add(this.comSmell);
             this.Controls.Add(this.comColor1);
@@ -409,11 +413,9 @@ namespace Warehouse.工具窗体
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.uiLabel1);
             this.Controls.Add(this.uiButton1);
-            this.Controls.Add(this.uiRichTextBox1);
             this.Name = "Frmaterial";
             this.Text = "Frmaterial";
             this.Controls.SetChildIndex(this.pnlBtm, 0);
-            this.Controls.SetChildIndex(this.uiRichTextBox1, 0);
             this.Controls.SetChildIndex(this.uiButton1, 0);
             this.Controls.SetChildIndex(this.uiLabel1, 0);
             this.Controls.SetChildIndex(this.txtID, 0);
@@ -439,13 +441,12 @@ namespace Warehouse.工具窗体
             this.Controls.SetChildIndex(this.comColor1, 0);
             this.Controls.SetChildIndex(this.comSmell, 0);
             this.Controls.SetChildIndex(this.comsuan, 0);
+            this.Controls.SetChildIndex(this.uiListBox1, 0);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Sunny.UI.UIRichTextBox uiRichTextBox1;
         private Sunny.UI.UIButton uiButton1;
         private Sunny.UI.UILabel uiLabel1;
         private Sunny.UI.UITextBox txtID;
@@ -471,5 +472,6 @@ namespace Warehouse.工具窗体
         private Sunny.UI.UIComboBox comColor1;
         private Sunny.UI.UIComboBox comSmell;
         private Sunny.UI.UIComboBox comsuan;
+        private Sunny.UI.UIListBox uiListBox1;
     }
 }

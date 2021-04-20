@@ -273,6 +273,16 @@ namespace DAL
             }
             return model;
         }
+        ///<summary>
+        ///用于填充下拉框
+        ///</summary>
+        public DataSet GetList(string columnname,int num)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("SELECT DISTINCT "+columnname+"  FROM out_storage");
+            return DbHelperMySQL.Query(strSql.ToString());
+        }
+
 
         /// <summary>
         /// 获得数据列表

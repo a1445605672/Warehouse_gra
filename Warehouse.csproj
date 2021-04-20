@@ -104,7 +104,25 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="new 入库汇总.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new 入库汇总.Designer.cs">
+      <DependentUpon>new 入库汇总.cs</DependentUpon>
+    </Compile>
+    <Compile Include="new_出库汇总.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_出库汇总.Designer.cs">
+      <DependentUpon>new_出库汇总.cs</DependentUpon>
+    </Compile>
     <Compile Include="SystemLog.cs" />
+    <Compile Include="入库汇总.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="入库汇总.Designer.cs">
+      <DependentUpon>入库汇总.cs</DependentUpon>
+    </Compile>
     <Compile Include="图形化展示.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +131,15 @@
     </Compile>
     <Compile Include="工具窗体\Class1.cs" />
     <Compile Include="工具窗体\ExcelHelp.cs" />
+    <Compile Include="工具窗体\FEdit_department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具窗体\FEdit_sr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具窗体\FEdit_sr.Designer.cs">
+      <DependentUpon>FEdit_sr.cs</DependentUpon>
+    </Compile>
     <Compile Include="工具窗体\FormEditRoom.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,11 +207,11 @@
     <Compile Include="入库登记.Designer.cs">
       <DependentUpon>入库登记.cs</DependentUpon>
     </Compile>
-    <Compile Include="出入库汇总.cs">
+    <Compile Include="出库汇总.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="出入库汇总.Designer.cs">
-      <DependentUpon>出入库汇总.cs</DependentUpon>
+    <Compile Include="出库汇总.Designer.cs">
+      <DependentUpon>出库汇总.cs</DependentUpon>
     </Compile>
     <Compile Include="出库日报.cs">
       <SubType>Form</SubType>
@@ -336,6 +363,12 @@
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="new 入库汇总.resx">
+      <DependentUpon>new 入库汇总.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_出库汇总.resx">
+      <DependentUpon>new_出库汇总.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -346,11 +379,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="入库汇总.resx">
+      <DependentUpon>入库汇总.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="出库汇总.resx">
+      <DependentUpon>出库汇总.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="图形化展示.resx">
       <DependentUpon>图形化展示.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="在库汇总.resx">
       <DependentUpon>在库汇总.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工具窗体\FEdit_department.resx">
+      <DependentUpon>FEdit_department.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工具窗体\FEdit_sr.resx">
+      <DependentUpon>FEdit_sr.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="工具窗体\FormEditRoom.resx">
       <DependentUpon>FormEditRoom.cs</DependentUpon>
@@ -437,6 +482,8 @@
       <DependentUpon>部门人员管理.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="Backup_And_Recovery\mysql_backup.bat" />
+    <None Include="Backup_And_Recovery\mysql_recover.bat" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -455,6 +502,10 @@
     <ProjectReference Include="BLL\BLL.csproj">
       <Project>{2ce55747-bba7-4a22-bfa5-a286cb473f53}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="DBUtility\DBUtility.csproj">
+      <Project>{e4077616-1e25-4b0d-845f-6a2b7dba4f73}</Project>
+      <Name>DBUtility</Name>
     </ProjectReference>
     <ProjectReference Include="Model\Model.csproj">
       <Project>{6f9c7777-9814-48c2-bcf2-2c2bf93411bc}</Project>

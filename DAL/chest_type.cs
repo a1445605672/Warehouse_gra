@@ -198,7 +198,11 @@ namespace DAL
             }
             return model;
         }
-
+        public DataSet GetList(int num)
+        {
+            string sql = "SELECT type_name FROM material_type WHERE 1=1";
+            return DbHelperMySQL.Query(sql.ToString());
+        }
         /// <summary>
         /// 获得数据列表
         /// </summary>

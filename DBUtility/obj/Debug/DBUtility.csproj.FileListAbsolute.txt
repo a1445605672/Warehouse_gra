@@ -41,3 +41,11 @@ E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
 E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
 E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
 E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
+E:\git版本\Warehouse_gra\DBUtility\bin\Debug\DBUtility.dll
+E:\git版本\Warehouse_gra\DBUtility\bin\Debug\DBUtility.pdb
+E:\git版本\Warehouse_gra\DBUtility\bin\Debug\Harman.Utility.dll
+E:\git版本\Warehouse_gra\DBUtility\bin\Debug\MySql.Data.dll
+E:\git版本\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
+E:\git版本\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
+E:\git版本\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
+E:\git版本\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
