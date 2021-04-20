@@ -1,4 +1,4 @@
-﻿
+﻿using System.Collections.Generic;
 using System;
 using System.Data;
 using System.Text;
@@ -273,6 +273,9 @@ namespace DAL
             }
             return model;
         }
+
+       
+
         ///<summary>
         ///用于填充下拉框
         ///</summary>
@@ -282,7 +285,32 @@ namespace DAL
             strSql.Append("SELECT DISTINCT "+columnname+"  FROM out_storage");
             return DbHelperMySQL.Query(strSql.ToString());
         }
-
+        ///<summary>
+        ///获取所有的下拉框
+        ///</summary>>
+        public List<Model.out_storage> getAllout()
+        {
+            List<Model.out_storage> outstorage = new List<Model.out_storage>();
+            string sqltext = "select * from out_storage";
+            DataSet sdr = DbHelperMySQL.Query(sqltext);
+            for (int i = 0; i < sdr.Tables[0].Rows.Count; i++)
+            {
+                Model.out_storage out1 = new Model.out_storage();
+                out1.enter_id = sdr.Tables[0].Rows[i]["enter_id"].ToString();
+                out1.out_account= Convert.ToInt32(sdr.Tables[0].Rows[i]["out_account"]);
+                out1 .out_batch_id= sdr.Tables[0].Rows[i]["out_batch_id"].ToString();
+                out1.out_data = Convert.ToDateTime(sdr.Tables[0].Rows[i]["out_data"]);
+                out1.out_id=
+                out1.out_if_accomplish=
+                out1.out_mat_id=
+                out1.out_mat_name=
+                out1.out_sr_id=
+                out1.out_staff_id=
+                out1.out_staff_name=
+                out1.remark=
+                
+            }
+        }
 
         /// <summary>
         /// 获得数据列表
