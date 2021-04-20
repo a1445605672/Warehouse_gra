@@ -152,6 +152,10 @@ namespace Warehouse
         //加载经办人
         private void comStaffName_Load(object sender, EventArgs e)
         {
+            //List<Model.out_storage> outmodel = new 
+
+
+
             comStaffName.DataSource = bllout.GetModelList("");
             comStaffName.DisplayMember = "out_staff_name";
             comStaffName.ValueMember = "out_staff_name";
