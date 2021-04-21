@@ -132,8 +132,9 @@ namespace Warehouse
             this.grid.RowTemplate.Height = 29;
             this.grid.SelectedIndex = -1;
             this.grid.ShowGridLine = true;
-            this.grid.Size = new System.Drawing.Size(791, 284);
+            this.grid.Size = new System.Drawing.Size(794, 284);
             this.grid.TabIndex = 1;
+            this.grid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_CellContentClick);
             // 
             // new_房间管理
             // 

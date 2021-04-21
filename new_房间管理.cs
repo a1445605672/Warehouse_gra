@@ -11,10 +11,10 @@ using System.Windows.Forms;
 using Warehouse.工具窗体;
 namespace Warehouse
 {
-    public partial class new_房间管理 : UITitlePage
-    {
-        public new_房间管理()
-        {
+	public partial class new_房间管理 : UITitlePage
+	{
+		public new_房间管理()
+		{
 			InitializeComponent();
 			//给search控件赋值
 			search1.uiComboBox1.Items.Add("房间ID");
@@ -30,6 +30,23 @@ namespace Warehouse
 			grid.AddColumn("仓库剩余库柜数", "storage_remain_chest");
 			grid.AddColumn("仓库剩余库位", "storage_remain_seat");
 			grid.AddColumn("仓库备注信息", "storage_comment");
+			grid.AddColumn("缩写", "storage_sx");
+			#region 添加修改，删除两个按钮
+			DataGridViewButtonColumn but = new DataGridViewButtonColumn();
+			but.HeaderText = "操作";  //设置列表头的名字
+			but.SetFixedMode(50);//设置按钮大小
+			but.Name = "UpDate";//设置按钮的名字
+			but.DefaultCellStyle.NullValue = "修改";
+			grid.Columns.Add(but);
+
+			DataGridViewButtonColumn but1 = new DataGridViewButtonColumn();
+			but1.HeaderText = "";
+			but1.SetFixedMode(50);
+			but1.Name = "Delete";
+			but1.DefaultCellStyle.NullValue = "删除";
+			grid.Columns.Add(but1);
+			#endregion
+
 			for (int i = 0; i < grid.ColumnCount; i++) { grid.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; }
 			AddRow();
 
@@ -84,6 +101,73 @@ namespace Warehouse
 		private void uiPagination1_PageChanged(object sender, object pagingSource, int pageIndex, int count)
 		{
 			grid.DataSource = pagingSource;
+		}
+		//Grid的点击事件
+		private void grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			//更新
+			if (grid.Columns[e.ColumnIndex].Name == "UpDate" && e.RowIndex >= 0)
+			{
+				//获得选择的行
+				int rowIndex =e.RowIndex;
+				string id= grid.CurrentRow.Cells[2].Value.ToString();
+				//string id = grid.Rows[rowIndex].Cells[0].Value.ToString().Trim();
+				Model.storage sta = new Model.storage();
+				sta.storage_id = id;
+				//弹出对话框
+				FormEditRoom room = new FormEditRoom();
+				bool m = room.FuZhi(id);
+				if (m != true)
+				{
+					UIMessageBox.ShowWarning("错误", true);
+				}
+				else
+				{
+					room.ShowDialog();
+				}
+				if (room.IsOK)
+				{
+					BLL.storage bllstorage = new BLL.storage();
+					bool k= bllstorage.Update(room.StorageModel);
+					//更改成功
+					if (k)
+					{
+						ShowSuccessDialog("更改成功");
+
+					}
+					//更改失败
+					else
+					{
+						UIMessageBox.ShowError("编辑失败");
+					}
+				}
+				else
+				{
+					UIMessageBox.ShowError("编辑失败");
+				}
+			}
+			//删除
+			if (grid.Columns[e.ColumnIndex].Name == "Delete" && e.RowIndex >= 0)
+			{
+				if (ShowAskDialog("此操作不可恢复。是否确认删除?"))
+				{
+					foreach (DataGridViewRow row in grid.SelectedRows)
+					{
+						string m = row.Cells[0].Value.ToString().Trim();
+						BLL.storage bllstorage = new BLL.storage();
+						bool die = bllstorage.Delete(m);
+						if (die)
+						{
+							ShowSuccessDialog("删除成功");
+							AddRow();
+						}
+						else
+						{
+							ShowErrorDialog("删除失败");
+						}
+					}
+				}
+			}
 		}
 	}
 }
