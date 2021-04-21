@@ -67,14 +67,7 @@ namespace Warehouse
 
 			for (int i = 0; i < 10; i++)
 				StatusFormStepIt();
-			#region 库位编号
 
-			
-
-
-
-
-			#endregion
 
 
 			for (int i = 0; i < 20; i++)
@@ -168,16 +161,18 @@ namespace Warehouse
 			 * 
 			 * 1.让库柜根据类型不同，大小不同进行升序（空间大小）
 			 * 2.根据物品的类型进行选择库柜，选择最能接近本次存储物品大小的库柜，
-			 * 3.或者进行分库柜进行存放，生成两次入库编号？
+			 * 3.或者进行分库柜进行存放，生成多次入库编号
 			 */
 
 			if
 					(Materialsbox.Text == "" || ProviderBox.Text == "" || volumeBox.Text == ""
 					|| inWarehouseAmount.Text == "" || weightBox.Text == "" || storageLocationBox.Text == ""
 					|| batchNumberBox.Text == "" || staffBox.Text == "" || remarkBox.Text == ""
+					|| storageLocationBox.Text==""
 					)
 			{
 				ShowAskDialog("您输入的有误请检查");
+				return;
 			}
 
 
@@ -265,10 +260,11 @@ namespace Warehouse
 						ShowErrorTip("物品输入有误，请选择");
 						return;
 					}
-					if (inWarehouseAmount.Text != "" && Materialsbox.Text != "")
+					if (inWarehouseAmount.Text != "" && Materialsbox.Text != ""&& volumeBox.Text!="")
 					{
+						
 						//自动推荐入库
-						storageLocation(Materialsbox.Text, inWarehouseAmount.Text);
+						storageLocation(Materialsbox.Text, (Convert.ToDouble(inWarehouseAmount.Text) * Convert.ToDouble(volumeBox.Text)).ToString());
 					}
 					break;
 				//case "storageLocationBox"://验证库位
@@ -304,6 +300,11 @@ namespace Warehouse
 						textbox.Text = "";
 						ShowErrorTip("体积输入有误，请输入数字体积"); 
 					}
+					if (inWarehouseAmount.Text != "" && Materialsbox.Text != "" && volumeBox.Text != "")
+					{
+						//自动推荐入库
+						storageLocation(Materialsbox.Text, (Convert.ToDouble(inWarehouseAmount.Text) * Convert.ToDouble(volumeBox.Text)).ToString());
+					}
 					break;
 				case "inWarehouseAmount":
 					if (fA.formAuthentication_isIntOrDouble(textbox.Text) == false)
@@ -312,10 +313,10 @@ namespace Warehouse
 						ShowErrorTip("入库量输入有误，请输入数字体积");
 						return;
 					}
-					if(inWarehouseAmount.Text!="" && Materialsbox.Text!="")
+					if(inWarehouseAmount.Text!="" && Materialsbox.Text!="" && volumeBox.Text != "")
 					{
 						//自动推荐入库
-						storageLocation(Materialsbox.Text, inWarehouseAmount.Text);
+						storageLocation(Materialsbox.Text, (Convert.ToDouble( inWarehouseAmount.Text)* Convert.ToDouble(volumeBox.Text)).ToString());
 					}
 					break;
 				case "weightBox":
@@ -350,6 +351,9 @@ namespace Warehouse
 
 		}
 		#endregion
+
+
+		#region 自动推荐库位
 		/// <summary>
 		/// 推荐库位
 		/// </summary>
@@ -358,7 +362,7 @@ namespace Warehouse
 		/// <returns></returns>
 		private string storageLocation(string materiaName,string  inStorageNumber)
 		{
-			
+			storageLocationBox.Text = "";
 			string storageAreaSQL = "SELECT DISTINCT (storagelocation.sl_store_area) ,storagelocation.sl_id " +
 				"FROM storagelocation,StorageMaterialType WHERE StorageMaterialType.`mat_id`=(SELECT mat_id FROM  material_info WHERE mat_name=\'"+ materiaName + "\')ORDER BY  storagelocation.sl_store_area";
 			DataSet ds=enterStoeage.getDataList(storageAreaSQL);
@@ -366,8 +370,8 @@ namespace Warehouse
 			KeyValuePair<string, double> keyValuePair;
 			for (int i=0;i<ds.Tables[0].Rows.Count;i++)
 			{
-				double storageArea =Convert.ToDouble( ds.Tables[0].Rows[0][0].ToString());
-				string storageLocationId = ds.Tables[0].Rows[0][1].ToString();
+				double storageArea =Convert.ToDouble( ds.Tables[0].Rows[i][0].ToString());
+				string storageLocationId = ds.Tables[0].Rows[i][1].ToString();
 				keyValuePair = new KeyValuePair<string, double>(storageLocationId, storageArea);
 				list.Add(keyValuePair);
 			}
@@ -378,7 +382,7 @@ namespace Warehouse
 					double sum = 0;
 					for (int i = 0; i < list.Count; i++)
 					{
-						sum += list[1].Value;
+						sum += list[i].Value;
 						if (sum > Convert.ToDouble(inStorageNumber))
 						{
 							storageLocationBox.Text += list[i].Key;
@@ -388,19 +392,25 @@ namespace Warehouse
 						{
 							storageLocationBox.Text += list[i].Key + ",";
 						}
-
+						
+					}
+					if(sum<Convert.ToDouble(inStorageNumber))
+					{
+						storageLocationBox.Text = "";
+						ShowSuccessDialog("没有合适的柜子，请添加");
 					}
 					//设置字体大小
-					storageLocationBox.Font = new Font("微软雅黑", 7.5F);
+					storageLocationBox.Font = new Font("微软雅黑", 9.0F);
 				}
 				else
 				{
 					int i = 0;
 					for (; i < list.Count; i++)
 					{
-						if(Convert.ToDouble(inStorageNumber)< list[1].Value)
+						if(Convert.ToDouble(inStorageNumber)< list[i].Value)
 						{
-							storageLocationBox.Text += list[i].Key;
+							storageLocationBox.Text = list[i].Key;
+							break;
 						}
 					}
 					if(i== list.Count)
@@ -411,10 +421,12 @@ namespace Warehouse
 			}
 			else
 			{
-				storageLocationBox.Text += list[1].Key；
+				storageLocationBox.Text += list[1].Key;
 			}
 			return null;
 		}
+
+		#endregion		
 	}
 
 
