@@ -224,6 +224,11 @@ namespace DAL
             }
             return model;
         }
+        public DataSet GetList(int num)
+        {
+            string sql = "SELECT chest_name FROM chest WHERE 1=1";
+            return DbHelperMySQL.Query(sql.ToString());
+        }
 
         /// <summary>
         /// 获得数据列表

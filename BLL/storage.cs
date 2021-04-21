@@ -89,6 +89,10 @@ namespace BLL
 			}
 			return (Model.storage)objModel;
 		}
+		public DataSet GetList(int num)
+		{
+			return dal.GetList(num);
+		}
 
 		/// <summary>
 		/// 获得数据列表

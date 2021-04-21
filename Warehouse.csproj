@@ -116,6 +116,18 @@
     <Compile Include="new_出库汇总.Designer.cs">
       <DependentUpon>new_出库汇总.cs</DependentUpon>
     </Compile>
+    <Compile Include="new_库柜管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_库柜管理.Designer.cs">
+      <DependentUpon>new_库柜管理.cs</DependentUpon>
+    </Compile>
+    <Compile Include="new_房间管理.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_房间管理.Designer.cs">
+      <DependentUpon>new_房间管理.cs</DependentUpon>
+    </Compile>
     <Compile Include="SystemLog.cs" />
     <Compile Include="入库汇总.cs">
       <SubType>Form</SubType>
@@ -269,18 +281,6 @@
     <Compile Include="库位类型管理.Designer.cs">
       <DependentUpon>库位类型管理.cs</DependentUpon>
     </Compile>
-    <Compile Include="库柜管理.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="库柜管理.Designer.cs">
-      <DependentUpon>库柜管理.cs</DependentUpon>
-    </Compile>
-    <Compile Include="房间管理.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="房间管理.Designer.cs">
-      <DependentUpon>房间管理.cs</DependentUpon>
-    </Compile>
     <Compile Include="收货商管理.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -369,6 +369,12 @@
     <EmbeddedResource Include="new_出库汇总.resx">
       <DependentUpon>new_出库汇总.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="new_库柜管理.resx">
+      <DependentUpon>new_库柜管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_房间管理.resx">
+      <DependentUpon>new_房间管理.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -426,12 +432,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="库位类型管理.resx">
       <DependentUpon>库位类型管理.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="库柜管理.resx">
-      <DependentUpon>库柜管理.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="房间管理.resx">
-      <DependentUpon>房间管理.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="更新数据窗体\UpdataInWarehouseFrm.resx">
       <DependentUpon>UpdataInWarehouseFrm.cs</DependentUpon>

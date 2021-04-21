@@ -45,7 +45,7 @@ namespace Warehouse.工具窗体
             // 
             // pnlBtm
             // 
-            this.pnlBtm.Size = new System.Drawing.Size(798, 55);
+            this.pnlBtm.Size = new System.Drawing.Size(631, 55);
             // 
             // RoomName
             // 
@@ -187,7 +187,7 @@ namespace Warehouse.工具窗体
             this.backinfo.MinimumSize = new System.Drawing.Size(1, 1);
             this.backinfo.Name = "backinfo";
             this.backinfo.Padding = new System.Windows.Forms.Padding(5);
-            this.backinfo.Size = new System.Drawing.Size(439, 39);
+            this.backinfo.Size = new System.Drawing.Size(353, 39);
             this.backinfo.TabIndex = 25;
             this.backinfo.Text = " ";
             // 
@@ -205,7 +205,7 @@ namespace Warehouse.工具窗体
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(633, 450);
             this.Controls.Add(this.backinfo);
             this.Controls.Add(this.uiLabel6);
             this.Controls.Add(this.Chestleft);
@@ -219,7 +219,7 @@ namespace Warehouse.工具窗体
             this.Controls.Add(this.uiLabel1);
             this.Controls.Add(this.RoomID);
             this.Name = "FormEditRoom";
-            this.Text = "FormEditRoom";
+            this.Text = "编辑房间";
             this.Controls.SetChildIndex(this.pnlBtm, 0);
             this.Controls.SetChildIndex(this.RoomID, 0);
             this.Controls.SetChildIndex(this.uiLabel1, 0);

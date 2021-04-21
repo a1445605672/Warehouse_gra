@@ -9,12 +9,12 @@ namespace BLL
 	/// </summary>
 	public partial class department
 	{
-		private readonly DAL.department dal = new DAL.department();
+		private readonly DAL.department dal=new DAL.department();
 		public department()
-		{ }
+		{}
 		#region  BasicMethod
 
-
+		
 
 		/// <summary>
 		/// 是否存在该记录
@@ -28,9 +28,9 @@ namespace BLL
 		///查询数据条数
 		/// </summary>
 		public int Count_data(string amount)
-		{
+        {
 			return dal.GetRecordCount(amount);
-		}
+        }
 
 		/// <summary>
 		/// 增加一条数据
@@ -51,17 +51,17 @@ namespace BLL
 		/// <summary>
 		/// 删除一条数据
 		/// </summary>
-		public bool Delete(string dep_id)
+		public bool Delete(string  dep_id)
 		{
-
+			
 			return dal.Delete(dep_id);
 		}
 		/// <summary>
 		/// 删除一条数据
 		/// </summary>
-		public bool DeleteList(string dep_idlist)
+		public bool DeleteList(string dep_idlist )
 		{
-			return dal.DeleteList(Maticsoft.Common.PageValidate.SafeLongFilter(dep_idlist, 0));
+			return dal.DeleteList(Maticsoft.Common.PageValidate.SafeLongFilter(dep_idlist,0) );
 		}
 
 		/// <summary>
@@ -69,7 +69,7 @@ namespace BLL
 		/// </summary>
 		public Model.department GetModel(string dep_id)
 		{
-
+			
 			return dal.GetModel(dep_id);
 		}
 
@@ -84,7 +84,7 @@ namespace BLL
 		/// </summary>
 		public Model.department GetModelByCache(string dep_id)
 		{
-
+			
 			string CacheKey = "departmentModel-" + dep_id;
 			object objModel = Maticsoft.Common.DataCache.GetCache(CacheKey);
 			if (objModel == null)
@@ -98,7 +98,7 @@ namespace BLL
 						Maticsoft.Common.DataCache.SetCache(CacheKey, objModel, DateTime.Now.AddMinutes(ModelCache), TimeSpan.Zero);
 					}
 				}
-				catch { }
+				catch{}
 			}
 			return (Model.department)objModel;
 		}
@@ -160,14 +160,14 @@ namespace BLL
 		/// </summary>
 		public DataSet GetListByPage(string strWhere, string orderby, int startIndex, int endIndex)
 		{
-			return dal.GetListByPage(strWhere, orderby, startIndex, endIndex);
+			return dal.GetListByPage( strWhere,  orderby,  startIndex,  endIndex);
 		}
 		/// <summary>
 		/// 分页获取数据列表
 		/// </summary>
 		//public DataSet GetList(int PageSize,int PageIndex,string strWhere)
 		//{
-		//return dal.GetList(PageSize,PageIndex,strWhere);
+			//return dal.GetList(PageSize,PageIndex,strWhere);
 		//}
 
 		#endregion  BasicMethod

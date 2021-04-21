@@ -6,32 +6,34 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Warehouse.工具窗体;
 namespace Warehouse
 {
-	public partial class 房间管理 : UITitlePage
-	{
-		public 房间管理()
-		{
-			InitializeComponent();
+    public partial class new_库柜管理 : UITitlePage
+    {
+        public new_库柜管理()
+        {
+            InitializeComponent();
 			//给search控件赋值
-			search1.uiComboBox1.Items.Add("房间ID");
-			search1.uiComboBox1.Items.Add("房子名字");
+			search1.uiComboBox1.Items.Add("库柜ID");
+			search1.uiComboBox1.Items.Add("库柜名称");
 			//search1.uiComboBox1.Items.Add("负责人名称");
 			search1.uiComboBox1.SelectedIndex = 0;
 			grid.ClearAll();
 			//窗体初始化绑定数据
-			grid.AddColumn("仓库id", "storage_id");
-			grid.AddColumn("仓库名", "storage_name");
-			grid.AddColumn("仓库创建时间", "storage_create_time");
-			grid.AddColumn("仓库面积大小", "storage_area");
-			grid.AddColumn("仓库剩余库柜数", "storage_remain_chest");
-			grid.AddColumn("仓库剩余库位", "storage_remain_seat");
-			grid.AddColumn("仓库备注信息", "storage_comment");
+			grid.AddColumn("库柜id", "chest_id");
+			grid.AddColumn("库柜名", "chest_name");
+			grid.AddColumn("库柜剩余体积", "chest_remain_volume");
+			grid.AddColumn("库柜剩余库位", "chest_remain_seat");
+			grid.AddColumn("库柜创建时间", "chest_create_time");
+			grid.AddColumn("库柜类型", "chest_type");
+			grid.AddColumn("库柜所属仓库", "chest_belong_storage");
+			grid.AddColumn("名称缩写", "chest_sx");
 			for (int i = 0; i < grid.ColumnCount; i++) { grid.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; }
 			AddRow();
-			
+
 			//确定按钮和搜索按钮赋值
 			search1.uiButton1.Click += new EventHandler(this.search1_AddEvent);
 			search1.SearchButton.Click += new EventHandler(this.search1_SearchEvent);
@@ -39,9 +41,9 @@ namespace Warehouse
 		//赋值
 		private void AddRow()
 		{
-			BLL.storage bsta = new BLL.storage();
-			this.grid.DataSource = bsta.GetModelList("");
-			uiPagination1.DataSource = bsta.GetModelList("");
+			BLL.chest bllchest = new BLL.chest();
+			this.grid.DataSource = bllchest.GetModelList("");
+			this.uiPagination1.DataSource = bllchest.GetModelList("");
 			uiPagination1.ActivePage = 1;
 		}
 		//搜索
@@ -63,12 +65,12 @@ namespace Warehouse
 		}
 		private void search1_AddEvent(object sender, EventArgs e)
 		{
-			FormEditRoom room = new FormEditRoom();
-			room.ShowDialog();
-			if (room.IsOK)
+			kugui ku = new kugui();
+			ku.ShowDialog();
+			if (ku.IsOK)
 			{
-				BLL.storage sr_ = new BLL.storage();
-				bool m = sr_.Add(room.storageModel);
+				BLL.chest sr_ = new BLL.chest();
+				bool m = sr_.Add(ku.chestModel);
 				if (m == true)
 				{
 					UIMessageBox.ShowSuccess("新增成功");
