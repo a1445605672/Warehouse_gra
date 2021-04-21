@@ -43,10 +43,10 @@ namespace Warehouse.工具窗体
             this.txtComment1 = new Sunny.UI.UITextBox();
             this.uiLabel7 = new Sunny.UI.UILabel();
             this.txtLeftVo = new Sunny.UI.UITextBox();
-            this.uiRichTextBox1 = new Sunny.UI.UIRichTextBox();
             this.uiButton1 = new Sunny.UI.UIButton();
             this.uiLabel8 = new Sunny.UI.UILabel();
             this.txtBelongto = new Sunny.UI.UITextBox();
+            this.uiListBox1 = new Sunny.UI.UIListBox();
             this.SuspendLayout();
             // 
             // pnlBtm
@@ -228,19 +228,6 @@ namespace Warehouse.工具窗体
             this.txtLeftVo.Size = new System.Drawing.Size(150, 39);
             this.txtLeftVo.TabIndex = 7;
             // 
-            // uiRichTextBox1
-            // 
-            this.uiRichTextBox1.AutoWordSelection = true;
-            this.uiRichTextBox1.FillColor = System.Drawing.Color.White;
-            this.uiRichTextBox1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiRichTextBox1.Location = new System.Drawing.Point(53, 105);
-            this.uiRichTextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiRichTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiRichTextBox1.Name = "uiRichTextBox1";
-            this.uiRichTextBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.uiRichTextBox1.Size = new System.Drawing.Size(202, 268);
-            this.uiRichTextBox1.TabIndex = 8;
-            // 
             // uiButton1
             // 
             this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -278,15 +265,31 @@ namespace Warehouse.工具窗体
             this.txtBelongto.TabIndex = 11;
             this.txtBelongto.Text = "左侧选择库柜";
             // 
+            // uiListBox1
+            // 
+            this.uiListBox1.FillColor = System.Drawing.Color.White;
+            this.uiListBox1.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiListBox1.FormatString = "";
+            this.uiListBox1.ItemSelectForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+            this.uiListBox1.Location = new System.Drawing.Point(39, 72);
+            this.uiListBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiListBox1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiListBox1.Name = "uiListBox1";
+            this.uiListBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.uiListBox1.Size = new System.Drawing.Size(217, 300);
+            this.uiListBox1.TabIndex = 12;
+            this.uiListBox1.Text = "uiListBox1";
+            this.uiListBox1.Load += new System.EventHandler(this.uiListBox1_Load);
+            // 
             // FrmStorage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 555);
+            this.Controls.Add(this.uiListBox1);
             this.Controls.Add(this.txtBelongto);
             this.Controls.Add(this.uiLabel8);
             this.Controls.Add(this.uiButton1);
-            this.Controls.Add(this.uiRichTextBox1);
             this.Controls.Add(this.txtLeftVo);
             this.Controls.Add(this.uiLabel7);
             this.Controls.Add(this.txtComment1);
@@ -317,11 +320,11 @@ namespace Warehouse.工具窗体
             this.Controls.SetChildIndex(this.txtComment1, 0);
             this.Controls.SetChildIndex(this.uiLabel7, 0);
             this.Controls.SetChildIndex(this.txtLeftVo, 0);
-            this.Controls.SetChildIndex(this.uiRichTextBox1, 0);
             this.Controls.SetChildIndex(this.uiButton1, 0);
             this.Controls.SetChildIndex(this.uiLabel8, 0);
             this.Controls.SetChildIndex(this.pnlBtm, 0);
             this.Controls.SetChildIndex(this.txtBelongto, 0);
+            this.Controls.SetChildIndex(this.uiListBox1, 0);
             this.ResumeLayout(false);
 
         }
@@ -342,9 +345,9 @@ namespace Warehouse.工具窗体
         private Sunny.UI.UITextBox txtComment1;
         private Sunny.UI.UILabel uiLabel7;
         private Sunny.UI.UITextBox txtLeftVo;
-        private Sunny.UI.UIRichTextBox uiRichTextBox1;
         private Sunny.UI.UIButton uiButton1;
         private Sunny.UI.UILabel uiLabel8;
         private Sunny.UI.UITextBox txtBelongto;
+        private Sunny.UI.UIListBox uiListBox1;
     }
 }
