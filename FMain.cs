@@ -117,11 +117,11 @@ namespace Warehouse
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "首页", "进入首页页面", "");
 					break;
 				case "房间管理":
-					LoadMdiForm(MainTabControl, text, typeof(房间管理));
+					LoadMdiForm(MainTabControl, text, typeof(new_房间管理));
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "房间管理", "进入房间管理页面", "");
 					break;
 				case "库柜管理":
-					LoadMdiForm(MainTabControl, text, typeof(库柜管理));
+					LoadMdiForm(MainTabControl, text, typeof(new_库柜管理));
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "库柜管理", "进入库柜管理页面", "");
 					break;
 				case "库位管理":

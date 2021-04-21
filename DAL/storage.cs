@@ -224,6 +224,11 @@ namespace DAL
             }
             return model;
         }
+        public DataSet GetList(int num)
+        {
+            string sql = "SELECT storage_name FROM storage WHERE 1=1";
+            return DbHelperMySQL.Query(sql.ToString());
+        }
 
         /// <summary>
         /// 获得数据列表

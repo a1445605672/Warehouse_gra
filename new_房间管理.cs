@@ -6,14 +6,15 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Warehouse.工具窗体;
 namespace Warehouse
 {
-	public partial class 房间管理 : UITitlePage
-	{
-		public 房间管理()
-		{
+    public partial class new_房间管理 : UITitlePage
+    {
+        public new_房间管理()
+        {
 			InitializeComponent();
 			//给search控件赋值
 			search1.uiComboBox1.Items.Add("房间ID");
@@ -31,7 +32,7 @@ namespace Warehouse
 			grid.AddColumn("仓库备注信息", "storage_comment");
 			for (int i = 0; i < grid.ColumnCount; i++) { grid.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; }
 			AddRow();
-			
+
 			//确定按钮和搜索按钮赋值
 			search1.uiButton1.Click += new EventHandler(this.search1_AddEvent);
 			search1.SearchButton.Click += new EventHandler(this.search1_SearchEvent);
@@ -41,7 +42,7 @@ namespace Warehouse
 		{
 			BLL.storage bsta = new BLL.storage();
 			this.grid.DataSource = bsta.GetModelList("");
-			uiPagination1.DataSource = bsta.GetModelList("");
+			this.uiPagination1.DataSource = bsta.GetModelList("");
 			uiPagination1.ActivePage = 1;
 		}
 		//搜索

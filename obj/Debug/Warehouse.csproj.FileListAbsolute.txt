@@ -119,8 +119,6 @@ D:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.Search.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.清理缓存.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.库位管理.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.库位类型管理.resources
-D:\Warehouse_gra\obj\Debug\Warehouse.库柜管理.resources
-D:\Warehouse_gra\obj\Debug\Warehouse.房间管理.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.更新数据窗体.UpdataInWarehouseFrm.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.UpdataFrm.resources
 D:\Warehouse_gra\obj\Debug\Warehouse.入库日报.resources
@@ -142,3 +140,5 @@ D:\Warehouse_gra\obj\Debug\Warehouse.csproj.CoreCompileInputs.cache
 D:\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyComplete
 D:\Warehouse_gra\obj\Debug\Warehouse.exe
 D:\Warehouse_gra\obj\Debug\Warehouse.pdb
+D:\Warehouse_gra\obj\Debug\Warehouse.new_房间管理.resources
+D:\Warehouse_gra\obj\Debug\Warehouse.new_库柜管理.resources
