@@ -13,7 +13,7 @@ namespace Warehouse
 {
 	public partial class 供应商管理 : UIPage
 	{
-
+		SystemLog log = new SystemLog();
 		int Dindex = -1;
 
         public 供应商管理()
@@ -53,6 +53,7 @@ namespace Warehouse
 			{
 				int f = search1.uiComboBox1.SelectedIndex;
 				string leixing = null;
+				string leixing_log = null;
 				if (f == 0)
 				{
 					leixing = "sr_type";
@@ -61,11 +62,12 @@ namespace Warehouse
 				if (f == 1)
 				{
 					leixing = "sr_name";
-
+					leixing_log = "供收货商名";
 				}
 				if (f == 2)
 				{
 					leixing = "sr_resp_name";
+					leixing_log = "供收货商类型";
 				}
 
 
@@ -78,7 +80,7 @@ namespace Warehouse
 
 				BLL.sr_info department = new BLL.sr_info();
 				uiPagination1.DataSource = department.GetModelList(str);
-
+				log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "供收货商管理", "查询" + leixing_log, "");
 
 			}
 		}
@@ -154,6 +156,7 @@ namespace Warehouse
 			return new Point(row, col);
 		}
 
+		//获取鼠标右击的位置
 		private void grid_MouseUp(object sender, MouseEventArgs e)
 		{
 			if (e.Button == MouseButtons.Right)

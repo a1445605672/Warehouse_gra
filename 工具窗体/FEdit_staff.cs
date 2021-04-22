@@ -18,16 +18,11 @@ namespace Warehouse.工具窗体
         {
 
            
-            //BLL.department dep = new BLL.department();
-            //DataSet ds = dep.GetList("");
-
-            //this.cbDepartment.DataSource = ds.Tables[0];
-            //this.cbDepartment.ValueMember = "dep_id";
-            //this.cbDepartment.DisplayMember = "dep_name";
-            //this.cbDepartment.SelectedIndex = -1;
-
+           
 
             InitializeComponent();
+            this.cbDepartment.Items.Clear();
+            Get_dep_info();
         }
 
         //输入检查
@@ -36,7 +31,8 @@ namespace Warehouse.工具窗体
             return CheckEmpty(edtName, "请输入姓名") 
                 && CheckRange(editAge,18,60, "输入年龄范围18~60")
                 && CheckEmpty(cbDepartment, "请选择部门")
-                && CheckEmpty(hire_date,"请选择入职时间");
+                && CheckEmpty(hire_date,"请选择入职时间")
+               ;
         }
 
         //编辑时为编辑框赋值
@@ -75,6 +71,21 @@ namespace Warehouse.工具窗体
             }
         }
 
+        public void Get_dep_info()
+        {
+            BLL.department dep = new BLL.department();
+            List<Model.department> dep_list = dep.GetModelList("");
+            int length = dep_list.Count;
+
+            for (int i = 0; i < length; i++)
+            {
+                //TreeNode tree = new TreeNode();
+                //tree.Name = dep_list[i].dep_id.ToString();
+                //tree.Text = dep_list[i].dep_name.ToString();
+                this.cbDepartment.Items.Add(dep_list[i].dep_name.ToString());
+            }
+        }
+
         private Model.staff staff;
 
         public Model.staff Staff
@@ -100,7 +111,9 @@ namespace Warehouse.工具窗体
                 //查询部门信息
                 Model.department depz = new Model.department();
                 BLL.department dep = new BLL.department();
-                depz =  dep.GetModel_Name(cbDepartment.Text.Trim());
+
+                string m = cbDepartment.SelectedText.Trim();
+                depz =  dep.GetModel_Name(m);
 
                 staff.staff_belong_dep_id = depz.dep_id;
                

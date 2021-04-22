@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace Warehouse
 {
     partial class 用户管理
@@ -44,9 +46,12 @@ namespace Warehouse
             this.MenuItem_Add = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItem_delete = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuItem_update = new System.Windows.Forms.ToolStripMenuItem();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.uiPagination1 = new Sunny.UI.UIPagination();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.uiContextMenuStrip1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -65,7 +70,7 @@ namespace Warehouse
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 44);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(928, 44);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // NewCreate
@@ -95,7 +100,7 @@ namespace Warehouse
             this.SearchButton.ForePressColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
             this.SearchButton.ForeSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
             this.SearchButton.IsCircle = true;
-            this.SearchButton.Location = new System.Drawing.Point(703, 3);
+            this.SearchButton.Location = new System.Drawing.Point(831, 3);
             this.SearchButton.MinimumSize = new System.Drawing.Size(1, 1);
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(219)))), ((int)(((byte)(227)))));
@@ -120,7 +125,7 @@ namespace Warehouse
             this.SearchBox.MinimumSize = new System.Drawing.Size(1, 1);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Padding = new System.Windows.Forms.Padding(5);
-            this.SearchBox.Size = new System.Drawing.Size(391, 39);
+            this.SearchBox.Size = new System.Drawing.Size(519, 34);
             this.SearchBox.TabIndex = 0;
             // 
             // uiComboBox1
@@ -136,7 +141,7 @@ namespace Warehouse
             this.uiComboBox1.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboBox1.Name = "uiComboBox1";
             this.uiComboBox1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboBox1.Size = new System.Drawing.Size(132, 39);
+            this.uiComboBox1.Size = new System.Drawing.Size(132, 34);
             this.uiComboBox1.TabIndex = 27;
             this.uiComboBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -163,7 +168,6 @@ namespace Warehouse
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grid.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grid.EnableHeadersVisualStyles = false;
             this.grid.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
@@ -183,7 +187,7 @@ namespace Warehouse
             this.grid.RowTemplate.Height = 29;
             this.grid.SelectedIndex = -1;
             this.grid.ShowGridLine = true;
-            this.grid.Size = new System.Drawing.Size(800, 406);
+            this.grid.Size = new System.Drawing.Size(924, 336);
             this.grid.TabIndex = 1;
             this.grid.MouseUp += new System.Windows.Forms.MouseEventHandler(this.uiDataGridView1_MouseUp);
             // 
@@ -196,33 +200,67 @@ namespace Warehouse
             this.MenuItem_delete,
             this.MenuItem_update});
             this.uiContextMenuStrip1.Name = "uiContextMenuStrip1";
-            this.uiContextMenuStrip1.Size = new System.Drawing.Size(137, 118);
+            this.uiContextMenuStrip1.Size = new System.Drawing.Size(125, 100);
             // 
             // MenuItem_Add
             // 
             this.MenuItem_Add.Name = "MenuItem_Add";
-            this.MenuItem_Add.Size = new System.Drawing.Size(136, 38);
+            this.MenuItem_Add.Size = new System.Drawing.Size(124, 32);
             this.MenuItem_Add.Text = "添加";
             this.MenuItem_Add.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // MenuItem_delete
             // 
             this.MenuItem_delete.Name = "MenuItem_delete";
-            this.MenuItem_delete.Size = new System.Drawing.Size(136, 38);
+            this.MenuItem_delete.Size = new System.Drawing.Size(124, 32);
             this.MenuItem_delete.Text = "删除";
             this.MenuItem_delete.Click += new System.EventHandler(this.MenuItem_delete_Click);
             // 
             // MenuItem_update
             // 
             this.MenuItem_update.Name = "MenuItem_update";
-            this.MenuItem_update.Size = new System.Drawing.Size(136, 38);
+            this.MenuItem_update.Size = new System.Drawing.Size(124, 32);
             this.MenuItem_update.Text = "编辑";
+            this.MenuItem_update.Click += new System.EventHandler(this.MenuItem_update_Click);
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 1;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Controls.Add(this.uiPagination1, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 389);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(928, 61);
+            this.tableLayoutPanel2.TabIndex = 2;
+            // 
+            // uiPagination1
+            // 
+            this.uiPagination1.ActivePage = 20;
+            this.uiPagination1.CausesValidation = false;
+            this.uiPagination1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uiPagination1.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiPagination1.Location = new System.Drawing.Point(4, 5);
+            this.uiPagination1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiPagination1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiPagination1.Name = "uiPagination1";
+            this.uiPagination1.PagerCount = 11;
+            this.uiPagination1.PageSize = 50;
+            this.uiPagination1.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
+            this.uiPagination1.Size = new System.Drawing.Size(920, 51);
+            this.uiPagination1.TabIndex = 1;
+            this.uiPagination1.Text = "uiDataGridPage1";
+            this.uiPagination1.TotalCount = 40000;
+            this.uiPagination1.PageChanged += new Sunny.UI.UIPagination.OnPageChangeEventHandler(this.uiPagination1_PageChanged);
             // 
             // 用户管理
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(928, 450);
+            this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.grid);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "用户管理";
@@ -230,8 +268,14 @@ namespace Warehouse
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();
             this.uiContextMenuStrip1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
+        }
+
+        private void uiPagination1_PageChanged(object sender, object pagingSource, int pageIndex, int count)
+        {
+            grid.DataSource = pagingSource;
         }
 
         #endregion
@@ -246,5 +290,7 @@ namespace Warehouse
         private System.Windows.Forms.ToolStripMenuItem MenuItem_Add;
         private System.Windows.Forms.ToolStripMenuItem MenuItem_delete;
         private System.Windows.Forms.ToolStripMenuItem MenuItem_update;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private Sunny.UI.UIPagination uiPagination1;
     }
 }

@@ -14,34 +14,21 @@ namespace Warehouse.工具窗体
     public partial class FEdit_sr : UIEditForm
     {
 
+
         public string Resp_name;
 
+        
         public FEdit_sr()
         {
             InitializeComponent();
 
             uiRadioButton1.Checked = true;
 
+            this.uiComboTreeView1.Nodes.Clear();
+            Get_dep_info();
 
 
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("节点0");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("节点1");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("节点2");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("节点3");
         
-            treeNode1.Name = "D_1";
-            treeNode1.Text = "仓储部";
-            treeNode2.Name = "D_2";
-            treeNode2.Text = "供收货部";
-            treeNode3.Name = "D_4";
-            treeNode3.Text = "供部";
-
-            this.uiComboTreeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[]
-            {
-                treeNode1,
-                treeNode2,
-                treeNode3
-            });
         }
 
         protected override bool CheckData()
@@ -55,6 +42,9 @@ namespace Warehouse.工具窗体
 
         public bool FuZhi(string id)
         {
+            this.uiComboTreeView1.Nodes.Clear();
+            Get_dep_info();
+
             BLL.sr_info sr = new BLL.sr_info();
             sr_Info = sr.GetModel(id);
             if(sr_Info != null)
@@ -71,10 +61,10 @@ namespace Warehouse.工具窗体
                     uiRadioButton1.Checked = true;
                 }
 
-               // uiTextBox1.Text = sr_Info.sr_resp_name;
-
+                // uiTextBox1.Text = sr_Info.sr_resp_name;
+               
                 uiComboTreeView2.Text = sr_Info.sr_resp_name;
-                uiComboTreeView1.Enabled = false;
+               // uiComboTreeView1.Enabled = false;
                
                 uiTextBox2.Text = sr_Info.sr_contact_name;
                 uiTextBox5.Text = sr_Info.sr_contact_phone;
@@ -90,6 +80,20 @@ namespace Warehouse.工具窗体
            
         }
 
+        public void Get_dep_info()
+        {
+            BLL.department dep = new BLL.department();
+            List<Model.department> dep_list = dep.GetModelList("");
+            int length = dep_list.Count;
+
+            for (int i = 0; i < length; i++)
+            {
+                TreeNode tree = new TreeNode();
+                tree.Name = dep_list[i].dep_id.ToString();
+                tree.Text = dep_list[i].dep_name.ToString();
+                this.uiComboTreeView1.Nodes.Add(tree);
+            }
+        }
         public string GetPYString(string str)
 
         {
@@ -224,9 +228,10 @@ namespace Warehouse.工具窗体
                     sr_Info.sr_contact_phone = uiTextBox5.Text.Trim();
                     sr_Info.sr_place = uiTextBox3.Text.Trim();
                     sr_Info.sr_update_time = DateTime.Now;
-
+                    sr_Info.sr_create_time = DateTime.Now;
 
                     return sr_Info;
+                    
 
                 }
 
@@ -246,8 +251,8 @@ namespace Warehouse.工具窗体
                     sr_Info.sr_contact_name = uiTextBox2.Text.Trim();
                     sr_Info.sr_contact_phone = uiTextBox5.Text.Trim();
                     sr_Info.sr_place = uiTextBox3.Text.Trim();
-
-
+                    sr_Info.sr_update_time = DateTime.Now;
+                    UIMessageBox.ShowSuccess("编辑成功");
 
                     return sr_Info;
                 }
