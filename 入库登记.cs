@@ -18,7 +18,9 @@ namespace Warehouse
 	{
 		BLL.enter_storage enterStoeage = new BLL.enter_storage();
 		BLL.sr_info srInfor = new BLL.sr_info();
+
 		List<KeyValuePair<string, double>> list;//存储库位大小
+		List<KeyValuePair<string, double>> inStorageList = new List<KeyValuePair<string, double>>();
 		public 入库登记()
 		{
 			ShowStatusForm(100, "数据加载中......");
@@ -67,8 +69,6 @@ namespace Warehouse
 
 			for (int i = 0; i < 10; i++)
 				StatusFormStepIt();
-
-
 
 			for (int i = 0; i < 20; i++)
 				StatusFormStepIt();
@@ -163,6 +163,9 @@ namespace Warehouse
 			 * 2.根据物品的类型进行选择库柜，选择最能接近本次存储物品大小的库柜，
 			 * 3.或者进行分库柜进行存放，生成多次入库编号
 			 */
+			BLL.enter_storage enter_Storage = new BLL.enter_storage();
+			Model.enter_storage storage = new Model.enter_storage();
+			Model.in_storage in_Storage = new Model.in_storage();
 
 			if
 					(Materialsbox.Text == "" || ProviderBox.Text == "" || volumeBox.Text == ""
@@ -174,28 +177,48 @@ namespace Warehouse
 				ShowAskDialog("您输入的有误请检查");
 				return;
 			}
+			String supplierIdSql = "SELECT sr_id FROM sr_info WHERE sr_type=\'供货商\' AND sr_name=\'" + ProviderBox.Text + "\'";
+			String enter_mat_id_sql = "SELECT mat_id FROM material_info WHERE mat_name=\'" + Materialsbox.Text.Trim() + "\'";
+			
+			
+			storage.enter_batch_id = batchNumberBox.Text.Trim();//批次编号
+			 //= storageLocationBox.Text.Trim();//库位编号
+			
+			string inStorageAmount = inWarehouseAmount.Text.Trim();//入库量
+			
+			
+			storage.enter_unit_bulk = volumeBox.Text.Trim();//单位体积
+			
+			
+			
+			storage.supplier_id = enterStoeage.getDataList(supplierIdSql).Tables[0].Rows[0][0].ToString();//供应商ID
+			storage.enter_mat_id = enterStoeage.getDataList(enter_mat_id_sql).Tables[0].Rows[0][0].ToString();//物料物料id
+			storage.enter_mat_name = Materialsbox.Text.Trim();//物料名称
+			storage.enter_fengji_num = "";//封记号
+			storage.enter_date = edtDate.Text.Trim();//入库时间
+			storage.enter_agent_id = staffBox.Text.Trim();//经办人编号
+			storage.enter_agent_name = "";//经办人姓名
 
+			if(inStorageList.Count>1)
+			{
+				//分库柜进行存放
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+				for (int i = 1; i <=inStorageList.Count-1; i++)
+				{
+					storage.enter_id = InWarwhouseNumberBox.Text.Trim()+"_"+i.ToString();//入库编号
+					storage.enter_sl_id = inStorageList[i].Key.ToString();
+					storage.enter_amount = inStorageList[i].Value.ToString();
+					enter_Storage.Add(storage);
+				}
+				storage.enter_id = InWarwhouseNumberBox.Text.Trim() + "_" + inStorageList.Count.ToString();//入库编号
+				storage.enter_sl_id = inStorageList[inStorageList.Count].Key.ToString();
+				storage.enter_amount = inStorageList[inStorageList.Count].Value.ToString();
+				enter_Storage.Add(storage);
+			}
+			else
+			{
+				enter_Storage.Add(storage);
+			}
 			log.WriteLog(6, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "入库登记", "完成入库", InWarwhouseNumberBox.Text.Trim());
 			ShowAskDialog("我已经入库啦");
 		}
@@ -386,11 +409,13 @@ namespace Warehouse
 						if (sum > Convert.ToDouble(inStorageNumber))
 						{
 							storageLocationBox.Text += list[i].Key;
+							inStorageList.Add(list[i]);
 							break;
 						}
 						else
 						{
 							storageLocationBox.Text += list[i].Key + ",";
+							inStorageList.Add(list[i]);
 						}
 						
 					}
@@ -410,6 +435,7 @@ namespace Warehouse
 						if(Convert.ToDouble(inStorageNumber)< list[i].Value)
 						{
 							storageLocationBox.Text = list[i].Key;
+							inStorageList.Add(list[i]);
 							break;
 						}
 					}
@@ -422,6 +448,7 @@ namespace Warehouse
 			else
 			{
 				storageLocationBox.Text += list[1].Key;
+				inStorageList.Add(list[1]);
 			}
 			return null;
 		}

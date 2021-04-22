@@ -55,7 +55,7 @@ namespace Warehouse
 			this.edtDate = new Sunny.UI.UIDatePicker();
 			this.uiLabel12 = new Sunny.UI.UILabel();
 			this.bulkStorage = new Sunny.UI.UIButton();
-			this.uiButton1 = new Sunny.UI.UIButton();
+			this.入库方式 = new Sunny.UI.UIButton();
 			this.storageLocationBox = new Sunny.UI.UITextBox();
 			this.PagePanel.SuspendLayout();
 			this.SuspendLayout();
@@ -63,7 +63,7 @@ namespace Warehouse
 			// PagePanel
 			// 
 			this.PagePanel.Controls.Add(this.storageLocationBox);
-			this.PagePanel.Controls.Add(this.uiButton1);
+			this.PagePanel.Controls.Add(this.入库方式);
 			this.PagePanel.Controls.Add(this.bulkStorage);
 			this.PagePanel.Controls.Add(this.uiLabel12);
 			this.PagePanel.Controls.Add(this.edtDate);
@@ -475,30 +475,30 @@ namespace Warehouse
 			this.bulkStorage.TipsText = "1";
 			this.bulkStorage.Click += new System.EventHandler(this.bulkStorage_Click);
 			// 
-			// uiButton1
+			// 入库方式
 			// 
-			this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.uiButton1.FillColor = System.Drawing.Color.White;
-			this.uiButton1.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-			this.uiButton1.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-			this.uiButton1.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-			this.uiButton1.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-			this.uiButton1.ForeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-			this.uiButton1.ForePressColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
-			this.uiButton1.ForeSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
-			this.uiButton1.Location = new System.Drawing.Point(29, 78);
-			this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
-			this.uiButton1.Name = "uiButton1";
-			this.uiButton1.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(219)))), ((int)(((byte)(227)))));
-			this.uiButton1.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
-			this.uiButton1.ShowFocusLine = true;
-			this.uiButton1.Size = new System.Drawing.Size(100, 35);
-			this.uiButton1.Style = Sunny.UI.UIStyle.White;
-			this.uiButton1.StyleCustomMode = true;
-			this.uiButton1.TabIndex = 56;
-			this.uiButton1.Text = "批量入库";
-			this.uiButton1.TipsText = "1";
+			this.入库方式.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.入库方式.FillColor = System.Drawing.Color.White;
+			this.入库方式.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+			this.入库方式.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+			this.入库方式.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+			this.入库方式.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.入库方式.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
+			this.入库方式.ForeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+			this.入库方式.ForePressColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
+			this.入库方式.ForeSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
+			this.入库方式.Location = new System.Drawing.Point(29, 78);
+			this.入库方式.MinimumSize = new System.Drawing.Size(1, 1);
+			this.入库方式.Name = "入库方式";
+			this.入库方式.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(219)))), ((int)(((byte)(227)))));
+			this.入库方式.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
+			this.入库方式.ShowFocusLine = true;
+			this.入库方式.Size = new System.Drawing.Size(100, 35);
+			this.入库方式.Style = Sunny.UI.UIStyle.White;
+			this.入库方式.StyleCustomMode = true;
+			this.入库方式.TabIndex = 56;
+			this.入库方式.Text = "入库方式";
+			this.入库方式.TipsText = "1";
 			// 
 			// storageLocationBox
 			// 
@@ -561,6 +561,6 @@ namespace Warehouse
 		private Sunny.UI.UILabel uiLabel12;
 		private Sunny.UI.UIButton bulkStorage;
 		private Sunny.UI.UITextBox storageLocationBox;
-		private Sunny.UI.UIButton uiButton1;
+		private Sunny.UI.UIButton 入库方式;
 	}
 }
