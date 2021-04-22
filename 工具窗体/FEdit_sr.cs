@@ -17,6 +17,7 @@ namespace Warehouse.工具窗体
 
         public string Resp_name;
 
+        
         public FEdit_sr()
         {
             InitializeComponent();
@@ -230,6 +231,7 @@ namespace Warehouse.工具窗体
                     sr_Info.sr_create_time = DateTime.Now;
 
                     return sr_Info;
+                    
 
                 }
 

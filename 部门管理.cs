@@ -11,8 +11,11 @@ using Warehouse.工具窗体;
 
 namespace Warehouse
 {
+
+
 	public partial class 部门管理 : UIPage
 	{
+		SystemLog log = new SystemLog();
 		public 部门管理()
 		{
 
@@ -242,6 +245,7 @@ namespace Warehouse
                 BLL.department stt = new BLL.department();
                 stt.Update(dlg.Department);
                 AddRow();
+				log.WriteLog(3, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "部门管理", "编辑部门信息", "");
             }
             else
             {

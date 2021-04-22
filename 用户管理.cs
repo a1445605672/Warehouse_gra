@@ -17,8 +17,8 @@ namespace Warehouse
         public 用户管理()
         {
             InitializeComponent();
-           
 
+            
             grid.AddColumn("员工id", "staff_id");
             grid.AddColumn("员工名", "staff_name");
             grid.AddColumn("性别", "staff_sex");
@@ -28,6 +28,8 @@ namespace Warehouse
             grid.AddColumn("入职时间", "staff_hire_date");
             grid.AddColumn("所属部门", "staff_belong_dep_id");
             grid.AddColumn("缩写","staff_sx");
+
+
 
             //自适应列距离
             for (int i = 0; i < grid.ColumnCount; i++) { grid.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; }
@@ -41,11 +43,15 @@ namespace Warehouse
         {
             
             BLL.staff bsta = new BLL.staff();
-            
-            this.grid.DataSource = bsta.GetModelList(""); 
-           
+
+            //this.grid.DataSource = bsta.GetModelList(""); 
+            uiPagination1.DataSource = bsta.GetModelList("");
+            uiPagination1.ActivePage = 1;
+
+
         }
 
+        //新增员工
         private void uiButton1_Click(object sender, EventArgs e)
         {
             FEdit_staff frm = new FEdit_staff();
@@ -114,6 +120,7 @@ namespace Warehouse
         {
 
         }
+
 
         private void uiDataGridView1_MouseUp(object sender, MouseEventArgs e)
         {
@@ -194,6 +201,57 @@ namespace Warehouse
                 }
             }
            
+        }
+
+
+        //编辑功能
+        private void MenuItem_update_Click(object sender, EventArgs e)
+        {
+
+            // 当前行
+            int rowIndex = grid.SelectedRows[0].Index;
+            string id = grid.Rows[rowIndex].Cells[0].Value.ToString().Trim();
+           
+            
+
+            Model.staff sta = new Model.staff();
+            sta.staff_id = id;
+            
+
+            
+
+
+            // 弹出对话框
+            FEdit_staff dlg = new FEdit_staff();
+            bool m = dlg.FuZhi(id);
+            //dlg.Staff.staff_name = name;
+
+            if(m == true)
+            {
+                dlg.ShowDialog();
+            }
+            else
+            {
+                UIMessageBox.ShowWarning("错误", true);
+            }
+
+            if (dlg.IsOK)
+            {
+              
+                BLL.staff stt = new BLL.staff();
+                stt.Update(dlg.Staff);
+                AddRow();
+            }
+            else
+            {
+                UIMessageBox.ShowError("编辑失败");
+            }
+
+
+
+           
+
+
         }
     }
 }
