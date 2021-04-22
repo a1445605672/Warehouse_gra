@@ -23,7 +23,7 @@ namespace Warehouse.工具窗体
 
             uiRadioButton1.Checked = true;
 
-
+            this.uiComboTreeView1.Nodes.Clear();
             Get_dep_info();
 
 
@@ -227,7 +227,7 @@ namespace Warehouse.工具窗体
                     sr_Info.sr_contact_phone = uiTextBox5.Text.Trim();
                     sr_Info.sr_place = uiTextBox3.Text.Trim();
                     sr_Info.sr_update_time = DateTime.Now;
-
+                    sr_Info.sr_create_time = DateTime.Now;
 
                     return sr_Info;
 
@@ -249,7 +249,7 @@ namespace Warehouse.工具窗体
                     sr_Info.sr_contact_name = uiTextBox2.Text.Trim();
                     sr_Info.sr_contact_phone = uiTextBox5.Text.Trim();
                     sr_Info.sr_place = uiTextBox3.Text.Trim();
-
+                    sr_Info.sr_update_time = DateTime.Now;
                     UIMessageBox.ShowSuccess("编辑成功");
 
                     return sr_Info;
