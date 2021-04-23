@@ -12,10 +12,24 @@ namespace Warehouse
 {
 	public partial class 收货商管理 : UIPage
 	{
+		public string Mat_id = null;
+
+
 		public 收货商管理()
 		{
+
+
 			InitializeComponent();
+
+			this.uiComboTreeView2.Enabled = false;
+			this.uiTextBox1.Enabled = false;
+			
+			Load_mat_type();
 		}
+
+
+
+		
 
 		public void Load_mat_type()
 		{
@@ -37,8 +51,74 @@ namespace Warehouse
 
         private void uiComboTreeView1_NodeSelected(object sender, TreeNode node)
         {
+            string id = node.Name;
+			BLL.material_info mat = new BLL.material_info();
+			string Cha_xun = "mat_type_id = " + "\"" + id.Trim() + "\"";
+
+			List<Model.material_info> material_ = new List<Model.material_info> ();
+			material_ = mat.GetModelList(Cha_xun);
+			this.uiComboTreeView2.Nodes.Clear();
+			for (int i = 0; i < material_.Count; i++)
+			{
+				//string treenode = i + "hah";
+				TreeNode treenode = new TreeNode();
+
+				treenode.Name = material_[i].mat_id;
+				treenode.Text = material_[i].mat_name;
+
+				this.uiComboTreeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[]
+		   {
+				treenode
+		   });
+
+			}
+			this.uiComboTreeView2.Enabled = true;
+
+		}
+
+        private void uiComboTreeView2_NodeSelected(object sender, TreeNode node)
+        {
+			Mat_id = node.Name;
+			this.uiTextBox1.Enabled = true;
 
         }
+
+        private void uiTextBox1_TextChanged(object sender, EventArgs e)
+        {
+			
+        }
+
+        private void uiTextBox1_TabStopChanged(object sender, EventArgs e)
+        {
+			
+		}
+
+        private void uiTextBox1_Validated(object sender, EventArgs e)
+        {
+			bool m = Warehouse.表单验证.formAuthentication.ShuZi_fanwei(uiTextBox1.Text);
+			if (m != true)
+			{
+				UIMessageBox.ShowWarning("输入范围须在1至999之间");
+			}
+			else
+			{
+				Model.in_storage in_Storage1 = new Model.in_storage();
+				BLL.in_storage in_Storage = new BLL.in_storage();
+				string Cha_xun = "mat_id = " + "\"" + Mat_id.Trim() + "\"";
+				in_Storage1 = in_Storage.GetModel(Cha_xun);
+				Console.ReadLine();
+			}
+		}
+
+        private void uiTextBox1_MouseLeave(object sender, EventArgs e)
+        {
+			
+        }
+
+        private void uiTextBox1_Validating(object sender, CancelEventArgs e)
+        {
+			UIMessageBox.ShowInfo("啦啦啦啦");
+		}
     }
 
 	
