@@ -47,6 +47,15 @@ namespace BLL
 		{
 			return dal.Update(model);
 		}
+		/// <summary>
+		/// 用Sql语句更新一条数据
+		/// </summary>
+		/// <param name="Sql">SQL语句</param>
+		/// <returns>boolean</returns>
+		public bool Update(string Sql)
+		{
+			return dal.Update(Sql);
+		}
 
 		/// <summary>
 		/// 删除一条数据

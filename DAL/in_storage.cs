@@ -112,6 +112,25 @@ namespace DAL
             }
         }
 
+        /// <summary>
+        /// 用sql语句跟新一条数据
+        /// </summary>
+        /// <param name="Sql"></param>
+        /// <returns></returns>
+        public bool Update(string Sql)
+		{
+            int rows = DbHelperMySQL.ExecuteSql(Sql);
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+           
+		}
+
         ///<summary>
         ///用于柱状图和折线图的绘制
         ///</summary>

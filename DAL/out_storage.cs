@@ -133,10 +133,10 @@ namespace DAL
         }
 
         /// <summary>
-        /// 更新一条数据
+        /// 用SQL语句跟新一条数据
         /// </summary>
-        /// <param name="Sql">sql语句</param>
-        /// <returns>boolean</returns>
+        /// <param name="Sql"></param>
+        /// <returns></returns>
         public bool Update(string Sql)
 		{
             int rows = DbHelperMySQL.ExecuteSql(Sql);
@@ -149,6 +149,8 @@ namespace DAL
                 return false;
             }
         }
+
+        
 
         /// <summary>
         /// 删除一条数据

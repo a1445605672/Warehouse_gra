@@ -66,7 +66,6 @@ namespace Warehouse
 			// uiDataGridView1
 			// 
 			this.uiDataGridView1.AllowUserToAddRows = false;
-			this.uiDataGridView1.AllowUserToResizeColumns = false;
 			this.uiDataGridView1.AllowUserToResizeRows = false;
 			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
 			this.uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
