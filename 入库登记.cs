@@ -164,14 +164,16 @@ namespace Warehouse
 			 * 3.或者进行分库柜进行存放，生成多次入库编号
 			 */
 			BLL.enter_storage enter_Storage = new BLL.enter_storage();
+			BLL.in_storage inStorage = new BLL.in_storage();
+			BLL.storagelocation storagelocation = new BLL.storagelocation();
+
 			Model.enter_storage storage = new Model.enter_storage();
 			Model.in_storage in_Storage = new Model.in_storage();
 
 			if
 					(Materialsbox.Text == "" || ProviderBox.Text == "" || volumeBox.Text == ""
 					|| inWarehouseAmount.Text == "" || weightBox.Text == "" || storageLocationBox.Text == ""
-					|| batchNumberBox.Text == "" || staffBox.Text == "" || remarkBox.Text == ""
-					|| storageLocationBox.Text==""
+					|| batchNumberBox.Text == "" || staffBox.Text == "" || storageLocationBox.Text==""
 					)
 			{
 				ShowAskDialog("您输入的有误请检查");
@@ -179,18 +181,12 @@ namespace Warehouse
 			}
 			String supplierIdSql = "SELECT sr_id FROM sr_info WHERE sr_type=\'供货商\' AND sr_name=\'" + ProviderBox.Text + "\'";
 			String enter_mat_id_sql = "SELECT mat_id FROM material_info WHERE mat_name=\'" + Materialsbox.Text.Trim() + "\'";
-			
-			
+
+			storage.enter_id = InWarwhouseNumberBox.Text.Trim();//入库编号
+			storage.enter_sl_id = storageLocationBox.Text.Trim() ;//库位编号
+			storage.enter_amount = inWarehouseAmount.Text.Trim();//入库量
 			storage.enter_batch_id = batchNumberBox.Text.Trim();//批次编号
-			 //= storageLocationBox.Text.Trim();//库位编号
-			
-			string inStorageAmount = inWarehouseAmount.Text.Trim();//入库量
-			
-			
 			storage.enter_unit_bulk = volumeBox.Text.Trim();//单位体积
-			
-			
-			
 			storage.supplier_id = enterStoeage.getDataList(supplierIdSql).Tables[0].Rows[0][0].ToString();//供应商ID
 			storage.enter_mat_id = enterStoeage.getDataList(enter_mat_id_sql).Tables[0].Rows[0][0].ToString();//物料物料id
 			storage.enter_mat_name = Materialsbox.Text.Trim();//物料名称
@@ -198,26 +194,58 @@ namespace Warehouse
 			storage.enter_date = edtDate.Text.Trim();//入库时间
 			storage.enter_agent_id = staffBox.Text.Trim();//经办人编号
 			storage.enter_agent_name = "";//经办人姓名
+			storage.enter_if_accomplish = 1;
 
-			if(inStorageList.Count>1)
+			in_Storage.mat_id = storage.enter_mat_id;//物料ID
+			in_Storage.mat_name = storage.enter_mat_name;//物料名称
+			in_Storage.in_time =Convert.ToDateTime( storage.enter_date);//入库时间
+			in_Storage.in_weight =Convert.ToDecimal( weightBox.Text.Trim());
+			in_Storage.in_volume = Convert.ToDecimal(storage.enter_unit_bulk);
+			in_Storage.enter_num = storage.enter_id;//入库ID
+			in_Storage.sl_id = storage.enter_sl_id;//库位编号
+			in_Storage.in_amount = Convert.ToDecimal(storage.enter_amount);
+
+
+			double inStorageAmount = 0;
+			if (inStorageList.Count>1)
 			{
 				//分库柜进行存放
-
-				for (int i = 1; i <=inStorageList.Count-1; i++)
+				for (int i = 0; i <inStorageList.Count-1; i++)
 				{
 					storage.enter_id = InWarwhouseNumberBox.Text.Trim()+"_"+i.ToString();//入库编号
-					storage.enter_sl_id = inStorageList[i].Key.ToString();
-					storage.enter_amount = inStorageList[i].Value.ToString();
-					enter_Storage.Add(storage);
+					storage.enter_sl_id = inStorageList[i].Key.ToString();//库位编号
+					storage.enter_amount = inStorageList[i].Value.ToString();//入库量
+
+					inStorageAmount += Convert.ToDouble(inStorageList[i].Value.ToString());
+
+					in_Storage.enter_num = storage.enter_id;//入库ID
+					in_Storage.sl_id = storage.enter_sl_id;//库位编号
+					in_Storage.in_amount =Convert.ToDecimal( storage.enter_amount);
+
+					inStorage.Add(in_Storage);
+					enter_Storage.Add(storage);//入库
+					storagelocation.Update("UPDATE  storagelocation SET sl_remain_bulk=0 WHERE sl_id=\'" + in_Storage.enter_num + "\'");
 				}
-				storage.enter_id = InWarwhouseNumberBox.Text.Trim() + "_" + inStorageList.Count.ToString();//入库编号
-				storage.enter_sl_id = inStorageList[inStorageList.Count].Key.ToString();
-				storage.enter_amount = inStorageList[inStorageList.Count].Value.ToString();
-				enter_Storage.Add(storage);
+				storage.enter_id = InWarwhouseNumberBox.Text.Trim() + "_" + (inStorageList.Count-1).ToString();//入库编号
+				storage.enter_sl_id = inStorageList[inStorageList.Count-1].Key.ToString();//库位编号
+				storage.enter_amount =(Convert.ToDouble(inWarehouseAmount.Text.Trim())-inStorageAmount).ToString();//入库量
+		
+
+				in_Storage.enter_num = storage.enter_id;//入库ID
+				in_Storage.sl_id = storage.enter_sl_id;//库位编号
+				in_Storage.in_amount = Convert.ToDecimal(storage.enter_amount);
+
+				inStorage.Add(in_Storage);
+				enter_Storage.Add(storage);//入库
+				string Sql= "UPDATE  storagelocation SET sl_remain_bulk="+(Convert.ToDouble(inStorageList[inStorageList.Count - 1].Value.ToString())- Convert.ToDouble(storage.enter_amount)).ToString() + " WHERE sl_id=\'" + in_Storage.enter_num + "\'"
+				storagelocation.Update(Sql);
 			}
 			else
 			{
+				inStorage.Add(in_Storage);
 				enter_Storage.Add(storage);
+				string Sql= "UPDATE  storagelocation SET sl_remain_bulk="+ (Convert.ToDouble(inStorageList[0].Value.ToString()) - Convert.ToDouble(storage.enter_amount)) + " WHERE sl_id=\'" + inStorageList[i].Key.ToString() + "\'"
+				storagelocation.Update(Sql);
 			}
 			log.WriteLog(6, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "入库登记", "完成入库", InWarwhouseNumberBox.Text.Trim());
 			ShowAskDialog("我已经入库啦");
@@ -287,7 +315,7 @@ namespace Warehouse
 					{
 						
 						//自动推荐入库
-						storageLocation(Materialsbox.Text, (Convert.ToDouble(inWarehouseAmount.Text) * Convert.ToDouble(volumeBox.Text)).ToString());
+						storageLocation(Materialsbox.Text, inWarehouseAmount.Text);
 					}
 					break;
 				//case "storageLocationBox"://验证库位
@@ -326,7 +354,7 @@ namespace Warehouse
 					if (inWarehouseAmount.Text != "" && Materialsbox.Text != "" && volumeBox.Text != "")
 					{
 						//自动推荐入库
-						storageLocation(Materialsbox.Text, (Convert.ToDouble(inWarehouseAmount.Text) * Convert.ToDouble(volumeBox.Text)).ToString());
+						storageLocation(Materialsbox.Text, inWarehouseAmount.Text);
 					}
 					break;
 				case "inWarehouseAmount":
@@ -339,7 +367,7 @@ namespace Warehouse
 					if(inWarehouseAmount.Text!="" && Materialsbox.Text!="" && volumeBox.Text != "")
 					{
 						//自动推荐入库
-						storageLocation(Materialsbox.Text, (Convert.ToDouble( inWarehouseAmount.Text)* Convert.ToDouble(volumeBox.Text)).ToString());
+						storageLocation(Materialsbox.Text, inWarehouseAmount.Text);
 					}
 					break;
 				case "weightBox":
@@ -381,7 +409,7 @@ namespace Warehouse
 		/// 推荐库位
 		/// </summary>
 		/// <param name="materiaName">物品名称</param>
-		/// <param name="inStorageNumber"></param>
+		/// <param name="inStorageNumber">入库量</param>
 		/// <returns></returns>
 		private string storageLocation(string materiaName,string  inStorageNumber)
 		{
@@ -457,14 +485,65 @@ namespace Warehouse
 	}
 
 
+	#region 入库
+
+	//public void inStoage(Model.enter_storage storage,Model.in_storage in_Storage, List<KeyValuePair<string, double>> inStorageList)
+	//{
+		
+	//	double inStorageAmount = 0;
+	//	if (inStorageList.Count > 1)
+	//	{
+	//		//分库柜进行存放
+	//		for (int i = 0; i < inStorageList.Count - 1; i++)
+	//		{
+	//			storage.enter_id = InWarwhouseNumberBox.Text.Trim() + "_" + i.ToString();//入库编号
+	//			storage.enter_sl_id = inStorageList[i].Key.ToString();//库位编号
+	//			storage.enter_amount = inStorageList[i].Value.ToString();//入库量
+
+	//			inStorageAmount += Convert.ToDouble(inStorageList[i].Value.ToString());
+
+	//			in_Storage.enter_num = storage.enter_id;//入库ID
+	//			in_Storage.sl_id = storage.enter_sl_id;//库位编号
+	//			in_Storage.in_amount = Convert.ToDecimal(storage.enter_amount);
+
+	//			inStorage.Add(in_Storage);
+	//			enter_Storage.Add(storage);//入库
+	//			storagelocation.Update("UPDATE  storagelocation SET sl_remain_bulk=0 WHERE sl_id=\'" + in_Storage.enter_num + "\'");
+	//		}
+	//		storage.enter_id = InWarwhouseNumberBox.Text.Trim() + "_" + (inStorageList.Count - 1).ToString();//入库编号
+	//		storage.enter_sl_id = inStorageList[inStorageList.Count - 1].Key.ToString();//库位编号
+	//		storage.enter_amount = (Convert.ToDouble(inWarehouseAmount.Text.Trim()) - inStorageAmount).ToString();//入库量
+
+
+	//		in_Storage.enter_num = storage.enter_id;//入库ID
+	//		in_Storage.sl_id = storage.enter_sl_id;//库位编号
+	//		in_Storage.in_amount = Convert.ToDecimal(storage.enter_amount);
+
+	//		inStorage.Add(in_Storage);
+	//		enter_Storage.Add(storage);//入库
+	//		string Sql = "UPDATE  storagelocation SET sl_remain_bulk=" + (Convert.ToDouble(inStorageList[inStorageList.Count - 1].Value.ToString()) - Convert.ToDouble(storage.enter_amount)).ToString() + " WHERE sl_id=\'" + in_Storage.enter_num + "\'"
+	//			storagelocation.Update(Sql);
+	//	}
+	//	else
+	//	{
+	//		inStorage.Add(in_Storage);
+	//		enter_Storage.Add(storage);
+	//		string Sql = "UPDATE  storagelocation SET sl_remain_bulk=" + (Convert.ToDouble(inStorageList[0].Value.ToString()) - Convert.ToDouble(storage.enter_amount)) + " WHERE sl_id=\'" + inStorageList[i].Key.ToString() + "\'"
+	//			storagelocation.Update(Sql);
+	//	}
+	//}
+
+	#endregion
+
+
 }
 
 
-	
 
 
-	
 
 
-	
+
+
+
 

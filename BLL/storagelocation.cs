@@ -42,6 +42,16 @@ namespace BLL
 		}
 
 		/// <summary>
+		/// 更新一条数据，执行Sql语句
+		/// </summary>
+		/// <param name="sql">Sql语句</param>
+		/// <returns>bool类型判断是否更新成功</returns>
+		public bool Update(string sql)
+		{
+			return dal.Update(sql);
+		}
+
+		/// <summary>
 		/// 删除一条数据
 		/// </summary>
 		public bool Delete(string sl_id)
