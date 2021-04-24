@@ -87,5 +87,20 @@ namespace Warehouse.表单验证
 		}
 		#endregion
 
+		#region
+		/// <summary>
+		/// 验证数字范围是否在要求的范围内
+		/// </summary>
+		/// <param name="m">输入验证的数字</param>
+		/// <returns></returns>
+
+		public static bool ShuZi_fanwei(string m)
+		{
+			Regex w = new Regex("[1-9]d{0,2}");
+
+			return w.IsMatch(m);
+		}
+		#endregion
+
 	}
 }
