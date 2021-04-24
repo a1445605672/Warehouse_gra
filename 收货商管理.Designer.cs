@@ -36,9 +36,9 @@ namespace Warehouse
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiComboTreeView2 = new Sunny.UI.UIComboTreeView();
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
-            this.uiGroupBox2 = new Sunny.UI.UIGroupBox();
-            this.uiLabel4 = new Sunny.UI.UILabel();
             this.uiLedDisplay1 = new Sunny.UI.UILedDisplay();
+            this.uiLabel4 = new Sunny.UI.UILabel();
+            this.uiGroupBox2 = new Sunny.UI.UIGroupBox();
             this.uiGroupBox1.SuspendLayout();
             this.uiGroupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -63,7 +63,7 @@ namespace Warehouse
             this.uiComboTreeView1.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboTreeView1.Name = "uiComboTreeView1";
             this.uiComboTreeView1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboTreeView1.Size = new System.Drawing.Size(150, 34);
+            this.uiComboTreeView1.Size = new System.Drawing.Size(150, 39);
             this.uiComboTreeView1.TabIndex = 1;
             this.uiComboTreeView1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiComboTreeView1.NodeSelected += new Sunny.UI.UIComboTreeView.OnNodeSelected(this.uiComboTreeView1_NodeSelected);
@@ -90,7 +90,7 @@ namespace Warehouse
             this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTextBox1.Name = "uiTextBox1";
             this.uiTextBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox1.Size = new System.Drawing.Size(150, 34);
+            this.uiTextBox1.Size = new System.Drawing.Size(150, 39);
             this.uiTextBox1.TabIndex = 3;
             this.uiTextBox1.TextChanged += new System.EventHandler(this.uiTextBox1_TextChanged);
             this.uiTextBox1.TabStopChanged += new System.EventHandler(this.uiTextBox1_TabStopChanged);
@@ -118,7 +118,7 @@ namespace Warehouse
             this.uiComboTreeView2.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboTreeView2.Name = "uiComboTreeView2";
             this.uiComboTreeView2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboTreeView2.Size = new System.Drawing.Size(150, 34);
+            this.uiComboTreeView2.Size = new System.Drawing.Size(150, 39);
             this.uiComboTreeView2.TabIndex = 6;
             this.uiComboTreeView2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiComboTreeView2.NodeSelected += new Sunny.UI.UIComboTreeView.OnNodeSelected(this.uiComboTreeView2_NodeSelected);
@@ -133,37 +133,9 @@ namespace Warehouse
             this.uiGroupBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox1.Name = "uiGroupBox1";
             this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox1.Size = new System.Drawing.Size(406, 326);
+            this.uiGroupBox1.Size = new System.Drawing.Size(486, 450);
             this.uiGroupBox1.TabIndex = 7;
             this.uiGroupBox1.Text = "调拨源仓库";
-            // 
-            // uiGroupBox2
-            // 
-            this.uiGroupBox2.Controls.Add(this.uiTextBox1);
-            this.uiGroupBox2.Controls.Add(this.uiLabel1);
-            this.uiGroupBox2.Controls.Add(this.uiLabel2);
-            this.uiGroupBox2.Controls.Add(this.uiComboTreeView2);
-            this.uiGroupBox2.Controls.Add(this.uiComboTreeView1);
-            this.uiGroupBox2.Controls.Add(this.uiLabel3);
-            this.uiGroupBox2.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiGroupBox2.Location = new System.Drawing.Point(476, 48);
-            this.uiGroupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiGroupBox2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiGroupBox2.Name = "uiGroupBox2";
-            this.uiGroupBox2.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox2.Size = new System.Drawing.Size(382, 326);
-            this.uiGroupBox2.TabIndex = 8;
-            this.uiGroupBox2.Text = "uiGroupBox2";
-            // 
-            // uiLabel4
-            // 
-            this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel4.Location = new System.Drawing.Point(19, 42);
-            this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(177, 23);
-            this.uiLabel4.TabIndex = 0;
-            this.uiLabel4.Text = "在库物品数量：";
-            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLedDisplay1
             // 
@@ -175,11 +147,39 @@ namespace Warehouse
             this.uiLedDisplay1.Size = new System.Drawing.Size(190, 34);
             this.uiLedDisplay1.TabIndex = 1;
             // 
+            // uiLabel4
+            // 
+            this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel4.Location = new System.Drawing.Point(19, 42);
+            this.uiLabel4.Name = "uiLabel4";
+            this.uiLabel4.Size = new System.Drawing.Size(177, 23);
+            this.uiLabel4.TabIndex = 0;
+            this.uiLabel4.Text = "在库物品数量：";
+            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiGroupBox2
+            // 
+            this.uiGroupBox2.Controls.Add(this.uiTextBox1);
+            this.uiGroupBox2.Controls.Add(this.uiLabel1);
+            this.uiGroupBox2.Controls.Add(this.uiLabel2);
+            this.uiGroupBox2.Controls.Add(this.uiComboTreeView2);
+            this.uiGroupBox2.Controls.Add(this.uiComboTreeView1);
+            this.uiGroupBox2.Controls.Add(this.uiLabel3);
+            this.uiGroupBox2.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiGroupBox2.Location = new System.Drawing.Point(569, 48);
+            this.uiGroupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiGroupBox2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiGroupBox2.Name = "uiGroupBox2";
+            this.uiGroupBox2.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
+            this.uiGroupBox2.Size = new System.Drawing.Size(642, 450);
+            this.uiGroupBox2.TabIndex = 8;
+            this.uiGroupBox2.Text = "uiGroupBox2";
+            // 
             // 收货商管理
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 494);
+            this.ClientSize = new System.Drawing.Size(1293, 793);
             this.Controls.Add(this.uiGroupBox2);
             this.Controls.Add(this.uiGroupBox1);
             this.Name = "收货商管理";
