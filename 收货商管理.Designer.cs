@@ -39,6 +39,8 @@ namespace Warehouse
             this.uiLedDisplay1 = new Sunny.UI.UILedDisplay();
             this.uiLabel4 = new Sunny.UI.UILabel();
             this.uiGroupBox2 = new Sunny.UI.UIGroupBox();
+            this.uiLabel5 = new Sunny.UI.UILabel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.uiGroupBox1.SuspendLayout();
             this.uiGroupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -125,6 +127,8 @@ namespace Warehouse
             // 
             // uiGroupBox1
             // 
+            this.uiGroupBox1.Controls.Add(this.flowLayoutPanel1);
+            this.uiGroupBox1.Controls.Add(this.uiLabel5);
             this.uiGroupBox1.Controls.Add(this.uiLedDisplay1);
             this.uiGroupBox1.Controls.Add(this.uiLabel4);
             this.uiGroupBox1.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -133,7 +137,7 @@ namespace Warehouse
             this.uiGroupBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox1.Name = "uiGroupBox1";
             this.uiGroupBox1.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox1.Size = new System.Drawing.Size(486, 450);
+            this.uiGroupBox1.Size = new System.Drawing.Size(446, 519);
             this.uiGroupBox1.TabIndex = 7;
             this.uiGroupBox1.Text = "调拨源仓库";
             // 
@@ -166,20 +170,37 @@ namespace Warehouse
             this.uiGroupBox2.Controls.Add(this.uiComboTreeView1);
             this.uiGroupBox2.Controls.Add(this.uiLabel3);
             this.uiGroupBox2.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiGroupBox2.Location = new System.Drawing.Point(569, 48);
+            this.uiGroupBox2.Location = new System.Drawing.Point(523, 60);
             this.uiGroupBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiGroupBox2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox2.Name = "uiGroupBox2";
             this.uiGroupBox2.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox2.Size = new System.Drawing.Size(642, 450);
+            this.uiGroupBox2.Size = new System.Drawing.Size(495, 531);
             this.uiGroupBox2.TabIndex = 8;
             this.uiGroupBox2.Text = "uiGroupBox2";
+            // 
+            // uiLabel5
+            // 
+            this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel5.Location = new System.Drawing.Point(25, 117);
+            this.uiLabel5.Name = "uiLabel5";
+            this.uiLabel5.Size = new System.Drawing.Size(122, 48);
+            this.uiLabel5.TabIndex = 2;
+            this.uiLabel5.Text = "所在仓库";
+            this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(162, 127);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(190, 215);
+            this.flowLayoutPanel1.TabIndex = 3;
             // 
             // 收货商管理
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1293, 793);
+            this.ClientSize = new System.Drawing.Size(1068, 706);
             this.Controls.Add(this.uiGroupBox2);
             this.Controls.Add(this.uiGroupBox1);
             this.Name = "收货商管理";
@@ -202,5 +223,7 @@ namespace Warehouse
         private Sunny.UI.UIGroupBox uiGroupBox2;
         private Sunny.UI.UILedDisplay uiLedDisplay1;
         private Sunny.UI.UILabel uiLabel4;
+        private Sunny.UI.UILabel uiLabel5;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

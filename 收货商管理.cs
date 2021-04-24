@@ -95,6 +95,31 @@ namespace Warehouse
             }
 			Amount = amount;
 			uiLedDisplay1.Text = amount + "个";
+
+			//this.flowLayoutPanel1.Controls.Add()
+			BLL.storage storage = new BLL.storage();
+			List<Model.storage> storages = new List<Model.storage>();
+			storages = storage.GetModelList("");
+
+			int sta_amount = storages.Count;
+			for(int i = 0; i< sta_amount; i++)
+            {
+				UILedBulb uILed = new UILedBulb();
+				string text = storages[i].storage_name;
+				//uILed.Name = storage[i].
+				UILabel label = new UILabel();
+				label.Text = text;
+				this.flowLayoutPanel1.Controls.Add(label);
+				this.flowLayoutPanel1.Controls.Add(uILed);
+
+			}
+
+
+
+			string kuwei = in_Storages[0].sl_id;
+		    
+
+
         }
 
         private void uiTextBox1_TextChanged(object sender, EventArgs e)
