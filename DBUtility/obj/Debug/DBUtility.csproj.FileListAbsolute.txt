@@ -49,3 +49,12 @@ E:\git版本\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInput
 E:\git版本\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
 E:\git版本\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
 E:\git版本\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
+C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DBUtility\bin\Debug\DBUtility.dll
+C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DBUtility\bin\Debug\DBUtility.pdb
+C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DBUtility\bin\Debug\Harman.Utility.dll
+C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DBUtility\bin\Debug\MySql.Data.dll
+C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csprojAssemblyReference.cache
+C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
+C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
+C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
+C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
