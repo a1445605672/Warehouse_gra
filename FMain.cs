@@ -48,7 +48,7 @@ namespace Warehouse
 			Aside.CreateChildNode(OutIntWarehouse, 57490, 24, "出库登记", ++pageIndex);
 			Aside.CreateChildNode(OutIntWarehouse, 61526, 24, "未完成出库", ++pageIndex);
 			Aside.CreateChildNode(OutIntWarehouse, 61766, 24, "未完成入库", ++pageIndex);
-
+			Aside.CreateChildNode(OutIntWarehouse, 61760, 24, "物料盘点", ++pageIndex);
 
 			pageIndex = 4000;
 			TreeNode StatisticalStatementBut = Aside.CreateNode("统计报表", 61950, 24, pageIndex);
@@ -219,7 +219,11 @@ namespace Warehouse
 					break;
 				case "综合统计分析":
 					LoadMdiForm(MainTabControl, text, typeof(综合统计分析));
-					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "图形化展示", "进入图形化展示页面", "");
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "综合统计分析", "进入综合统计分析页面", "");
+					break;
+				case "物料盘点":
+					LoadMdiForm(MainTabControl, text, typeof(new_物料盘存));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "物料盘存", "进入物料盘存页面", "");
 					break;
 				default:
 					break;

@@ -128,6 +128,12 @@
     <Compile Include="new_房间管理.Designer.cs">
       <DependentUpon>new_房间管理.cs</DependentUpon>
     </Compile>
+    <Compile Include="new_物料盘存.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_物料盘存.Designer.cs">
+      <DependentUpon>new_物料盘存.cs</DependentUpon>
+    </Compile>
     <Compile Include="SumCount.cs" />
     <Compile Include="SystemLog.cs" />
     <Compile Include="入库汇总.cs">
@@ -164,6 +170,12 @@
     </Compile>
     <Compile Include="工具窗体\Frmaterial.Designer.cs">
       <DependentUpon>Frmaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工具窗体\FrmEditInstorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具窗体\FrmEditInstorage.Designer.cs">
+      <DependentUpon>FrmEditInstorage.cs</DependentUpon>
     </Compile>
     <Compile Include="工具窗体\FrmmaterType.cs">
       <SubType>Form</SubType>
@@ -318,6 +330,12 @@
     <Compile Include="物料信息管理.Designer.cs">
       <DependentUpon>物料信息管理.cs</DependentUpon>
     </Compile>
+    <Compile Include="物料盘存.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="物料盘存.Designer.cs">
+      <DependentUpon>物料盘存.cs</DependentUpon>
+    </Compile>
     <Compile Include="物料类别管理.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -382,6 +400,9 @@
     <EmbeddedResource Include="new_房间管理.resx">
       <DependentUpon>new_房间管理.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="new_物料盘存.resx">
+      <DependentUpon>new_物料盘存.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -415,6 +436,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="工具窗体\Frmaterial.resx">
       <DependentUpon>Frmaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工具窗体\FrmEditInstorage.resx">
+      <DependentUpon>FrmEditInstorage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="工具窗体\FrmmaterType.resx">
       <DependentUpon>FrmmaterType.cs</DependentUpon>
@@ -475,6 +499,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="物料信息管理.resx">
       <DependentUpon>物料信息管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="物料盘存.resx">
+      <DependentUpon>物料盘存.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="物料类别管理.resx">
       <DependentUpon>物料类别管理.cs</DependentUpon>

@@ -361,3 +361,6 @@ C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\obj\Debug\Warehouse.csproj.Co
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\obj\Debug\Warehouse.exe
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\obj\Debug\Warehouse.pdb
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\obj\Debug\Warehouse.综合统计分析.resources
+C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\obj\Debug\Warehouse.物料盘存.resources
+C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\obj\Debug\Warehouse.new_物料盘存.resources
+C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmEditInstorage.resources
