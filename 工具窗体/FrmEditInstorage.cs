@@ -48,7 +48,7 @@ namespace Warehouse.工具窗体
         public bool FuZhi(string id)
         {
             BLL.in_storage bllin = new BLL.in_storage();
-            in_storage = bllin.GetModel(id);
+            in_storage = bllin.GetModelById(id);
             if (in_storage != null)
             {
                 txtInNum.Text = in_storage.enter_num;
