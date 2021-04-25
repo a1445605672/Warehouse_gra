@@ -80,7 +80,16 @@ namespace BLL
 		{
 			return dal.GetModelBymat_name(matname);
 		}
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="in_time"></param>
+		/// <returns></returns>
+		public Model.in_storage GetModelById(string id)
+		{
 
+			return dal.GetModelbyId(id);
+		}
 		/// <summary>
 		/// 得到一个对象实体
 		/// </summary>

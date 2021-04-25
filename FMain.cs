@@ -15,7 +15,7 @@ namespace Warehouse
 	{
 		SystemLog log = new SystemLog();
 		Session session = new Session();
-		
+
 		public FMain()
 		{
 			InitializeComponent();
@@ -35,7 +35,7 @@ namespace Warehouse
 
 
 			pageIndex = 2000;
-			TreeNode SystemManagment=Aside.CreateNode("系统管理", 61573, 24, pageIndex);
+			TreeNode SystemManagment = Aside.CreateNode("系统管理", 61573, 24, pageIndex);
 			Aside.CreateChildNode(SystemManagment, 61888, 24, "数据备份", ++pageIndex);
 			Aside.CreateChildNode(SystemManagment, 108, 24, "系统日志", ++pageIndex);
 			Aside.CreateChildNode(SystemManagment, 57483, 24, "用户管理", ++pageIndex);
@@ -43,21 +43,22 @@ namespace Warehouse
 
 
 			pageIndex = 3000;
-			TreeNode OutIntWarehouse=Aside.CreateNode("出入库管理", 61451, 24, pageIndex);
+			TreeNode OutIntWarehouse = Aside.CreateNode("出入库管理", 61451, 24, pageIndex);
 			Aside.CreateChildNode(OutIntWarehouse, 57489, 24, "入库登记", ++pageIndex);
 			Aside.CreateChildNode(OutIntWarehouse, 57490, 24, "出库登记", ++pageIndex);
 			Aside.CreateChildNode(OutIntWarehouse, 61526, 24, "未完成出库", ++pageIndex);
 			Aside.CreateChildNode(OutIntWarehouse, 61766, 24, "未完成入库", ++pageIndex);
-
+			Aside.CreateChildNode(OutIntWarehouse, 61760, 24, "物料盘点", ++pageIndex);
 
 			pageIndex = 4000;
 			TreeNode StatisticalStatementBut = Aside.CreateNode("统计报表", 61950, 24, pageIndex);
-			Aside.CreateChildNode(StatisticalStatementBut, 62029, 24 ,"入库汇总", ++pageIndex);
+			Aside.CreateChildNode(StatisticalStatementBut, 62029, 24, "入库汇总", ++pageIndex);
 			Aside.CreateChildNode(StatisticalStatementBut, 62059, 24, "出库汇总", ++pageIndex);
 			Aside.CreateChildNode(StatisticalStatementBut, 61665, 24, "在库汇总", ++pageIndex);
-			Aside.CreateChildNode(StatisticalStatementBut, 61932,24, "出库日报", ++pageIndex);
-			Aside.CreateChildNode(StatisticalStatementBut, 61555,24,"入库日报", ++pageIndex);
-			Aside.CreateChildNode(StatisticalStatementBut, 61585, 24,"柱状图", ++pageIndex);
+			Aside.CreateChildNode(StatisticalStatementBut, 61932, 24, "出库日报", ++pageIndex);
+			Aside.CreateChildNode(StatisticalStatementBut, 61555, 24, "入库日报", ++pageIndex);
+			Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "综合统计分析", ++pageIndex);
+			Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "柱状图", ++pageIndex);
 			Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "折线图", ++pageIndex);
 			Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "图形化展示", ++pageIndex);
 			Aside.SelectFirst();
@@ -67,9 +68,9 @@ namespace Warehouse
 		{
 			string menuText = item.Text;
 			uiLabel2.Text = item.Text;
-			if (item!=null)
+			if (item != null)
 			{
-				
+
 				foreach (TabPage tab in MainTabControl.TabPages)
 				{
 					if (tab.Text == menuText)
@@ -78,7 +79,7 @@ namespace Warehouse
 						return;
 					}
 				}
-				
+
 				switchFrm(menuText);
 			}
 		}
@@ -104,7 +105,7 @@ namespace Warehouse
 		//页面刷新按钮
 		private void UpdateButton_Click(object sender, EventArgs e)
 		{
-			switchFrm(uiLabel2.Text);	
+			switchFrm(uiLabel2.Text);
 		}
 
 		//根据用户匹配窗体
@@ -215,6 +216,14 @@ namespace Warehouse
 				case "图形化展示":
 					LoadMdiForm(MainTabControl, text, typeof(图形化展示));
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "图形化展示", "进入图形化展示页面", "");
+					break;
+				case "综合统计分析":
+					LoadMdiForm(MainTabControl, text, typeof(综合统计分析));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "综合统计分析", "进入综合统计分析页面", "");
+					break;
+				case "物料盘点":
+					LoadMdiForm(MainTabControl, text, typeof(new_物料盘存));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "物料盘存", "进入物料盘存页面", "");
 					break;
 				default:
 					break;
