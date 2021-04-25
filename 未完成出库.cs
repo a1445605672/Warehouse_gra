@@ -19,26 +19,34 @@ namespace Warehouse
 			uiDataGridView1.BringToFront();
 			#region  datagridview添加列
 			//第一个参数是列表头，第二个参数用于绑定数据
-			uiDataGridView1.AddColumn("出库编号", "out_id").SetFixedMode(140);//140
+			uiDataGridView1.AddColumn("出库编号", "out_id").SetFixedMode(150);//140
 			//uiDataGridView1.AddColumn("收货商", "").SetFixedMode(150);
 			//uiDataGridView1.AddColumn("物料编号", "out_mat_id").SetFixedMode(150);
 			uiDataGridView1.AddColumn("物料名称", "out_mat_name").SetFixedMode(160);//160
-			uiDataGridView1.AddColumn("出库量", "out_account").SetFixedMode(130);
+			uiDataGridView1.AddColumn("出库量", "out_account").SetFixedMode(80);
 			uiDataGridView1.AddColumn("批次", "out_batch_id").SetFixedMode(130);
 			uiDataGridView1.AddColumn("出库日期", "out_data").SetFixedMode(160);
 			//uiDataGridView1.AddColumn("经办人编号", "out_staff_id").SetFixedMode(60);
-			uiDataGridView1.AddColumn("经办人", "out_staff_name").SetFixedMode(130);
+			uiDataGridView1.AddColumn("经办人", "out_staff_name").SetFixedMode(120);
 			uiDataGridView1.ReadOnly = true;
 			#endregion
 			for (int i = 0; i < 30; i++)
 				StatusFormStepIt();
 			#region  添加删除，修改两个按钮
+			DataGridViewButtonColumn but2 = new DataGridViewButtonColumn();
+			but2.HeaderText = "操作";
+			but2.SetFixedMode(50);
+			but2.Name = "outStorage";
+			but2.DefaultCellStyle.NullValue = "出库";
+			uiDataGridView1.Columns.Add(but2);
+
 			DataGridViewButtonColumn but = new DataGridViewButtonColumn();
-			but.HeaderText = "操作";  //设置列表头的名字
+			but.HeaderText = "";  //设置列表头的名字
 			but.SetFixedMode(50);//设置按钮大小
 			but.Name = "UpDate";//设置按钮的名字
 			but.DefaultCellStyle.NullValue = "修改";
 			uiDataGridView1.Columns.Add(but);
+
 
 			DataGridViewButtonColumn but1 = new DataGridViewButtonColumn();
 			but1.HeaderText = "";
@@ -87,20 +95,19 @@ namespace Warehouse
 				updatafrm.TopLevel = true;
 				#region 窗体传值
 				//出库编号
-				updatafrm.OutWarwhouseNumberBox.Text = uiDataGridView1.CurrentRow.Cells[2].Value.ToString();
+				updatafrm.OutWarwhouseNumberBox.Text = uiDataGridView1.CurrentRow.Cells[3].Value.ToString();
 				//物料名称
-				updatafrm.Materialsbox.Text = uiDataGridView1.CurrentRow.Cells[4].Value.ToString();
+				updatafrm.Materialsbox.Text = uiDataGridView1.CurrentRow.Cells[5].Value.ToString();
 				//出库量
-				updatafrm.outWarehouseAmountBox.Text = uiDataGridView1.CurrentRow.Cells[5].Value.ToString();
+				updatafrm.outWarehouseAmountBox.Text = uiDataGridView1.CurrentRow.Cells[6].Value.ToString();
 				//批次
-				updatafrm.batchNumberBox.Text = uiDataGridView1.CurrentRow.Cells[6].Value.ToString();
+				updatafrm.batchNumberBox.Text = uiDataGridView1.CurrentRow.Cells[7].Value.ToString();
 				//日期
-				updatafrm.edtDate.Text =Convert.ToDateTime( uiDataGridView1.CurrentRow.Cells[7].Value.ToString()).ToString("yyyy-MM-dd");
+				updatafrm.edtDate.Text =Convert.ToDateTime( uiDataGridView1.CurrentRow.Cells[8].Value.ToString()).ToString("yyyy-MM-dd");
 				//经办人
-				updatafrm.staffBox.Text = uiDataGridView1.CurrentRow.Cells[9].Value.ToString();
+				updatafrm.staffBox.Text = uiDataGridView1.CurrentRow.Cells[10].Value.ToString();
 				#endregion
 				updatafrm.ShowDialog();
-				log.WriteLog(3, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "未完成入库", "修改物料信息", uiDataGridView1.CurrentRow.Cells[13].Value.ToString());
 
 			}
 			if (uiDataGridView1.Columns[e.ColumnIndex].Name == "Delete" && e.RowIndex >= 0)

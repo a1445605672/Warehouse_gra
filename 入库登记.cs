@@ -180,6 +180,7 @@ namespace Warehouse
 			//清空数据
 			Materialsbox.Text = "";
 			ProviderBox.Text = "";
+			ProviderBox.SelectedIndex = 0;
 			volumeBox.Text = "";
 			inWarehouseAmount.Text = "";
 			weightBox.Text = "";
@@ -426,6 +427,7 @@ namespace Warehouse
 			
 			if (ds.Tables[0].Rows.Count <= 0)
 			{
+				inWarehouseAmount.Text = "";
 				ShowSuccessDialog("没有存储此物料的柜子，请添加");
 				return null;
 			}
@@ -436,6 +438,7 @@ namespace Warehouse
 			{
 				double storageArea = Convert.ToDouble(ds.Tables[0].Rows[i][0].ToString());
 				string storageLocationId = ds.Tables[0].Rows[i][1].ToString();
+				//如果库位面积大于零则加入，否则忽略
 				if (storageArea > 0)
 				{
 					keyValuePair = new KeyValuePair<string, double>(storageLocationId, storageArea);
@@ -443,8 +446,14 @@ namespace Warehouse
 				}
 
 			}
+			if(list.Count==0)
+			{
+				inWarehouseAmount.Text = "";
+				ShowSuccessDialog("没有合适的柜子请添加，请添加");
+				return null;
+			}
 
-			
+			//入库入库量小于第一个库位容量询问是否分库为入库
 			if (list[0].Value < Convert.ToDouble(inStorageNumber))
 			{
 				if (ShowAskDialog("是否分多个库位进行入库"))
@@ -494,6 +503,7 @@ namespace Warehouse
 					}
 					if (i == list.Count)
 					{
+						inWarehouseAmount.Text = "";
 						ShowSuccessDialog("没有合适的柜子，请添加");
 					}
 				}

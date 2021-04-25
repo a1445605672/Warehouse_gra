@@ -161,6 +161,7 @@ namespace Warehouse
 			this.remarkBox.MinimumSize = new System.Drawing.Size(1, 1);
 			this.remarkBox.Name = "remarkBox";
 			this.remarkBox.Padding = new System.Windows.Forms.Padding(5);
+			this.remarkBox.Radius = 10;
 			this.remarkBox.Size = new System.Drawing.Size(221, 29);
 			this.remarkBox.TabIndex = 45;
 			this.remarkBox.Watermark = "请输入汉字";
@@ -189,6 +190,7 @@ namespace Warehouse
 			this.staffBox.MinimumSize = new System.Drawing.Size(1, 1);
 			this.staffBox.Name = "staffBox";
 			this.staffBox.Padding = new System.Windows.Forms.Padding(5);
+			this.staffBox.Radius = 10;
 			this.staffBox.Size = new System.Drawing.Size(221, 29);
 			this.staffBox.TabIndex = 43;
 			this.staffBox.Watermark = "请输入经办人编号";
@@ -250,6 +252,7 @@ namespace Warehouse
 			this.weightBox.MinimumSize = new System.Drawing.Size(1, 1);
 			this.weightBox.Name = "weightBox";
 			this.weightBox.Padding = new System.Windows.Forms.Padding(5);
+			this.weightBox.Radius = 10;
 			this.weightBox.Size = new System.Drawing.Size(170, 29);
 			this.weightBox.TabIndex = 35;
 			this.weightBox.Watermark = "请输入单位重量";
@@ -277,6 +280,7 @@ namespace Warehouse
 			this.inWarehouseAmount.MinimumSize = new System.Drawing.Size(1, 1);
 			this.inWarehouseAmount.Name = "inWarehouseAmount";
 			this.inWarehouseAmount.Padding = new System.Windows.Forms.Padding(5);
+			this.inWarehouseAmount.Radius = 10;
 			this.inWarehouseAmount.Size = new System.Drawing.Size(221, 29);
 			this.inWarehouseAmount.TabIndex = 33;
 			this.inWarehouseAmount.Watermark = "请输入库量";
@@ -328,6 +332,7 @@ namespace Warehouse
 			this.InWarwhouseNumberBox.MinimumSize = new System.Drawing.Size(1, 1);
 			this.InWarwhouseNumberBox.Name = "InWarwhouseNumberBox";
 			this.InWarwhouseNumberBox.Padding = new System.Windows.Forms.Padding(5);
+			this.InWarwhouseNumberBox.Radius = 10;
 			this.InWarwhouseNumberBox.ReadOnly = true;
 			this.InWarwhouseNumberBox.Size = new System.Drawing.Size(221, 29);
 			this.InWarwhouseNumberBox.TabIndex = 27;
@@ -356,6 +361,7 @@ namespace Warehouse
 			this.volumeBox.MinimumSize = new System.Drawing.Size(1, 1);
 			this.volumeBox.Name = "volumeBox";
 			this.volumeBox.Padding = new System.Windows.Forms.Padding(5);
+			this.volumeBox.Radius = 10;
 			this.volumeBox.Size = new System.Drawing.Size(170, 29);
 			this.volumeBox.TabIndex = 49;
 			this.volumeBox.Watermark = "请输入体积";
@@ -381,6 +387,7 @@ namespace Warehouse
 			this.batchNumberBox.MinimumSize = new System.Drawing.Size(63, 0);
 			this.batchNumberBox.Name = "batchNumberBox";
 			this.batchNumberBox.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+			this.batchNumberBox.Radius = 10;
 			this.batchNumberBox.Size = new System.Drawing.Size(221, 29);
 			this.batchNumberBox.TabIndex = 52;
 			this.batchNumberBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -397,6 +404,7 @@ namespace Warehouse
 			this.ProviderBox.MinimumSize = new System.Drawing.Size(63, 0);
 			this.ProviderBox.Name = "ProviderBox";
 			this.ProviderBox.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+			this.ProviderBox.Radius = 10;
 			this.ProviderBox.Size = new System.Drawing.Size(221, 29);
 			this.ProviderBox.TabIndex = 53;
 			this.ProviderBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -412,6 +420,7 @@ namespace Warehouse
 			this.Materialsbox.MinimumSize = new System.Drawing.Size(63, 0);
 			this.Materialsbox.Name = "Materialsbox";
 			this.Materialsbox.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+			this.Materialsbox.Radius = 10;
 			this.Materialsbox.Size = new System.Drawing.Size(221, 29);
 			this.Materialsbox.TabIndex = 53;
 			this.Materialsbox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -430,6 +439,7 @@ namespace Warehouse
 			this.edtDate.MinimumSize = new System.Drawing.Size(63, 0);
 			this.edtDate.Name = "edtDate";
 			this.edtDate.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+			this.edtDate.Radius = 10;
 			this.edtDate.Size = new System.Drawing.Size(221, 29);
 			this.edtDate.SymbolDropDown = 61555;
 			this.edtDate.SymbolNormal = 61555;
@@ -513,6 +523,7 @@ namespace Warehouse
 			this.storageLocationBox.MinimumSize = new System.Drawing.Size(1, 1);
 			this.storageLocationBox.Name = "storageLocationBox";
 			this.storageLocationBox.Padding = new System.Windows.Forms.Padding(5);
+			this.storageLocationBox.Radius = 10;
 			this.storageLocationBox.ReadOnly = true;
 			this.storageLocationBox.Size = new System.Drawing.Size(221, 29);
 			this.storageLocationBox.TabIndex = 28;

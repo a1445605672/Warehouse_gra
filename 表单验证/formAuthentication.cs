@@ -21,14 +21,13 @@ namespace Warehouse.表单验证
 		{
 				try
 				{
-				
-				double d = Convert.ToDouble(str);	
+					double d = Convert.ToDouble(str);
 					return true;
 				}
-			catch
-			{
-				return false;
-			}
+				catch
+				{
+					return false;
+				}
 		}
 		#endregion
 
@@ -40,13 +39,13 @@ namespace Warehouse.表单验证
 		/// <param name="str"></param>
 		/// <param name="comboBox"></param>
 		/// <returns></returns>
-		public bool formAuthentication_Combobox(string str,UIComboBox comboBox)
+		public bool formAuthentication_Combobox(string str, UIComboBox comboBox)
 		{
 			if (comboBox.Items.IndexOf(str) >= 0)
 			{
 				return true;
 			}
-			
+
 			return false;
 		}
 		#endregion

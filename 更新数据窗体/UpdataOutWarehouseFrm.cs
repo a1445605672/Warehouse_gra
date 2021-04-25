@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Sunny.UI;
+using Warehouse.工具窗体;
 using Warehouse.表单验证;
 
 namespace Warehouse
@@ -15,12 +16,11 @@ namespace Warehouse
 	
 	public partial class UpdataFrm : UITitlePage
 	{
+		SystemLog log = new SystemLog();
 		
 		public UpdataFrm()
 		{
-			
 			InitializeComponent();
-
 		}
 
 		#region 取消
@@ -137,6 +137,22 @@ namespace Warehouse
 
 		private void uiButton17_Click(object sender, EventArgs e)
 		{
+
+			string out_Storage_sql = "UPDATE  out_storage SET out_mat_id= ,out_sr_id= ,out_batch_id=,out_data=， out_staff_id=,out_staff_name= WHERE  out_id=";
+			if(Materialsbox.Text!="")
+			{
+			out_Storage_sql+= "out_mat_name=\'"+ Materialsbox.Text + "\',";
+			string mat_id_sql= "SELECT mat_id FROM material_info WHERE mat_name=\'"+ Materialsbox.Text + "\'";
+
+			}
+
+			
+			
+			if (ProviderBox.Text!="")
+			{
+
+			}
+				log.WriteLog(3, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "未完成入库", "修改物料信息","" );
 
 		}
 	}

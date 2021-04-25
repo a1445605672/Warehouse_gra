@@ -52,19 +52,19 @@ namespace Warehouse
 			
 				#region 窗体传值
 				//编号
-				UpF.NumberBox.Text = uiDataGridView1.CurrentRow.Cells[2].Value.ToString();
+				UpF.NumberBox.Text = uiDataGridView1.CurrentRow.Cells[3].Value.ToString();
 				//物料
 				UpF.MaterialBox.Text= uiDataGridView1.CurrentRow.Cells[8].Value.ToString();
 				//库位
-				UpF.StorageLocationBox.Text= uiDataGridView1.CurrentRow.Cells[4].Value.ToString();
+				UpF.StorageLocationBox.Text= uiDataGridView1.CurrentRow.Cells[5].Value.ToString();
 				//入库量
-				UpF.InWarehouseAccountBox.Text= uiDataGridView1.CurrentRow.Cells[5].Value.ToString();
+				UpF.InWarehouseAccountBox.Text= uiDataGridView1.CurrentRow.Cells[6].Value.ToString();
 				//体积
-				UpF.VolumeBox.Text= uiDataGridView1.CurrentRow.Cells[6].Value.ToString();
+				//UpF.VolumeBox.Text= uiDataGridView1.CurrentRow.Cells[7].Value.ToString();
 				//供应商
 				UpF.ProviderBox.Text= uiDataGridView1.CurrentRow.Cells[7].Value.ToString();
 				//批次
-				UpF.batchBox.Text= uiDataGridView1.CurrentRow.Cells[3].Value.ToString();
+				UpF.batchBox.Text= uiDataGridView1.CurrentRow.Cells[4].Value.ToString();
 				//日期
 				UpF.DateBox.Text=Convert.ToDateTime(uiDataGridView1.CurrentRow.Cells[9].Value.ToString()).ToString("yyyy-MM-dd");
 				#endregion
