@@ -107,7 +107,32 @@ namespace Warehouse
         //查询
         private void uiButton1_Click(object sender, EventArgs e)
         {
-
+            //获得输入
+            string strName = uiTextBox1.Text.Trim();
+            //数据库语句
+            string strSql = "";
+            if (strName != null)
+            {
+                strSql = "mat_name='"+strName+"'";
+            }
+            else
+            {
+                UIMessageBox.ShowWarning("请输入物料名称");
+            }
+            BLL.in_storage bllin = new BLL.in_storage();
+            uiDataGridView1.ClearAll();
+            uiDataGridView1.AddColumn("入库编号", "enter_num");
+            uiDataGridView1.AddColumn("物料id", "mat_id");
+            uiDataGridView1.AddColumn("物料名称", "mat_name");
+            uiDataGridView1.AddColumn("入库量", "in_time");
+            uiDataGridView1.AddColumn("在库时间", "in_time");
+            uiDataGridView1.AddColumn("库位编号", "sl_id");
+            uiDataGridView1.AddColumn("存量", "in_amount");
+            uiDataGridView1.AddColumn("重量", "in_weight");
+            uiDataGridView1.AddColumn("体积", "in_volume");
+            for (int i = 0; i < uiDataGridView1.ColumnCount; i++) { uiDataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; }
+            this.uiPagination1.DataSource = bllin.GetModelList(strSql);
+            this.uiDataGridView1.DataSource=bllin.GetModelList(strSql);
         }
         //翻页
         private void uiPagination1_PageChanged(object sender, object pagingSource, int pageIndex, int count)
