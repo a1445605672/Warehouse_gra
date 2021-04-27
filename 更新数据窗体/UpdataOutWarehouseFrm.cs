@@ -144,15 +144,15 @@ namespace Warehouse
 			out_Storage_sql+= "out_mat_name=\'"+ Materialsbox.Text + "\',";
 			string mat_id_sql= "SELECT mat_id FROM material_info WHERE mat_name=\'"+ Materialsbox.Text + "\'";
 
-			}
-
-			
-			
+				
+			}			
 			if (ProviderBox.Text!="")
 			{
 
 			}
-				log.WriteLog(3, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "未完成入库", "修改物料信息","" );
+			ShowAskDialog("修改成功");
+			this.Close();
+			log.WriteLog(3, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "未完成入库", "修改物料信息","" );
 
 		}
 	}

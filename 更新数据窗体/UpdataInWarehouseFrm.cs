@@ -60,6 +60,7 @@ namespace Warehouse.更新数据窗体
 
 
 			ShowAskDialog("修改成功");
+			this.Close();
 			log.WriteLog(6, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出库登记", "完成出库", NumberBox.Text.Trim());
 		}
 		#endregion
