@@ -133,10 +133,10 @@ namespace DAL
         }
 
         /// <summary>
-        /// 更新一条数据
+        /// 用SQL语句跟新一条数据
         /// </summary>
-        /// <param name="Sql">sql语句</param>
-        /// <returns>boolean</returns>
+        /// <param name="Sql"></param>
+        /// <returns></returns>
         public bool Update(string Sql)
 		{
             int rows = DbHelperMySQL.ExecuteSql(Sql);
@@ -149,6 +149,8 @@ namespace DAL
                 return false;
             }
         }
+
+        
 
         /// <summary>
         /// 删除一条数据
@@ -287,7 +289,11 @@ namespace DAL
         }
         ///<summary>
         ///获取所有的下拉框
+
+        /////</summary>>
+
         ///</summary>>
+
         //public List<Model.out_storage> getAllout()
         //{
         //    List<Model.out_storage> outstorage = new List<Model.out_storage>();
@@ -299,6 +305,17 @@ namespace DAL
         //        out1.enter_id = sdr.Tables[0].Rows[i]["enter_id"].ToString();
         //        out1.out_account= Convert.ToInt32(sdr.Tables[0].Rows[i]["out_account"]);
         //        out1 .out_batch_id= sdr.Tables[0].Rows[i]["out_batch_id"].ToString();
+
+        //        //out1.out_data = Convert.ToDateTime(sdr.Tables[0].Rows[i]["out_data"]);
+        //        //out1.out_id=
+        //        //out1.out_if_accomplish=
+        //        //out1.out_mat_id=
+        //        //out1.out_mat_name=
+        //        //out1.out_sr_id=
+        //        //out1.out_staff_id=
+        //        //out1.out_staff_name=
+        //        //out1.remark=
+
         //        out1.out_data = Convert.ToDateTime(sdr.Tables[0].Rows[i]["out_data"]);
         //        out1.out_id=
         //        out1.out_if_accomplish=
@@ -308,6 +325,7 @@ namespace DAL
         //        out1.out_staff_id=
         //        out1.out_staff_name=
         //        out1.remark=
+
                 
         //    }
         //}
@@ -410,7 +428,8 @@ namespace DAL
             return DbHelperMySQL.RunProcedure("UP_GetRecordByPage",parameters,"ds");
         }*/
 
-        #endregion  BasicMethod
+        #endregion  
+      
 		#region  ExtensionMethod
 
 		#endregion  ExtensionMethod

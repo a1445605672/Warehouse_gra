@@ -35,7 +35,6 @@ namespace Warehouse.更新数据窗体
 			this.batchBox = new Sunny.UI.UIComboBox();
 			this.ProviderBox = new Sunny.UI.UIComboBox();
 			this.staffBox = new Sunny.UI.UITextBox();
-			this.VolumeBox = new Sunny.UI.UITextBox();
 			this.InWarehouseAccountBox = new Sunny.UI.UITextBox();
 			this.StorageLocationBox = new Sunny.UI.UITextBox();
 			this.NumberBox = new Sunny.UI.UITextBox();
@@ -43,7 +42,6 @@ namespace Warehouse.更新数据窗体
 			this.uiLabel7 = new Sunny.UI.UILabel();
 			this.uiLabel8 = new Sunny.UI.UILabel();
 			this.uiLabel5 = new Sunny.UI.UILabel();
-			this.uiLabel6 = new Sunny.UI.UILabel();
 			this.uiLabel3 = new Sunny.UI.UILabel();
 			this.uiLabel4 = new Sunny.UI.UILabel();
 			this.uiLabel2 = new Sunny.UI.UILabel();
@@ -65,7 +63,6 @@ namespace Warehouse.更新数据窗体
 			this.PagePanel.Controls.Add(this.batchBox);
 			this.PagePanel.Controls.Add(this.ProviderBox);
 			this.PagePanel.Controls.Add(this.staffBox);
-			this.PagePanel.Controls.Add(this.VolumeBox);
 			this.PagePanel.Controls.Add(this.InWarehouseAccountBox);
 			this.PagePanel.Controls.Add(this.StorageLocationBox);
 			this.PagePanel.Controls.Add(this.NumberBox);
@@ -73,7 +70,6 @@ namespace Warehouse.更新数据窗体
 			this.PagePanel.Controls.Add(this.uiLabel7);
 			this.PagePanel.Controls.Add(this.uiLabel8);
 			this.PagePanel.Controls.Add(this.uiLabel5);
-			this.PagePanel.Controls.Add(this.uiLabel6);
 			this.PagePanel.Controls.Add(this.uiLabel3);
 			this.PagePanel.Controls.Add(this.uiLabel4);
 			this.PagePanel.Controls.Add(this.uiLabel2);
@@ -86,7 +82,7 @@ namespace Warehouse.更新数据窗体
 			this.uiButton17.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.uiButton17.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiButton17.ForeSelectedColor = System.Drawing.Color.Empty;
-			this.uiButton17.Location = new System.Drawing.Point(107, 390);
+			this.uiButton17.Location = new System.Drawing.Point(107, 357);
 			this.uiButton17.MinimumSize = new System.Drawing.Size(1, 1);
 			this.uiButton17.Name = "uiButton17";
 			this.uiButton17.Radius = 35;
@@ -105,7 +101,7 @@ namespace Warehouse.更新数据窗体
 			this.uiButton13.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(87)))), ((int)(((byte)(89)))));
 			this.uiButton13.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(87)))), ((int)(((byte)(89)))));
 			this.uiButton13.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiButton13.Location = new System.Drawing.Point(260, 390);
+			this.uiButton13.Location = new System.Drawing.Point(260, 357);
 			this.uiButton13.MinimumSize = new System.Drawing.Size(1, 1);
 			this.uiButton13.Name = "uiButton13";
 			this.uiButton13.Radius = 35;
@@ -124,7 +120,7 @@ namespace Warehouse.更新数据窗体
 			// 
 			this.DateBox.FillColor = System.Drawing.Color.White;
 			this.DateBox.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.DateBox.Location = new System.Drawing.Point(201, 262);
+			this.DateBox.Location = new System.Drawing.Point(201, 229);
 			this.DateBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.DateBox.MaxLength = 10;
 			this.DateBox.MinimumSize = new System.Drawing.Size(63, 0);
@@ -143,7 +139,7 @@ namespace Warehouse.更新数据窗体
 			this.batchBox.DisplayMember = "请选择";
 			this.batchBox.FillColor = System.Drawing.Color.White;
 			this.batchBox.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.batchBox.Location = new System.Drawing.Point(201, 226);
+			this.batchBox.Location = new System.Drawing.Point(201, 193);
 			this.batchBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.batchBox.MinimumSize = new System.Drawing.Size(63, 0);
 			this.batchBox.Name = "batchBox";
@@ -160,7 +156,7 @@ namespace Warehouse.更新数据窗体
 			this.ProviderBox.DisplayMember = "请选择";
 			this.ProviderBox.FillColor = System.Drawing.Color.White;
 			this.ProviderBox.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.ProviderBox.Location = new System.Drawing.Point(201, 190);
+			this.ProviderBox.Location = new System.Drawing.Point(201, 157);
 			this.ProviderBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.ProviderBox.MinimumSize = new System.Drawing.Size(63, 0);
 			this.ProviderBox.Name = "ProviderBox";
@@ -177,7 +173,7 @@ namespace Warehouse.更新数据窗体
 			this.staffBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.staffBox.FillColor = System.Drawing.Color.White;
 			this.staffBox.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.staffBox.Location = new System.Drawing.Point(201, 298);
+			this.staffBox.Location = new System.Drawing.Point(201, 265);
 			this.staffBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.staffBox.Maximum = 2147483647D;
 			this.staffBox.Minimum = -2147483648D;
@@ -188,23 +184,6 @@ namespace Warehouse.更新数据窗体
 			this.staffBox.TabIndex = 34;
 			this.staffBox.Watermark = "请输入经办人编号";
 			this.staffBox.Validated += new System.EventHandler(this.PagePanel_Validated);
-			// 
-			// VolumeBox
-			// 
-			this.VolumeBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.VolumeBox.FillColor = System.Drawing.Color.White;
-			this.VolumeBox.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.VolumeBox.Location = new System.Drawing.Point(201, 154);
-			this.VolumeBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.VolumeBox.Maximum = 2147483647D;
-			this.VolumeBox.Minimum = -2147483648D;
-			this.VolumeBox.MinimumSize = new System.Drawing.Size(1, 1);
-			this.VolumeBox.Name = "VolumeBox";
-			this.VolumeBox.Padding = new System.Windows.Forms.Padding(5);
-			this.VolumeBox.Size = new System.Drawing.Size(150, 29);
-			this.VolumeBox.TabIndex = 33;
-			this.VolumeBox.Watermark = "请输入单位体积";
-			this.VolumeBox.Validated += new System.EventHandler(this.PagePanel_Validated);
 			// 
 			// InWarehouseAccountBox
 			// 
@@ -261,7 +240,7 @@ namespace Warehouse.更新数据窗体
 			// 
 			this.uiLabel9.AutoSize = true;
 			this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiLabel9.Location = new System.Drawing.Point(114, 303);
+			this.uiLabel9.Location = new System.Drawing.Point(114, 270);
 			this.uiLabel9.Name = "uiLabel9";
 			this.uiLabel9.Size = new System.Drawing.Size(74, 21);
 			this.uiLabel9.TabIndex = 30;
@@ -272,7 +251,7 @@ namespace Warehouse.更新数据窗体
 			// 
 			this.uiLabel7.AutoSize = true;
 			this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiLabel7.Location = new System.Drawing.Point(114, 266);
+			this.uiLabel7.Location = new System.Drawing.Point(114, 233);
 			this.uiLabel7.Name = "uiLabel7";
 			this.uiLabel7.Size = new System.Drawing.Size(68, 21);
 			this.uiLabel7.TabIndex = 29;
@@ -294,23 +273,12 @@ namespace Warehouse.更新数据窗体
 			// 
 			this.uiLabel5.AutoSize = true;
 			this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiLabel5.Location = new System.Drawing.Point(114, 194);
+			this.uiLabel5.Location = new System.Drawing.Point(114, 161);
 			this.uiLabel5.Name = "uiLabel5";
 			this.uiLabel5.Size = new System.Drawing.Size(58, 21);
 			this.uiLabel5.TabIndex = 27;
 			this.uiLabel5.Text = "供应商";
 			this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// uiLabel6
-			// 
-			this.uiLabel6.AutoSize = true;
-			this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiLabel6.Location = new System.Drawing.Point(114, 158);
-			this.uiLabel6.Name = "uiLabel6";
-			this.uiLabel6.Size = new System.Drawing.Size(68, 21);
-			this.uiLabel6.TabIndex = 26;
-			this.uiLabel6.Text = "体  积：";
-			this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// uiLabel3
 			// 
@@ -338,7 +306,7 @@ namespace Warehouse.更新数据窗体
 			// 
 			this.uiLabel2.AutoSize = true;
 			this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiLabel2.Location = new System.Drawing.Point(114, 230);
+			this.uiLabel2.Location = new System.Drawing.Point(114, 197);
 			this.uiLabel2.Name = "uiLabel2";
 			this.uiLabel2.Size = new System.Drawing.Size(63, 21);
 			this.uiLabel2.TabIndex = 23;
@@ -361,7 +329,7 @@ namespace Warehouse.更新数据窗体
 			this.remarkBox.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.remarkBox.FillColor = System.Drawing.Color.White;
 			this.remarkBox.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.remarkBox.Location = new System.Drawing.Point(201, 334);
+			this.remarkBox.Location = new System.Drawing.Point(201, 301);
 			this.remarkBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.remarkBox.Maximum = 2147483647D;
 			this.remarkBox.Minimum = -2147483648D;
@@ -377,7 +345,7 @@ namespace Warehouse.更新数据窗体
 			// 
 			this.uiLabel10.AutoSize = true;
 			this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.uiLabel10.Location = new System.Drawing.Point(114, 341);
+			this.uiLabel10.Location = new System.Drawing.Point(114, 308);
 			this.uiLabel10.Name = "uiLabel10";
 			this.uiLabel10.Size = new System.Drawing.Size(68, 21);
 			this.uiLabel10.TabIndex = 35;
@@ -423,7 +391,6 @@ namespace Warehouse.更新数据窗体
 		private Sunny.UI.UILabel uiLabel7;
 		private Sunny.UI.UILabel uiLabel8;
 		private Sunny.UI.UILabel uiLabel5;
-		private Sunny.UI.UILabel uiLabel6;
 		private Sunny.UI.UILabel uiLabel3;
 		private Sunny.UI.UILabel uiLabel4;
 		private Sunny.UI.UILabel uiLabel2;
@@ -433,7 +400,6 @@ namespace Warehouse.更新数据窗体
 		public Sunny.UI.UIComboBox batchBox;
 		public Sunny.UI.UIComboBox ProviderBox;
 		public Sunny.UI.UITextBox staffBox;
-		public Sunny.UI.UITextBox VolumeBox;
 		public Sunny.UI.UITextBox InWarehouseAccountBox;
 		public Sunny.UI.UITextBox StorageLocationBox;
 		public Sunny.UI.UITextBox NumberBox;

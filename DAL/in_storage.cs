@@ -112,6 +112,25 @@ namespace DAL
             }
         }
 
+        /// <summary>
+        /// 用sql语句跟新一条数据
+        /// </summary>
+        /// <param name="Sql"></param>
+        /// <returns></returns>
+        public bool Update(string Sql)
+		{
+            int rows = DbHelperMySQL.ExecuteSql(Sql);
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+           
+		}
+
         ///<summary>
         ///用于柱状图和折线图的绘制
         ///</summary>
@@ -186,7 +205,27 @@ namespace DAL
                 return null;
             }
         }
+        public Model.in_storage GetModelbyId(string enter_num)
+        {
 
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select enter_num,mat_id,mat_name,in_time,sl_id,in_amount,in_weight,in_volume from in_storage ");
+            strSql.Append(" where enter_num=@enter_num");
+            MySqlParameter[] parameters = {
+                    new MySqlParameter("@enter_num", MySqlDbType.VarChar,128)         };
+            parameters[0].Value = enter_num;
+
+            Model.in_storage model = new Model.in_storage();
+            DataSet ds = DbHelperMySQL.Query(strSql.ToString(), parameters);
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                return DataRowToModel(ds.Tables[0].Rows[0]);
+            }
+            else
+            {
+                return null;
+            }
+        }
         /// <summary>
         /// 得到一个对象实体
         /// </summary>

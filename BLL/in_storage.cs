@@ -47,6 +47,15 @@ namespace BLL
 		{
 			return dal.Update(model);
 		}
+		/// <summary>
+		/// 用Sql语句更新一条数据
+		/// </summary>
+		/// <param name="Sql">SQL语句</param>
+		/// <returns>boolean</returns>
+		public bool Update(string Sql)
+		{
+			return dal.Update(Sql);
+		}
 
 		/// <summary>
 		/// 删除一条数据
@@ -71,7 +80,16 @@ namespace BLL
 		{
 			return dal.GetModelBymat_name(matname);
 		}
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="in_time"></param>
+		/// <returns></returns>
+		public Model.in_storage GetModelById(string id)
+		{
 
+			return dal.GetModelbyId(id);
+		}
 		/// <summary>
 		/// 得到一个对象实体
 		/// </summary>

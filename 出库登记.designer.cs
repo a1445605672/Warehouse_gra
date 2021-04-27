@@ -39,6 +39,7 @@ namespace Warehouse
 			this.uiDataGridView1 = new Sunny.UI.UIDataGridView();
 			this.uiPagination1 = new Sunny.UI.UIPagination();
 			this.uiPanel1 = new Sunny.UI.UIPanel();
+			this.InWearhouseNumber = new Sunny.UI.UILabel();
 			this.outWarehouseAmountLabel = new Sunny.UI.UILabel();
 			this.storageLocationBox = new Sunny.UI.UITextBox();
 			this.Materialsbox = new Sunny.UI.UITextBox();
@@ -65,7 +66,6 @@ namespace Warehouse
 			this.SelectMaterialsbox = new Sunny.UI.UIComboBox();
 			this.uiLabel11 = new Sunny.UI.UILabel();
 			this.SearchBut = new Sunny.UI.UIButton();
-			this.InWearhouseNumber = new Sunny.UI.UILabel();
 			this.PagePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).BeginInit();
 			this.uiPanel1.SuspendLayout();
@@ -149,7 +149,7 @@ namespace Warehouse
 			this.uiPagination1.MinimumSize = new System.Drawing.Size(1, 1);
 			this.uiPagination1.Name = "uiPagination1";
 			this.uiPagination1.PagerCount = 11;
-			this.uiPagination1.PageSize = 19;
+			this.uiPagination1.PageSize = 17;
 			this.uiPagination1.RectSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.None;
 			this.uiPagination1.Size = new System.Drawing.Size(950, 39);
 			this.uiPagination1.TabIndex = 3;
@@ -192,6 +192,17 @@ namespace Warehouse
 			this.uiPanel1.TabIndex = 0;
 			this.uiPanel1.Text = null;
 			// 
+			// InWearhouseNumber
+			// 
+			this.InWearhouseNumber.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.InWearhouseNumber.Location = new System.Drawing.Point(683, 144);
+			this.InWearhouseNumber.Name = "InWearhouseNumber";
+			this.InWearhouseNumber.Size = new System.Drawing.Size(177, 28);
+			this.InWearhouseNumber.TabIndex = 64;
+			this.InWearhouseNumber.Text = "入库编号，隐藏显示";
+			this.InWearhouseNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.InWearhouseNumber.Visible = false;
+			// 
 			// outWarehouseAmountLabel
 			// 
 			this.outWarehouseAmountLabel.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -216,6 +227,7 @@ namespace Warehouse
 			this.storageLocationBox.MinimumSize = new System.Drawing.Size(1, 1);
 			this.storageLocationBox.Name = "storageLocationBox";
 			this.storageLocationBox.Padding = new System.Windows.Forms.Padding(5);
+			this.storageLocationBox.Radius = 10;
 			this.storageLocationBox.ReadOnly = true;
 			this.storageLocationBox.Size = new System.Drawing.Size(221, 29);
 			this.storageLocationBox.TabIndex = 62;
@@ -234,6 +246,7 @@ namespace Warehouse
 			this.Materialsbox.MinimumSize = new System.Drawing.Size(1, 1);
 			this.Materialsbox.Name = "Materialsbox";
 			this.Materialsbox.Padding = new System.Windows.Forms.Padding(5);
+			this.Materialsbox.Radius = 10;
 			this.Materialsbox.ReadOnly = true;
 			this.Materialsbox.Size = new System.Drawing.Size(221, 29);
 			this.Materialsbox.TabIndex = 62;
@@ -263,6 +276,7 @@ namespace Warehouse
 			this.OutWarwhouseNumberBox.MinimumSize = new System.Drawing.Size(1, 1);
 			this.OutWarwhouseNumberBox.Name = "OutWarwhouseNumberBox";
 			this.OutWarwhouseNumberBox.Padding = new System.Windows.Forms.Padding(5);
+			this.OutWarwhouseNumberBox.Radius = 10;
 			this.OutWarwhouseNumberBox.ReadOnly = true;
 			this.OutWarwhouseNumberBox.Size = new System.Drawing.Size(221, 29);
 			this.OutWarwhouseNumberBox.TabIndex = 61;
@@ -280,6 +294,7 @@ namespace Warehouse
 			this.remarkBox.MinimumSize = new System.Drawing.Size(1, 1);
 			this.remarkBox.Name = "remarkBox";
 			this.remarkBox.Padding = new System.Windows.Forms.Padding(5);
+			this.remarkBox.Radius = 10;
 			this.remarkBox.Size = new System.Drawing.Size(221, 29);
 			this.remarkBox.TabIndex = 60;
 			this.remarkBox.Watermark = "请输入汉字";
@@ -297,6 +312,7 @@ namespace Warehouse
 			this.staffBox.MinimumSize = new System.Drawing.Size(1, 1);
 			this.staffBox.Name = "staffBox";
 			this.staffBox.Padding = new System.Windows.Forms.Padding(5);
+			this.staffBox.Radius = 10;
 			this.staffBox.Size = new System.Drawing.Size(221, 29);
 			this.staffBox.TabIndex = 59;
 			this.staffBox.Watermark = "请输入经办人编号";
@@ -313,6 +329,7 @@ namespace Warehouse
 			this.edtDate.MinimumSize = new System.Drawing.Size(63, 0);
 			this.edtDate.Name = "edtDate";
 			this.edtDate.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+			this.edtDate.Radius = 10;
 			this.edtDate.Size = new System.Drawing.Size(221, 29);
 			this.edtDate.SymbolDropDown = 61555;
 			this.edtDate.SymbolNormal = 61555;
@@ -330,6 +347,7 @@ namespace Warehouse
 			this.batchNumberBox.MinimumSize = new System.Drawing.Size(63, 0);
 			this.batchNumberBox.Name = "batchNumberBox";
 			this.batchNumberBox.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+			this.batchNumberBox.Radius = 10;
 			this.batchNumberBox.Size = new System.Drawing.Size(221, 29);
 			this.batchNumberBox.TabIndex = 57;
 			this.batchNumberBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -346,6 +364,7 @@ namespace Warehouse
 			this.ProviderBox.MinimumSize = new System.Drawing.Size(63, 0);
 			this.ProviderBox.Name = "ProviderBox";
 			this.ProviderBox.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+			this.ProviderBox.Radius = 10;
 			this.ProviderBox.Size = new System.Drawing.Size(221, 29);
 			this.ProviderBox.TabIndex = 54;
 			this.ProviderBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -491,6 +510,7 @@ namespace Warehouse
 			this.outWarehouseAmountBox.MinimumSize = new System.Drawing.Size(1, 1);
 			this.outWarehouseAmountBox.Name = "outWarehouseAmountBox";
 			this.outWarehouseAmountBox.Padding = new System.Windows.Forms.Padding(5);
+			this.outWarehouseAmountBox.Radius = 10;
 			this.outWarehouseAmountBox.Size = new System.Drawing.Size(221, 29);
 			this.outWarehouseAmountBox.TabIndex = 13;
 			this.outWarehouseAmountBox.Watermark = "请输入出库数量";
@@ -550,6 +570,7 @@ namespace Warehouse
 			this.SelectMaterialsbox.MinimumSize = new System.Drawing.Size(63, 0);
 			this.SelectMaterialsbox.Name = "SelectMaterialsbox";
 			this.SelectMaterialsbox.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+			this.SelectMaterialsbox.Radius = 10;
 			this.SelectMaterialsbox.Size = new System.Drawing.Size(221, 29);
 			this.SelectMaterialsbox.TabIndex = 54;
 			this.SelectMaterialsbox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -578,17 +599,6 @@ namespace Warehouse
 			this.SearchBut.TabIndex = 56;
 			this.SearchBut.Text = "搜  索";
 			this.SearchBut.Click += new System.EventHandler(this.SearchBut_Click);
-			// 
-			// InWearhouseNumber
-			// 
-			this.InWearhouseNumber.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.InWearhouseNumber.Location = new System.Drawing.Point(683, 144);
-			this.InWearhouseNumber.Name = "InWearhouseNumber";
-			this.InWearhouseNumber.Size = new System.Drawing.Size(177, 28);
-			this.InWearhouseNumber.TabIndex = 64;
-			this.InWearhouseNumber.Text = "入库编号，隐藏显示";
-			this.InWearhouseNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.InWearhouseNumber.Visible = false;
 			// 
 			// 出库登记
 			// 

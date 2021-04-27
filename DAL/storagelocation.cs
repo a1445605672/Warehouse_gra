@@ -117,6 +117,26 @@ namespace DAL
             }
         }
 
+
+        /// <summary>
+        /// 更新一条数据，执行sql语句
+        /// </summary>
+        /// <param name="Sql">Sql语句</param>
+        /// <returns>boolean值判断执行是否成功</returns>
+      public bool  Update(string Sql)
+		{
+            int rows = DbHelperMySQL.ExecuteSql(Sql);
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+
         /// <summary>
         /// 删除一条数据
         /// </summary>
