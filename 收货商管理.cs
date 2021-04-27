@@ -96,7 +96,15 @@ namespace Warehouse
 			Amount = amount;
 			uiLedDisplay1.Text = amount + "个";
 
+			//查询在哪个仓库
+			string kuwei = in_Storages[0].sl_id;
+			string batch = in_Storages[0].enter_num;
+
+			string storage_name = Which_storage(kuwei);
+			
+
 			//this.flowLayoutPanel1.Controls.Add()
+			//增加仓库信息
 			BLL.storage storage = new BLL.storage();
 			List<Model.storage> storages = new List<Model.storage>();
 			storages = storage.GetModelList("");
@@ -109,18 +117,38 @@ namespace Warehouse
 				//uILed.Name = storage[i].
 				UILabel label = new UILabel();
 				label.Text = text;
+				if(text == storage_name.Trim())
+                {
+					uILed.Blink = true;
+                }
 				this.flowLayoutPanel1.Controls.Add(label);
 				this.flowLayoutPanel1.Controls.Add(uILed);
 
 			}
 
+			//查询这个物品在哪个仓库
 
 
-			string kuwei = in_Storages[0].sl_id;
-		    
 
+			
 
+		
         }
+
+
+		private string Which_storage(string kuwei)
+        {
+			string Cha_xun1 = "sl_id = " + "\"" + kuwei.Trim() + "\"";
+			BLL.storagelocation storagelocation = new BLL.storagelocation();
+			List<Model.storagelocation> storagelocation1 = new List<Model.storagelocation>();
+			storagelocation1 = storagelocation.GetModelList(Cha_xun1);
+			string sl_belong_chest = storagelocation1[0].sl_belong_chest;
+
+			int index = 0;
+			index = sl_belong_chest.LastIndexOf("_");
+			sl_belong_chest = sl_belong_chest.Substring(0, index);
+			return sl_belong_chest;
+		}
 
         private void uiTextBox1_TextChanged(object sender, EventArgs e)
         {

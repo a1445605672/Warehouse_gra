@@ -92,8 +92,6 @@ C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.工具窗体.Search.resou
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.工具窗体.清理缓存.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.库位管理.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.库位类型管理.resources
-C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.库柜管理.resources
-C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.房间管理.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.更新数据窗体.UpdataInWarehouseFrm.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.UpdataFrm.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.入库日报.resources
@@ -364,7 +362,16 @@ C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\obj\Debug\Warehouse.综合统
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\obj\Debug\Warehouse.物料盘存.resources
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\obj\Debug\Warehouse.new_物料盘存.resources
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmEditInstorage.resources
+<<<<<<< HEAD
 E:\Warehouse_gra\obj\Debug\Warehouse.new_物料盘存.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmEditInstorage.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.物料盘存.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.综合统计分析.resources
+=======
+C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.new_库柜管理.resources
+C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.new_房间管理.resources
+C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.new_物料盘存.resources
+C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmEditInstorage.resources
+C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.物料盘存.resources
+C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.综合统计分析.resources
+>>>>>>> ae01e9c4596c307992d2092605c142dc4ca9d863

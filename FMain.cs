@@ -30,8 +30,8 @@ namespace Warehouse
 			Aside.CreateChildNode(BasicInform, 61495, 24, "物料类别管理", ++pageIndex);
 			Aside.CreateChildNode(BasicInform, 57583, 24, "部门管理", ++pageIndex);
 			Aside.CreateChildNode(BasicInform, 61632, 24, "部门人员管理", ++pageIndex);
-			Aside.CreateChildNode(BasicInform, 61975, 24, "供应商管理", ++pageIndex);
-			Aside.CreateChildNode(BasicInform, 61976, 24, "收货商管理", ++pageIndex);
+			Aside.CreateChildNode(BasicInform, 61975, 24, "供收货商管理", ++pageIndex);
+			Aside.CreateChildNode(BasicInform, 61976, 24, "调拨计划管理", ++pageIndex);
 
 
 			pageIndex = 2000;
@@ -149,13 +149,13 @@ namespace Warehouse
 					LoadMdiForm(MainTabControl, text, typeof(部门人员管理));
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "部门人员管理", "进入部门人员管理页面", "");
 					break;
-				case "供应商管理":
+				case "供收货商管理":
 					LoadMdiForm(MainTabControl, text, typeof(供应商管理));
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "供应商管理", "进入供应商管理页面", "");
 					break;
-				case "收货商管理":
+				case "调拨计划管理":
 					LoadMdiForm(MainTabControl, text, typeof(收货商管理));
-					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "收货商管理", "进入收货商管理页面", "");
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "调拨计划管理", "进入调拨计划管理页面", "");
 					break;
 				case "数据备份":
 					LoadMdiForm(MainTabControl, text, typeof(数据备份));
