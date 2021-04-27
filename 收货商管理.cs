@@ -126,7 +126,7 @@ namespace Warehouse
 
 			}
 
-			//查询这个物品在哪个仓库
+			
 
 
 
@@ -135,7 +135,11 @@ namespace Warehouse
 		
         }
 
-
+		/// <summary>
+		/// 通过库位编号查询仓库名
+		/// </summary>
+		/// <param name="kuwei"></param>
+		/// <returns></returns>
 		private string Which_storage(string kuwei)
         {
 			string Cha_xun1 = "sl_id = " + "\"" + kuwei.Trim() + "\"";
