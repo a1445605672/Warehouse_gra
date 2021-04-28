@@ -93,6 +93,8 @@ namespace BLL
 		{
 			return dal.GetList(num);
 		}
+		
+		
 
 		/// <summary>
 		/// 获得数据列表

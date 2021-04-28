@@ -36,6 +36,7 @@ namespace Warehouse
 			but.HeaderText = "操作";  //设置列表头的名字
 			but.SetFixedMode(50);//设置按钮大小
 			but.Name = "UpDate";//设置按钮的名字
+			
 			but.DefaultCellStyle.NullValue = "修改";
 			grid.Columns.Add(but);
 
@@ -86,7 +87,7 @@ namespace Warehouse
 			if (room.IsOK)
 			{
 				BLL.storage sr_ = new BLL.storage();
-				bool m = sr_.Add(room.storageModel);
+				bool m = sr_.Add(room.StorageModel);
 				if (m == true)
 				{
 					UIMessageBox.ShowSuccess("新增成功");

@@ -52,7 +52,7 @@ namespace Warehouse.工具窗体
             this.RoomName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.RoomName.FillColor = System.Drawing.Color.White;
             this.RoomName.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.RoomName.Location = new System.Drawing.Point(267, 115);
+            this.RoomName.Location = new System.Drawing.Point(236, 115);
             this.RoomName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RoomName.Maximum = 2147483647D;
             this.RoomName.Minimum = -2147483648D;
@@ -70,40 +70,43 @@ namespace Warehouse.工具窗体
             this.uiLabel2.Name = "uiLabel2";
             this.uiLabel2.Size = new System.Drawing.Size(126, 39);
             this.uiLabel2.TabIndex = 15;
-            this.uiLabel2.Text = " 房间名称";
+            this.uiLabel2.Text = " 房间名称:";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel1
             // 
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel1.Location = new System.Drawing.Point(134, 72);
+            this.uiLabel1.Location = new System.Drawing.Point(106, 67);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(126, 43);
             this.uiLabel1.TabIndex = 16;
-            this.uiLabel1.Text = "房间ID";
+            this.uiLabel1.Text = "房间ID:";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // RoomID
             // 
             this.RoomID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.RoomID.FillColor = System.Drawing.Color.White;
+            this.RoomID.Enabled = false;
+            this.RoomID.FillColor = System.Drawing.Color.Silver;
             this.RoomID.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.RoomID.Location = new System.Drawing.Point(267, 61);
+            this.RoomID.Location = new System.Drawing.Point(236, 66);
             this.RoomID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RoomID.Maximum = 2147483647D;
             this.RoomID.Minimum = -2147483648D;
             this.RoomID.MinimumSize = new System.Drawing.Size(1, 1);
             this.RoomID.Name = "RoomID";
             this.RoomID.Padding = new System.Windows.Forms.Padding(5);
-            this.RoomID.Size = new System.Drawing.Size(150, 39);
+            this.RoomID.Size = new System.Drawing.Size(208, 39);
+            this.RoomID.Style = Sunny.UI.UIStyle.Custom;
             this.RoomID.TabIndex = 10;
+            this.RoomID.Text = "房间编号系统生成";
             // 
             // Locationleft
             // 
             this.Locationleft.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Locationleft.FillColor = System.Drawing.Color.White;
             this.Locationleft.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.Locationleft.Location = new System.Drawing.Point(267, 222);
+            this.Locationleft.Location = new System.Drawing.Point(236, 227);
             this.Locationleft.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Locationleft.Maximum = 2147483647D;
             this.Locationleft.Minimum = -2147483648D;
@@ -121,7 +124,7 @@ namespace Warehouse.工具窗体
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(123, 34);
             this.uiLabel3.TabIndex = 19;
-            this.uiLabel3.Text = " 库位剩余";
+            this.uiLabel3.Text = " 库位剩余:";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel4
@@ -131,7 +134,7 @@ namespace Warehouse.工具窗体
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(126, 43);
             this.uiLabel4.TabIndex = 20;
-            this.uiLabel4.Text = "房间面积";
+            this.uiLabel4.Text = "房间面积:";
             this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // RoomArea
@@ -139,7 +142,7 @@ namespace Warehouse.工具窗体
             this.RoomArea.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.RoomArea.FillColor = System.Drawing.Color.White;
             this.RoomArea.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.RoomArea.Location = new System.Drawing.Point(267, 168);
+            this.RoomArea.Location = new System.Drawing.Point(236, 172);
             this.RoomArea.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RoomArea.Maximum = 2147483647D;
             this.RoomArea.Minimum = -2147483648D;
@@ -154,7 +157,7 @@ namespace Warehouse.工具窗体
             this.Chestleft.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Chestleft.FillColor = System.Drawing.Color.White;
             this.Chestleft.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.Chestleft.Location = new System.Drawing.Point(267, 281);
+            this.Chestleft.Location = new System.Drawing.Point(236, 281);
             this.Chestleft.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Chestleft.Maximum = 2147483647D;
             this.Chestleft.Minimum = -2147483648D;
@@ -172,7 +175,7 @@ namespace Warehouse.工具窗体
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(123, 34);
             this.uiLabel5.TabIndex = 22;
-            this.uiLabel5.Text = "库柜剩余";
+            this.uiLabel5.Text = "库柜剩余:";
             this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // backinfo
@@ -180,7 +183,7 @@ namespace Warehouse.工具窗体
             this.backinfo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.backinfo.FillColor = System.Drawing.Color.White;
             this.backinfo.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.backinfo.Location = new System.Drawing.Point(267, 335);
+            this.backinfo.Location = new System.Drawing.Point(236, 335);
             this.backinfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.backinfo.Maximum = 2147483647D;
             this.backinfo.Minimum = -2147483648D;
@@ -198,7 +201,7 @@ namespace Warehouse.工具窗体
             this.uiLabel6.Name = "uiLabel6";
             this.uiLabel6.Size = new System.Drawing.Size(123, 34);
             this.uiLabel6.TabIndex = 24;
-            this.uiLabel6.Text = "备注信息";
+            this.uiLabel6.Text = "备注信息:";
             this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FormEditRoom

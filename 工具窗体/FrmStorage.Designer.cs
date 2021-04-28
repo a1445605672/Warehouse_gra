@@ -252,7 +252,7 @@ namespace Warehouse.工具窗体
             // txtBelongto
             // 
             this.txtBelongto.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBelongto.FillColor = System.Drawing.Color.White;
+            this.txtBelongto.FillColor = System.Drawing.Color.Silver;
             this.txtBelongto.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.txtBelongto.Location = new System.Drawing.Point(430, 72);
             this.txtBelongto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -262,6 +262,7 @@ namespace Warehouse.工具窗体
             this.txtBelongto.Name = "txtBelongto";
             this.txtBelongto.Padding = new System.Windows.Forms.Padding(5);
             this.txtBelongto.Size = new System.Drawing.Size(150, 39);
+            this.txtBelongto.Style = Sunny.UI.UIStyle.Custom;
             this.txtBelongto.TabIndex = 11;
             this.txtBelongto.Text = "左侧选择库柜";
             // 

@@ -368,3 +368,4 @@ C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.new_物料盘存.resource
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmEditInstorage.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.物料盘存.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.综合统计分析.resources
+C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.new_房间管理1.resources
