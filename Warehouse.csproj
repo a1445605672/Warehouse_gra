@@ -128,12 +128,6 @@
     <Compile Include="new_房间管理.Designer.cs">
       <DependentUpon>new_房间管理.cs</DependentUpon>
     </Compile>
-    <Compile Include="new_房间管理1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="new_房间管理1.Designer.cs">
-      <DependentUpon>new_房间管理1.cs</DependentUpon>
-    </Compile>
     <Compile Include="new_物料盘存.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,7 +148,6 @@
     <Compile Include="图形化展示.Designer.cs">
       <DependentUpon>图形化展示.cs</DependentUpon>
     </Compile>
-    <Compile Include="工具窗体\Class1.cs" />
     <Compile Include="工具窗体\ExcelHelp.cs" />
     <Compile Include="工具窗体\FEdit_department.cs">
       <SubType>Form</SubType>
@@ -411,9 +404,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="new_房间管理.resx">
       <DependentUpon>new_房间管理.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="new_房间管理1.resx">
-      <DependentUpon>new_房间管理1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="new_物料盘存.resx">
       <DependentUpon>new_物料盘存.cs</DependentUpon>
