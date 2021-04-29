@@ -67,7 +67,8 @@ namespace Warehouse.工具窗体
             // txtID
             // 
             this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtID.FillColor = System.Drawing.Color.White;
+            this.txtID.Enabled = false;
+            this.txtID.FillColor = System.Drawing.Color.Silver;
             this.txtID.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.txtID.Location = new System.Drawing.Point(430, 120);
             this.txtID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -77,7 +78,9 @@ namespace Warehouse.工具窗体
             this.txtID.Name = "txtID";
             this.txtID.Padding = new System.Windows.Forms.Padding(5);
             this.txtID.Size = new System.Drawing.Size(150, 39);
+            this.txtID.Style = Sunny.UI.UIStyle.Custom;
             this.txtID.TabIndex = 3;
+            this.txtID.Text = "系统自动生成";
             // 
             // uiLabel2
             // 
@@ -101,6 +104,7 @@ namespace Warehouse.工具窗体
             this.uiComboBox1.Size = new System.Drawing.Size(150, 39);
             this.uiComboBox1.TabIndex = 5;
             this.uiComboBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiComboBox1.Load += new System.EventHandler(this.uiComboBox1_Load);
             // 
             // uiLabel3
             // 
@@ -238,6 +242,7 @@ namespace Warehouse.工具窗体
             this.uiButton1.Size = new System.Drawing.Size(112, 52);
             this.uiButton1.TabIndex = 9;
             this.uiButton1.Text = "选择库柜";
+            this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
             // 
             // uiLabel8
             // 
@@ -252,6 +257,7 @@ namespace Warehouse.工具窗体
             // txtBelongto
             // 
             this.txtBelongto.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBelongto.Enabled = false;
             this.txtBelongto.FillColor = System.Drawing.Color.Silver;
             this.txtBelongto.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.txtBelongto.Location = new System.Drawing.Point(430, 72);

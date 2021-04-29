@@ -42,7 +42,7 @@ namespace Warehouse.工具窗体
             // pnlBtm
             // 
             this.pnlBtm.Location = new System.Drawing.Point(1, 356);
-            this.pnlBtm.Size = new System.Drawing.Size(537, 55);
+            this.pnlBtm.Size = new System.Drawing.Size(402, 55);
             // 
             // uiLabel1
             // 
@@ -148,7 +148,7 @@ namespace Warehouse.工具窗体
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 414);
+            this.ClientSize = new System.Drawing.Size(404, 414);
             this.Controls.Add(this.uiTextBox4);
             this.Controls.Add(this.uiTextBox3);
             this.Controls.Add(this.uiTextBox2);
@@ -158,7 +158,7 @@ namespace Warehouse.工具窗体
             this.Controls.Add(this.uiTextBox1);
             this.Controls.Add(this.uiLabel1);
             this.Name = "FrmmaterType";
-            this.Text = "FrmmaterType";
+            this.Text = "物料类别";
             this.Controls.SetChildIndex(this.pnlBtm, 0);
             this.Controls.SetChildIndex(this.uiLabel1, 0);
             this.Controls.SetChildIndex(this.uiTextBox1, 0);

@@ -22,6 +22,23 @@ namespace Warehouse
 			grid.AddColumn("库位宽", "type_high");
 			grid.AddColumn("库位高", "type_wide");
 			grid.AddColumn("缩写","type_sx");
+			#region 添加修改，删除两个按钮
+			DataGridViewButtonColumn but = new DataGridViewButtonColumn();
+			but.HeaderText = "操作";  //设置列表头的名字
+			but.SetFixedMode(50);//设置按钮大小
+			but.Name = "UpDate";//设置按钮的名字
+
+			but.DefaultCellStyle.NullValue = "修改";
+			grid.Columns.Add(but);
+
+			DataGridViewButtonColumn but1 = new DataGridViewButtonColumn();
+			but1.HeaderText = "";
+			but1.SetFixedMode(50);
+			but1.Name = "Delete";
+			but1.DefaultCellStyle.NullValue = "删除";
+			grid.Columns.Add(but1);
+			#endregion
+
 			for (int i = 0; i < grid.ColumnCount; i++) { grid.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; }
 			AddRow();
 			//给search控件赋值
@@ -56,6 +73,7 @@ namespace Warehouse
 				
 			}
 		}
+		//新增
 		private void search1_AddEvent(object sender, EventArgs e)
 		{
 
@@ -63,7 +81,7 @@ namespace Warehouse
 			type.ShowDialog();
 			if (type.IsOK)
 			{
-				BLL.chest_type sr_ = new BLL.chest_type();
+				BLL.storagelocation_type sr_ = new BLL.storagelocation_type();
 				bool m = sr_.Add(type.Chest_typeModel);
 				if (m == true)
 				{
@@ -80,5 +98,72 @@ namespace Warehouse
 		{
 			grid.DataSource = pagingSource;
 		}
-	}
+		//Gridview的点击事件
+		private void grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			//更新
+			if (grid.Columns[e.ColumnIndex].Name == "UpDate" && e.RowIndex >= 0)
+			{
+				//获得选择的行
+				int rowIndex = e.RowIndex;
+				string id = grid.CurrentRow.Cells[2].Value.ToString();
+				//string id = grid.Rows[rowIndex].Cells[0].Value.ToString().Trim();
+				Model.storagelocation_type sta = new Model.storagelocation_type();
+				sta.type_id = id;
+				//弹出对话框
+				kuguitype type = new kuguitype();
+				bool m = type.FuZhi(id);
+				if (m != true)
+				{
+					UIMessageBox.ShowWarning("错误", true);
+				}
+				else
+				{
+					type.ShowDialog();
+				}
+				if (type.IsOK)
+				{
+					BLL.storagelocation_type bllstorage = new BLL.storagelocation_type();
+					bool k = bllstorage.Update(type.Chest_typeModel);
+					//更改成功
+					if (k)
+					{
+						ShowSuccessDialog("更改成功");
+
+					}
+					//更改失败
+					else
+					{
+						UIMessageBox.ShowError("编辑失败");
+					}
+				}
+				else
+				{
+					UIMessageBox.ShowError("编辑失败");
+				}
+			}
+			//删除
+			if (grid.Columns[e.ColumnIndex].Name == "Delete" && e.RowIndex >= 0)
+			{
+				if (ShowAskDialog("此操作不可恢复。是否确认删除?"))
+				{
+					foreach (DataGridViewRow row in grid.SelectedRows)
+					{
+						string m = row.Cells[0].Value.ToString().Trim();
+						BLL.storagelocation_type bllstorage = new BLL.storagelocation_type();
+						bool die = bllstorage.Delete(m);
+						if (die)
+						{
+							ShowSuccessDialog("删除成功");
+							AddRow();
+						}
+						else
+						{
+							ShowErrorDialog("删除失败");
+						}
+					}
+				}
+			}
+		}
+    }
 }

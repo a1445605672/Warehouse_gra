@@ -36,11 +36,11 @@ namespace Warehouse
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grid = new Sunny.UI.UIDataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.search1 = new Warehouse.工具窗体.Search();
             this.uiPagination1 = new Sunny.UI.UIPagination();
             this.uiContextMenuStrip2 = new Sunny.UI.UIContextMenuStrip();
             this.delete_sr = new System.Windows.Forms.ToolStripMenuItem();
             this.update_sr = new System.Windows.Forms.ToolStripMenuItem();
-            this.search1 = new Warehouse.工具窗体.Search();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.uiContextMenuStrip2.SuspendLayout();
@@ -91,6 +91,7 @@ namespace Warehouse
             this.grid.ShowGridLine = true;
             this.grid.Size = new System.Drawing.Size(794, 269);
             this.grid.TabIndex = 1;
+            this.grid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_CellContentClick);
             // 
             // tableLayoutPanel1
             // 
@@ -108,6 +109,14 @@ namespace Warehouse
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.73112F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 415);
             this.tableLayoutPanel1.TabIndex = 3;
+            // 
+            // search1
+            // 
+            this.search1.Location = new System.Drawing.Point(4, 5);
+            this.search1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.search1.Name = "search1";
+            this.search1.Size = new System.Drawing.Size(792, 44);
+            this.search1.TabIndex = 0;
             // 
             // uiPagination1
             // 
@@ -142,14 +151,6 @@ namespace Warehouse
             this.update_sr.Name = "update_sr";
             this.update_sr.Size = new System.Drawing.Size(136, 38);
             this.update_sr.Text = "编辑";
-            // 
-            // search1
-            // 
-            this.search1.Location = new System.Drawing.Point(4, 5);
-            this.search1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.search1.Name = "search1";
-            this.search1.Size = new System.Drawing.Size(792, 44);
-            this.search1.TabIndex = 0;
             // 
             // 库位类型管理
             // 
