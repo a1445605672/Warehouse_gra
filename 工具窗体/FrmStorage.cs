@@ -25,18 +25,29 @@ namespace Warehouse.工具窗体
                 if (storagelocationModel == null)
                 {
                     storagelocationModel = new Model.storagelocation();
+                    //s1_id
                     storagelocationModel.sl_id = txtID.Text.Trim();
+                    //库位类型
                     storagelocationModel.sl_store_type_id = uiComboBox1.SelectedText;
+                    //所属库柜
                     storagelocationModel.sl_belong_chest = txtBelongto.Text.Trim();
+                    //备注
                     storagelocationModel.sl_comment = txtComment1.Text.Trim();
+                    //剩余量
                     storagelocationModel.sl_remain_bulk = txtLeftVo.IntValue;
+                    //库存放量
                     storagelocationModel.sl_store_area = txtArea.IntValue;
+                    //库位上限
                     storagelocationModel.sl_store_max = txtMax.IntValue;
+                    //库位下限
                     storagelocationModel.sl_store_min = txtMin.IntValue;
 
-
+                    return storagelocationModel;
                 }
-                return storagelocationModel;
+                else
+                {
+                    return storagelocationModel;
+                }
             }
         }
         private void uiLabel3_Click(object sender, EventArgs e)

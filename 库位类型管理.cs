@@ -17,10 +17,10 @@ namespace Warehouse
 			InitializeComponent();
 
 			//窗体初始化绑定数据
-			grid.AddColumn("库柜类型id", "type_id");
-			grid.AddColumn("库柜长", "type_length");
-			grid.AddColumn("库柜宽", "type_high");
-			grid.AddColumn("库柜高", "type_wide");
+			grid.AddColumn("库位类型ID", "type_id");
+			grid.AddColumn("库位长", "type_length");
+			grid.AddColumn("库位宽", "type_high");
+			grid.AddColumn("库位高", "type_wide");
 			grid.AddColumn("缩写","type_sx");
 			for (int i = 0; i < grid.ColumnCount; i++) { grid.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; }
 			AddRow();
@@ -36,7 +36,7 @@ namespace Warehouse
 		private void AddRow()
 		{
 
-			BLL.chest_type bsta = new BLL.chest_type();
+			BLL.storagelocation_type bsta = new BLL.storagelocation_type();
 			grid.DataSource= bsta.GetModelList("");
 			uiPagination1.DataSource = bsta.GetModelList("");
 			uiPagination1.ActivePage = 1;
