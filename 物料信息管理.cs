@@ -147,9 +147,27 @@ namespace Warehouse
 				{
 					UIMessageBox.ShowError("编辑失败");
 				}
-				//删除
-				if (grid.Columns[e.ColumnIndex].Name == "Delete" && e.RowIndex >= 0)
+			}
+			//删除
+			if (grid.Columns[e.ColumnIndex].Name == "Delete" && e.RowIndex >= 0)
+			{
+				if (ShowAskDialog("此操作不可恢复。是否确认删除?"))
 				{
+					foreach (DataGridViewRow row in grid.SelectedRows)
+					{
+						string m = row.Cells[0].Value.ToString().Trim();
+						BLL.material_info bllstorage = new BLL.material_info();
+						bool die = bllstorage.Delete(m);
+						if (die)
+						{
+							ShowSuccessDialog("删除成功");
+							AddRow();
+						}
+						else
+						{
+							ShowErrorDialog("删除失败");
+						}
+					}
 				}
 			}
 		}
