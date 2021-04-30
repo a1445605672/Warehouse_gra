@@ -65,7 +65,7 @@ namespace Warehouse
             this.uiComboTreeView1.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboTreeView1.Name = "uiComboTreeView1";
             this.uiComboTreeView1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboTreeView1.Size = new System.Drawing.Size(150, 39);
+            this.uiComboTreeView1.Size = new System.Drawing.Size(150, 34);
             this.uiComboTreeView1.TabIndex = 1;
             this.uiComboTreeView1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiComboTreeView1.NodeSelected += new Sunny.UI.UIComboTreeView.OnNodeSelected(this.uiComboTreeView1_NodeSelected);
@@ -92,7 +92,7 @@ namespace Warehouse
             this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTextBox1.Name = "uiTextBox1";
             this.uiTextBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox1.Size = new System.Drawing.Size(150, 39);
+            this.uiTextBox1.Size = new System.Drawing.Size(150, 34);
             this.uiTextBox1.TabIndex = 3;
             this.uiTextBox1.TextChanged += new System.EventHandler(this.uiTextBox1_TextChanged);
             this.uiTextBox1.TabStopChanged += new System.EventHandler(this.uiTextBox1_TabStopChanged);
@@ -120,7 +120,7 @@ namespace Warehouse
             this.uiComboTreeView2.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboTreeView2.Name = "uiComboTreeView2";
             this.uiComboTreeView2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboTreeView2.Size = new System.Drawing.Size(150, 39);
+            this.uiComboTreeView2.Size = new System.Drawing.Size(150, 34);
             this.uiComboTreeView2.TabIndex = 6;
             this.uiComboTreeView2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiComboTreeView2.NodeSelected += new Sunny.UI.UIComboTreeView.OnNodeSelected(this.uiComboTreeView2_NodeSelected);
@@ -192,13 +192,13 @@ namespace Warehouse
             this.uiGroupBox2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiGroupBox2.Name = "uiGroupBox2";
             this.uiGroupBox2.Padding = new System.Windows.Forms.Padding(0, 32, 0, 0);
-            this.uiGroupBox2.Size = new System.Drawing.Size(440, 492);
+            this.uiGroupBox2.Size = new System.Drawing.Size(397, 507);
             this.uiGroupBox2.TabIndex = 8;
             this.uiGroupBox2.Text = "源仓库";
             // 
             // 收货商管理
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1068, 706);
             this.Controls.Add(this.uiGroupBox2);
