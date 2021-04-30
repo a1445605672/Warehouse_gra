@@ -78,7 +78,6 @@ C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.new_入库汇总.resource
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.Properties.Resources.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.入库汇总.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.出库汇总.resources
-C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.图形化展示.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.在库汇总.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FEdit_department.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FEdit_sr.resources
@@ -370,3 +369,5 @@ C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.物料盘存.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.综合统计分析.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.库存控制.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmLimit.resources
+C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.入库折线图.resources
+C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.出库动图.resources

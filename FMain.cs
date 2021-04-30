@@ -59,9 +59,10 @@ namespace Warehouse
 			Aside.CreateChildNode(StatisticalStatementBut, 61932, 24, "出库日报", ++pageIndex);
 			Aside.CreateChildNode(StatisticalStatementBut, 61555, 24, "入库日报", ++pageIndex);
 			Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "综合统计分析", ++pageIndex);
-			Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "柱状图", ++pageIndex);
-			Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "折线图", ++pageIndex);
-			Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "图形化展示", ++pageIndex);
+			Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "在库柱状图", ++pageIndex);
+			Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "在库饼状图", ++pageIndex);
+			Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "入库折线图", ++pageIndex);
+			Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "出库动图", ++pageIndex);
 			Aside.SelectFirst();
 		}
 
@@ -210,17 +211,17 @@ namespace Warehouse
 					LoadMdiForm(MainTabControl, text, typeof(用户管理));
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "用户管理", "进入用户管理页面", "");
 					break;
-				case "柱状图":
+				case "在库柱状图":
 					LoadMdiForm(MainTabControl, text, typeof(柱状图));
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "柱状图", "进入柱状图页面", "");
 					break;
-				case "折线图":
+				case "在库饼状图":
 					LoadMdiForm(MainTabControl, text, typeof(折线图));
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "折线图", "进入折线图页面", "");
 					break;
-				case "图形化展示":
-					LoadMdiForm(MainTabControl, text, typeof(图形化展示));
-					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "图形化展示", "进入图形化展示页面", "");
+				case "入库折线图":
+					LoadMdiForm(MainTabControl, text, typeof(入库折线图));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "入库折线图", "进入入库折线图页面", "");
 					break;
 				case "综合统计分析":
 					LoadMdiForm(MainTabControl, text, typeof(综合统计分析));
@@ -229,6 +230,10 @@ namespace Warehouse
 				case "物料盘点":
 					LoadMdiForm(MainTabControl, text, typeof(new_物料盘存));
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "物料盘存", "进入物料盘存页面", "");
+					break;
+				case "出库动图":
+					LoadMdiForm(MainTabControl, text, typeof(出库动图));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出库动图", "进入出库动图页面", "");
 					break;
 				default:
 					break;
