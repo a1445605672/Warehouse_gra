@@ -176,6 +176,12 @@
     <Compile Include="工具窗体\FrmEditInstorage.Designer.cs">
       <DependentUpon>FrmEditInstorage.cs</DependentUpon>
     </Compile>
+    <Compile Include="工具窗体\FrmLimit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具窗体\FrmLimit.Designer.cs">
+      <DependentUpon>FrmLimit.cs</DependentUpon>
+    </Compile>
     <Compile Include="工具窗体\FrmmaterType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -451,6 +457,9 @@
     <EmbeddedResource Include="工具窗体\FrmEditInstorage.resx">
       <DependentUpon>FrmEditInstorage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="工具窗体\FrmLimit.resx">
+      <DependentUpon>FrmLimit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="工具窗体\FrmmaterType.resx">
       <DependentUpon>FrmmaterType.cs</DependentUpon>
     </EmbeddedResource>
@@ -474,6 +483,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="库位类型管理.resx">
       <DependentUpon>库位类型管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="库存控制.resx">
+      <DependentUpon>库存控制.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="更新数据窗体\UpdataInWarehouseFrm.resx">
       <DependentUpon>UpdataInWarehouseFrm.cs</DependentUpon>

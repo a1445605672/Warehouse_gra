@@ -49,6 +49,7 @@ namespace Warehouse
 			Aside.CreateChildNode(OutIntWarehouse, 61526, 24, "未完成出库", ++pageIndex);
 			Aside.CreateChildNode(OutIntWarehouse, 61766, 24, "未完成入库", ++pageIndex);
 			Aside.CreateChildNode(OutIntWarehouse, 61760, 24, "物料盘点", ++pageIndex);
+			Aside.CreateChildNode(OutIntWarehouse, 61760, 24, "库存控制", ++pageIndex);
 
 			pageIndex = 4000;
 			TreeNode StatisticalStatementBut = Aside.CreateNode("统计报表", 61950, 24, pageIndex);
@@ -152,6 +153,10 @@ namespace Warehouse
 				case "供收货商管理":
 					LoadMdiForm(MainTabControl, text, typeof(供应商管理));
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "供应商管理", "进入供应商管理页面", "");
+					break;
+				case "库存控制":
+					LoadMdiForm(MainTabControl, text, typeof(库存控制));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "库存控制", "进入库存控制页面", "");
 					break;
 				case "调拨计划管理":
 					LoadMdiForm(MainTabControl, text, typeof(收货商管理));
