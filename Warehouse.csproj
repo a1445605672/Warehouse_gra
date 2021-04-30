@@ -219,6 +219,12 @@
     <Compile Include="库位预警.Designer.cs">
       <DependentUpon>库位预警.cs</DependentUpon>
     </Compile>
+    <Compile Include="库存控制.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="库存控制.Designer.cs">
+      <DependentUpon>库存控制.cs</DependentUpon>
+    </Compile>
     <Compile Include="更新数据窗体\UpdataOutWarehouseFrm.cs">
       <SubType>Form</SubType>
     </Compile>
