@@ -267,31 +267,6 @@ namespace Warehouse.工具窗体
         }
 
         public List<Model.staff> staffs;
-        private void uiComboTreeView1_NodeSelected(object sender, TreeNode node)
-        {
-            string name = node.Text;
-            string dep_id = node.Name;
-            BLL.staff sta = new BLL.staff();
-
-            string Cha_xun = "staff_belong_dep_id = " + "\"" + dep_id.Trim() + "\"";
-           
-            staffs =  sta.GetModelList(Cha_xun);
-            int m = staffs.Count;
-           for(int i = 0 ; i < m; i++)
-            {
-                //string treenode = i + "hah";
-                TreeNode treenode = new TreeNode("");
-
-                treenode.Name = staffs[i].staff_id;
-                treenode.Text = staffs[i].staff_name;
-
-                this.uiComboTreeView2.Nodes.AddRange(new System.Windows.Forms.TreeNode[]
-           {
-                treenode
-           });
-
-            }
-        }
 
         private void uiComboTreeView2_NodeSelected(object sender, TreeNode node)
         {

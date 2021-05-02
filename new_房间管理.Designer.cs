@@ -87,7 +87,7 @@ namespace Warehouse
             this.search1.Location = new System.Drawing.Point(4, 5);
             this.search1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.search1.Name = "search1";
-            this.search1.Size = new System.Drawing.Size(780, 31);
+            this.search1.Size = new System.Drawing.Size(792, 31);
             this.search1.TabIndex = 2;
             // 
             // grid

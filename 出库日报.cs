@@ -44,13 +44,15 @@ namespace Warehouse
         {
             //获取日期输入
             string newtime = uiDatePicker1.Text.Trim();
+            string endtime = uiDatePicker2.Text.Trim();
             //数据库语句
             string strSql = "";
-            if (newtime != "")
+            if (newtime != ""&&endtime!=null)
             {
                 //UNIX_TIMESTAMP('"+(startTime1.Text.ToString())+"')
                 //SELECT * FROM enter_storage WHERE UNIX_TIMESTAMP(enter_date)=UNIX_TIMESTAMP('2021-03-24')
-                strSql += "UNIX_TIMESTAMP(out_data)=UNIX_TIMESTAMP('" + uiDatePicker1.Text.ToString() + "')";
+                strSql += "UNIX_TIMESTAMP(out_data) between UNIX_TIMESTAMP('" + uiDatePicker1.Text.ToString() + "') and  UNIX_TIMESTAMP('"+uiDatePicker2.Text.ToString()+"')";
+                //strSql += "UNIX_TIMESTAMP(out_data)=UNIX_TIMESTAMP('" + uiDatePicker1.Text.ToString() + "')";
             }
             else
             {

@@ -49,18 +49,18 @@ namespace Warehouse.工具窗体
             // uiLabel1
             // 
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel1.Location = new System.Drawing.Point(68, 97);
+            this.uiLabel1.Location = new System.Drawing.Point(43, 97);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(150, 39);
+            this.uiLabel1.Size = new System.Drawing.Size(193, 48);
             this.uiLabel1.TabIndex = 4;
-            this.uiLabel1.Text = "库位类型编号";
+            this.uiLabel1.Text = "库位类型编号：";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // typeID
             // 
             this.typeID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.typeID.Enabled = false;
-            this.typeID.FillColor = System.Drawing.Color.White;
+            this.typeID.FillColor = System.Drawing.Color.Silver;
             this.typeID.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.typeID.Location = new System.Drawing.Point(237, 97);
             this.typeID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -70,7 +70,9 @@ namespace Warehouse.工具窗体
             this.typeID.Name = "typeID";
             this.typeID.Padding = new System.Windows.Forms.Padding(5);
             this.typeID.Size = new System.Drawing.Size(150, 39);
+            this.typeID.Style = Sunny.UI.UIStyle.Custom;
             this.typeID.TabIndex = 5;
+            this.typeID.Text = "系统自动生成";
             // 
             // uiLabel3
             // 
@@ -79,7 +81,7 @@ namespace Warehouse.工具窗体
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(150, 39);
             this.uiLabel3.TabIndex = 4;
-            this.uiLabel3.Text = "长度(m)";
+            this.uiLabel3.Text = "长度(m)：";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // length
@@ -104,7 +106,7 @@ namespace Warehouse.工具窗体
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(150, 39);
             this.uiLabel4.TabIndex = 4;
-            this.uiLabel4.Text = "宽度(m)";
+            this.uiLabel4.Text = "宽度(m)：";
             this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // wide
@@ -129,7 +131,7 @@ namespace Warehouse.工具窗体
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(150, 39);
             this.uiLabel5.TabIndex = 4;
-            this.uiLabel5.Text = "高度(m)";
+            this.uiLabel5.Text = "高度(m)：";
             this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // high
@@ -154,7 +156,7 @@ namespace Warehouse.工具窗体
             this.uiLabel6.Name = "uiLabel6";
             this.uiLabel6.Size = new System.Drawing.Size(150, 39);
             this.uiLabel6.TabIndex = 4;
-            this.uiLabel6.Text = "备注";
+            this.uiLabel6.Text = "备注：";
             this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // beizhu
@@ -188,7 +190,7 @@ namespace Warehouse.工具窗体
             this.Controls.Add(this.typeID);
             this.Controls.Add(this.uiLabel1);
             this.Name = "kuguitype";
-            this.Text = "kuguitype";
+            this.Text = "库柜类型";
             this.Controls.SetChildIndex(this.uiLabel1, 0);
             this.Controls.SetChildIndex(this.typeID, 0);
             this.Controls.SetChildIndex(this.uiLabel3, 0);

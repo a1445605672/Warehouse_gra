@@ -91,6 +91,7 @@ namespace Warehouse
             this.grid.ShowGridLine = true;
             this.grid.Size = new System.Drawing.Size(794, 269);
             this.grid.TabIndex = 1;
+            this.grid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grid_CellContentClick);
             // 
             // tableLayoutPanel1
             // 
@@ -137,18 +138,18 @@ namespace Warehouse
             this.delete_sr,
             this.update_sr});
             this.uiContextMenuStrip2.Name = "uiContextMenuStrip2";
-            this.uiContextMenuStrip2.Size = new System.Drawing.Size(137, 76);
+            this.uiContextMenuStrip2.Size = new System.Drawing.Size(137, 80);
             // 
             // delete_sr
             // 
             this.delete_sr.Name = "delete_sr";
-            this.delete_sr.Size = new System.Drawing.Size(136, 36);
+            this.delete_sr.Size = new System.Drawing.Size(136, 38);
             this.delete_sr.Text = "删除";
             // 
             // update_sr
             // 
             this.update_sr.Name = "update_sr";
-            this.update_sr.Size = new System.Drawing.Size(136, 36);
+            this.update_sr.Size = new System.Drawing.Size(136, 38);
             this.update_sr.Text = "编辑";
             // 
             // 物料类别管理
