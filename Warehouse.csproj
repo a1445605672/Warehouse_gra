@@ -464,6 +464,9 @@
     <EmbeddedResource Include="库位类型管理.resx">
       <DependentUpon>库位类型管理.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="收货商管理.resx">
+      <DependentUpon>收货商管理.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="更新数据窗体\UpdataInWarehouseFrm.resx">
       <DependentUpon>UpdataInWarehouseFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -517,6 +520,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="部门人员管理.resx">
       <DependentUpon>部门人员管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="部门管理.resx">
+      <DependentUpon>部门管理.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Backup_And_Recovery\mysql_backup.bat" />
