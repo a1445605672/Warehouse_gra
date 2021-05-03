@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -96,6 +97,21 @@ namespace Warehouse
 			Amount = amount;
 			uiLedDisplay1.Text = amount + "个";
 
+			//查询在哪个库位
+			ArrayList kuweis_name = Select_Kuwei_Name(in_Storages);
+			for (int i = 0; i < kuweis_name.Count; i++)
+			{
+				UILedBulb uILed = new UILedBulb();
+				string text = kuweis_name[i].ToString();
+				//uILed.Name = storage[i].
+				UILabel label = new UILabel();
+				label.Text = text;
+			    uILed.Blink = true;
+				this.flowLayoutPanel3.Controls.Add(label);
+				this.flowLayoutPanel3.Controls.Add(uILed);
+
+			}
+
 			//查询在哪个仓库
 			string kuwei = in_Storages[0].sl_id;
 			string batch = in_Storages[0].enter_num;
@@ -138,21 +154,75 @@ namespace Warehouse
 		/// <summary>
 		/// 通过库位编号查询仓库名
 		/// </summary>
-		/// <param name="kuwei"></param>
+		/// <补充>
+		///		这里查询的库柜都是按照仓库_1(从1开始按顺序）命名，如果不按这个顺序则查询不到仓库
+		/// </补充>
+		/// <param name="kuwei">库位编号</param>
 		/// <returns></returns>
 		private string Which_storage(string kuwei)
         {
+
 			string Cha_xun1 = "sl_id = " + "\"" + kuwei.Trim() + "\"";
 			BLL.storagelocation storagelocation = new BLL.storagelocation();
 			List<Model.storagelocation> storagelocation1 = new List<Model.storagelocation>();
 			storagelocation1 = storagelocation.GetModelList(Cha_xun1);
 			string sl_belong_chest = storagelocation1[0].sl_belong_chest;
+			string sl_id = storagelocation1[0].sl_id;
 
-			int index = 0;
+
+
+            //库位
+            UILight light1 = new UILight();
+            Label label1 = new Label();
+            label1.Text = sl_belong_chest;
+            light1.State = UILightState.Blink;
+            this.flowLayoutPanel2.Controls.Add(label1);
+            this.flowLayoutPanel2.Controls.Add(light1);
+
+
+
+
+
+
+
+
+
+            int index = 0;
 			index = sl_belong_chest.LastIndexOf("_");
 			sl_belong_chest = sl_belong_chest.Substring(0, index);
 			return sl_belong_chest;
 		}
+
+		//查询不同的库位编号
+		public ArrayList Select_Kuwei_Name(List<Model.in_storage> in_Storages)
+        {
+			int count = in_Storages.Count;
+
+			ArrayList haha = new ArrayList();
+			
+		 
+			haha.Add(in_Storages[0].sl_id.ToString().Trim()) ;
+
+			for(int i =1; i<count; i++)
+            {
+				//for(int m =0; m< haha.Count; m++)
+    //            {
+				//	if (haha[m].ToString().Trim() != in_Storages[i].sl_id.ToString().Trim())
+				//	{
+				//		haha.Add(in_Storages[i].sl_id.ToString().Trim()) ;
+				//	}
+				//}
+				if(haha.Contains(in_Storages[i].sl_id.ToString().Trim()) != true)
+                {
+					haha.Add(in_Storages[i].sl_id.ToString().Trim());
+                }
+				
+            }
+
+
+
+			return haha;
+        }
 
         private void uiTextBox1_TextChanged(object sender, EventArgs e)
         {
