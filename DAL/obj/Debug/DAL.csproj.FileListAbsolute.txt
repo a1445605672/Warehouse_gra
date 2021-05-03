@@ -80,3 +80,15 @@ C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DAL\obj\Debug\DAL.csproj.Core
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DAL\obj\Debug\DAL.dll
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DAL\obj\Debug\DAL.pdb
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DAL\bin\Debug\DAL.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DAL\bin\Debug\DAL.pdb
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DAL\bin\Debug\DBUtility.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DAL\bin\Debug\Model.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DAL\bin\Debug\MySql.Data.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DAL\bin\Debug\DBUtility.pdb
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DAL\bin\Debug\Model.pdb
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DAL\obj\Debug\DAL.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DAL\obj\Debug\DAL.pdb
