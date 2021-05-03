@@ -136,24 +136,19 @@
     </Compile>
     <Compile Include="SumCount.cs" />
     <Compile Include="SystemLog.cs" />
-    <Compile Include="入库折线图.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="入库折线图.Designer.cs">
-      <DependentUpon>入库折线图.cs</DependentUpon>
-    </Compile>
     <Compile Include="入库汇总.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="入库汇总.Designer.cs">
       <DependentUpon>入库汇总.cs</DependentUpon>
     </Compile>
-    <Compile Include="出库动图.cs">
+    <Compile Include="图形化展示.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="出库动图.Designer.cs">
-      <DependentUpon>出库动图.cs</DependentUpon>
+    <Compile Include="图形化展示.Designer.cs">
+      <DependentUpon>图形化展示.cs</DependentUpon>
     </Compile>
+    <Compile Include="工具窗体\Class1.cs" />
     <Compile Include="工具窗体\ExcelHelp.cs" />
     <Compile Include="工具窗体\FEdit_department.cs">
       <SubType>Form</SubType>
@@ -181,12 +176,6 @@
     </Compile>
     <Compile Include="工具窗体\FrmEditInstorage.Designer.cs">
       <DependentUpon>FrmEditInstorage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="工具窗体\FrmLimit.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="工具窗体\FrmLimit.Designer.cs">
-      <DependentUpon>FrmLimit.cs</DependentUpon>
     </Compile>
     <Compile Include="工具窗体\FrmmaterType.cs">
       <SubType>Form</SubType>
@@ -225,18 +214,6 @@
     </Compile>
     <Compile Include="工具窗体\清理缓存.Designer.cs">
       <DependentUpon>清理缓存.cs</DependentUpon>
-    </Compile>
-    <Compile Include="库位预警.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="库位预警.Designer.cs">
-      <DependentUpon>库位预警.cs</DependentUpon>
-    </Compile>
-    <Compile Include="库存控制.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="库存控制.Designer.cs">
-      <DependentUpon>库存控制.cs</DependentUpon>
     </Compile>
     <Compile Include="更新数据窗体\UpdataOutWarehouseFrm.cs">
       <SubType>Form</SubType>
@@ -437,17 +414,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="入库折线图.resx">
-      <DependentUpon>入库折线图.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="入库汇总.resx">
       <DependentUpon>入库汇总.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="出库动图.resx">
-      <DependentUpon>出库动图.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="出库汇总.resx">
       <DependentUpon>出库汇总.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="图形化展示.resx">
+      <DependentUpon>图形化展示.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="在库汇总.resx">
       <DependentUpon>在库汇总.cs</DependentUpon>
@@ -466,9 +440,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="工具窗体\FrmEditInstorage.resx">
       <DependentUpon>FrmEditInstorage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="工具窗体\FrmLimit.resx">
-      <DependentUpon>FrmLimit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="工具窗体\FrmmaterType.resx">
       <DependentUpon>FrmmaterType.cs</DependentUpon>
@@ -494,8 +465,8 @@
     <EmbeddedResource Include="库位类型管理.resx">
       <DependentUpon>库位类型管理.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="库存控制.resx">
-      <DependentUpon>库存控制.cs</DependentUpon>
+    <EmbeddedResource Include="收货商管理.resx">
+      <DependentUpon>收货商管理.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="收货商管理.resx">
       <DependentUpon>收货商管理.cs</DependentUpon>
@@ -553,6 +524,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="部门人员管理.resx">
       <DependentUpon>部门人员管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="部门管理.resx">
+      <DependentUpon>部门管理.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Backup_And_Recovery\mysql_backup.bat" />

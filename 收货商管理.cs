@@ -26,6 +26,10 @@ namespace Warehouse
 
 			this.uiComboTreeView2.Enabled = false;
 			this.uiTextBox1.Enabled = false;
+			this.uiComboTreeView3.Enabled = false;
+			this.uiComboTreeView4.Enabled = false;
+			this.uiComboTreeView5.Enabled = false;
+			this.uiRadioButton1.Checked = true;
 			
 			Load_mat_type();
 		}
