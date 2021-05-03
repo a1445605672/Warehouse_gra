@@ -62,7 +62,6 @@ C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\bin\Debug\DBUtility.dll
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\bin\Debug\DBUtility.pdb
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\bin\Debug\Harman.Utility.dll
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\bin\Debug\MySql.Data.dll
-C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csprojAssemblyReference.cache
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
