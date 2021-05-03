@@ -36,7 +36,11 @@ namespace Warehouse
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiComboTreeView2 = new Sunny.UI.UIComboTreeView();
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.uiLabel14 = new Sunny.UI.UILabel();
+            this.uiLabel13 = new Sunny.UI.UILabel();
             this.uiLabel5 = new Sunny.UI.UILabel();
             this.uiLedDisplay1 = new Sunny.UI.UILedDisplay();
             this.uiLabel4 = new Sunny.UI.UILabel();
@@ -55,10 +59,6 @@ namespace Warehouse
             this.uiLabel9 = new Sunny.UI.UILabel();
             this.uiLabel10 = new Sunny.UI.UILabel();
             this.uiLabel11 = new Sunny.UI.UILabel();
-            this.uiLabel13 = new Sunny.UI.UILabel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.uiLabel14 = new Sunny.UI.UILabel();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.uiGroupBox1.SuspendLayout();
             this.uiGroupBox2.SuspendLayout();
             this.uiGroupBox3.SuspendLayout();
@@ -140,7 +140,7 @@ namespace Warehouse
             this.uiComboTreeView2.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboTreeView2.Name = "uiComboTreeView2";
             this.uiComboTreeView2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboTreeView2.Size = new System.Drawing.Size(150, 39);
+            this.uiComboTreeView2.Size = new System.Drawing.Size(149, 39);
             this.uiComboTreeView2.TabIndex = 6;
             this.uiComboTreeView2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiComboTreeView2.NodeSelected += new Sunny.UI.UIComboTreeView.OnNodeSelected(this.uiComboTreeView2_NodeSelected);
@@ -165,6 +165,22 @@ namespace Warehouse
             this.uiGroupBox1.TabIndex = 7;
             this.uiGroupBox1.Text = "调拨源仓库";
             // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.AutoScroll = true;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(162, 469);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(207, 80);
+            this.flowLayoutPanel3.TabIndex = 5;
+            // 
+            // flowLayoutPanel2
+            // 
+            this.flowLayoutPanel2.AutoScroll = true;
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(162, 319);
+            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(206, 74);
+            this.flowLayoutPanel2.TabIndex = 4;
+            // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
@@ -172,6 +188,26 @@ namespace Warehouse
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(206, 191);
             this.flowLayoutPanel1.TabIndex = 3;
+            // 
+            // uiLabel14
+            // 
+            this.uiLabel14.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel14.Location = new System.Drawing.Point(3, 438);
+            this.uiLabel14.Name = "uiLabel14";
+            this.uiLabel14.Size = new System.Drawing.Size(154, 48);
+            this.uiLabel14.TabIndex = 2;
+            this.uiLabel14.Text = "所在库位：";
+            this.uiLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiLabel13
+            // 
+            this.uiLabel13.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel13.Location = new System.Drawing.Point(3, 278);
+            this.uiLabel13.Name = "uiLabel13";
+            this.uiLabel13.Size = new System.Drawing.Size(154, 48);
+            this.uiLabel13.TabIndex = 2;
+            this.uiLabel13.Text = "所在库柜：";
+            this.uiLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel5
             // 
@@ -365,6 +401,7 @@ namespace Warehouse
             this.uiComboTreeView3.TabIndex = 1;
             this.uiComboTreeView3.Text = " ";
             this.uiComboTreeView3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiComboTreeView3.NodeSelected += new Sunny.UI.UIComboTreeView.OnNodeSelected(this.uiComboTreeView3_NodeSelected);
             // 
             // uiLabel9
             // 
@@ -395,42 +432,6 @@ namespace Warehouse
             this.uiLabel11.TabIndex = 0;
             this.uiLabel11.Text = "选择目的仓库";
             this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiLabel13
-            // 
-            this.uiLabel13.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel13.Location = new System.Drawing.Point(3, 278);
-            this.uiLabel13.Name = "uiLabel13";
-            this.uiLabel13.Size = new System.Drawing.Size(154, 48);
-            this.uiLabel13.TabIndex = 2;
-            this.uiLabel13.Text = "所在库柜：";
-            this.uiLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(162, 319);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(206, 74);
-            this.flowLayoutPanel2.TabIndex = 4;
-            // 
-            // uiLabel14
-            // 
-            this.uiLabel14.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel14.Location = new System.Drawing.Point(3, 438);
-            this.uiLabel14.Name = "uiLabel14";
-            this.uiLabel14.Size = new System.Drawing.Size(154, 48);
-            this.uiLabel14.TabIndex = 2;
-            this.uiLabel14.Text = "所在库位：";
-            this.uiLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.AutoScroll = true;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(162, 469);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(207, 80);
-            this.flowLayoutPanel3.TabIndex = 5;
             // 
             // 收货商管理
             // 

@@ -26,6 +26,12 @@ namespace Warehouse
 
 			this.uiComboTreeView2.Enabled = false;
 			this.uiTextBox1.Enabled = false;
+
+			int count = this.uiGroupBox4.Controls.Count;
+			for(int i =0; i<count; i++)
+            {
+				this.uiGroupBox4.Controls[i].Enabled = false;
+            }
 			
 			Load_mat_type();
 		}
@@ -33,7 +39,7 @@ namespace Warehouse
 
 
 		
-
+		//在combotreeview中增加物料信息
 		public void Load_mat_type()
 		{
 			BLL.material_type material_ = new BLL.material_type();
@@ -52,6 +58,27 @@ namespace Warehouse
 			}
 		}
 
+		//加载仓库信息
+		public void Load_Storage_Info()
+        {
+			BLL.storage storage = new BLL.storage();
+			List<Model.storage> storages = storage.GetModelList("");
+
+			for (int i = 0; i < storages.Count; i++)
+			{
+				TreeNode tree = new TreeNode();
+				tree.Name = storages[i].storage_id.ToString();
+				tree.Text = storages[i].storage_name.ToString();
+				this.uiComboTreeView3.Nodes.Add(tree);
+			}
+
+			this.uiRadioButton1.Enabled = true;
+			this.uiRadioButton2.Enabled = true;
+			this.uiRadioButton2.Checked = true;
+			this.uiRadioButton1.Checked = false;
+
+		}
+
         private void uiComboTreeView1_NodeSelected(object sender, TreeNode node)
         {
             string id = node.Name;
@@ -61,6 +88,7 @@ namespace Warehouse
 			List<Model.material_info> material_ = new List<Model.material_info> ();
 			material_ = mat.GetModelList(Cha_xun);
 			this.uiComboTreeView2.Nodes.Clear();
+			
 			for (int i = 0; i < material_.Count; i++)
 			{
 				//string treenode = i + "hah";
@@ -142,14 +170,20 @@ namespace Warehouse
 
 			}
 
-			
+
+			//显示控件
+			this.uiComboTreeView3.Enabled = true;
+			//加载仓库数据
+			Load_Storage_Info();
 
 
 
-			
 
-		
-        }
+
+
+
+
+		}
 
 		/// <summary>
 		/// 通过库位编号查询仓库名
@@ -205,13 +239,7 @@ namespace Warehouse
 
 			for(int i =1; i<count; i++)
             {
-				//for(int m =0; m< haha.Count; m++)
-    //            {
-				//	if (haha[m].ToString().Trim() != in_Storages[i].sl_id.ToString().Trim())
-				//	{
-				//		haha.Add(in_Storages[i].sl_id.ToString().Trim()) ;
-				//	}
-				//}
+				
 				if(haha.Contains(in_Storages[i].sl_id.ToString().Trim()) != true)
                 {
 					haha.Add(in_Storages[i].sl_id.ToString().Trim());
@@ -237,29 +265,30 @@ namespace Warehouse
         private void uiTextBox1_Validated(object sender, EventArgs e)
         {
 			
-			//else
-			//{
-			//	Model.in_storage in_Storage1 = new Model.in_storage();
-			//	BLL.in_storage in_Storage = new BLL.in_storage();
-			//	string Cha_xun = "mat_id = " + "\"" + Mat_id.Trim() + "\"";
-			//	in_Storage1 = in_Storage.GetModel(Cha_xun);
-			//	Console.ReadLine();
-			//}
-
-			decimal w = decimal.Parse(uiTextBox1.Text);
-            bool m = Warehouse.表单验证.formAuthentication.ShuZi_fanwei(uiTextBox1.Text);
-            if (m != true)
-            {
-                UIMessageBox.ShowWarning("输入范围须在1至999之间");
-
-            }
-            else
-            {
-				if (w > Amount)
+			if(uiTextBox1.Text != null)
+			{
+				decimal w = decimal.Parse(uiTextBox1.Text);
+				bool m = Warehouse.表单验证.formAuthentication.ShuZi_fanwei(uiTextBox1.Text);
+				if (m != true)
 				{
-					UIMessageBox.ShowWarning("填写数量超过当前库存数量");
+					UIMessageBox.ShowWarning("输入范围须在1至999之间");
+					uiTextBox1.Clear();
+				}
+				else
+				{
+					if (w > Amount)
+					{
+						UIMessageBox.ShowWarning("填写数量超过当前库存数量");
+						uiTextBox1.Clear();
+					}
 				}
 			}
+            else
+            {
+				UIMessageBox.ShowError("调拨数量不能为空");
+            }
+
+			
 
            
 
@@ -274,6 +303,21 @@ namespace Warehouse
         private void uiTextBox1_Validating(object sender, CancelEventArgs e)
         {
 		}
+
+        private void uiComboTreeView3_NodeSelected(object sender, TreeNode node)
+        {
+			//手动模式
+			if(uiRadioButton2.Checked != true)
+            {
+
+            }
+            else
+            {
+
+            }
+
+
+        }
     }
 
 	
