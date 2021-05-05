@@ -19,6 +19,8 @@ namespace Warehouse
         public 供应商管理()
 		{
 			InitializeComponent();
+			//UIButton uIButton = new UIButton();
+			//this.tableLayoutPanel1.Controls.Add(uIButton);
 
 			grid.AddColumn("供收货商编号", "sr_id");
 			grid.AddColumn("供收货商名称", "sr_name");
@@ -251,6 +253,11 @@ namespace Warehouse
 		}
 
         private void search1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

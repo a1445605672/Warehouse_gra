@@ -17,7 +17,7 @@ namespace Warehouse
 		//当前所选物品的库存数量
 		public decimal Amount = 0;
 
-
+		List<KeyValuePair<string, double>> list;//存储库位大小
 		public 收货商管理()
 		{
 
@@ -306,19 +306,83 @@ namespace Warehouse
 
         private void uiComboTreeView3_NodeSelected(object sender, TreeNode node)
         {
+			string storage_id = node.Name.Trim();
+
+
 			//手动模式
 			if(uiRadioButton2.Checked != true)
             {
+				this.uiComboTreeView4.Enabled = true;
+				this.uiComboTreeView5.Enabled = true;
 
-            }
+
+
+
+
+			}
             else
             {
+				this.uiComboTreeView4.Enabled = false;
+				this.uiComboTreeView5.Enabled = false;
 
-            }
+				//第一步 查询哪个库柜还有剩余的库位(默认按着哪个库柜剩余库位最多给予分配)
+				//string chest_id =  Find_Remain_Seat(storage_id).Trim();
+				
+
+
+				//调用入库的代码
+
+			}
 
 
         }
-    }
+
+		/// <summary>
+		/// 寻找当前房间库位最多的库柜
+		/// </summary>
+		/// <param name="storage_id"></param>
+		/// <returns></returns>
+		private string Find_Remain_Seat(string storage_id)
+        {
+			string chest_id;
+
+			BLL.chest chest = new BLL.chest();
+			List<Model.chest> chests = new List<Model.chest>();
+
+			string Cha_xun = " chest_belong_storage = " + "\"" + storage_id.Trim() + "\"";
+
+			chests = chest.GetModelList(Cha_xun);
+
+			int [] Pai_xu = new int[chests.Count];
+			for(int i =0; i<chests.Count; i++)
+            {
+				Pai_xu[i] = (int)chests[i].chest_remain_seat;
+            }
+			int the_max_value = Pai_xu.Max();
+
+			for (int m = 0; m < Pai_xu.Length; m++)
+			{
+				if (the_max_value == Pai_xu[m])
+                {
+					 chest_id = chests[m].chest_id;
+					return chest_id;
+				}
+                
+            }
+
+			return null;
+
+			
+        }
+
+
+		
+	}
+
+
 
 	
+
+
+
 }

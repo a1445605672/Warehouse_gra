@@ -70,7 +70,7 @@ namespace Warehouse
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel1.Location = new System.Drawing.Point(3, 43);
             this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(164, 23);
+            this.uiLabel1.Size = new System.Drawing.Size(199, 37);
             this.uiLabel1.TabIndex = 0;
             this.uiLabel1.Text = " 选择调拨品类：";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -95,7 +95,7 @@ namespace Warehouse
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel2.Location = new System.Drawing.Point(8, 169);
             this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(159, 23);
+            this.uiLabel2.Size = new System.Drawing.Size(194, 39);
             this.uiLabel2.TabIndex = 2;
             this.uiLabel2.Text = "填写调拨数量：";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -125,7 +125,7 @@ namespace Warehouse
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel3.Location = new System.Drawing.Point(8, 102);
             this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(159, 23);
+            this.uiLabel3.Size = new System.Drawing.Size(200, 39);
             this.uiLabel3.TabIndex = 5;
             this.uiLabel3.Text = "选择调拨物品：";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -437,7 +437,7 @@ namespace Warehouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1068, 706);
+            this.ClientSize = new System.Drawing.Size(1001, 701);
             this.Controls.Add(this.uiGroupBox4);
             this.Controls.Add(this.uiGroupBox3);
             this.Controls.Add(this.uiGroupBox2);

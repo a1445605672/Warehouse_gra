@@ -144,6 +144,8 @@ namespace Warehouse
 				ShowSuccessDialog("您输入有误，请检查");
 				return;
 			}
+
+			//输入信息
 			String supplierIdSql = "SELECT sr_id FROM sr_info WHERE sr_type=\'供货商\' AND sr_name=\'" + ProviderBox.Text + "\'";
 			String enter_mat_id_sql = "SELECT mat_id FROM material_info WHERE mat_name=\'" + Materialsbox.Text.Trim() + "\'";
 			string staff_name_Sql = "SELECT staff_name FROM staff WHERE staff_id=\'" + staffBox.Text.Trim() + "\'";
@@ -161,6 +163,7 @@ namespace Warehouse
 			storage.enter_agent_name = enterStoeage.getDataList(staff_name_Sql).Tables[0].Rows[0][0].ToString(); ;//经办人姓名
 			storage.enter_if_accomplish = 1;
 
+			//
 			in_Storage.mat_id = storage.enter_mat_id;//物料ID
 			in_Storage.mat_name = storage.enter_mat_name;//物料名称
 			in_Storage.in_time = Convert.ToDateTime(storage.enter_date);//入库时间
@@ -414,9 +417,10 @@ namespace Warehouse
 		/// <param name="materiaName">物品名称</param>
 		/// <param name="inStorageNumber">入库量</param>
 		/// <returns></returns>
-		private string storageLocation(string materiaName, string inStorageNumber)
+		public string storageLocation(string materiaName, string inStorageNumber)
 		{
 			inStorageList.Clear();
+
 			storageLocationBox.Text = "";
 			string storageAreaSQL = "SELECT DISTINCT (storagelocation.sl_remain_bulk) ,storagelocation.sl_id " +
 				"FROM storagelocation,StorageMaterialType " +
@@ -526,7 +530,7 @@ namespace Warehouse
 		/// </summary>
 		/// <param name="storage">Model.enter_storage</param>
 		/// <param name="in_Storage">Model.in_storage in_Storage</param>
-		/// <param name="inStorageList">库位列表，需要查询出入库的库位大小和枯萎编号</param>
+		/// <param name="inStorageList">库位列表，需要查询出入库的库位大小和库位编号</param>
 		public void inStorageEvent(Model.enter_storage storage, Model.in_storage in_Storage, List<KeyValuePair<string, double>> inStorageList)
 		{
 			double inStorageAmount = 0;
