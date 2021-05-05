@@ -178,6 +178,9 @@ namespace BLL
 		//return dal.GetList(PageSize,PageIndex,strWhere);
 		//}
 
+
+	
+
 		#endregion  BasicMethod
 		#region  ExtensionMethod
 

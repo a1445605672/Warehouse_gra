@@ -219,6 +219,7 @@
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
     <Compile Include="工具窗体\Session.cs" />
+    <Compile Include="工具窗体\Suo_xie.cs" />
     <Compile Include="工具窗体\清理缓存.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -436,6 +437,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="供应商管理.resx">
+      <DependentUpon>供应商管理.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="入库折线图.resx">
       <DependentUpon>入库折线图.cs</DependentUpon>
     </EmbeddedResource>
@@ -495,6 +499,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="库存控制.resx">
       <DependentUpon>库存控制.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="收货商管理.resx">
+      <DependentUpon>收货商管理.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="更新数据窗体\UpdataInWarehouseFrm.resx">
       <DependentUpon>UpdataInWarehouseFrm.cs</DependentUpon>
