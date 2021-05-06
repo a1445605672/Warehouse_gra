@@ -54,18 +54,18 @@ namespace Warehouse.工具窗体
             // uiLabel1
             // 
             this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel1.Location = new System.Drawing.Point(326, 45);
+            this.uiLabel1.Location = new System.Drawing.Point(302, 50);
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(128, 44);
             this.uiLabel1.TabIndex = 3;
-            this.uiLabel1.Text = "所属房间";
+            this.uiLabel1.Text = "所属房间:";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // RoomID
             // 
             this.RoomID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.RoomID.Enabled = false;
-            this.RoomID.FillColor = System.Drawing.Color.Gray;
+            this.RoomID.FillColor = System.Drawing.Color.Silver;
             this.RoomID.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.RoomID.Location = new System.Drawing.Point(461, 50);
             this.RoomID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -82,11 +82,11 @@ namespace Warehouse.工具窗体
             // 库柜编号
             // 
             this.库柜编号.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.库柜编号.Location = new System.Drawing.Point(326, 94);
+            this.库柜编号.Location = new System.Drawing.Point(299, 94);
             this.库柜编号.Name = "库柜编号";
-            this.库柜编号.Size = new System.Drawing.Size(128, 44);
+            this.库柜编号.Size = new System.Drawing.Size(155, 44);
             this.库柜编号.TabIndex = 3;
-            this.库柜编号.Text = "房柜编号";
+            this.库柜编号.Text = "房柜编号：";
             this.库柜编号.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // chestID
@@ -95,7 +95,7 @@ namespace Warehouse.工具窗体
             this.chestID.BackColor = System.Drawing.Color.White;
             this.chestID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.chestID.Enabled = false;
-            this.chestID.FillColor = System.Drawing.Color.Gray;
+            this.chestID.FillColor = System.Drawing.Color.Silver;
             this.chestID.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.chestID.Location = new System.Drawing.Point(461, 99);
             this.chestID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -107,16 +107,16 @@ namespace Warehouse.工具窗体
             this.chestID.Size = new System.Drawing.Size(150, 39);
             this.chestID.Style = Sunny.UI.UIStyle.Custom;
             this.chestID.TabIndex = 4;
-            this.chestID.Text = "左侧选择房间";
+            this.chestID.Text = "库柜编号自动生成";
             // 
             // uiLabel2
             // 
             this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel2.Location = new System.Drawing.Point(326, 143);
+            this.uiLabel2.Location = new System.Drawing.Point(302, 143);
             this.uiLabel2.Name = "uiLabel2";
-            this.uiLabel2.Size = new System.Drawing.Size(128, 44);
+            this.uiLabel2.Size = new System.Drawing.Size(152, 49);
             this.uiLabel2.TabIndex = 3;
-            this.uiLabel2.Text = "库柜名称";
+            this.uiLabel2.Text = "库柜名称：";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // chestName
@@ -137,11 +137,11 @@ namespace Warehouse.工具窗体
             // uiLabel3
             // 
             this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel3.Location = new System.Drawing.Point(326, 192);
+            this.uiLabel3.Location = new System.Drawing.Point(305, 192);
             this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(128, 44);
+            this.uiLabel3.Size = new System.Drawing.Size(149, 44);
             this.uiLabel3.TabIndex = 3;
-            this.uiLabel3.Text = "剩余体积";
+            this.uiLabel3.Text = "剩余体积：";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // tijileft
@@ -162,11 +162,11 @@ namespace Warehouse.工具窗体
             // uiLabel4
             // 
             this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel4.Location = new System.Drawing.Point(326, 241);
+            this.uiLabel4.Location = new System.Drawing.Point(305, 241);
             this.uiLabel4.Name = "uiLabel4";
-            this.uiLabel4.Size = new System.Drawing.Size(128, 44);
+            this.uiLabel4.Size = new System.Drawing.Size(149, 44);
             this.uiLabel4.TabIndex = 3;
-            this.uiLabel4.Text = "剩余库位";
+            this.uiLabel4.Text = "剩余库位：";
             this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // kuweileft
@@ -187,11 +187,11 @@ namespace Warehouse.工具窗体
             // uiLabel5
             // 
             this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel5.Location = new System.Drawing.Point(326, 290);
+            this.uiLabel5.Location = new System.Drawing.Point(305, 294);
             this.uiLabel5.Name = "uiLabel5";
-            this.uiLabel5.Size = new System.Drawing.Size(128, 44);
+            this.uiLabel5.Size = new System.Drawing.Size(149, 49);
             this.uiLabel5.TabIndex = 3;
-            this.uiLabel5.Text = "库柜类型";
+            this.uiLabel5.Text = "库柜类型：";
             this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiButton1
@@ -204,15 +204,16 @@ namespace Warehouse.工具窗体
             this.uiButton1.Size = new System.Drawing.Size(158, 47);
             this.uiButton1.TabIndex = 5;
             this.uiButton1.Text = "获取房间编号";
+            this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
             // 
             // uiLabel6
             // 
             this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel6.Location = new System.Drawing.Point(326, 338);
+            this.uiLabel6.Location = new System.Drawing.Point(305, 343);
             this.uiLabel6.Name = "uiLabel6";
-            this.uiLabel6.Size = new System.Drawing.Size(128, 44);
+            this.uiLabel6.Size = new System.Drawing.Size(149, 44);
             this.uiLabel6.TabIndex = 3;
-            this.uiLabel6.Text = "名称缩写";
+            this.uiLabel6.Text = "名称缩写：";
             this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtSuo1
@@ -243,6 +244,7 @@ namespace Warehouse.工具窗体
             this.uiComboBox1.TabIndex = 6;
             this.uiComboBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiComboBox1.SelectedIndexChanged += new System.EventHandler(this.uiComboBox1_SelectedIndexChanged);
+            this.uiComboBox1.Load += new System.EventHandler(this.uiComboBox1_Load);
             // 
             // uiListBox1
             // 

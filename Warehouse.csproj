@@ -142,6 +142,12 @@
     <Compile Include="入库汇总.Designer.cs">
       <DependentUpon>入库汇总.cs</DependentUpon>
     </Compile>
+    <Compile Include="出库动图.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="出库动图.Designer.cs">
+      <DependentUpon>出库动图.cs</DependentUpon>
+    </Compile>
     <Compile Include="图形化展示.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,11 +220,24 @@
       <DependentUpon>Search.cs</DependentUpon>
     </Compile>
     <Compile Include="工具窗体\Session.cs" />
+    <Compile Include="工具窗体\Suo_xie.cs" />
     <Compile Include="工具窗体\清理缓存.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="工具窗体\清理缓存.Designer.cs">
       <DependentUpon>清理缓存.cs</DependentUpon>
+    </Compile>
+    <Compile Include="库位预警.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="库位预警.Designer.cs">
+      <DependentUpon>库位预警.cs</DependentUpon>
+    </Compile>
+    <Compile Include="库存控制.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="库存控制.Designer.cs">
+      <DependentUpon>库存控制.cs</DependentUpon>
     </Compile>
     <Compile Include="更新数据窗体\UpdataOutWarehouseFrm.cs">
       <SubType>Form</SubType>
@@ -422,6 +441,9 @@
     <EmbeddedResource Include="入库汇总.resx">
       <DependentUpon>入库汇总.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="出库动图.resx">
+      <DependentUpon>出库动图.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="出库汇总.resx">
       <DependentUpon>出库汇总.cs</DependentUpon>
     </EmbeddedResource>
@@ -472,6 +494,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="库位类型管理.resx">
       <DependentUpon>库位类型管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="库存控制.resx">
+      <DependentUpon>库存控制.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="收货商管理.resx">
+      <DependentUpon>收货商管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="收货商管理.resx">
+      <DependentUpon>收货商管理.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="更新数据窗体\UpdataInWarehouseFrm.resx">
       <DependentUpon>UpdataInWarehouseFrm.cs</DependentUpon>
@@ -526,6 +557,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="部门人员管理.resx">
       <DependentUpon>部门人员管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="部门管理.resx">
+      <DependentUpon>部门管理.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <None Include="Backup_And_Recovery\mysql_backup.bat" />

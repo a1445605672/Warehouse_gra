@@ -59,8 +59,8 @@ namespace Warehouse.工具窗体
             // 
             // pnlBtm
             // 
-            this.pnlBtm.Location = new System.Drawing.Point(1, 729);
-            this.pnlBtm.Size = new System.Drawing.Size(730, 55);
+            this.pnlBtm.Location = new System.Drawing.Point(1, 678);
+            this.pnlBtm.Size = new System.Drawing.Size(623, 55);
             // 
             // uiButton1
             // 
@@ -72,6 +72,7 @@ namespace Warehouse.工具窗体
             this.uiButton1.Size = new System.Drawing.Size(113, 45);
             this.uiButton1.TabIndex = 3;
             this.uiButton1.Text = "获取类型";
+            this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
             // 
             // uiLabel1
             // 
@@ -80,13 +81,13 @@ namespace Warehouse.工具窗体
             this.uiLabel1.Name = "uiLabel1";
             this.uiLabel1.Size = new System.Drawing.Size(136, 46);
             this.uiLabel1.TabIndex = 4;
-            this.uiLabel1.Text = "物料编号";
+            this.uiLabel1.Text = "物料编号：";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtID
             // 
             this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtID.FillColor = System.Drawing.Color.White;
+            this.txtID.FillColor = System.Drawing.Color.Silver;
             this.txtID.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.txtID.Location = new System.Drawing.Point(438, 60);
             this.txtID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -96,7 +97,9 @@ namespace Warehouse.工具窗体
             this.txtID.Name = "txtID";
             this.txtID.Padding = new System.Windows.Forms.Padding(5);
             this.txtID.Size = new System.Drawing.Size(150, 39);
+            this.txtID.Style = Sunny.UI.UIStyle.Custom;
             this.txtID.TabIndex = 5;
+            this.txtID.Text = "系统自动生成";
             // 
             // uiLabel2
             // 
@@ -105,13 +108,13 @@ namespace Warehouse.工具窗体
             this.uiLabel2.Name = "uiLabel2";
             this.uiLabel2.Size = new System.Drawing.Size(136, 46);
             this.uiLabel2.TabIndex = 4;
-            this.uiLabel2.Text = "类型信息";
+            this.uiLabel2.Text = "类型信息：";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtInfo
             // 
             this.txtInfo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtInfo.FillColor = System.Drawing.Color.White;
+            this.txtInfo.FillColor = System.Drawing.Color.Silver;
             this.txtInfo.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.txtInfo.Location = new System.Drawing.Point(438, 111);
             this.txtInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -121,7 +124,9 @@ namespace Warehouse.工具窗体
             this.txtInfo.Name = "txtInfo";
             this.txtInfo.Padding = new System.Windows.Forms.Padding(5);
             this.txtInfo.Size = new System.Drawing.Size(150, 39);
+            this.txtInfo.Style = Sunny.UI.UIStyle.Custom;
             this.txtInfo.TabIndex = 5;
+            this.txtInfo.Text = "左侧选择类型";
             // 
             // uiLabel3
             // 
@@ -130,7 +135,7 @@ namespace Warehouse.工具窗体
             this.uiLabel3.Name = "uiLabel3";
             this.uiLabel3.Size = new System.Drawing.Size(136, 46);
             this.uiLabel3.TabIndex = 4;
-            this.uiLabel3.Text = "物料名称";
+            this.uiLabel3.Text = "物料名称：";
             this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtName
@@ -156,7 +161,7 @@ namespace Warehouse.工具窗体
             this.uiLabel4.Name = "uiLabel4";
             this.uiLabel4.Size = new System.Drawing.Size(136, 46);
             this.uiLabel4.TabIndex = 4;
-            this.uiLabel4.Text = "丰度";
+            this.uiLabel4.Text = "丰度：";
             this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtFengdu
@@ -181,7 +186,7 @@ namespace Warehouse.工具窗体
             this.uiLabel5.Name = "uiLabel5";
             this.uiLabel5.Size = new System.Drawing.Size(136, 46);
             this.uiLabel5.TabIndex = 4;
-            this.uiLabel5.Text = "物料状态";
+            this.uiLabel5.Text = "物料状态：";
             this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel6
@@ -191,7 +196,7 @@ namespace Warehouse.工具窗体
             this.uiLabel6.Name = "uiLabel6";
             this.uiLabel6.Size = new System.Drawing.Size(136, 46);
             this.uiLabel6.TabIndex = 4;
-            this.uiLabel6.Text = "物料颜色";
+            this.uiLabel6.Text = "物料颜色：";
             this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel7
@@ -201,7 +206,7 @@ namespace Warehouse.工具窗体
             this.uiLabel7.Name = "uiLabel7";
             this.uiLabel7.Size = new System.Drawing.Size(136, 46);
             this.uiLabel7.TabIndex = 4;
-            this.uiLabel7.Text = "物料气味";
+            this.uiLabel7.Text = "物料气味：";
             this.uiLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel8
@@ -211,7 +216,7 @@ namespace Warehouse.工具窗体
             this.uiLabel8.Name = "uiLabel8";
             this.uiLabel8.Size = new System.Drawing.Size(136, 46);
             this.uiLabel8.TabIndex = 4;
-            this.uiLabel8.Text = "物料用途";
+            this.uiLabel8.Text = "物料用途：";
             this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtUseFor
@@ -236,7 +241,7 @@ namespace Warehouse.工具窗体
             this.uiLabel9.Name = "uiLabel9";
             this.uiLabel9.Size = new System.Drawing.Size(136, 46);
             this.uiLabel9.TabIndex = 4;
-            this.uiLabel9.Text = "物料来源";
+            this.uiLabel9.Text = "物料来源：";
             this.uiLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtSource
@@ -259,9 +264,9 @@ namespace Warehouse.工具窗体
             this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel10.Location = new System.Drawing.Point(295, 484);
             this.uiLabel10.Name = "uiLabel10";
-            this.uiLabel10.Size = new System.Drawing.Size(136, 46);
+            this.uiLabel10.Size = new System.Drawing.Size(207, 51);
             this.uiLabel10.TabIndex = 4;
-            this.uiLabel10.Text = "物料酸碱度";
+            this.uiLabel10.Text = "物料酸碱度：";
             this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiLabel11
@@ -269,9 +274,9 @@ namespace Warehouse.工具窗体
             this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiLabel11.Location = new System.Drawing.Point(295, 533);
             this.uiLabel11.Name = "uiLabel11";
-            this.uiLabel11.Size = new System.Drawing.Size(136, 46);
+            this.uiLabel11.Size = new System.Drawing.Size(207, 46);
             this.uiLabel11.TabIndex = 4;
-            this.uiLabel11.Text = "元素百分比";
+            this.uiLabel11.Text = "元素百分比：";
             this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtPercent1
@@ -292,11 +297,11 @@ namespace Warehouse.工具窗体
             // uiLabel12
             // 
             this.uiLabel12.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel12.Location = new System.Drawing.Point(309, 582);
+            this.uiLabel12.Location = new System.Drawing.Point(322, 582);
             this.uiLabel12.Name = "uiLabel12";
             this.uiLabel12.Size = new System.Drawing.Size(136, 46);
             this.uiLabel12.TabIndex = 4;
-            this.uiLabel12.Text = "元素量";
+            this.uiLabel12.Text = "元素量：";
             this.uiLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtRich
@@ -326,6 +331,7 @@ namespace Warehouse.工具窗体
             this.comboxState.Size = new System.Drawing.Size(150, 39);
             this.comboxState.TabIndex = 6;
             this.comboxState.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.comboxState.Load += new System.EventHandler(this.comboxState_Load);
             // 
             // comColor1
             // 
@@ -339,6 +345,7 @@ namespace Warehouse.工具窗体
             this.comColor1.Size = new System.Drawing.Size(150, 39);
             this.comColor1.TabIndex = 6;
             this.comColor1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.comColor1.Load += new System.EventHandler(this.comColor1_Load);
             // 
             // comSmell
             // 
@@ -352,6 +359,7 @@ namespace Warehouse.工具窗体
             this.comSmell.Size = new System.Drawing.Size(150, 39);
             this.comSmell.TabIndex = 6;
             this.comSmell.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.comSmell.Load += new System.EventHandler(this.comSmell_Load);
             // 
             // comsuan
             // 
@@ -365,6 +373,7 @@ namespace Warehouse.工具窗体
             this.comsuan.Size = new System.Drawing.Size(150, 39);
             this.comsuan.TabIndex = 7;
             this.comsuan.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.comsuan.Load += new System.EventHandler(this.comsuan_Load);
             // 
             // uiListBox1
             // 
@@ -386,7 +395,7 @@ namespace Warehouse.工具窗体
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 787);
+            this.ClientSize = new System.Drawing.Size(625, 736);
             this.Controls.Add(this.uiListBox1);
             this.Controls.Add(this.comsuan);
             this.Controls.Add(this.comSmell);
@@ -414,7 +423,7 @@ namespace Warehouse.工具窗体
             this.Controls.Add(this.uiLabel1);
             this.Controls.Add(this.uiButton1);
             this.Name = "Frmaterial";
-            this.Text = "Frmaterial";
+            this.Text = "物料管理";
             this.Controls.SetChildIndex(this.pnlBtm, 0);
             this.Controls.SetChildIndex(this.uiButton1, 0);
             this.Controls.SetChildIndex(this.uiLabel1, 0);

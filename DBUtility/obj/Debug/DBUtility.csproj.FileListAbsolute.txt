@@ -58,3 +58,11 @@ C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DBUtility\obj\Debug\DBUtility
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\bin\Debug\DBUtility.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\bin\Debug\DBUtility.pdb
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\bin\Debug\Harman.Utility.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\bin\Debug\MySql.Data.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
