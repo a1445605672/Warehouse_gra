@@ -49,6 +49,17 @@ namespace BLL
 			
 			return dal.Delete(log_num);
 		}
+
+		/// <summary>
+		/// 使用sql语句删除数据
+		/// </summary>
+		/// <param name="Sql"> Sql语句</param>
+		/// <returns>bool</returns>
+		public bool delete(string Sql)
+		{
+			return dal.delete(Sql);
+		}
+
 		/// <summary>
 		/// 删除一条数据
 		/// </summary>

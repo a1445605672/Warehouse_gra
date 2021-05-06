@@ -28,6 +28,7 @@ namespace Warehouse
 			InitializeComponent();
 
 			iniData();
+			staffBox.Text = Session.staffId;
 		}
 
 

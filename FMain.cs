@@ -14,7 +14,7 @@ namespace Warehouse
 	public partial class FMain : UIHeaderAsideMainFrame
 	{
 		SystemLog log = new SystemLog();
-		Session session = new Session();
+		
 
 		public FMain()
 		{
@@ -239,5 +239,10 @@ namespace Warehouse
 			System.Environment.Exit(0);
 		}
 		#endregion
+
+		private void FMain_Load(object sender, EventArgs e)
+		{
+			userName.Text = Session.staffName;
+		}
 	}
 }

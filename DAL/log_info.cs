@@ -120,6 +120,21 @@ namespace DAL
                 return false;
             }
         }
+
+        public bool delete(string Sql)
+		{
+            int rows = DbHelperMySQL.ExecuteSql(Sql);
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+		}
+
+
         /// <summary>
         /// 批量删除数据
         /// </summary>

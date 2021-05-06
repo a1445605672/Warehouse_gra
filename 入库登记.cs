@@ -621,6 +621,27 @@ namespace Warehouse
 
 		#endregion
 
+		
+
+		private void 自动入库ToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			ShowErrorTip("我是自动入库");
+		}
+
+		private void Way_Click(object sender, EventArgs e)
+		{
+			uiContextMenuStrip1.Show(Way, 0, Way.Height);
+		}
+
+		private void 手动入库ToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void 批量入库ToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 
 

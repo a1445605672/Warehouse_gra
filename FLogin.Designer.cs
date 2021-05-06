@@ -29,26 +29,26 @@ namespace Warehouse
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.SuspendLayout();
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Text = "欢迎进入物料管理系统";
-            // 
-            // FLogin
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1050, 664);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MaximumSize = new System.Drawing.Size(1050, 664);
-            this.MinimumSize = new System.Drawing.Size(1050, 664);
-            this.Name = "FLogin";
-            this.Text = "Form1";
-            this.Title = "欢迎进入物料管理系统";
-            this.ButtonLoginClick += new System.EventHandler(this.FLogin_ButtonLoginClick);
-            this.ButtonCancelClick += new System.EventHandler(this.FLogin_ButtonCancelClick);
-            this.ResumeLayout(false);
+			this.SuspendLayout();
+			// 
+			// lblTitle
+			// 
+			this.lblTitle.Location = new System.Drawing.Point(27, 24);
+			this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblTitle.Size = new System.Drawing.Size(496, 33);
+			this.lblTitle.Text = "欢迎进入物料管理系统";
+			// 
+			// FLogin
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(750, 450);
+			this.Name = "FLogin";
+			this.Text = "Form1";
+			this.Title = "欢迎进入物料管理系统";
+			this.ButtonLoginClick += new System.EventHandler(this.FLogin_ButtonLoginClick);
+			this.ButtonCancelClick += new System.EventHandler(this.FLogin_ButtonCancelClick);
+			this.ResumeLayout(false);
 
 		}
 
