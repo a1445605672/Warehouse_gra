@@ -54,17 +54,20 @@ namespace Warehouse
 			this.Materialsbox = new Sunny.UI.UIComboBox();
 			this.edtDate = new Sunny.UI.UIDatePicker();
 			this.uiLabel12 = new Sunny.UI.UILabel();
-			this.bulkStorage = new Sunny.UI.UIButton();
-			this.入库方式 = new Sunny.UI.UIButton();
-			this.storageLocationBox = new Sunny.UI.UITextBox();
+			this.uiContextMenuStrip1 = new Sunny.UI.UIContextMenuStrip();
+			this.自动入库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.手动入库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.批量入库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.Way = new Sunny.UI.UISymbolButton();
+			this.storageLocationBox = new Sunny.UI.UIComboBox();
 			this.PagePanel.SuspendLayout();
+			this.uiContextMenuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// PagePanel
 			// 
 			this.PagePanel.Controls.Add(this.storageLocationBox);
-			this.PagePanel.Controls.Add(this.入库方式);
-			this.PagePanel.Controls.Add(this.bulkStorage);
+			this.PagePanel.Controls.Add(this.Way);
 			this.PagePanel.Controls.Add(this.uiLabel12);
 			this.PagePanel.Controls.Add(this.edtDate);
 			this.PagePanel.Controls.Add(this.Materialsbox);
@@ -144,9 +147,9 @@ namespace Warehouse
 			this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel10.Location = new System.Drawing.Point(306, 448);
 			this.uiLabel10.Name = "uiLabel10";
-			this.uiLabel10.Size = new System.Drawing.Size(42, 21);
+			this.uiLabel10.Size = new System.Drawing.Size(51, 21);
 			this.uiLabel10.TabIndex = 46;
-			this.uiLabel10.Text = "备注";
+			this.uiLabel10.Text = "备 注:";
 			this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// remarkBox
@@ -173,9 +176,9 @@ namespace Warehouse
 			this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel9.Location = new System.Drawing.Point(306, 411);
 			this.uiLabel9.Name = "uiLabel9";
-			this.uiLabel9.Size = new System.Drawing.Size(58, 21);
+			this.uiLabel9.Size = new System.Drawing.Size(79, 21);
 			this.uiLabel9.TabIndex = 44;
-			this.uiLabel9.Text = "经办人";
+			this.uiLabel9.Text = "经办人ID:";
 			this.uiLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// staffBox
@@ -202,9 +205,9 @@ namespace Warehouse
 			this.uiLabel8.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel8.Location = new System.Drawing.Point(306, 374);
 			this.uiLabel8.Name = "uiLabel8";
-			this.uiLabel8.Size = new System.Drawing.Size(42, 21);
+			this.uiLabel8.Size = new System.Drawing.Size(51, 21);
 			this.uiLabel8.TabIndex = 42;
-			this.uiLabel8.Text = "日期";
+			this.uiLabel8.Text = "日 期:";
 			this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// uiLabel7
@@ -213,9 +216,9 @@ namespace Warehouse
 			this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel7.Location = new System.Drawing.Point(306, 337);
 			this.uiLabel7.Name = "uiLabel7";
-			this.uiLabel7.Size = new System.Drawing.Size(42, 21);
+			this.uiLabel7.Size = new System.Drawing.Size(51, 21);
 			this.uiLabel7.TabIndex = 40;
-			this.uiLabel7.Text = "批次";
+			this.uiLabel7.Text = "批 次:";
 			this.uiLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// uiLabel6
@@ -224,9 +227,9 @@ namespace Warehouse
 			this.uiLabel6.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel6.Location = new System.Drawing.Point(306, 300);
 			this.uiLabel6.Name = "uiLabel6";
-			this.uiLabel6.Size = new System.Drawing.Size(42, 21);
+			this.uiLabel6.Size = new System.Drawing.Size(51, 21);
 			this.uiLabel6.TabIndex = 38;
-			this.uiLabel6.Text = "库位";
+			this.uiLabel6.Text = "库 位:";
 			this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// uiLabel5
@@ -235,9 +238,9 @@ namespace Warehouse
 			this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel5.Location = new System.Drawing.Point(306, 263);
 			this.uiLabel5.Name = "uiLabel5";
-			this.uiLabel5.Size = new System.Drawing.Size(74, 21);
+			this.uiLabel5.Size = new System.Drawing.Size(78, 21);
 			this.uiLabel5.TabIndex = 36;
-			this.uiLabel5.Text = "单位重量";
+			this.uiLabel5.Text = "单位重量:";
 			this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// weightBox
@@ -263,9 +266,9 @@ namespace Warehouse
 			this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel4.Location = new System.Drawing.Point(306, 226);
 			this.uiLabel4.Name = "uiLabel4";
-			this.uiLabel4.Size = new System.Drawing.Size(58, 21);
+			this.uiLabel4.Size = new System.Drawing.Size(62, 21);
 			this.uiLabel4.TabIndex = 34;
-			this.uiLabel4.Text = "入库量";
+			this.uiLabel4.Text = "入库量:";
 			this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// inWarehouseAmount
@@ -292,9 +295,9 @@ namespace Warehouse
 			this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel3.Location = new System.Drawing.Point(306, 152);
 			this.uiLabel3.Name = "uiLabel3";
-			this.uiLabel3.Size = new System.Drawing.Size(42, 21);
+			this.uiLabel3.Size = new System.Drawing.Size(63, 21);
 			this.uiLabel3.TabIndex = 32;
-			this.uiLabel3.Text = "物品";
+			this.uiLabel3.Text = "物 品：";
 			this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// uiLabel1
@@ -303,9 +306,9 @@ namespace Warehouse
 			this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel1.Location = new System.Drawing.Point(306, 78);
 			this.uiLabel1.Name = "uiLabel1";
-			this.uiLabel1.Size = new System.Drawing.Size(74, 21);
+			this.uiLabel1.Size = new System.Drawing.Size(78, 21);
 			this.uiLabel1.TabIndex = 28;
-			this.uiLabel1.Text = "入库编号";
+			this.uiLabel1.Text = "入库编号:";
 			this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// uiLabel2
@@ -314,9 +317,9 @@ namespace Warehouse
 			this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel2.Location = new System.Drawing.Point(306, 115);
 			this.uiLabel2.Name = "uiLabel2";
-			this.uiLabel2.Size = new System.Drawing.Size(58, 21);
+			this.uiLabel2.Size = new System.Drawing.Size(74, 21);
 			this.uiLabel2.TabIndex = 30;
-			this.uiLabel2.Text = "供应商";
+			this.uiLabel2.Text = "供应商：";
 			this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// InWarwhouseNumberBox
@@ -344,9 +347,9 @@ namespace Warehouse
 			this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel11.Location = new System.Drawing.Point(306, 189);
 			this.uiLabel11.Name = "uiLabel11";
-			this.uiLabel11.Size = new System.Drawing.Size(74, 21);
+			this.uiLabel11.Size = new System.Drawing.Size(78, 21);
 			this.uiLabel11.TabIndex = 50;
-			this.uiLabel11.Text = "单位体积";
+			this.uiLabel11.Text = "单位体积:";
 			this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// volumeBox
@@ -459,75 +462,67 @@ namespace Warehouse
 			this.uiLabel12.Text = "g";
 			this.uiLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
-			// bulkStorage
+			// uiContextMenuStrip1
 			// 
-			this.bulkStorage.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.bulkStorage.FillColor = System.Drawing.Color.White;
-			this.bulkStorage.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-			this.bulkStorage.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-			this.bulkStorage.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-			this.bulkStorage.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.bulkStorage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-			this.bulkStorage.ForeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-			this.bulkStorage.ForePressColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
-			this.bulkStorage.ForeSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
-			this.bulkStorage.Location = new System.Drawing.Point(797, 74);
-			this.bulkStorage.MinimumSize = new System.Drawing.Size(1, 1);
-			this.bulkStorage.Name = "bulkStorage";
-			this.bulkStorage.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(219)))), ((int)(((byte)(227)))));
-			this.bulkStorage.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
-			this.bulkStorage.ShowFocusLine = true;
-			this.bulkStorage.Size = new System.Drawing.Size(100, 35);
-			this.bulkStorage.Style = Sunny.UI.UIStyle.White;
-			this.bulkStorage.StyleCustomMode = true;
-			this.bulkStorage.TabIndex = 55;
-			this.bulkStorage.Text = "批量入库";
-			this.bulkStorage.TipsText = "1";
-			this.bulkStorage.Click += new System.EventHandler(this.bulkStorage_Click);
+			this.uiContextMenuStrip1.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.uiContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.自动入库ToolStripMenuItem,
+            this.手动入库ToolStripMenuItem,
+            this.批量入库ToolStripMenuItem});
+			this.uiContextMenuStrip1.Name = "uiContextMenuStrip1";
+			this.uiContextMenuStrip1.Size = new System.Drawing.Size(145, 82);
 			// 
-			// 入库方式
+			// 自动入库ToolStripMenuItem
 			// 
-			this.入库方式.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.入库方式.FillColor = System.Drawing.Color.White;
-			this.入库方式.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-			this.入库方式.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-			this.入库方式.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-			this.入库方式.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.入库方式.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(98)))), ((int)(((byte)(102)))));
-			this.入库方式.ForeHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-			this.入库方式.ForePressColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
-			this.入库方式.ForeSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(131)))), ((int)(((byte)(229)))));
-			this.入库方式.Location = new System.Drawing.Point(29, 78);
-			this.入库方式.MinimumSize = new System.Drawing.Size(1, 1);
-			this.入库方式.Name = "入库方式";
-			this.入库方式.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(216)))), ((int)(((byte)(219)))), ((int)(((byte)(227)))));
-			this.入库方式.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(222)))), ((int)(((byte)(255)))));
-			this.入库方式.ShowFocusLine = true;
-			this.入库方式.Size = new System.Drawing.Size(100, 35);
-			this.入库方式.Style = Sunny.UI.UIStyle.White;
-			this.入库方式.StyleCustomMode = true;
-			this.入库方式.TabIndex = 56;
-			this.入库方式.Text = "入库方式";
-			this.入库方式.TipsText = "1";
+			this.自动入库ToolStripMenuItem.Name = "自动入库ToolStripMenuItem";
+			this.自动入库ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+			this.自动入库ToolStripMenuItem.Text = "自动入库";
+			this.自动入库ToolStripMenuItem.Click += new System.EventHandler(this.自动入库ToolStripMenuItem_Click);
+			// 
+			// 手动入库ToolStripMenuItem
+			// 
+			this.手动入库ToolStripMenuItem.Name = "手动入库ToolStripMenuItem";
+			this.手动入库ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+			this.手动入库ToolStripMenuItem.Text = "手动入库";
+			this.手动入库ToolStripMenuItem.Click += new System.EventHandler(this.手动入库ToolStripMenuItem_Click);
+			// 
+			// 批量入库ToolStripMenuItem
+			// 
+			this.批量入库ToolStripMenuItem.Name = "批量入库ToolStripMenuItem";
+			this.批量入库ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+			this.批量入库ToolStripMenuItem.Text = "批量入库";
+			this.批量入库ToolStripMenuItem.Click += new System.EventHandler(this.批量入库ToolStripMenuItem_Click);
+			// 
+			// Way
+			// 
+			this.Way.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.Way.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.Way.ForeSelectedColor = System.Drawing.Color.Empty;
+			this.Way.Location = new System.Drawing.Point(29, 16);
+			this.Way.MinimumSize = new System.Drawing.Size(1, 1);
+			this.Way.Name = "Way";
+			this.Way.RectSelectedColor = System.Drawing.Color.Empty;
+			this.Way.Size = new System.Drawing.Size(100, 35);
+			this.Way.StyleCustomMode = true;
+			this.Way.Symbol = 61498;
+			this.Way.TabIndex = 57;
+			this.Way.Text = "入库方式";
+			this.Way.Click += new System.EventHandler(this.Way_Click);
 			// 
 			// storageLocationBox
 			// 
-			this.storageLocationBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.storageLocationBox.Enabled = false;
 			this.storageLocationBox.FillColor = System.Drawing.Color.White;
-			this.storageLocationBox.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+			this.storageLocationBox.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.storageLocationBox.Location = new System.Drawing.Point(385, 296);
 			this.storageLocationBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.storageLocationBox.Maximum = 2147483647D;
-			this.storageLocationBox.Minimum = -2147483648D;
-			this.storageLocationBox.MinimumSize = new System.Drawing.Size(1, 1);
+			this.storageLocationBox.MinimumSize = new System.Drawing.Size(63, 0);
 			this.storageLocationBox.Name = "storageLocationBox";
-			this.storageLocationBox.Padding = new System.Windows.Forms.Padding(5);
+			this.storageLocationBox.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
 			this.storageLocationBox.Radius = 10;
-			this.storageLocationBox.ReadOnly = true;
 			this.storageLocationBox.Size = new System.Drawing.Size(221, 29);
-			this.storageLocationBox.TabIndex = 28;
-			this.storageLocationBox.Watermark = "";
+			this.storageLocationBox.TabIndex = 58;
+			this.storageLocationBox.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+			this.storageLocationBox.Watermark = "请选择";
 			// 
 			// 入库登记
 			// 
@@ -537,8 +532,10 @@ namespace Warehouse
 			this.Name = "入库登记";
 			this.Text = "入库登记";
 			this.Load += new System.EventHandler(this.入库登记_Load);
+			this.Controls.SetChildIndex(this.PagePanel, 0);
 			this.PagePanel.ResumeLayout(false);
 			this.PagePanel.PerformLayout();
+			this.uiContextMenuStrip1.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -570,8 +567,11 @@ namespace Warehouse
 		private Sunny.UI.UITextBox volumeBox;
 		private Sunny.UI.UIDatePicker edtDate;
 		private Sunny.UI.UILabel uiLabel12;
-		private Sunny.UI.UIButton bulkStorage;
-		private Sunny.UI.UITextBox storageLocationBox;
-		private Sunny.UI.UIButton 入库方式;
+		private Sunny.UI.UIContextMenuStrip uiContextMenuStrip1;
+		private System.Windows.Forms.ToolStripMenuItem 自动入库ToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem 手动入库ToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem 批量入库ToolStripMenuItem;
+		private Sunny.UI.UISymbolButton Way;
+		private Sunny.UI.UIComboBox storageLocationBox;
 	}
 }

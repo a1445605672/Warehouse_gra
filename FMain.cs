@@ -14,7 +14,7 @@ namespace Warehouse
 	public partial class FMain : UIHeaderAsideMainFrame
 	{
 		SystemLog log = new SystemLog();
-		Session session = new Session();
+		
 
 		public FMain()
 		{
@@ -220,8 +220,8 @@ namespace Warehouse
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "折线图", "进入折线图页面", "");
 					break;
 				case "入库折线图":
-					LoadMdiForm(MainTabControl, text, typeof(入库折线图));
-					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "入库折线图", "进入入库折线图页面", "");
+					//LoadMdiForm(MainTabControl, text, typeof(入库折线图));
+					//log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "入库折线图", "进入入库折线图页面", "");
 					break;
 				case "综合统计分析":
 					LoadMdiForm(MainTabControl, text, typeof(综合统计分析));
@@ -249,5 +249,10 @@ namespace Warehouse
 			System.Environment.Exit(0);
 		}
 		#endregion
+
+		private void FMain_Load(object sender, EventArgs e)
+		{
+			userName.Text = Session.staffName;
+		}
 	}
 }

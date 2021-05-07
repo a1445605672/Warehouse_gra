@@ -26,12 +26,19 @@ namespace Warehouse
 
 			this.uiComboTreeView2.Enabled = false;
 			this.uiTextBox1.Enabled = false;
+<<<<<<< HEAD
+			this.uiComboTreeView3.Enabled = false;
+			this.uiComboTreeView4.Enabled = false;
+			this.uiComboTreeView5.Enabled = false;
+			this.uiRadioButton1.Checked = true;
+=======
 
 			int count = this.uiGroupBox4.Controls.Count;
 			for(int i =0; i<count; i++)
             {
 				this.uiGroupBox4.Controls[i].Enabled = false;
             }
+>>>>>>> 2f8236c60e6de7946bb5cc8570d92b65efd01889
 			
 			Load_mat_type();
 		}

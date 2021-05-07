@@ -174,9 +174,11 @@ namespace Warehouse
 			in_Storage.in_amount = Convert.ToDecimal(storage.enter_amount);
 
 			//入库
-			inStorageEvent(storage, in_Storage, inStorageList);
 
-
+			if (inStorageEvent(storage, in_Storage, inStorageList))
+			{
+				ShowSuccessDialog("入库已完成，请及时查看");
+			}
 			//入库编号，批次编号
 			inStorageAndBranchNumber();
 
@@ -416,8 +418,13 @@ namespace Warehouse
 		/// </summary>
 		/// <param name="materiaName">物品名称</param>
 		/// <param name="inStorageNumber">入库量</param>
+<<<<<<< HEAD
+		/// <returns>库位字符串</returns>
+		private string storageLocation(string materiaName, string inStorageNumber)
+=======
 		/// <returns></returns>
 		public string storageLocation(string materiaName, string inStorageNumber)
+>>>>>>> 2f8236c60e6de7946bb5cc8570d92b65efd01889
 		{
 			inStorageList.Clear();
 
@@ -530,8 +537,13 @@ namespace Warehouse
 		/// </summary>
 		/// <param name="storage">Model.enter_storage</param>
 		/// <param name="in_Storage">Model.in_storage in_Storage</param>
+<<<<<<< HEAD
+		/// <param name="inStorageList">库位列表，需要查询出入库的库位大小和枯萎编号</param>
+		public Boolean inStorageEvent(Model.enter_storage storage, Model.in_storage in_Storage, List<KeyValuePair<string, double>> inStorageList)
+=======
 		/// <param name="inStorageList">库位列表，需要查询出入库的库位大小和库位编号</param>
 		public void inStorageEvent(Model.enter_storage storage, Model.in_storage in_Storage, List<KeyValuePair<string, double>> inStorageList)
+>>>>>>> 2f8236c60e6de7946bb5cc8570d92b65efd01889
 		{
 			double inStorageAmount = 0;
 			if (inStorageList.Count > 1)
@@ -565,17 +577,27 @@ namespace Warehouse
 				inStorage.Add(in_Storage);
 				enterStoeage.Add(storage);//入库
 				string Sql = "UPDATE  storagelocation SET sl_remain_bulk=" + (Convert.ToDouble(inStorageList[inStorageList.Count - 1].Value.ToString()) - Convert.ToDouble(storage.enter_amount)).ToString() + " WHERE sl_id=\'" + in_Storage.sl_id + "\'";
-				storagelocation.Update(Sql);
+				
+				if(storagelocation.Update(Sql))
+				{
+					log.WriteLog(6, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "入库登记", "完成入库", InWarwhouseNumberBox.Text.Trim());
+					return true;
+				}
 			}
 			else
 			{
 				inStorage.Add(in_Storage);
 				enterStoeage.Add(storage);
 				string Sql = "UPDATE  storagelocation SET sl_remain_bulk=" + (Convert.ToDouble(inStorageList[0].Value.ToString()) - Convert.ToDouble(storage.enter_amount)) + " WHERE sl_id=\'" + inStorageList[0].Key.ToString() + "\'";
-				storagelocation.Update(Sql);
+				if(storagelocation.Update(Sql))
+				{
+					log.WriteLog(6, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "入库登记", "完成入库", InWarwhouseNumberBox.Text.Trim());
+					return true;
+				}
 			}
-			log.WriteLog(6, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "入库登记", "完成入库", InWarwhouseNumberBox.Text.Trim());
-			ShowSuccessDialog("入库已完成，请及时查看");
+			
+			
+			return false;
 		}
 		#endregion
 
@@ -625,6 +647,27 @@ namespace Warehouse
 
 		#endregion
 
+		
+
+		private void 自动入库ToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			ShowErrorTip("我是自动入库");
+		}
+
+		private void Way_Click(object sender, EventArgs e)
+		{
+			uiContextMenuStrip1.Show(Way, 0, Way.Height);
+		}
+
+		private void 手动入库ToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void 批量入库ToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 
 

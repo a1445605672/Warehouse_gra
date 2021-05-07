@@ -361,16 +361,52 @@ C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\obj\Debug\Warehouse.综合统
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\obj\Debug\Warehouse.物料盘存.resources
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\obj\Debug\Warehouse.new_物料盘存.resources
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmEditInstorage.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.new_物料盘存.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmEditInstorage.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.物料盘存.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.综合统计分析.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.new_库柜管理.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.new_房间管理.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.new_物料盘存.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmEditInstorage.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.物料盘存.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.综合统计分析.resources
+<<<<<<< HEAD
+E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.DialogFrm.resources
+=======
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.库存控制.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmLimit.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.入库折线图.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.出库动图.resources
+<<<<<<< HEAD
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\Warehouse.exe.config
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\Warehouse.exe
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\Warehouse.pdb
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\BLL.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\DBUtility.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\Model.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\MySql.Data.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\Newtonsoft.Json.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\NPOI.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\NPOI.OOXML.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\NPOI.OpenXml4Net.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\NPOI.OpenXmlFormats.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\SunnyUI.Common.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\SunnyUI.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\DAL.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\Maticsoft.Common.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\BLL.pdb
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\DBUtility.pdb
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\Model.pdb
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\ICSharpCode.SharpZipLib.pdb
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\ICSharpCode.SharpZipLib.xml
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\Newtonsoft.Json.xml
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\DAL.pdb
+=======
+>>>>>>> 2f8236c60e6de7946bb5cc8570d92b65efd01889
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.csprojAssemblyReference.cache
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.FLogin.resources
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.FMain.resources
@@ -421,6 +457,16 @@ C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.综合统计�
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.部门人员管理.resources
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.csproj.GenerateResource.cache
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.csproj.CoreCompileInputs.cache
+<<<<<<< HEAD
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyComplete
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.exe
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.pdb
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.收货商管理.resources
+>>>>>>> c9a8720a7d43009c66a197f016423f92198b6a69
+E:\Warehouse_gra\obj\Debug\Warehouse.出库动图.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.库存控制.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.部门管理.resources
+=======
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.exe
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.pdb
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\Warehouse.exe.config
@@ -452,3 +498,4 @@ C:\Users\qinrui\Documents\GitHub\Warehouse_gra\bin\Debug\DAL.pdb
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyComplete
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.收货商管理.resources
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.供应商管理.resources
+>>>>>>> 2f8236c60e6de7946bb5cc8570d92b65efd01889
