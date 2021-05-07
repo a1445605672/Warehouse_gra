@@ -78,8 +78,8 @@ namespace Warehouse
         //新增库存控制
         private void uiButton2_Click(object sender, EventArgs e)
         {
-            FrmLimit limit = new FrmLimit();
-            limit.Show();
+            //FrmLimit limit = new FrmLimit();
+            //limit.Show();
         }
     }
 }

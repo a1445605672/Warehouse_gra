@@ -115,9 +115,6 @@ namespace Warehouse
 		#region 出库完成事件
 		private void OutWarehouseBut_Click(object sender, EventArgs e)
 		{
-			
-
-
 			//查询物料id
 			string mat_id_Sql= "SELECT  mat_id FROM material_info WHERE mat_name=\'"+ Materialsbox.Text.Trim() + "\'";//
 			//经办人姓名
@@ -138,20 +135,10 @@ namespace Warehouse
 			out_storage.remark = remarkBox.Text.Trim();//备注
 			out_storage.enter_id = InWearhouseNumber.Text.Trim();//入库编号
 
-			//更新在库表
-			string Sql= "UPDATE in_storage SET in_amount=in_amount-"+ out_storage.out_account + " WHERE enter_num=\'"+ out_storage.enter_id + "\'";
-			//更新库位存量
-			string storagelocation_sql = "UPDATE storagelocation SET sl_remain_bulk = sl_remain_bulk +"+ out_storage.out_account + " WHERE sl_id =\'"+ storageLocationBox.Text.Trim()+ "\'";
 
-			out_Storage.Add(out_storage);
-			in_storage.Update(Sql);//更新在库表
-			in_storage.Update(storagelocation_sql);//更新库位存量
 
-			log.WriteLog(6, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出库登记", "完成出库", InWearhouseNumber.Text.Trim());
-			in_storage.Update("DELETE FROM in_storage WHERE in_amount<=0");
+			outStorage(out_storage);
 			ShowSuccessDialog("出库完成，请即时查看");
-
-
 			//返回到数据页
 			uiPanel1.Visible = false;
 			loadInstorageData();
@@ -381,6 +368,45 @@ namespace Warehouse
 			#endregion
 		}
 
+		#endregion
+
+
+		#region  出库
+		/// <summary>
+		/// 出库事件
+		/// </summary>
+		/// <param name="out_storage">Model.out_storage</param>
+		/// <returns>Boolean</returns>
+		public Boolean outStorage(Model.out_storage out_storage)
+		{
+			Boolean status=false;
+			//更新在库表
+			string Sql = "UPDATE in_storage SET in_amount=in_amount-" + out_storage.out_account + " WHERE enter_num=\'" + out_storage.enter_id + "\'";
+			//更新库位存量
+			string storagelocation_sql = "UPDATE storagelocation SET sl_remain_bulk = sl_remain_bulk +" + out_storage.out_account + " WHERE sl_id =\'" + storageLocationBox.Text.Trim() + "\'";
+
+			out_Storage.Add(out_storage);
+			//更新在库表
+			if (in_storage.Update(Sql))
+			{
+
+				if (in_storage.Update("DELETE FROM in_storage WHERE in_amount<=0"))
+				{
+					//更新库位存量
+					if (in_storage.Update(storagelocation_sql))
+					{
+						status = true;
+
+					}
+				}
+				log.WriteLog(6, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出库登记", "完成出库", InWearhouseNumber.Text.Trim());
+				return true;
+			}else
+			{
+				return false;
+			}
+			
+		}
 		#endregion
 
 	}

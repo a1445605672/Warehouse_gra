@@ -148,13 +148,6 @@
     <Compile Include="出库动图.Designer.cs">
       <DependentUpon>出库动图.cs</DependentUpon>
     </Compile>
-    <Compile Include="图形化展示.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="图形化展示.Designer.cs">
-      <DependentUpon>图形化展示.cs</DependentUpon>
-    </Compile>
-    <Compile Include="工具窗体\Class1.cs" />
     <Compile Include="工具窗体\DialogFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -447,9 +440,6 @@
     <EmbeddedResource Include="出库汇总.resx">
       <DependentUpon>出库汇总.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="图形化展示.resx">
-      <DependentUpon>图形化展示.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="在库汇总.resx">
       <DependentUpon>在库汇总.cs</DependentUpon>
     </EmbeddedResource>
@@ -497,12 +487,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="库存控制.resx">
       <DependentUpon>库存控制.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="收货商管理.resx">
-      <DependentUpon>收货商管理.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="收货商管理.resx">
-      <DependentUpon>收货商管理.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="更新数据窗体\UpdataInWarehouseFrm.resx">
       <DependentUpon>UpdataInWarehouseFrm.cs</DependentUpon>

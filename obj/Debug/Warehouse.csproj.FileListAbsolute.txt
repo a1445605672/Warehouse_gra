@@ -459,3 +459,6 @@ C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.exe
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.pdb
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.收货商管理.resources
 >>>>>>> c9a8720a7d43009c66a197f016423f92198b6a69
+E:\Warehouse_gra\obj\Debug\Warehouse.出库动图.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.库存控制.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.部门管理.resources
