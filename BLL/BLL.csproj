@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authority_management .cs" />
     <Compile Include="chest.cs" />
     <Compile Include="chest_type.cs" />
     <Compile Include="department.cs" />

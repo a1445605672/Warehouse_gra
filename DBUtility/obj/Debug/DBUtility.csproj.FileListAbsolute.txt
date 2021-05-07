@@ -66,3 +66,7 @@ C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csp
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
+<<<<<<< HEAD
+=======
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csprojAssemblyReference.cache
+>>>>>>> 2f8236c60e6de7946bb5cc8570d92b65efd01889
