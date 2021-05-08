@@ -29,7 +29,6 @@ namespace Warehouse
 		/// </summary>
 		private void InitializeComponent()
 		{
-            this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiComboTreeView1 = new Sunny.UI.UIComboTreeView();
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.uiTextBox1 = new Sunny.UI.UITextBox();
@@ -45,6 +44,7 @@ namespace Warehouse
             this.uiLedDisplay1 = new Sunny.UI.UILedDisplay();
             this.uiLabel4 = new Sunny.UI.UILabel();
             this.uiGroupBox2 = new Sunny.UI.UIGroupBox();
+            this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiGroupBox3 = new Sunny.UI.UIGroupBox();
             this.uiLabel8 = new Sunny.UI.UILabel();
             this.uiLabel7 = new Sunny.UI.UILabel();
@@ -65,22 +65,12 @@ namespace Warehouse
             this.uiGroupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // uiLabel1
-            // 
-            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel1.Location = new System.Drawing.Point(3, 43);
-            this.uiLabel1.Name = "uiLabel1";
-            this.uiLabel1.Size = new System.Drawing.Size(199, 37);
-            this.uiLabel1.TabIndex = 0;
-            this.uiLabel1.Text = " 选择调拨品类：";
-            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // uiComboTreeView1
             // 
             this.uiComboTreeView1.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.uiComboTreeView1.FillColor = System.Drawing.Color.White;
             this.uiComboTreeView1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiComboTreeView1.Location = new System.Drawing.Point(183, 43);
+            this.uiComboTreeView1.Location = new System.Drawing.Point(183, 45);
             this.uiComboTreeView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiComboTreeView1.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboTreeView1.Name = "uiComboTreeView1";
@@ -242,10 +232,10 @@ namespace Warehouse
             // uiGroupBox2
             // 
             this.uiGroupBox2.Controls.Add(this.uiTextBox1);
-            this.uiGroupBox2.Controls.Add(this.uiLabel1);
             this.uiGroupBox2.Controls.Add(this.uiLabel2);
             this.uiGroupBox2.Controls.Add(this.uiComboTreeView2);
             this.uiGroupBox2.Controls.Add(this.uiComboTreeView1);
+            this.uiGroupBox2.Controls.Add(this.uiLabel1);
             this.uiGroupBox2.Controls.Add(this.uiLabel3);
             this.uiGroupBox2.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.uiGroupBox2.Location = new System.Drawing.Point(430, 64);
@@ -256,6 +246,16 @@ namespace Warehouse
             this.uiGroupBox2.Size = new System.Drawing.Size(531, 252);
             this.uiGroupBox2.TabIndex = 8;
             this.uiGroupBox2.Text = "源仓库";
+            // 
+            // uiLabel1
+            // 
+            this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel1.Location = new System.Drawing.Point(8, 43);
+            this.uiLabel1.Name = "uiLabel1";
+            this.uiLabel1.Size = new System.Drawing.Size(200, 39);
+            this.uiLabel1.TabIndex = 5;
+            this.uiLabel1.Text = "选择调拨品类：";
+            this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // uiGroupBox3
             // 
@@ -371,6 +371,7 @@ namespace Warehouse
             this.uiComboTreeView5.TabIndex = 1;
             this.uiComboTreeView5.Text = " ";
             this.uiComboTreeView5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiComboTreeView5.NodeSelected += new Sunny.UI.UIComboTreeView.OnNodeSelected(this.uiComboTreeView5_NodeSelected);
             // 
             // uiComboTreeView4
             // 
@@ -386,6 +387,7 @@ namespace Warehouse
             this.uiComboTreeView4.TabIndex = 1;
             this.uiComboTreeView4.Text = " ";
             this.uiComboTreeView4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiComboTreeView4.NodeSelected += new Sunny.UI.UIComboTreeView.OnNodeSelected(this.uiComboTreeView4_NodeSelected);
             // 
             // uiComboTreeView3
             // 
@@ -453,8 +455,6 @@ namespace Warehouse
 		}
 
         #endregion
-
-        private Sunny.UI.UILabel uiLabel1;
         private Sunny.UI.UIComboTreeView uiComboTreeView1;
         private Sunny.UI.UILabel uiLabel2;
         private Sunny.UI.UITextBox uiTextBox1;
@@ -484,5 +484,6 @@ namespace Warehouse
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private Sunny.UI.UILabel uiLabel14;
+        private Sunny.UI.UILabel uiLabel1;
     }
 }

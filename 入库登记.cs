@@ -418,13 +418,11 @@ namespace Warehouse
 		/// </summary>
 		/// <param name="materiaName">物品名称</param>
 		/// <param name="inStorageNumber">入库量</param>
-<<<<<<< HEAD
+
 		/// <returns>库位字符串</returns>
-		private string storageLocation(string materiaName, string inStorageNumber)
-=======
+	
 		/// <returns></returns>
 		public string storageLocation(string materiaName, string inStorageNumber)
->>>>>>> 2f8236c60e6de7946bb5cc8570d92b65efd01889
 		{
 			inStorageList.Clear();
 
@@ -537,13 +535,9 @@ namespace Warehouse
 		/// </summary>
 		/// <param name="storage">Model.enter_storage</param>
 		/// <param name="in_Storage">Model.in_storage in_Storage</param>
-<<<<<<< HEAD
 		/// <param name="inStorageList">库位列表，需要查询出入库的库位大小和枯萎编号</param>
-		public Boolean inStorageEvent(Model.enter_storage storage, Model.in_storage in_Storage, List<KeyValuePair<string, double>> inStorageList)
-=======
 		/// <param name="inStorageList">库位列表，需要查询出入库的库位大小和库位编号</param>
-		public void inStorageEvent(Model.enter_storage storage, Model.in_storage in_Storage, List<KeyValuePair<string, double>> inStorageList)
->>>>>>> 2f8236c60e6de7946bb5cc8570d92b65efd01889
+		public Boolean inStorageEvent(Model.enter_storage storage, Model.in_storage in_Storage, List<KeyValuePair<string, double>> inStorageList)
 		{
 			double inStorageAmount = 0;
 			if (inStorageList.Count > 1)

@@ -26,19 +26,27 @@ namespace Warehouse
 
 			this.uiComboTreeView2.Enabled = false;
 			this.uiTextBox1.Enabled = false;
-<<<<<<< HEAD
+
 			this.uiComboTreeView3.Enabled = false;
 			this.uiComboTreeView4.Enabled = false;
 			this.uiComboTreeView5.Enabled = false;
 			this.uiRadioButton1.Checked = true;
-=======
+
 
 			int count = this.uiGroupBox4.Controls.Count;
 			for(int i =0; i<count; i++)
             {
-				this.uiGroupBox4.Controls[i].Enabled = false;
+				if (this.uiGroupBox4.Controls[i].Name.Contains("Label"))
+                {
+					this.uiGroupBox4.Controls[i].Enabled = true;
+				}
+                else
+                {
+					this.uiGroupBox4.Controls[i].Enabled = false;
+				}
+				
             }
->>>>>>> 2f8236c60e6de7946bb5cc8570d92b65efd01889
+
 			
 			Load_mat_type();
 		}
@@ -313,6 +321,7 @@ namespace Warehouse
 
         private void uiComboTreeView3_NodeSelected(object sender, TreeNode node)
         {
+			this.uiComboTreeView4.Enabled = true;
 			string storage_id = node.Name.Trim();
 
 
@@ -323,7 +332,21 @@ namespace Warehouse
 				this.uiComboTreeView5.Enabled = true;
 
 
+				BLL.chest chest = new BLL.chest();
+				List<Model.chest> chests = new List<Model.chest>();
+				string Cha_xun = " chest_belong_storage = " + "\"" + storage_id.Trim() + "\"";
 
+				chests = chest.GetModelList(Cha_xun);
+
+				
+				this.uiComboTreeView4.Nodes.Clear();
+				for(int i = 0; i<chests.Count; i++)
+                {
+					TreeNode treenode = new TreeNode();
+					treenode.Name = chests[i].chest_id;
+					treenode.Text = chests[i].chest_name;
+					this.uiComboTreeView4.Nodes.Add(treenode);
+                }
 
 
 			}
@@ -382,9 +405,35 @@ namespace Warehouse
 			
         }
 
+        private void uiComboTreeView5_NodeSelected(object sender, TreeNode node)
+        {
 
+
+
+        }
+
+        private void uiComboTreeView4_NodeSelected(object sender, TreeNode node)
+        {
+			string kugui = node.Name;
+
+			BLL.storagelocation storagelocation = new BLL.storagelocation();
+			List<Model.storagelocation> locs = new List<Model.storagelocation>();
 		
-	}
+
+			string Cha_xun = "sl_belong_chest = " + "\"" + kugui.Trim() + "\"";
+			locs = storagelocation.GetModelList(Cha_xun);
+			this.uiComboTreeView5.Nodes.Clear();
+			for (int i = 0; i < locs.Count; i++)
+            {
+				TreeNode treeNode = new TreeNode();
+				treeNode.Text = locs[i].sl_id;
+				this.uiComboTreeView5.Nodes.Add(treeNode);
+            }
+
+
+				 
+        }
+    }
 
 
 
