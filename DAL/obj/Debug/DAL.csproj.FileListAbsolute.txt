@@ -80,3 +80,15 @@ C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DAL\obj\Debug\DAL.csproj.Core
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DAL\obj\Debug\DAL.dll
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DAL\obj\Debug\DAL.pdb
+E:\0421\Warehouse_gra\DAL\bin\Debug\DAL.dll
+E:\0421\Warehouse_gra\DAL\bin\Debug\DAL.pdb
+E:\0421\Warehouse_gra\DAL\bin\Debug\DBUtility.dll
+E:\0421\Warehouse_gra\DAL\bin\Debug\Model.dll
+E:\0421\Warehouse_gra\DAL\bin\Debug\MySql.Data.dll
+E:\0421\Warehouse_gra\DAL\bin\Debug\DBUtility.pdb
+E:\0421\Warehouse_gra\DAL\bin\Debug\Model.pdb
+E:\0421\Warehouse_gra\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+E:\0421\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\0421\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\0421\Warehouse_gra\DAL\obj\Debug\DAL.dll
+E:\0421\Warehouse_gra\DAL\obj\Debug\DAL.pdb
