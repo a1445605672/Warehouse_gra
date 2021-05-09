@@ -18,6 +18,10 @@ namespace Warehouse
 		public decimal Amount = 0;
 
 		List<KeyValuePair<string, double>> list;//存储库位大小
+
+		//用于为入库提供信息
+		private Model.enter_storage ssss;
+
 		public 收货商管理()
 		{
 
@@ -407,7 +411,7 @@ namespace Warehouse
 
         private void uiComboTreeView5_NodeSelected(object sender, TreeNode node)
         {
-
+		    ssss.enter_sl_id =	node.Text;
 
 
         }
