@@ -10,6 +10,8 @@ namespace Warehouse
 	public partial class 未完成出库 : UITitlePage
 	{
 		SystemLog log = new SystemLog();
+		Model.out_storage out_storage = new Model.out_storage();
+		BLL.out_storage out_Storage = new BLL.out_storage();
 		public 未完成出库()
 		{
 			ShowStatusForm(100, "数据加载中......");
@@ -19,15 +21,15 @@ namespace Warehouse
 			uiDataGridView1.BringToFront();
 			#region  datagridview添加列
 			//第一个参数是列表头，第二个参数用于绑定数据
-			uiDataGridView1.AddColumn("出库编号", "out_id").SetFixedMode(150);//140
+			uiDataGridView1.AddColumn("出库编号", "out_id").SetFixedMode(150);//150
 			//uiDataGridView1.AddColumn("收货商", "").SetFixedMode(150);
 			//uiDataGridView1.AddColumn("物料编号", "out_mat_id").SetFixedMode(150);
 			uiDataGridView1.AddColumn("物料名称", "out_mat_name").SetFixedMode(160);//160
 			uiDataGridView1.AddColumn("出库量", "out_account").SetFixedMode(80);
-			uiDataGridView1.AddColumn("批次", "out_batch_id").SetFixedMode(130);
-			uiDataGridView1.AddColumn("出库日期", "out_data").SetFixedMode(160);
+			uiDataGridView1.AddColumn("批次", "out_batch_id").SetFixedMode(130);//130
+			uiDataGridView1.AddColumn("出库日期", "out_data").SetFixedMode(160);//160
 			//uiDataGridView1.AddColumn("经办人编号", "out_staff_id").SetFixedMode(60);
-			uiDataGridView1.AddColumn("经办人", "out_staff_name").SetFixedMode(120);
+			uiDataGridView1.AddColumn("经办人", "out_staff_name").SetFixedMode(120);//120
 			uiDataGridView1.ReadOnly = true;
 			#endregion
 			for (int i = 0; i < 30; i++)
@@ -60,8 +62,9 @@ namespace Warehouse
 			#region 出库，数据绑定到datagridview
 			List<Model.out_storage> datas = new List<Model.out_storage>();
 			BLL.out_storage out_Storage = new BLL.out_storage();
-			string Where = "out_if_accomplish=0";
-			datas = out_Storage.GetModelList(Where);
+
+			string SQL = "select out_id,out_mat_id,out_mat_name,out_account,out_batch_id,out_data,out_staff_id,out_staff_name,enter_id,out_sr_id FROM out_storage where out_if_accomplish=0";
+			datas = out_Storage.GetModelList(SQL);
 			this.uiPagination1.DataSource = datas;//绑定到在库数据绑定到datagridview
 			this.uiPagination1.ActivePage = 1;
 
@@ -143,6 +146,24 @@ namespace Warehouse
 					ShowSuccessTip("您已取消");
 					
 				}
+			}
+			//出库
+			if (uiDataGridView1.Columns[e.ColumnIndex].Name == "outStorage" && e.RowIndex >= 0)
+			{
+				
+
+				out_storage.out_id = uiDataGridView1.CurrentRow.Cells[3].Value.ToString();//出库编号
+				out_storage.out_mat_id = uiDataGridView1.CurrentRow.Cells[3].Value.ToString();//物料id
+				//out_storage.out_mat_name =uiDataGridView1.CurrentRow.Cells[5].Value.ToString();//物料名称
+				out_storage.out_account = Convert.ToDecimal(uiDataGridView1.CurrentRow.Cells[6].Value.ToString());//出库量
+				out_storage.out_batch_id = uiDataGridView1.CurrentRow.Cells[7].Value.ToString();//批次编号
+				out_storage.out_data = uiDataGridView1.CurrentRow.Cells[8].Value.ToString();//入库时间
+				out_storage.out_staff_id = uiDataGridView1.CurrentRow.Cells[9].Value.ToString();//经办人编号
+				out_storage.out_staff_name = uiDataGridView1.CurrentRow.Cells[10].Value.ToString();//经办人姓名
+				out_storage.out_if_accomplish = 1;
+				out_storage.out_sr_id = uiDataGridView1.CurrentRow.Cells[15].Value.ToString();//收货商id
+				out_storage.remark = "";//备注
+				out_storage.enter_id = uiDataGridView1.CurrentRow.Cells[14].Value.ToString();//入库编号
 			}
 		}
 		#endregion

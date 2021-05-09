@@ -55,7 +55,7 @@ namespace Warehouse
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "折线图";
-            this.Text = "折线图";
+            this.Text = "在库饼状图";
             this.PagePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 

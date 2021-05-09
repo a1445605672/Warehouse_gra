@@ -92,8 +92,6 @@ namespace Warehouse
 			this.uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.uiDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.uiDataGridView1.BackgroundColor = System.Drawing.Color.White;
-			this.uiDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-			this.uiDataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.uiDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
 			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
 			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
@@ -134,7 +132,7 @@ namespace Warehouse
 			this.uiDataGridView1.RowTemplate.Height = 29;
 			this.uiDataGridView1.SelectedIndex = -1;
 			this.uiDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-			this.uiDataGridView1.ShowRect = false;
+			this.uiDataGridView1.ShowGridLine = true;
 			this.uiDataGridView1.Size = new System.Drawing.Size(950, 544);
 			this.uiDataGridView1.TabIndex = 2;
 			this.uiDataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.uiDataGridView1_CellContentClick);
@@ -449,9 +447,9 @@ namespace Warehouse
 			this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel10.Location = new System.Drawing.Point(316, 398);
 			this.uiLabel10.Name = "uiLabel10";
-			this.uiLabel10.Size = new System.Drawing.Size(42, 21);
+			this.uiLabel10.Size = new System.Drawing.Size(46, 21);
 			this.uiLabel10.TabIndex = 24;
-			this.uiLabel10.Text = "备注";
+			this.uiLabel10.Text = "备注:";
 			this.uiLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// uiLabel9
@@ -460,9 +458,9 @@ namespace Warehouse
 			this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel9.Location = new System.Drawing.Point(316, 360);
 			this.uiLabel9.Name = "uiLabel9";
-			this.uiLabel9.Size = new System.Drawing.Size(58, 21);
+			this.uiLabel9.Size = new System.Drawing.Size(79, 21);
 			this.uiLabel9.TabIndex = 22;
-			this.uiLabel9.Text = "经办人";
+			this.uiLabel9.Text = "经办人ID:";
 			this.uiLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// uiLabel8
@@ -471,9 +469,9 @@ namespace Warehouse
 			this.uiLabel8.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel8.Location = new System.Drawing.Point(316, 322);
 			this.uiLabel8.Name = "uiLabel8";
-			this.uiLabel8.Size = new System.Drawing.Size(42, 21);
+			this.uiLabel8.Size = new System.Drawing.Size(51, 21);
 			this.uiLabel8.TabIndex = 20;
-			this.uiLabel8.Text = "日期";
+			this.uiLabel8.Text = "日 期:";
 			this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// uiLabel7
@@ -482,9 +480,9 @@ namespace Warehouse
 			this.uiLabel7.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel7.Location = new System.Drawing.Point(316, 284);
 			this.uiLabel7.Name = "uiLabel7";
-			this.uiLabel7.Size = new System.Drawing.Size(42, 21);
+			this.uiLabel7.Size = new System.Drawing.Size(51, 21);
 			this.uiLabel7.TabIndex = 18;
-			this.uiLabel7.Text = "批次";
+			this.uiLabel7.Text = "批 次:";
 			this.uiLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// uiLabel5
@@ -493,9 +491,9 @@ namespace Warehouse
 			this.uiLabel5.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel5.Location = new System.Drawing.Point(316, 246);
 			this.uiLabel5.Name = "uiLabel5";
-			this.uiLabel5.Size = new System.Drawing.Size(58, 21);
+			this.uiLabel5.Size = new System.Drawing.Size(62, 21);
 			this.uiLabel5.TabIndex = 14;
-			this.uiLabel5.Text = "出库量";
+			this.uiLabel5.Text = "出库量:";
 			this.uiLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// outWarehouseAmountBox
@@ -522,9 +520,9 @@ namespace Warehouse
 			this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel4.Location = new System.Drawing.Point(316, 208);
 			this.uiLabel4.Name = "uiLabel4";
-			this.uiLabel4.Size = new System.Drawing.Size(42, 21);
+			this.uiLabel4.Size = new System.Drawing.Size(51, 21);
 			this.uiLabel4.TabIndex = 12;
-			this.uiLabel4.Text = "库位";
+			this.uiLabel4.Text = "库 位:";
 			this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// uiLabel3
@@ -533,9 +531,9 @@ namespace Warehouse
 			this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel3.Location = new System.Drawing.Point(316, 170);
 			this.uiLabel3.Name = "uiLabel3";
-			this.uiLabel3.Size = new System.Drawing.Size(42, 21);
+			this.uiLabel3.Size = new System.Drawing.Size(51, 21);
 			this.uiLabel3.TabIndex = 10;
-			this.uiLabel3.Text = "物品";
+			this.uiLabel3.Text = "物 品:";
 			this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// uiLabel1
@@ -544,9 +542,9 @@ namespace Warehouse
 			this.uiLabel1.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel1.Location = new System.Drawing.Point(316, 94);
 			this.uiLabel1.Name = "uiLabel1";
-			this.uiLabel1.Size = new System.Drawing.Size(74, 21);
+			this.uiLabel1.Size = new System.Drawing.Size(78, 21);
 			this.uiLabel1.TabIndex = 6;
-			this.uiLabel1.Text = "出库编号";
+			this.uiLabel1.Text = "出库编号:";
 			this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// uiLabel2
@@ -555,9 +553,9 @@ namespace Warehouse
 			this.uiLabel2.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel2.Location = new System.Drawing.Point(316, 132);
 			this.uiLabel2.Name = "uiLabel2";
-			this.uiLabel2.Size = new System.Drawing.Size(58, 21);
+			this.uiLabel2.Size = new System.Drawing.Size(62, 21);
 			this.uiLabel2.TabIndex = 8;
-			this.uiLabel2.Text = "收货商";
+			this.uiLabel2.Text = "收货商:";
 			this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// SelectMaterialsbox
@@ -582,9 +580,9 @@ namespace Warehouse
 			this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel11.Location = new System.Drawing.Point(200, 11);
 			this.uiLabel11.Name = "uiLabel11";
-			this.uiLabel11.Size = new System.Drawing.Size(58, 21);
+			this.uiLabel11.Size = new System.Drawing.Size(51, 21);
 			this.uiLabel11.TabIndex = 55;
-			this.uiLabel11.Text = "物品：";
+			this.uiLabel11.Text = "物 品:";
 			this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// SearchBut

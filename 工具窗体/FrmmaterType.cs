@@ -29,12 +29,36 @@ namespace Warehouse.工具窗体
                     materTpyeModel.type_name = uiTextBox2.Text.Trim();
                     materTpyeModel.type_comment = uiTextBox3.Text.Trim();
                     materTpyeModel.type_sx = uiTextBox4.Text.Trim();
-
+                    return materTpyeModel;
                 }
-                return materTpyeModel;
+                else
+                {
+                    materTpyeModel.type_id = uiTextBox1.Text.Trim();
+                    materTpyeModel.type_name = uiTextBox2.Text.Trim();
+                    materTpyeModel.type_comment = uiTextBox3.Text.Trim();
+                    materTpyeModel.type_sx = uiTextBox4.Text.Trim();
+                    return materTpyeModel;
+                }
             }
             set
             { 
+            }
+        }
+        public bool FuZhi(string id)
+        {
+            BLL.material_type type = new BLL.material_type();
+            materTpyeModel = type.GetModel(id);
+            if (materTpyeModel != null)
+            {
+                uiTextBox1.Text = materTpyeModel.type_id;
+                uiTextBox2.Text = materTpyeModel.type_name;
+                uiTextBox3.Text = materTpyeModel.type_comment;
+                uiTextBox4.Text = materTpyeModel.type_sx;
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }

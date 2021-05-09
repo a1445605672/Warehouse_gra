@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,7 +17,7 @@ namespace Warehouse
 		//当前所选物品的库存数量
 		public decimal Amount = 0;
 
-
+		List<KeyValuePair<string, double>> list;//存储库位大小
 		public 收货商管理()
 		{
 
@@ -25,6 +26,27 @@ namespace Warehouse
 
 			this.uiComboTreeView2.Enabled = false;
 			this.uiTextBox1.Enabled = false;
+
+			this.uiComboTreeView3.Enabled = false;
+			this.uiComboTreeView4.Enabled = false;
+			this.uiComboTreeView5.Enabled = false;
+			this.uiRadioButton1.Checked = true;
+
+
+			int count = this.uiGroupBox4.Controls.Count;
+			for(int i =0; i<count; i++)
+            {
+				if (this.uiGroupBox4.Controls[i].Name.Contains("Label"))
+                {
+					this.uiGroupBox4.Controls[i].Enabled = true;
+				}
+                else
+                {
+					this.uiGroupBox4.Controls[i].Enabled = false;
+				}
+				
+            }
+
 			
 			Load_mat_type();
 		}
@@ -32,7 +54,7 @@ namespace Warehouse
 
 
 		
-
+		//在combotreeview中增加物料信息
 		public void Load_mat_type()
 		{
 			BLL.material_type material_ = new BLL.material_type();
@@ -51,6 +73,27 @@ namespace Warehouse
 			}
 		}
 
+		//加载仓库信息
+		public void Load_Storage_Info()
+        {
+			BLL.storage storage = new BLL.storage();
+			List<Model.storage> storages = storage.GetModelList("");
+
+			for (int i = 0; i < storages.Count; i++)
+			{
+				TreeNode tree = new TreeNode();
+				tree.Name = storages[i].storage_id.ToString();
+				tree.Text = storages[i].storage_name.ToString();
+				this.uiComboTreeView3.Nodes.Add(tree);
+			}
+
+			this.uiRadioButton1.Enabled = true;
+			this.uiRadioButton2.Enabled = true;
+			this.uiRadioButton2.Checked = true;
+			this.uiRadioButton1.Checked = false;
+
+		}
+
         private void uiComboTreeView1_NodeSelected(object sender, TreeNode node)
         {
             string id = node.Name;
@@ -60,6 +103,7 @@ namespace Warehouse
 			List<Model.material_info> material_ = new List<Model.material_info> ();
 			material_ = mat.GetModelList(Cha_xun);
 			this.uiComboTreeView2.Nodes.Clear();
+			
 			for (int i = 0; i < material_.Count; i++)
 			{
 				//string treenode = i + "hah";
@@ -96,6 +140,21 @@ namespace Warehouse
 			Amount = amount;
 			uiLedDisplay1.Text = amount + "个";
 
+			//查询在哪个库位
+			ArrayList kuweis_name = Select_Kuwei_Name(in_Storages);
+			for (int i = 0; i < kuweis_name.Count; i++)
+			{
+				UILedBulb uILed = new UILedBulb();
+				string text = kuweis_name[i].ToString();
+				//uILed.Name = storage[i].
+				UILabel label = new UILabel();
+				label.Text = text;
+			    uILed.Blink = true;
+				this.flowLayoutPanel3.Controls.Add(label);
+				this.flowLayoutPanel3.Controls.Add(uILed);
+
+			}
+
 			//查询在哪个仓库
 			string kuwei = in_Storages[0].sl_id;
 			string batch = in_Storages[0].enter_num;
@@ -126,29 +185,87 @@ namespace Warehouse
 
 			}
 
-			//查询这个物品在哪个仓库
+
+			//显示控件
+			this.uiComboTreeView3.Enabled = true;
+			//加载仓库数据
+			Load_Storage_Info();
 
 
 
-			
-
-		
-        }
 
 
+
+
+
+		}
+
+		/// <summary>
+		/// 通过库位编号查询仓库名
+		/// </summary>
+		/// <补充>
+		///		这里查询的库柜都是按照仓库_1(从1开始按顺序）命名，如果不按这个顺序则查询不到仓库
+		/// </补充>
+		/// <param name="kuwei">库位编号</param>
+		/// <returns></returns>
 		private string Which_storage(string kuwei)
         {
+
 			string Cha_xun1 = "sl_id = " + "\"" + kuwei.Trim() + "\"";
 			BLL.storagelocation storagelocation = new BLL.storagelocation();
 			List<Model.storagelocation> storagelocation1 = new List<Model.storagelocation>();
 			storagelocation1 = storagelocation.GetModelList(Cha_xun1);
 			string sl_belong_chest = storagelocation1[0].sl_belong_chest;
+			string sl_id = storagelocation1[0].sl_id;
 
-			int index = 0;
+
+
+            //库位
+            UILight light1 = new UILight();
+            Label label1 = new Label();
+            label1.Text = sl_belong_chest;
+            light1.State = UILightState.Blink;
+            this.flowLayoutPanel2.Controls.Add(label1);
+            this.flowLayoutPanel2.Controls.Add(light1);
+
+
+
+
+
+
+
+
+
+            int index = 0;
 			index = sl_belong_chest.LastIndexOf("_");
 			sl_belong_chest = sl_belong_chest.Substring(0, index);
 			return sl_belong_chest;
 		}
+
+		//查询不同的库位编号
+		public ArrayList Select_Kuwei_Name(List<Model.in_storage> in_Storages)
+        {
+			int count = in_Storages.Count;
+
+			ArrayList haha = new ArrayList();
+			
+		 
+			haha.Add(in_Storages[0].sl_id.ToString().Trim()) ;
+
+			for(int i =1; i<count; i++)
+            {
+				
+				if(haha.Contains(in_Storages[i].sl_id.ToString().Trim()) != true)
+                {
+					haha.Add(in_Storages[i].sl_id.ToString().Trim());
+                }
+				
+            }
+
+
+
+			return haha;
+        }
 
         private void uiTextBox1_TextChanged(object sender, EventArgs e)
         {
@@ -163,29 +280,30 @@ namespace Warehouse
         private void uiTextBox1_Validated(object sender, EventArgs e)
         {
 			
-			//else
-			//{
-			//	Model.in_storage in_Storage1 = new Model.in_storage();
-			//	BLL.in_storage in_Storage = new BLL.in_storage();
-			//	string Cha_xun = "mat_id = " + "\"" + Mat_id.Trim() + "\"";
-			//	in_Storage1 = in_Storage.GetModel(Cha_xun);
-			//	Console.ReadLine();
-			//}
-
-			decimal w = decimal.Parse(uiTextBox1.Text);
-            bool m = Warehouse.表单验证.formAuthentication.ShuZi_fanwei(uiTextBox1.Text);
-            if (m != true)
-            {
-                UIMessageBox.ShowWarning("输入范围须在1至999之间");
-
-            }
-            else
-            {
-				if (w > Amount)
+			if(uiTextBox1.Text != null)
+			{
+				decimal w = decimal.Parse(uiTextBox1.Text);
+				bool m = Warehouse.表单验证.formAuthentication.ShuZi_fanwei(uiTextBox1.Text);
+				if (m != true)
 				{
-					UIMessageBox.ShowWarning("填写数量超过当前库存数量");
+					UIMessageBox.ShowWarning("输入范围须在1至999之间");
+					uiTextBox1.Clear();
+				}
+				else
+				{
+					if (w > Amount)
+					{
+						UIMessageBox.ShowWarning("填写数量超过当前库存数量");
+						uiTextBox1.Clear();
+					}
 				}
 			}
+            else
+            {
+				UIMessageBox.ShowError("调拨数量不能为空");
+            }
+
+			
 
            
 
@@ -200,7 +318,127 @@ namespace Warehouse
         private void uiTextBox1_Validating(object sender, CancelEventArgs e)
         {
 		}
+
+        private void uiComboTreeView3_NodeSelected(object sender, TreeNode node)
+        {
+			this.uiComboTreeView4.Enabled = true;
+			string storage_id = node.Name.Trim();
+
+
+			//手动模式
+			if(uiRadioButton2.Checked != true)
+            {
+				this.uiComboTreeView4.Enabled = true;
+				this.uiComboTreeView5.Enabled = true;
+
+
+				BLL.chest chest = new BLL.chest();
+				List<Model.chest> chests = new List<Model.chest>();
+				string Cha_xun = " chest_belong_storage = " + "\"" + storage_id.Trim() + "\"";
+
+				chests = chest.GetModelList(Cha_xun);
+
+				
+				this.uiComboTreeView4.Nodes.Clear();
+				for(int i = 0; i<chests.Count; i++)
+                {
+					TreeNode treenode = new TreeNode();
+					treenode.Name = chests[i].chest_id;
+					treenode.Text = chests[i].chest_name;
+					this.uiComboTreeView4.Nodes.Add(treenode);
+                }
+
+
+			}
+            else
+            {
+				this.uiComboTreeView4.Enabled = false;
+				this.uiComboTreeView5.Enabled = false;
+
+				//第一步 查询哪个库柜还有剩余的库位(默认按着哪个库柜剩余库位最多给予分配)
+				//string chest_id =  Find_Remain_Seat(storage_id).Trim();
+				
+
+
+				//调用入库的代码
+
+			}
+
+
+        }
+
+		/// <summary>
+		/// 寻找当前房间库位最多的库柜
+		/// </summary>
+		/// <param name="storage_id"></param>
+		/// <returns></returns>
+		private string Find_Remain_Seat(string storage_id)
+        {
+			string chest_id;
+
+			BLL.chest chest = new BLL.chest();
+			List<Model.chest> chests = new List<Model.chest>();
+
+			string Cha_xun = " chest_belong_storage = " + "\"" + storage_id.Trim() + "\"";
+
+			chests = chest.GetModelList(Cha_xun);
+
+			int [] Pai_xu = new int[chests.Count];
+			for(int i =0; i<chests.Count; i++)
+            {
+				Pai_xu[i] = (int)chests[i].chest_remain_seat;
+            }
+			int the_max_value = Pai_xu.Max();
+
+			for (int m = 0; m < Pai_xu.Length; m++)
+			{
+				if (the_max_value == Pai_xu[m])
+                {
+					 chest_id = chests[m].chest_id;
+					return chest_id;
+				}
+                
+            }
+
+			return null;
+
+			
+        }
+
+        private void uiComboTreeView5_NodeSelected(object sender, TreeNode node)
+        {
+
+
+
+        }
+
+        private void uiComboTreeView4_NodeSelected(object sender, TreeNode node)
+        {
+			string kugui = node.Name;
+
+			BLL.storagelocation storagelocation = new BLL.storagelocation();
+			List<Model.storagelocation> locs = new List<Model.storagelocation>();
+		
+
+			string Cha_xun = "sl_belong_chest = " + "\"" + kugui.Trim() + "\"";
+			locs = storagelocation.GetModelList(Cha_xun);
+			this.uiComboTreeView5.Nodes.Clear();
+			for (int i = 0; i < locs.Count; i++)
+            {
+				TreeNode treeNode = new TreeNode();
+				treeNode.Text = locs[i].sl_id;
+				this.uiComboTreeView5.Nodes.Add(treeNode);
+            }
+
+
+				 
+        }
     }
 
+
+
 	
+
+
+
 }

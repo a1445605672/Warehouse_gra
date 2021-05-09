@@ -11,11 +11,11 @@ using System.Windows.Forms;
 using Warehouse.工具窗体;
 namespace Warehouse
 {
-    public partial class new_库柜管理 : UITitlePage
-    {
-        public new_库柜管理()
-        {
-            InitializeComponent();
+	public partial class new_库柜管理 : UITitlePage
+	{
+		public new_库柜管理()
+		{
+			InitializeComponent();
 			//给search控件赋值
 			search1.uiComboBox1.Items.Add("库柜ID");
 			search1.uiComboBox1.Items.Add("库柜名称");
@@ -31,6 +31,24 @@ namespace Warehouse
 			grid.AddColumn("库柜类型", "chest_type");
 			grid.AddColumn("库柜所属仓库", "chest_belong_storage");
 			grid.AddColumn("名称缩写", "chest_sx");
+
+			#region 添加修改，删除两个按钮
+			DataGridViewButtonColumn but = new DataGridViewButtonColumn();
+			but.HeaderText = "操作";  //设置列表头的名字
+			but.SetFixedMode(50);//设置按钮大小
+			but.Name = "UpDate";//设置按钮的名字
+
+			but.DefaultCellStyle.NullValue = "修改";
+			grid.Columns.Add(but);
+
+			DataGridViewButtonColumn but1 = new DataGridViewButtonColumn();
+			but1.HeaderText = "";
+			but1.SetFixedMode(50);
+			but1.Name = "Delete";
+			but1.DefaultCellStyle.NullValue = "删除";
+			grid.Columns.Add(but1);
+			#endregion
+
 			for (int i = 0; i < grid.ColumnCount; i++) { grid.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; }
 			AddRow();
 
@@ -70,7 +88,7 @@ namespace Warehouse
 			if (ku.IsOK)
 			{
 				BLL.chest sr_ = new BLL.chest();
-				bool m = sr_.Add(ku.chestModel);
+				bool m = sr_.Add(ku.ChestModel);
 				if (m == true)
 				{
 					UIMessageBox.ShowSuccess("新增成功");
@@ -85,6 +103,72 @@ namespace Warehouse
 		private void uiPagination1_PageChanged(object sender, object pagingSource, int pageIndex, int count)
 		{
 			grid.DataSource = pagingSource;
+		}
+
+		private void grid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			//更新
+			if (grid.Columns[e.ColumnIndex].Name == "UpDate" && e.RowIndex >= 0)
+			{
+				//获得选择的行
+				int rowIndex = e.RowIndex;
+				string id = grid.CurrentRow.Cells[2].Value.ToString();
+				Model.chest sta = new Model.chest();
+				sta.chest_id = id;
+				//弹出对话框
+				kugui gui = new kugui();
+				bool m = gui.FuZhi(id);
+				if (m != true)
+				{
+					UIMessageBox.ShowWarning("错误", true);
+				}
+				else
+				{
+					gui.ShowDialog();
+				}
+				if (gui.IsOK)
+				{
+					BLL.chest bllchest = new BLL.chest();
+					bool k = bllchest.Update(gui.ChestModel);
+					//更改成功
+					if (k)
+					{
+						ShowSuccessDialog("更改成功");
+
+					}
+					//更改失败
+					else
+					{
+						UIMessageBox.ShowError("编辑失败");
+					}
+				}
+				else
+				{
+					UIMessageBox.ShowError("编辑失败");
+				}
+			}
+			//删除
+			if (grid.Columns[e.ColumnIndex].Name == "Delete" && e.RowIndex >= 0)
+			{
+				if (ShowAskDialog("此操作不可恢复。是否确认删除?"))
+				{
+					foreach (DataGridViewRow row in grid.SelectedRows)
+					{
+						string m = row.Cells[0].Value.ToString().Trim();
+						BLL.chest bllstorage = new BLL.chest();
+						bool die = bllstorage.Delete(m);
+						if (die)
+						{
+							ShowSuccessDialog("删除成功");
+							AddRow();
+						}
+						else
+						{
+							ShowErrorDialog("删除失败");
+						}
+					}
+				}
+			}
 		}
 	}
 }

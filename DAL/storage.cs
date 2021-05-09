@@ -49,9 +49,42 @@ namespace DAL
 					new MySqlParameter("@storage_remain_seat", MySqlDbType.Int32,32),
 					new MySqlParameter("@storage_comment", MySqlDbType.VarChar,255),
 					new MySqlParameter("@storage_sx", MySqlDbType.VarChar,64)};
+            //创建出ID
+            //房间编号的生成
+            
+            //从数据库中查询对应几条数据，那么下一次的记录直接加1
+            //int num = GetRecordCount("1=1");
+            //num自加一次
+            //num += 1;
+            //房间根据面积分为 A B C 三个等级
+            // levelA 0-20 平方米
+            // levelB 20-40平方米
+            // levelC >=40平方米
+            //int RoomAreaNum = Convert.ToInt32(model.storage_area);
+            //LevelA
+            //if (0 <= RoomAreaNum && RoomAreaNum <= 20)
+            //{
+            //    model.storage_id = "A" + num + "";
+            //}
+            ////levelB
+            //if (20 <= RoomAreaNum && RoomAreaNum <= 40)
+            //{
+            //    model.storage_id = "B" + num + "";
+            //}
+            ////levelC
+            //else
+            //{
+            //    model.storage_id = "C" + num + "";
+            //}
+
+
+
             parameters[0].Value = model.storage_id;
             parameters[1].Value = model.storage_name;
+            //创建时间为当前
+            //model.storage_create_time = DateTime.Now;
             parameters[2].Value = model.storage_create_time;
+
             parameters[3].Value = model.storage_area;
             parameters[4].Value = model.storage_remain_chest;
             parameters[5].Value = model.storage_remain_seat;
@@ -267,7 +300,7 @@ namespace DAL
             {
                 strSql.Append(" where " + strWhere);
             }
-            object obj = DbHelperSQL.GetSingle(strSql.ToString());
+            object obj = DbHelperMySQL.GetSingle(strSql.ToString());
             if (obj == null)
             {
                 return 0;

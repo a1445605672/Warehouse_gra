@@ -125,7 +125,7 @@ namespace Warehouse
             this.SearchBox.MinimumSize = new System.Drawing.Size(1, 1);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Padding = new System.Windows.Forms.Padding(5);
-            this.SearchBox.Size = new System.Drawing.Size(519, 34);
+            this.SearchBox.Size = new System.Drawing.Size(519, 39);
             this.SearchBox.TabIndex = 0;
             // 
             // uiComboBox1
@@ -141,7 +141,7 @@ namespace Warehouse
             this.uiComboBox1.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboBox1.Name = "uiComboBox1";
             this.uiComboBox1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboBox1.Size = new System.Drawing.Size(132, 34);
+            this.uiComboBox1.Size = new System.Drawing.Size(132, 39);
             this.uiComboBox1.TabIndex = 27;
             this.uiComboBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -200,26 +200,26 @@ namespace Warehouse
             this.MenuItem_delete,
             this.MenuItem_update});
             this.uiContextMenuStrip1.Name = "uiContextMenuStrip1";
-            this.uiContextMenuStrip1.Size = new System.Drawing.Size(125, 100);
+            this.uiContextMenuStrip1.Size = new System.Drawing.Size(137, 118);
             // 
             // MenuItem_Add
             // 
             this.MenuItem_Add.Name = "MenuItem_Add";
-            this.MenuItem_Add.Size = new System.Drawing.Size(124, 32);
+            this.MenuItem_Add.Size = new System.Drawing.Size(136, 38);
             this.MenuItem_Add.Text = "添加";
             this.MenuItem_Add.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // MenuItem_delete
             // 
             this.MenuItem_delete.Name = "MenuItem_delete";
-            this.MenuItem_delete.Size = new System.Drawing.Size(124, 32);
+            this.MenuItem_delete.Size = new System.Drawing.Size(136, 38);
             this.MenuItem_delete.Text = "删除";
             this.MenuItem_delete.Click += new System.EventHandler(this.MenuItem_delete_Click);
             // 
             // MenuItem_update
             // 
             this.MenuItem_update.Name = "MenuItem_update";
-            this.MenuItem_update.Size = new System.Drawing.Size(124, 32);
+            this.MenuItem_update.Size = new System.Drawing.Size(136, 38);
             this.MenuItem_update.Text = "编辑";
             this.MenuItem_update.Click += new System.EventHandler(this.MenuItem_update_Click);
             // 
@@ -257,7 +257,7 @@ namespace Warehouse
             // 
             // 用户管理
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(928, 450);
             this.Controls.Add(this.tableLayoutPanel2);

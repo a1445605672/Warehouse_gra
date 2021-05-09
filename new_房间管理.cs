@@ -23,19 +23,20 @@ namespace Warehouse
 			search1.uiComboBox1.SelectedIndex = 0;
 			grid.ClearAll();
 			//窗体初始化绑定数据
-			grid.AddColumn("仓库id", "storage_id");
-			grid.AddColumn("仓库名", "storage_name");
-			grid.AddColumn("仓库创建时间", "storage_create_time");
-			grid.AddColumn("仓库面积大小", "storage_area");
-			grid.AddColumn("仓库剩余库柜数", "storage_remain_chest");
-			grid.AddColumn("仓库剩余库位", "storage_remain_seat");
-			grid.AddColumn("仓库备注信息", "storage_comment");
+			grid.AddColumn("房间ID", "storage_id");
+			grid.AddColumn("房间名称", "storage_name");
+			grid.AddColumn("房间创建时间", "storage_create_time");
+			grid.AddColumn("房间面积大小", "storage_area");
+			grid.AddColumn("房间剩余库柜数", "storage_remain_chest");
+			grid.AddColumn("房间剩余库位", "storage_remain_seat");
+			grid.AddColumn("房间备注信息", "storage_comment");
 			grid.AddColumn("缩写", "storage_sx");
 			#region 添加修改，删除两个按钮
 			DataGridViewButtonColumn but = new DataGridViewButtonColumn();
 			but.HeaderText = "操作";  //设置列表头的名字
 			but.SetFixedMode(50);//设置按钮大小
 			but.Name = "UpDate";//设置按钮的名字
+			
 			but.DefaultCellStyle.NullValue = "修改";
 			grid.Columns.Add(but);
 
@@ -86,7 +87,7 @@ namespace Warehouse
 			if (room.IsOK)
 			{
 				BLL.storage sr_ = new BLL.storage();
-				bool m = sr_.Add(room.storageModel);
+				bool m = sr_.Add(room.StorageModel);
 				if (m == true)
 				{
 					UIMessageBox.ShowSuccess("新增成功");

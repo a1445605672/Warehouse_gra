@@ -56,12 +56,12 @@ namespace Warehouse
 		private void Addcolumns()
 		{
 			uiDataGridView1.ClearAll();
-			uiDataGridView1.AddColumn("编号", "log_num").SetFixedMode(80);
-			uiDataGridView1.AddColumn("类型", "log_type").SetFixedMode(60);
+			uiDataGridView1.AddColumn("编 号", "log_num").SetFixedMode(80);
+			uiDataGridView1.AddColumn("类 型", "log_type").SetFixedMode(60);
 			uiDataGridView1.AddColumn("入库编号", "enter_num").SetFixedMode(110);
-			uiDataGridView1.AddColumn("描述", "log_describe").SetFixedMode(370);
-			uiDataGridView1.AddColumn("时间", "log_time").SetFixedMode(110);
-			uiDataGridView1.AddColumn("页面", "page").SetFixedMode(90);
+			uiDataGridView1.AddColumn("描 述", "log_describe").SetFixedMode(370);
+			uiDataGridView1.AddColumn("时 间", "log_time").SetFixedMode(110);
+			uiDataGridView1.AddColumn("模 块", "page").SetFixedMode(90);
 			uiDataGridView1.AddColumn("用户名", "staff_id").SetFixedMode(90);
 			uiDataGridView1.ReadOnly = true;
 		}
@@ -139,7 +139,7 @@ namespace Warehouse
 			KeyValuePair<string, string> keyValuePair3 = new KeyValuePair<string, string>("enter_num", "入库编号"); 
 			KeyValuePair<string, string> keyValuePair4 = new KeyValuePair<string, string>("log_describe", "描述");
 			KeyValuePair<string, string> keyValuePair5 = new KeyValuePair<string, string>("log_time", "时间");
-			KeyValuePair<string, string> keyValuePair6 = new KeyValuePair<string, string>("page", "页面");
+			KeyValuePair<string, string> keyValuePair6 = new KeyValuePair<string, string>("page", "模块");
 			KeyValuePair<string, string> keyValuePair7 = new KeyValuePair<string, string>("staff_id", "用户名");
 			listName.Add(keyValuePair1);
 			listName.Add(keyValuePair2);
@@ -152,7 +152,12 @@ namespace Warehouse
 			MessageBox.Show("导出成功");
 		}
 
-		
+		private void deleteButton_Click(object sender, EventArgs e)
+		{
+			DialogFrm dialog = new DialogFrm();
+			dialog.TopLevel = true;
+			dialog.ShowDialog();
+		}
 	}
 
 

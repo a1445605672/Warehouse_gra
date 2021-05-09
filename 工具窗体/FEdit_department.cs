@@ -133,12 +133,14 @@ namespace Warehouse.工具窗体
                 
                 department.dep_principal_id = staff.staff_id.Trim();
 
-                //查询数据表内数据行数
-                BLL.department dep = new BLL.department();
-                int amount = dep.Count_data("");
+                ////查询数据表内数据行数
+                //BLL.department dep = new BLL.department();
+                //int amount = dep.Count_data("");
+                Warehouse.工具窗体.Suo_xie suo_Xie = new Warehouse.工具窗体.Suo_xie();
+                string id_name = suo_Xie.GetPYString(name_box.Text.Trim());
 
                 //定义部门id
-                department.dep_id = "D_" + (amount+1).ToString().Trim();
+                department.dep_id = "D_" + id_name.Trim();
 
 
                 return department;

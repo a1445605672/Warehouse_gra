@@ -29,11 +29,11 @@ namespace Warehouse
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.uiPagination1 = new Sunny.UI.UIPagination();
 			this.uiDataGridView1 = new Sunny.UI.UIDataGridView();
 			this.uiLabel1 = new Sunny.UI.UILabel();
@@ -48,12 +48,14 @@ namespace Warehouse
 			this.page = new Sunny.UI.UIComboBox();
 			this.uiLabel6 = new Sunny.UI.UILabel();
 			this.deriveButton = new Sunny.UI.UIButton();
+			this.deleteButton = new Sunny.UI.UIButton();
 			this.PagePanel.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.uiDataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// PagePanel
 			// 
+			this.PagePanel.Controls.Add(this.deleteButton);
 			this.PagePanel.Controls.Add(this.deriveButton);
 			this.PagePanel.Controls.Add(this.enter_num);
 			this.PagePanel.Controls.Add(this.logDate);
@@ -93,27 +95,27 @@ namespace Warehouse
 			// 
 			this.uiDataGridView1.AllowUserToAddRows = false;
 			this.uiDataGridView1.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-			this.uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+			this.uiDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
 			this.uiDataGridView1.BackgroundColor = System.Drawing.Color.White;
 			this.uiDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 12F);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+			dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 12F);
+			dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
 			this.uiDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 12F);
-			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.uiDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 12F);
+			dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+			dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(200)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+			dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.uiDataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
 			this.uiDataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.uiDataGridView1.EnableHeadersVisualStyles = false;
 			this.uiDataGridView1.Font = new System.Drawing.Font("微软雅黑", 12F);
@@ -123,16 +125,16 @@ namespace Warehouse
 			this.uiDataGridView1.MultiSelect = false;
 			this.uiDataGridView1.Name = "uiDataGridView1";
 			this.uiDataGridView1.ReadOnly = true;
-			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 12F);
-			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.uiDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-			dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-			this.uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(243)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle9.Font = new System.Drawing.Font("微软雅黑", 12F);
+			dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+			dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.uiDataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+			dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+			this.uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle10;
 			this.uiDataGridView1.RowTemplate.Height = 29;
 			this.uiDataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
 			this.uiDataGridView1.SelectedIndex = -1;
@@ -158,7 +160,7 @@ namespace Warehouse
 			this.logType.Items.AddRange(new object[] {
             "",
             "查看",
-            "插入",
+            "添加",
             "删除",
             "修改",
             "出库",
@@ -178,7 +180,7 @@ namespace Warehouse
 			// 
 			this.logSearchButton.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.logSearchButton.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.logSearchButton.Location = new System.Drawing.Point(686, 17);
+			this.logSearchButton.Location = new System.Drawing.Point(714, 44);
 			this.logSearchButton.MinimumSize = new System.Drawing.Size(1, 1);
 			this.logSearchButton.Name = "logSearchButton";
 			this.logSearchButton.Radius = 35;
@@ -204,9 +206,9 @@ namespace Warehouse
 			this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiLabel3.Location = new System.Drawing.Point(459, 9);
 			this.uiLabel3.Name = "uiLabel3";
-			this.uiLabel3.Size = new System.Drawing.Size(58, 21);
+			this.uiLabel3.Size = new System.Drawing.Size(74, 21);
 			this.uiLabel3.TabIndex = 60;
-			this.uiLabel3.Text = "操作员";
+			this.uiLabel3.Text = "操作员：";
 			this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// staffId
@@ -311,7 +313,7 @@ namespace Warehouse
 			this.page.Size = new System.Drawing.Size(150, 29);
 			this.page.TabIndex = 64;
 			this.page.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-			this.page.Watermark = "请选择页面";
+			this.page.Watermark = "请选择模块";
 			// 
 			// uiLabel6
 			// 
@@ -321,21 +323,44 @@ namespace Warehouse
 			this.uiLabel6.Name = "uiLabel6";
 			this.uiLabel6.Size = new System.Drawing.Size(63, 21);
 			this.uiLabel6.TabIndex = 63;
-			this.uiLabel6.Text = "页 面：";
+			this.uiLabel6.Text = "模 块：";
 			this.uiLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// deriveButton
 			// 
 			this.deriveButton.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.deriveButton.Font = new System.Drawing.Font("微软雅黑", 12F);
-			this.deriveButton.Location = new System.Drawing.Point(817, 17);
+			this.deriveButton.Location = new System.Drawing.Point(714, 3);
 			this.deriveButton.MinimumSize = new System.Drawing.Size(1, 1);
 			this.deriveButton.Name = "deriveButton";
 			this.deriveButton.Radius = 35;
 			this.deriveButton.Size = new System.Drawing.Size(100, 35);
 			this.deriveButton.TabIndex = 69;
-			this.deriveButton.Text = "导出";
+			this.deriveButton.Text = "导 出";
 			this.deriveButton.Click += new System.EventHandler(this.deriveButton_Click);
+			// 
+			// deleteButton
+			// 
+			this.deleteButton.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.deleteButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+			this.deleteButton.FillHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(127)))), ((int)(((byte)(128)))));
+			this.deleteButton.FillPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(87)))), ((int)(((byte)(89)))));
+			this.deleteButton.FillSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(87)))), ((int)(((byte)(89)))));
+			this.deleteButton.Font = new System.Drawing.Font("微软雅黑", 12F);
+			this.deleteButton.Location = new System.Drawing.Point(838, 17);
+			this.deleteButton.MinimumSize = new System.Drawing.Size(1, 1);
+			this.deleteButton.Name = "deleteButton";
+			this.deleteButton.Radius = 35;
+			this.deleteButton.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+			this.deleteButton.RectHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(127)))), ((int)(((byte)(128)))));
+			this.deleteButton.RectPressColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(87)))), ((int)(((byte)(89)))));
+			this.deleteButton.RectSelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(87)))), ((int)(((byte)(89)))));
+			this.deleteButton.Size = new System.Drawing.Size(100, 35);
+			this.deleteButton.Style = Sunny.UI.UIStyle.Red;
+			this.deleteButton.StyleCustomMode = true;
+			this.deleteButton.TabIndex = 71;
+			this.deleteButton.Text = "删 除";
+			this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
 			// 
 			// 系统日志
 			// 
@@ -368,5 +393,6 @@ namespace Warehouse
 		private Sunny.UI.UIComboBox page;
 		private Sunny.UI.UILabel uiLabel6;
 		private Sunny.UI.UIButton deriveButton;
+		private Sunny.UI.UIButton deleteButton;
 	}
 }
