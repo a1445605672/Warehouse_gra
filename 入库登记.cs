@@ -418,13 +418,9 @@ namespace Warehouse
 		/// </summary>
 		/// <param name="materiaName">物品名称</param>
 		/// <param name="inStorageNumber">入库量</param>
-<<<<<<< HEAD
 		/// <returns>库位字符串</returns>
-		private string storageLocation(string materiaName, string inStorageNumber)
-=======
 		/// <returns></returns>
 		public string storageLocation(string materiaName, string inStorageNumber)
->>>>>>> 2f8236c60e6de7946bb5cc8570d92b65efd01889
 		{
 			inStorageList.Clear();
 
@@ -537,13 +533,9 @@ namespace Warehouse
 		/// </summary>
 		/// <param name="storage">Model.enter_storage</param>
 		/// <param name="in_Storage">Model.in_storage in_Storage</param>
-<<<<<<< HEAD
 		/// <param name="inStorageList">库位列表，需要查询出入库的库位大小和枯萎编号</param>
 		public Boolean inStorageEvent(Model.enter_storage storage, Model.in_storage in_Storage, List<KeyValuePair<string, double>> inStorageList)
-=======
-		/// <param name="inStorageList">库位列表，需要查询出入库的库位大小和库位编号</param>
-		public void inStorageEvent(Model.enter_storage storage, Model.in_storage in_Storage, List<KeyValuePair<string, double>> inStorageList)
->>>>>>> 2f8236c60e6de7946bb5cc8570d92b65efd01889
+
 		{
 			double inStorageAmount = 0;
 			if (inStorageList.Count > 1)
@@ -666,7 +658,58 @@ namespace Warehouse
 
 		private void 批量入库ToolStripMenuItem_Click(object sender, EventArgs e)
 		{
+			OpenFileDialog openFileDialog = new OpenFileDialog();
+			openFileDialog.Multiselect = true;
+			openFileDialog.Title = "选择文件夹";
+			openFileDialog.Filter = "Excel文件(*.xlsx)|*.xlsx";
+			if(openFileDialog.ShowDialog()==System.Windows.Forms.DialogResult.OK)
+			{
+				String filepath = openFileDialog.FileName;
+				/**
+				 * 第一个参数代表完整的路径，第二个参数代表工作表名，第三个参数表示正文从第几行开始
+				 **/
+				DataTable dataTable= ExcelHelp.ImportFromExcel(filepath, "Sheet1", 0);
+				for(int i=0;i<dataTable.Rows.Count;i++)
+				{
+					Model.enter_storage storage1 = new Model.enter_storage();
+					storage1.enter_id=dataTable.Rows[i][0].ToString();
+					storage1.enter_batch_id=dataTable.Rows[i][1].ToString();
+					storage1.enter_sl_id= dataTable.Rows[i][2].ToString();
+					storage1.enter_amount= dataTable.Rows[i][3].ToString();
+					storage1.enter_unit_bulk=dataTable.Rows[i][4].ToString() ;
+					storage1.supplier_id=dataTable.Rows[i][6].ToString() ;
+					storage1.enter_mat_id=dataTable.Rows[i][7].ToString() ;
+					storage1.enter_mat_name=dataTable.Rows[i][8].ToString() ;
+					storage1.enter_fengji_num = "";
+					string[] date = dataTable.Rows[i][10].ToString().Split("-");
+					string datatime = date[2]+"-" + date[1].Substring(0, 1)+"-"+date[0];
+					storage1.enter_date=datatime;
+					storage1.enter_agent_id=dataTable.Rows[i][11].ToString();
+					storage1.enter_agent_name=dataTable.Rows[i][12].ToString();
+					storage1.enter_comment = dataTable.Rows[i][13].ToString();
 
+					Model.in_storage in_Storage1 = new Model.in_storage();
+					
+
+					in_Storage1.mat_id = storage1.enter_mat_id;//物料ID
+					in_Storage1.mat_name = storage1.enter_mat_name;//物料名称
+					
+					in_Storage1.in_time = Convert.ToDateTime(storage1.enter_date);//入库时间
+					in_Storage1.in_weight = Convert.ToDecimal(dataTable.Rows[i][5].ToString());
+					in_Storage1.in_volume = Convert.ToDecimal(storage1.enter_unit_bulk);
+					in_Storage1.enter_num = storage1.enter_id;//入库ID
+					in_Storage1.sl_id = storage1.enter_sl_id;//库位编号
+					in_Storage1.in_amount = Convert.ToDecimal(storage.enter_amount);
+
+					List<KeyValuePair<string, double>> inStorageList1 = new List<KeyValuePair<string, double>>();
+					
+					String Sql= "SELECT sl_remain_bulk FROM storagelocation WHERE  sl_id=\'"+ storage1.enter_sl_id + "\'";
+				DataSet ds=enterStoeage.getDataList(Sql);
+					inStorageList1.Add(new KeyValuePair<string, double>(storage1.enter_sl_id, Convert.ToDouble(ds.Tables[0].Rows[0][0])));
+					inStorageEvent(storage1, in_Storage1, inStorageList1);
+				}
+			}
+			ShowSuccessDialog("入库已完成，请及时查看");
 		}
 	}
 

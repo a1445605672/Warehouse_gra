@@ -67,10 +67,10 @@ E:\git版本\Warehouse_gra\obj\Debug\Warehouse.csproj.CoreCompileInputs.cache
 E:\git版本\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyComplete
 E:\git版本\Warehouse_gra\obj\Debug\Warehouse.exe
 E:\git版本\Warehouse_gra\obj\Debug\Warehouse.pdb
-<<<<<<< HEAD
+
 E:\git版本\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FEdit_department.resources
 E:\git版本\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FEdit_sr.resources
-=======
+
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.csprojAssemblyReference.cache
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.FLogin.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.FMain.resources
@@ -143,4 +143,4 @@ C:\Users\kui\Desktop\Warehouse_gra\bin\Debug\Newtonsoft.Json.xml
 C:\Users\kui\Desktop\Warehouse_gra\bin\Debug\DAL.pdb
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyComplete
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.new_出库汇总.resources
->>>>>>> d67066bc52faa7cbb4d31beb281a1eaaca726f7f
+
