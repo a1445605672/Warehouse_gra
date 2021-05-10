@@ -21,49 +21,88 @@ namespace Warehouse
 			InitializeComponent();
 			TreeNode parent = Aside.CreateNode("首页", 61461, 24, 1);
 			int pageIndex = 1000;
-			TreeNode BasicInform = Aside.CreateNode("基础信息", 61686, 24, pageIndex);
-			Aside.CreateChildNode(BasicInform, 61852, 24, "房间管理", ++pageIndex);
-			Aside.CreateChildNode(BasicInform, 57484, 24, "库柜管理", ++pageIndex);
-			Aside.CreateChildNode(BasicInform, 61517, 24, "库位管理", ++pageIndex);
-			Aside.CreateChildNode(BasicInform, 61861, 24, "库位类型管理", ++pageIndex);
-			Aside.CreateChildNode(BasicInform, 61497, 24, "物料信息管理", ++pageIndex);
-			Aside.CreateChildNode(BasicInform, 61495, 24, "物料类别管理", ++pageIndex);
-			Aside.CreateChildNode(BasicInform, 57583, 24, "部门管理", ++pageIndex);
-			Aside.CreateChildNode(BasicInform, 61632, 24, "部门人员管理", ++pageIndex);
-			Aside.CreateChildNode(BasicInform, 61975, 24, "供收货商管理", ++pageIndex);
-			Aside.CreateChildNode(BasicInform, 61976, 24, "调拨计划管理", ++pageIndex);
+
+			//string quan = Quan_xian();
+			string quan = "1";
+
+			if(quan == "1")
+            {
+				TreeNode BasicInform = Aside.CreateNode("基础信息", 61686, 24, pageIndex);
+				Aside.CreateChildNode(BasicInform, 61852, 24, "房间管理", ++pageIndex);
+				Aside.CreateChildNode(BasicInform, 57484, 24, "库柜管理", ++pageIndex);
+				Aside.CreateChildNode(BasicInform, 61517, 24, "库位管理", ++pageIndex);
+				Aside.CreateChildNode(BasicInform, 61861, 24, "库位类型管理", ++pageIndex);
+				Aside.CreateChildNode(BasicInform, 61497, 24, "物料信息管理", ++pageIndex);
+				Aside.CreateChildNode(BasicInform, 61495, 24, "物料类别管理", ++pageIndex);
+				Aside.CreateChildNode(BasicInform, 57583, 24, "部门管理", ++pageIndex);
+				Aside.CreateChildNode(BasicInform, 61632, 24, "采购退货管理", ++pageIndex);
+				Aside.CreateChildNode(BasicInform, 61975, 24, "供收货商管理", ++pageIndex);
+				Aside.CreateChildNode(BasicInform, 61976, 24, "调拨计划管理", ++pageIndex);
 
 
-			pageIndex = 2000;
-			TreeNode SystemManagment = Aside.CreateNode("系统管理", 61573, 24, pageIndex);
-			Aside.CreateChildNode(SystemManagment, 61888, 24, "数据备份", ++pageIndex);
-			Aside.CreateChildNode(SystemManagment, 108, 24, "系统日志", ++pageIndex);
-			Aside.CreateChildNode(SystemManagment, 57483, 24, "用户管理", ++pageIndex);
-			Aside.CreateChildNode(SystemManagment, 62004, 24, "用户注册", ++pageIndex);
+				pageIndex = 2000;
+				TreeNode SystemManagment = Aside.CreateNode("系统管理", 61573, 24, pageIndex);
+				Aside.CreateChildNode(SystemManagment, 61888, 24, "数据备份", ++pageIndex);
+				Aside.CreateChildNode(SystemManagment, 108, 24, "系统日志", ++pageIndex);
+				Aside.CreateChildNode(SystemManagment, 57483, 24, "用户管理", ++pageIndex);
+				Aside.CreateChildNode(SystemManagment, 62004, 24, "用户注册", ++pageIndex);
 
 
-			pageIndex = 3000;
-			TreeNode OutIntWarehouse = Aside.CreateNode("出入库管理", 61451, 24, pageIndex);
-			Aside.CreateChildNode(OutIntWarehouse, 57489, 24, "入库登记", ++pageIndex);
-			Aside.CreateChildNode(OutIntWarehouse, 57490, 24, "出库登记", ++pageIndex);
-			Aside.CreateChildNode(OutIntWarehouse, 61526, 24, "未完成出库", ++pageIndex);
-			Aside.CreateChildNode(OutIntWarehouse, 61766, 24, "未完成入库", ++pageIndex);
-			Aside.CreateChildNode(OutIntWarehouse, 61760, 24, "物料盘点", ++pageIndex);
-			Aside.CreateChildNode(OutIntWarehouse, 61760, 24, "库存控制", ++pageIndex);
+				pageIndex = 3000;
+				TreeNode OutIntWarehouse = Aside.CreateNode("出入库管理", 61451, 24, pageIndex);
+				Aside.CreateChildNode(OutIntWarehouse, 57489, 24, "入库登记", ++pageIndex);
+				Aside.CreateChildNode(OutIntWarehouse, 57490, 24, "出库登记", ++pageIndex);
+				Aside.CreateChildNode(OutIntWarehouse, 61526, 24, "未完成出库", ++pageIndex);
+				Aside.CreateChildNode(OutIntWarehouse, 61766, 24, "未完成入库", ++pageIndex);
+				Aside.CreateChildNode(OutIntWarehouse, 61760, 24, "物料盘点", ++pageIndex);
+				Aside.CreateChildNode(OutIntWarehouse, 61760, 24, "库存控制", ++pageIndex);
 
-			pageIndex = 4000;
-			TreeNode StatisticalStatementBut = Aside.CreateNode("统计报表", 61950, 24, pageIndex);
-			Aside.CreateChildNode(StatisticalStatementBut, 62029, 24, "入库汇总", ++pageIndex);
-			Aside.CreateChildNode(StatisticalStatementBut, 62059, 24, "出库汇总", ++pageIndex);
-			Aside.CreateChildNode(StatisticalStatementBut, 61665, 24, "在库汇总", ++pageIndex);
-			Aside.CreateChildNode(StatisticalStatementBut, 61932, 24, "出库日报", ++pageIndex);
-			Aside.CreateChildNode(StatisticalStatementBut, 61555, 24, "入库日报", ++pageIndex);
-			Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "综合统计分析", ++pageIndex);
-			Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "在库柱状图", ++pageIndex);
-			Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "在库饼状图", ++pageIndex);
-			Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "入库折线图", ++pageIndex);
-			Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "出库动图", ++pageIndex);
-			Aside.SelectFirst();
+				pageIndex = 4000;
+				TreeNode StatisticalStatementBut = Aside.CreateNode("统计报表", 61950, 24, pageIndex);
+				Aside.CreateChildNode(StatisticalStatementBut, 62029, 24, "入库汇总", ++pageIndex);
+				Aside.CreateChildNode(StatisticalStatementBut, 62059, 24, "出库汇总", ++pageIndex);
+				Aside.CreateChildNode(StatisticalStatementBut, 61665, 24, "在库汇总", ++pageIndex);
+				Aside.CreateChildNode(StatisticalStatementBut, 61932, 24, "出库日报", ++pageIndex);
+				Aside.CreateChildNode(StatisticalStatementBut, 61555, 24, "入库日报", ++pageIndex);
+				Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "综合统计分析", ++pageIndex);
+				Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "在库柱状图", ++pageIndex);
+				Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "在库饼状图", ++pageIndex);
+				Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "入库折线图", ++pageIndex);
+				Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "出库动图", ++pageIndex);
+
+				Aside.SelectFirst();
+			}
+			if(quan == "2")
+            {
+				pageIndex = 3000;
+				TreeNode OutIntWarehouse = Aside.CreateNode("出入库管理", 61451, 24, pageIndex);
+				Aside.CreateChildNode(OutIntWarehouse, 57489, 24, "入库登记", ++pageIndex);
+				Aside.CreateChildNode(OutIntWarehouse, 57490, 24, "出库登记", ++pageIndex);
+				Aside.CreateChildNode(OutIntWarehouse, 61526, 24, "未完成出库", ++pageIndex);
+				Aside.CreateChildNode(OutIntWarehouse, 61766, 24, "未完成入库", ++pageIndex);
+				Aside.CreateChildNode(OutIntWarehouse, 61760, 24, "物料盘点", ++pageIndex);
+				Aside.CreateChildNode(OutIntWarehouse, 61760, 24, "库存控制", ++pageIndex);
+				Aside.SelectFirst();
+			}
+            else
+            {
+				pageIndex = 4000;
+				TreeNode StatisticalStatementBut = Aside.CreateNode("统计报表", 61950, 24, pageIndex);
+				Aside.CreateChildNode(StatisticalStatementBut, 62029, 24, "入库汇总", ++pageIndex);
+				Aside.CreateChildNode(StatisticalStatementBut, 62059, 24, "出库汇总", ++pageIndex);
+				Aside.CreateChildNode(StatisticalStatementBut, 61665, 24, "在库汇总", ++pageIndex);
+				Aside.CreateChildNode(StatisticalStatementBut, 61932, 24, "出库日报", ++pageIndex);
+				Aside.CreateChildNode(StatisticalStatementBut, 61555, 24, "入库日报", ++pageIndex);
+				Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "综合统计分析", ++pageIndex);
+				Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "在库柱状图", ++pageIndex);
+				Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "在库饼状图", ++pageIndex);
+				Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "入库折线图", ++pageIndex);
+				Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "出库动图", ++pageIndex);
+
+				Aside.SelectFirst();
+			}
+
+
 		}
 
 		private void Aside_MenuItemClick(TreeNode node, NavMenuItem item, int pageIndex)
@@ -147,9 +186,9 @@ namespace Warehouse
 					LoadMdiForm(MainTabControl, text, typeof(部门管理));
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "部门管理", "进入部门管理页面", "");
 					break;
-				case "部门人员管理":
+				case "采购退货管理":
 					LoadMdiForm(MainTabControl, text, typeof(部门人员管理));
-					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "部门人员管理", "进入部门人员管理页面", "");
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "采购退货管理", "进入采购退货管理页面", "");
 					break;
 				case "供收货商管理":
 					LoadMdiForm(MainTabControl, text, typeof(供应商管理));
@@ -254,5 +293,15 @@ namespace Warehouse
 		{
 			userName.Text = Session.staffName;
 		}
+
+		private string Quan_xian()
+        {
+			BLL.staff staff = new BLL.staff();
+			Model.staff staff1 = new Model.staff();
+
+			staff1 = staff.GetModel(Session.staffId);
+			string quan_xian = staff1.staff_sx;
+			return quan_xian;
+        }
 	}
 }
