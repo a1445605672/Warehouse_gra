@@ -92,3 +92,15 @@ E:\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 E:\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CopyComplete
 E:\Warehouse_gra\DAL\obj\Debug\DAL.dll
 E:\Warehouse_gra\DAL\obj\Debug\DAL.pdb
+C:\Users\kui\Desktop\最新\Warehouse_gra\DAL\bin\Debug\DAL.dll
+C:\Users\kui\Desktop\最新\Warehouse_gra\DAL\bin\Debug\DAL.pdb
+C:\Users\kui\Desktop\最新\Warehouse_gra\DAL\bin\Debug\DBUtility.dll
+C:\Users\kui\Desktop\最新\Warehouse_gra\DAL\bin\Debug\Model.dll
+C:\Users\kui\Desktop\最新\Warehouse_gra\DAL\bin\Debug\MySql.Data.dll
+C:\Users\kui\Desktop\最新\Warehouse_gra\DAL\bin\Debug\DBUtility.pdb
+C:\Users\kui\Desktop\最新\Warehouse_gra\DAL\bin\Debug\Model.pdb
+C:\Users\kui\Desktop\最新\Warehouse_gra\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\kui\Desktop\最新\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\kui\Desktop\最新\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\kui\Desktop\最新\Warehouse_gra\DAL\obj\Debug\DAL.dll
+C:\Users\kui\Desktop\最新\Warehouse_gra\DAL\obj\Debug\DAL.pdb
