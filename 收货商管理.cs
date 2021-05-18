@@ -437,6 +437,16 @@ namespace Warehouse
 
 				 
         }
+		//调拨
+        private void uiButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+		//取消
+        private void uiButton3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

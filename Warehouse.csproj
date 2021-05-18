@@ -384,6 +384,12 @@
     <Compile Include="用户管理.Designer.cs">
       <DependentUpon>用户管理.cs</DependentUpon>
     </Compile>
+    <Compile Include="端口设置.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="端口设置.Designer.cs">
+      <DependentUpon>端口设置.cs</DependentUpon>
+    </Compile>
     <Compile Include="系统日志.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -509,6 +515,9 @@
     <EmbeddedResource Include="库存控制.resx">
       <DependentUpon>库存控制.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="收货商管理.resx">
+      <DependentUpon>收货商管理.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="更新数据窗体\UpdataInWarehouseFrm.resx">
       <DependentUpon>UpdataInWarehouseFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -553,6 +562,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="用户管理.resx">
       <DependentUpon>用户管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="端口设置.resx">
+      <DependentUpon>端口设置.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="系统日志.resx">
       <DependentUpon>系统日志.cs</DependentUpon>

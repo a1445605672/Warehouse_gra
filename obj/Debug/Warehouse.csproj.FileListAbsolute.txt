@@ -372,7 +372,6 @@ C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.物料盘存.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.综合统计分析.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.DialogFrm.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.库存控制.resources
-C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmLimit.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.入库折线图.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.出库动图.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.出库动图.resources
@@ -544,3 +543,9 @@ C:\Users\kui\Desktop\最新\Warehouse_gra\bin\Debug\Newtonsoft.Json.xml
 C:\Users\kui\Desktop\最新\Warehouse_gra\bin\Debug\DAL.pdb
 C:\Users\kui\Desktop\最新\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyComplete
 C:\Users\kui\Desktop\最新\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmLimit1.resources
+C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.供应商管理.resources
+C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.工具窗体.DialogFrm.resources
+C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmLimit1.resources
+C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.收货商管理.resources
+C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.部门管理.resources
+C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.端口设置.resources
