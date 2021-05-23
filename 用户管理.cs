@@ -55,6 +55,7 @@ namespace Warehouse
         private void uiButton1_Click(object sender, EventArgs e)
         {
             FEdit_staff frm = new FEdit_staff();
+            frm.Text = "编辑用户";
             frm.ShowDialog();
             
             if (frm.IsOK)
@@ -208,6 +209,7 @@ namespace Warehouse
         private void MenuItem_update_Click(object sender, EventArgs e)
         {
 
+
             // 当前行
             int rowIndex = grid.SelectedRows[0].Index;
             string id = grid.Rows[rowIndex].Cells[0].Value.ToString().Trim();
@@ -223,6 +225,7 @@ namespace Warehouse
 
             // 弹出对话框
             FEdit_staff dlg = new FEdit_staff();
+            dlg.Text = "编辑用户";
             bool m = dlg.FuZhi(id);
             //dlg.Staff.staff_name = name;
 

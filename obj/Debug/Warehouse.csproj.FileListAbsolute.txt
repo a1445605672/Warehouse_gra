@@ -453,7 +453,6 @@ C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.物料类别�
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.用户管理.resources
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.系统日志.resources
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.综合统计分析.resources
-C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.部门人员管理.resources
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.部门管理.resources
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.csproj.GenerateResource.cache
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.csproj.CoreCompileInputs.cache
@@ -461,3 +460,5 @@ C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyCo
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.exe
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.pdb
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.收货商管理.resources
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.数据备份.resources
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.采购退货管理.resources

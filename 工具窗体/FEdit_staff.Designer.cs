@@ -29,6 +29,9 @@ namespace Warehouse.工具窗体
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("系统管理员");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("部门管理员");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("操作员");
             this.edtName = new Sunny.UI.UITextBox();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
@@ -44,11 +47,13 @@ namespace Warehouse.工具窗体
             this.phone = new Sunny.UI.UITextBox();
             this.idcard = new Sunny.UI.UITextBox();
             this.hire_date = new Sunny.UI.UIDatePicker();
+            this.uiLabel8 = new Sunny.UI.UILabel();
+            this.uiComboTreeView1 = new Sunny.UI.UIComboTreeView();
             this.SuspendLayout();
             // 
             // pnlBtm
             // 
-            this.pnlBtm.Location = new System.Drawing.Point(1, 447);
+            this.pnlBtm.Location = new System.Drawing.Point(1, 498);
             this.pnlBtm.Size = new System.Drawing.Size(526, 55);
             // 
             // edtName
@@ -63,7 +68,7 @@ namespace Warehouse.工具窗体
             this.edtName.MinimumSize = new System.Drawing.Size(1, 1);
             this.edtName.Name = "edtName";
             this.edtName.Padding = new System.Windows.Forms.Padding(5);
-            this.edtName.Size = new System.Drawing.Size(150, 34);
+            this.edtName.Size = new System.Drawing.Size(150, 39);
             this.edtName.TabIndex = 2;
             // 
             // uiLabel1
@@ -148,7 +153,7 @@ namespace Warehouse.工具窗体
             this.editAge.MinimumSize = new System.Drawing.Size(1, 1);
             this.editAge.Name = "editAge";
             this.editAge.Padding = new System.Windows.Forms.Padding(5);
-            this.editAge.Size = new System.Drawing.Size(150, 34);
+            this.editAge.Size = new System.Drawing.Size(150, 39);
             this.editAge.TabIndex = 4;
             this.editAge.Text = " ";
             // 
@@ -186,7 +191,7 @@ namespace Warehouse.工具窗体
             this.cbDepartment.MinimumSize = new System.Drawing.Size(63, 0);
             this.cbDepartment.Name = "cbDepartment";
             this.cbDepartment.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.cbDepartment.Size = new System.Drawing.Size(150, 34);
+            this.cbDepartment.Size = new System.Drawing.Size(150, 39);
             this.cbDepartment.TabIndex = 5;
             this.cbDepartment.Text = " ";
             this.cbDepartment.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -203,7 +208,7 @@ namespace Warehouse.工具窗体
             this.phone.MinimumSize = new System.Drawing.Size(1, 1);
             this.phone.Name = "phone";
             this.phone.Padding = new System.Windows.Forms.Padding(5);
-            this.phone.Size = new System.Drawing.Size(214, 34);
+            this.phone.Size = new System.Drawing.Size(214, 39);
             this.phone.TabIndex = 6;
             // 
             // idcard
@@ -218,7 +223,7 @@ namespace Warehouse.工具窗体
             this.idcard.MinimumSize = new System.Drawing.Size(1, 1);
             this.idcard.Name = "idcard";
             this.idcard.Padding = new System.Windows.Forms.Padding(5);
-            this.idcard.Size = new System.Drawing.Size(258, 34);
+            this.idcard.Size = new System.Drawing.Size(258, 39);
             this.idcard.TabIndex = 7;
             // 
             // hire_date
@@ -231,7 +236,7 @@ namespace Warehouse.工具窗体
             this.hire_date.MinimumSize = new System.Drawing.Size(63, 0);
             this.hire_date.Name = "hire_date";
             this.hire_date.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.hire_date.Size = new System.Drawing.Size(150, 34);
+            this.hire_date.Size = new System.Drawing.Size(150, 39);
             this.hire_date.SymbolDropDown = 61555;
             this.hire_date.SymbolNormal = 61555;
             this.hire_date.TabIndex = 8;
@@ -239,11 +244,46 @@ namespace Warehouse.工具窗体
             this.hire_date.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.hire_date.Value = new System.DateTime(2021, 3, 7, 17, 37, 38, 882);
             // 
+            // uiLabel8
+            // 
+            this.uiLabel8.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel8.Location = new System.Drawing.Point(49, 447);
+            this.uiLabel8.Name = "uiLabel8";
+            this.uiLabel8.Size = new System.Drawing.Size(100, 23);
+            this.uiLabel8.TabIndex = 3;
+            this.uiLabel8.Text = "权限：";
+            this.uiLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // uiComboTreeView1
+            // 
+            this.uiComboTreeView1.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
+            this.uiComboTreeView1.FillColor = System.Drawing.Color.White;
+            this.uiComboTreeView1.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiComboTreeView1.Location = new System.Drawing.Point(194, 447);
+            this.uiComboTreeView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiComboTreeView1.MinimumSize = new System.Drawing.Size(63, 0);
+            this.uiComboTreeView1.Name = "uiComboTreeView1";
+            treeNode1.Name = "节点0";
+            treeNode1.Text = "系统管理员";
+            treeNode2.Name = "节点1";
+            treeNode2.Text = "部门管理员";
+            treeNode3.Name = "节点2";
+            treeNode3.Text = "操作员";
+            this.uiComboTreeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3});
+            this.uiComboTreeView1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
+            this.uiComboTreeView1.Size = new System.Drawing.Size(150, 39);
+            this.uiComboTreeView1.TabIndex = 9;
+            this.uiComboTreeView1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // FEdit_staff
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 505);
+            this.ClientSize = new System.Drawing.Size(528, 556);
+            this.Controls.Add(this.uiComboTreeView1);
             this.Controls.Add(this.hire_date);
             this.Controls.Add(this.idcard);
             this.Controls.Add(this.phone);
@@ -251,6 +291,7 @@ namespace Warehouse.工具窗体
             this.Controls.Add(this.rbFemale);
             this.Controls.Add(this.rbMale);
             this.Controls.Add(this.editAge);
+            this.Controls.Add(this.uiLabel8);
             this.Controls.Add(this.uiLabel7);
             this.Controls.Add(this.uiLabel6);
             this.Controls.Add(this.uiLabel5);
@@ -260,7 +301,7 @@ namespace Warehouse.工具窗体
             this.Controls.Add(this.uiLabel1);
             this.Controls.Add(this.edtName);
             this.Name = "FEdit_staff";
-            this.Text = "FEdit_staff";
+            this.Text = "新增用户";
             this.Controls.SetChildIndex(this.pnlBtm, 0);
             this.Controls.SetChildIndex(this.edtName, 0);
             this.Controls.SetChildIndex(this.uiLabel1, 0);
@@ -270,6 +311,7 @@ namespace Warehouse.工具窗体
             this.Controls.SetChildIndex(this.uiLabel5, 0);
             this.Controls.SetChildIndex(this.uiLabel6, 0);
             this.Controls.SetChildIndex(this.uiLabel7, 0);
+            this.Controls.SetChildIndex(this.uiLabel8, 0);
             this.Controls.SetChildIndex(this.editAge, 0);
             this.Controls.SetChildIndex(this.rbMale, 0);
             this.Controls.SetChildIndex(this.rbFemale, 0);
@@ -277,6 +319,7 @@ namespace Warehouse.工具窗体
             this.Controls.SetChildIndex(this.phone, 0);
             this.Controls.SetChildIndex(this.idcard, 0);
             this.Controls.SetChildIndex(this.hire_date, 0);
+            this.Controls.SetChildIndex(this.uiComboTreeView1, 0);
             this.ResumeLayout(false);
 
         }
@@ -298,5 +341,7 @@ namespace Warehouse.工具窗体
         private Sunny.UI.UITextBox phone;
         private Sunny.UI.UITextBox idcard;
         private Sunny.UI.UIDatePicker hire_date;
+        private Sunny.UI.UILabel uiLabel8;
+        private Sunny.UI.UIComboTreeView uiComboTreeView1;
     }
 }

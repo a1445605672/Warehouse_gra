@@ -19,6 +19,7 @@ namespace Warehouse
 		BLL.enter_storage enterStoeage = new BLL.enter_storage();
 		BLL.sr_info srInfor = new BLL.sr_info();
 
+		
 
 		BLL.in_storage inStorage = new BLL.in_storage();
 		BLL.storagelocation storagelocation = new BLL.storagelocation();

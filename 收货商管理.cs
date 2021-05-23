@@ -22,6 +22,8 @@ namespace Warehouse
 		//用于为入库提供信息
 		private Model.enter_storage ssss;
 
+		private string storage_id;
+
 		public 收货商管理()
 		{
 
@@ -190,8 +192,7 @@ namespace Warehouse
 			}
 
 
-			//显示控件
-			this.uiComboTreeView3.Enabled = true;
+			
 			//加载仓库数据
 			Load_Storage_Info();
 
@@ -325,48 +326,49 @@ namespace Warehouse
 
         private void uiComboTreeView3_NodeSelected(object sender, TreeNode node)
         {
-			this.uiComboTreeView4.Enabled = true;
-			string storage_id = node.Name.Trim();
+			//this.uiComboTreeView4.Enabled = true;
+			storage_id = null;
+			storage_id = node.Name.Trim();
 
 
-			//手动模式
-			if(uiRadioButton2.Checked != true)
+            //手动模式
+            if (uiRadioButton2.Checked != true)
             {
-				this.uiComboTreeView4.Enabled = true;
-				this.uiComboTreeView5.Enabled = true;
+                
 
 
-				BLL.chest chest = new BLL.chest();
-				List<Model.chest> chests = new List<Model.chest>();
-				string Cha_xun = " chest_belong_storage = " + "\"" + storage_id.Trim() + "\"";
+                BLL.chest chest = new BLL.chest();
+                List<Model.chest> chests = new List<Model.chest>();
+                string Cha_xun = " chest_belong_storage = " + "\"" + storage_id.Trim() + "\"";
 
-				chests = chest.GetModelList(Cha_xun);
+                chests = chest.GetModelList(Cha_xun);
 
-				
-				this.uiComboTreeView4.Nodes.Clear();
-				for(int i = 0; i<chests.Count; i++)
+
+                this.uiComboTreeView4.Nodes.Clear();
+
+                for (int i = 0; i < chests.Count; i++)
                 {
-					TreeNode treenode = new TreeNode();
-					treenode.Name = chests[i].chest_id;
-					treenode.Text = chests[i].chest_name;
-					this.uiComboTreeView4.Nodes.Add(treenode);
+                    TreeNode treenode = new TreeNode();
+                    treenode.Name = chests[i].chest_id;
+                    treenode.Text = chests[i].chest_name;
+                    this.uiComboTreeView4.Nodes.Add(treenode);
                 }
 
 
-			}
+            }
             else
             {
-				this.uiComboTreeView4.Enabled = false;
-				this.uiComboTreeView5.Enabled = false;
+                this.uiComboTreeView4.Enabled = false;
+                this.uiComboTreeView5.Enabled = false;
 
-				//第一步 查询哪个库柜还有剩余的库位(默认按着哪个库柜剩余库位最多给予分配)
-				//string chest_id =  Find_Remain_Seat(storage_id).Trim();
-				
+                //第一步 查询哪个库柜还有剩余的库位(默认按着哪个库柜剩余库位最多给予分配)
+                //string chest_id =  Find_Remain_Seat(storage_id).Trim();
 
 
-				//调用入库的代码
 
-			}
+                //调用入库的代码
+
+            }
 
 
         }
@@ -437,7 +439,24 @@ namespace Warehouse
 
 				 
         }
-    }
+
+        private void uiRadioButton1_ValueChanged(object sender, bool value)
+        {
+            //手动模式
+            if (uiRadioButton2.Checked != true)
+            {
+				this.uiComboTreeView3.Enabled = true;
+                this.uiComboTreeView4.Enabled = true;
+                this.uiComboTreeView5.Enabled = true;
+
+
+              
+
+            }
+
+
+        }
+	}
 
 
 

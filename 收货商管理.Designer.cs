@@ -35,14 +35,20 @@ namespace Warehouse
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiComboTreeView2 = new Sunny.UI.UIComboTreeView();
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
+            this.uiTitlePanel3 = new Sunny.UI.UITitlePanel();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.uiTitlePanel2 = new Sunny.UI.UITitlePanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.uiTitlePanel4 = new Sunny.UI.UITitlePanel();
             this.uiLedDisplay1 = new Sunny.UI.UILedDisplay();
+            this.uiTitlePanel1 = new Sunny.UI.UITitlePanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.uiGroupBox2 = new Sunny.UI.UIGroupBox();
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiGroupBox4 = new Sunny.UI.UIGroupBox();
+            this.uiButton3 = new Sunny.UI.UIButton();
             this.uiRadioButton2 = new Sunny.UI.UIRadioButton();
+            this.uiButton2 = new Sunny.UI.UIButton();
             this.uiRadioButton1 = new Sunny.UI.UIRadioButton();
             this.uiLabel12 = new Sunny.UI.UILabel();
             this.uiComboTreeView5 = new Sunny.UI.UIComboTreeView();
@@ -51,19 +57,13 @@ namespace Warehouse
             this.uiLabel9 = new Sunny.UI.UILabel();
             this.uiLabel10 = new Sunny.UI.UILabel();
             this.uiLabel11 = new Sunny.UI.UILabel();
-            this.uiTitlePanel1 = new Sunny.UI.UITitlePanel();
-            this.uiTitlePanel2 = new Sunny.UI.UITitlePanel();
-            this.uiTitlePanel3 = new Sunny.UI.UITitlePanel();
-            this.uiTitlePanel4 = new Sunny.UI.UITitlePanel();
-            this.uiButton2 = new Sunny.UI.UIButton();
-            this.uiButton3 = new Sunny.UI.UIButton();
             this.uiGroupBox1.SuspendLayout();
+            this.uiTitlePanel3.SuspendLayout();
+            this.uiTitlePanel2.SuspendLayout();
+            this.uiTitlePanel4.SuspendLayout();
+            this.uiTitlePanel1.SuspendLayout();
             this.uiGroupBox2.SuspendLayout();
             this.uiGroupBox4.SuspendLayout();
-            this.uiTitlePanel1.SuspendLayout();
-            this.uiTitlePanel2.SuspendLayout();
-            this.uiTitlePanel3.SuspendLayout();
-            this.uiTitlePanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // uiComboTreeView1
@@ -152,6 +152,20 @@ namespace Warehouse
             this.uiGroupBox1.TabIndex = 7;
             this.uiGroupBox1.Text = "调拨源仓库";
             // 
+            // uiTitlePanel3
+            // 
+            this.uiTitlePanel3.Controls.Add(this.flowLayoutPanel3);
+            this.uiTitlePanel3.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiTitlePanel3.ForeColor = System.Drawing.Color.White;
+            this.uiTitlePanel3.Location = new System.Drawing.Point(237, 349);
+            this.uiTitlePanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiTitlePanel3.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiTitlePanel3.Name = "uiTitlePanel3";
+            this.uiTitlePanel3.Padding = new System.Windows.Forms.Padding(0, 35, 0, 0);
+            this.uiTitlePanel3.Size = new System.Drawing.Size(211, 215);
+            this.uiTitlePanel3.TabIndex = 6;
+            this.uiTitlePanel3.Text = "所在库位";
+            // 
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.AutoScroll = true;
@@ -159,6 +173,20 @@ namespace Warehouse
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
             this.flowLayoutPanel3.Size = new System.Drawing.Size(196, 173);
             this.flowLayoutPanel3.TabIndex = 5;
+            // 
+            // uiTitlePanel2
+            // 
+            this.uiTitlePanel2.Controls.Add(this.flowLayoutPanel2);
+            this.uiTitlePanel2.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiTitlePanel2.ForeColor = System.Drawing.Color.White;
+            this.uiTitlePanel2.Location = new System.Drawing.Point(8, 349);
+            this.uiTitlePanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiTitlePanel2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiTitlePanel2.Name = "uiTitlePanel2";
+            this.uiTitlePanel2.Padding = new System.Windows.Forms.Padding(0, 35, 0, 0);
+            this.uiTitlePanel2.Size = new System.Drawing.Size(222, 215);
+            this.uiTitlePanel2.TabIndex = 6;
+            this.uiTitlePanel2.Text = "所在库柜";
             // 
             // flowLayoutPanel2
             // 
@@ -168,13 +196,19 @@ namespace Warehouse
             this.flowLayoutPanel2.Size = new System.Drawing.Size(190, 173);
             this.flowLayoutPanel2.TabIndex = 4;
             // 
-            // flowLayoutPanel1
+            // uiTitlePanel4
             // 
-            this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(17, 39);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(166, 173);
-            this.flowLayoutPanel1.TabIndex = 3;
+            this.uiTitlePanel4.Controls.Add(this.uiLedDisplay1);
+            this.uiTitlePanel4.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiTitlePanel4.ForeColor = System.Drawing.Color.White;
+            this.uiTitlePanel4.Location = new System.Drawing.Point(16, 68);
+            this.uiTitlePanel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiTitlePanel4.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiTitlePanel4.Name = "uiTitlePanel4";
+            this.uiTitlePanel4.Padding = new System.Windows.Forms.Padding(0, 35, 0, 0);
+            this.uiTitlePanel4.Size = new System.Drawing.Size(214, 215);
+            this.uiTitlePanel4.TabIndex = 6;
+            this.uiTitlePanel4.Text = "在库数量";
             // 
             // uiLedDisplay1
             // 
@@ -185,6 +219,28 @@ namespace Warehouse
             this.uiLedDisplay1.Name = "uiLedDisplay1";
             this.uiLedDisplay1.Size = new System.Drawing.Size(190, 34);
             this.uiLedDisplay1.TabIndex = 1;
+            // 
+            // uiTitlePanel1
+            // 
+            this.uiTitlePanel1.Controls.Add(this.flowLayoutPanel1);
+            this.uiTitlePanel1.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiTitlePanel1.ForeColor = System.Drawing.Color.White;
+            this.uiTitlePanel1.Location = new System.Drawing.Point(238, 68);
+            this.uiTitlePanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.uiTitlePanel1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiTitlePanel1.Name = "uiTitlePanel1";
+            this.uiTitlePanel1.Padding = new System.Windows.Forms.Padding(0, 35, 0, 0);
+            this.uiTitlePanel1.Size = new System.Drawing.Size(214, 215);
+            this.uiTitlePanel1.TabIndex = 6;
+            this.uiTitlePanel1.Text = "所在仓库";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(17, 39);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(166, 173);
+            this.flowLayoutPanel1.TabIndex = 3;
             // 
             // uiGroupBox2
             // 
@@ -237,11 +293,22 @@ namespace Warehouse
             this.uiGroupBox4.TabIndex = 9;
             this.uiGroupBox4.Text = "目的仓库";
             // 
+            // uiButton3
+            // 
+            this.uiButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton3.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiButton3.Location = new System.Drawing.Point(243, 290);
+            this.uiButton3.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton3.Name = "uiButton3";
+            this.uiButton3.Size = new System.Drawing.Size(100, 35);
+            this.uiButton3.TabIndex = 7;
+            this.uiButton3.Text = "取消";
+            // 
             // uiRadioButton2
             // 
             this.uiRadioButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiRadioButton2.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiRadioButton2.Location = new System.Drawing.Point(288, 123);
+            this.uiRadioButton2.Location = new System.Drawing.Point(315, 61);
             this.uiRadioButton2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiRadioButton2.Name = "uiRadioButton2";
             this.uiRadioButton2.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
@@ -249,22 +316,34 @@ namespace Warehouse
             this.uiRadioButton2.TabIndex = 4;
             this.uiRadioButton2.Text = "自动";
             // 
+            // uiButton2
+            // 
+            this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiButton2.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiButton2.Location = new System.Drawing.Point(52, 290);
+            this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiButton2.Name = "uiButton2";
+            this.uiButton2.Size = new System.Drawing.Size(100, 35);
+            this.uiButton2.TabIndex = 7;
+            this.uiButton2.Text = "调拨";
+            // 
             // uiRadioButton1
             // 
             this.uiRadioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiRadioButton1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiRadioButton1.Location = new System.Drawing.Point(205, 123);
+            this.uiRadioButton1.Location = new System.Drawing.Point(215, 61);
             this.uiRadioButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiRadioButton1.Name = "uiRadioButton1";
             this.uiRadioButton1.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
             this.uiRadioButton1.Size = new System.Drawing.Size(94, 29);
             this.uiRadioButton1.TabIndex = 3;
             this.uiRadioButton1.Text = "手动";
+            this.uiRadioButton1.ValueChanged += new Sunny.UI.UIRadioButton.OnValueChanged(this.uiRadioButton1_ValueChanged);
             // 
             // uiLabel12
             // 
             this.uiLabel12.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel12.Location = new System.Drawing.Point(1, 114);
+            this.uiLabel12.Location = new System.Drawing.Point(3, 52);
             this.uiLabel12.Name = "uiLabel12";
             this.uiLabel12.Size = new System.Drawing.Size(198, 38);
             this.uiLabel12.TabIndex = 2;
@@ -308,7 +387,7 @@ namespace Warehouse
             this.uiComboTreeView3.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.uiComboTreeView3.FillColor = System.Drawing.Color.White;
             this.uiComboTreeView3.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiComboTreeView3.Location = new System.Drawing.Point(215, 51);
+            this.uiComboTreeView3.Location = new System.Drawing.Point(215, 115);
             this.uiComboTreeView3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiComboTreeView3.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboTreeView3.Name = "uiComboTreeView3";
@@ -322,7 +401,7 @@ namespace Warehouse
             // uiLabel9
             // 
             this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel9.Location = new System.Drawing.Point(46, 232);
+            this.uiLabel9.Location = new System.Drawing.Point(49, 232);
             this.uiLabel9.Name = "uiLabel9";
             this.uiLabel9.Size = new System.Drawing.Size(153, 35);
             this.uiLabel9.TabIndex = 0;
@@ -332,7 +411,7 @@ namespace Warehouse
             // uiLabel10
             // 
             this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel10.Location = new System.Drawing.Point(46, 173);
+            this.uiLabel10.Location = new System.Drawing.Point(49, 173);
             this.uiLabel10.Name = "uiLabel10";
             this.uiLabel10.Size = new System.Drawing.Size(153, 37);
             this.uiLabel10.TabIndex = 0;
@@ -342,90 +421,12 @@ namespace Warehouse
             // uiLabel11
             // 
             this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel11.Location = new System.Drawing.Point(3, 53);
+            this.uiLabel11.Location = new System.Drawing.Point(3, 115);
             this.uiLabel11.Name = "uiLabel11";
             this.uiLabel11.Size = new System.Drawing.Size(199, 37);
             this.uiLabel11.TabIndex = 0;
             this.uiLabel11.Text = "选择目的仓库：";
             this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiTitlePanel1
-            // 
-            this.uiTitlePanel1.Controls.Add(this.flowLayoutPanel1);
-            this.uiTitlePanel1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiTitlePanel1.ForeColor = System.Drawing.Color.White;
-            this.uiTitlePanel1.Location = new System.Drawing.Point(238, 68);
-            this.uiTitlePanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTitlePanel1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiTitlePanel1.Name = "uiTitlePanel1";
-            this.uiTitlePanel1.Padding = new System.Windows.Forms.Padding(0, 35, 0, 0);
-            this.uiTitlePanel1.Size = new System.Drawing.Size(214, 215);
-            this.uiTitlePanel1.TabIndex = 6;
-            this.uiTitlePanel1.Text = "所在仓库";
-            // 
-            // uiTitlePanel2
-            // 
-            this.uiTitlePanel2.Controls.Add(this.flowLayoutPanel2);
-            this.uiTitlePanel2.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiTitlePanel2.ForeColor = System.Drawing.Color.White;
-            this.uiTitlePanel2.Location = new System.Drawing.Point(8, 349);
-            this.uiTitlePanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTitlePanel2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiTitlePanel2.Name = "uiTitlePanel2";
-            this.uiTitlePanel2.Padding = new System.Windows.Forms.Padding(0, 35, 0, 0);
-            this.uiTitlePanel2.Size = new System.Drawing.Size(222, 215);
-            this.uiTitlePanel2.TabIndex = 6;
-            this.uiTitlePanel2.Text = "所在库柜";
-            // 
-            // uiTitlePanel3
-            // 
-            this.uiTitlePanel3.Controls.Add(this.flowLayoutPanel3);
-            this.uiTitlePanel3.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiTitlePanel3.ForeColor = System.Drawing.Color.White;
-            this.uiTitlePanel3.Location = new System.Drawing.Point(237, 349);
-            this.uiTitlePanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTitlePanel3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiTitlePanel3.Name = "uiTitlePanel3";
-            this.uiTitlePanel3.Padding = new System.Windows.Forms.Padding(0, 35, 0, 0);
-            this.uiTitlePanel3.Size = new System.Drawing.Size(211, 215);
-            this.uiTitlePanel3.TabIndex = 6;
-            this.uiTitlePanel3.Text = "所在库位";
-            // 
-            // uiTitlePanel4
-            // 
-            this.uiTitlePanel4.Controls.Add(this.uiLedDisplay1);
-            this.uiTitlePanel4.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiTitlePanel4.ForeColor = System.Drawing.Color.White;
-            this.uiTitlePanel4.Location = new System.Drawing.Point(16, 68);
-            this.uiTitlePanel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.uiTitlePanel4.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiTitlePanel4.Name = "uiTitlePanel4";
-            this.uiTitlePanel4.Padding = new System.Windows.Forms.Padding(0, 35, 0, 0);
-            this.uiTitlePanel4.Size = new System.Drawing.Size(214, 215);
-            this.uiTitlePanel4.TabIndex = 6;
-            this.uiTitlePanel4.Text = "在库数量";
-            // 
-            // uiButton2
-            // 
-            this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton2.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiButton2.Location = new System.Drawing.Point(52, 290);
-            this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton2.Name = "uiButton2";
-            this.uiButton2.Size = new System.Drawing.Size(100, 35);
-            this.uiButton2.TabIndex = 7;
-            this.uiButton2.Text = "调拨";
-            // 
-            // uiButton3
-            // 
-            this.uiButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton3.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiButton3.Location = new System.Drawing.Point(243, 290);
-            this.uiButton3.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton3.Name = "uiButton3";
-            this.uiButton3.Size = new System.Drawing.Size(100, 35);
-            this.uiButton3.TabIndex = 7;
-            this.uiButton3.Text = "取消";
             // 
             // 收货商管理
             // 
@@ -439,12 +440,12 @@ namespace Warehouse
             this.Name = "收货商管理";
             this.Text = "收货商管理";
             this.uiGroupBox1.ResumeLayout(false);
+            this.uiTitlePanel3.ResumeLayout(false);
+            this.uiTitlePanel2.ResumeLayout(false);
+            this.uiTitlePanel4.ResumeLayout(false);
+            this.uiTitlePanel1.ResumeLayout(false);
             this.uiGroupBox2.ResumeLayout(false);
             this.uiGroupBox4.ResumeLayout(false);
-            this.uiTitlePanel1.ResumeLayout(false);
-            this.uiTitlePanel2.ResumeLayout(false);
-            this.uiTitlePanel3.ResumeLayout(false);
-            this.uiTitlePanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
 		}
