@@ -32,15 +32,6 @@ C:\Users\kui\Desktop\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CoreComp
 C:\Users\kui\Desktop\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
 C:\Users\kui\Desktop\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
 C:\Users\kui\Desktop\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
-E:\Warehouse_gra\DBUtility\bin\Debug\DBUtility.dll
-E:\Warehouse_gra\DBUtility\bin\Debug\DBUtility.pdb
-E:\Warehouse_gra\DBUtility\bin\Debug\Harman.Utility.dll
-E:\Warehouse_gra\DBUtility\bin\Debug\MySql.Data.dll
-E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csprojAssemblyReference.cache
-E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
-E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
-E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
-E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
 E:\git版本\Warehouse_gra\DBUtility\bin\Debug\DBUtility.dll
 E:\git版本\Warehouse_gra\DBUtility\bin\Debug\DBUtility.pdb
 E:\git版本\Warehouse_gra\DBUtility\bin\Debug\Harman.Utility.dll
@@ -67,3 +58,24 @@ C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csp
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csprojAssemblyReference.cache
+<<<<<<< HEAD
+=======
+E:\Warehouse_gra\DBUtility\bin\Debug\DBUtility.dll
+E:\Warehouse_gra\DBUtility\bin\Debug\DBUtility.pdb
+E:\Warehouse_gra\DBUtility\bin\Debug\Harman.Utility.dll
+E:\Warehouse_gra\DBUtility\bin\Debug\MySql.Data.dll
+E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csprojAssemblyReference.cache
+E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
+E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
+E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
+E:\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
+C:\Users\kui\Desktop\最新\Warehouse_gra\DBUtility\bin\Debug\DBUtility.dll
+C:\Users\kui\Desktop\最新\Warehouse_gra\DBUtility\bin\Debug\DBUtility.pdb
+C:\Users\kui\Desktop\最新\Warehouse_gra\DBUtility\bin\Debug\Harman.Utility.dll
+C:\Users\kui\Desktop\最新\Warehouse_gra\DBUtility\bin\Debug\MySql.Data.dll
+C:\Users\kui\Desktop\最新\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csprojAssemblyReference.cache
+C:\Users\kui\Desktop\最新\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
+C:\Users\kui\Desktop\最新\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
+C:\Users\kui\Desktop\最新\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
+C:\Users\kui\Desktop\最新\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
+>>>>>>> c403e476c1874ba7cd13743debcf8f4bdcf37e98

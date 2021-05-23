@@ -439,6 +439,7 @@ namespace Warehouse
 
 				 
         }
+<<<<<<< HEAD
 
         private void uiRadioButton1_ValueChanged(object sender, bool value)
         {
@@ -457,6 +458,19 @@ namespace Warehouse
 
         }
 	}
+=======
+		//调拨
+        private void uiButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+		//取消
+        private void uiButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+>>>>>>> c403e476c1874ba7cd13743debcf8f4bdcf37e98
 
 
 

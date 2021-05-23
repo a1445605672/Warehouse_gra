@@ -56,6 +56,7 @@ namespace Warehouse
 				Aside.CreateChildNode(OutIntWarehouse, 61766, 24, "未完成入库", ++pageIndex);
 				Aside.CreateChildNode(OutIntWarehouse, 61760, 24, "物料盘点", ++pageIndex);
 				Aside.CreateChildNode(OutIntWarehouse, 61760, 24, "库存控制", ++pageIndex);
+				Aside.CreateChildNode(OutIntWarehouse, 61760, 24, "端口设置", ++pageIndex);
 
 				pageIndex = 4000;
 				TreeNode StatisticalStatementBut = Aside.CreateNode("统计报表", 61950, 24, pageIndex);
@@ -259,8 +260,8 @@ namespace Warehouse
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "折线图", "进入折线图页面", "");
 					break;
 				case "入库折线图":
-					//LoadMdiForm(MainTabControl, text, typeof(入库折线图));
-					//log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "入库折线图", "进入入库折线图页面", "");
+					LoadMdiForm(MainTabControl, text, typeof(入库折线图));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "入库折线图", "进入入库折线图页面", "");
 					break;
 				case "综合统计分析":
 					LoadMdiForm(MainTabControl, text, typeof(综合统计分析));
@@ -273,6 +274,10 @@ namespace Warehouse
 				case "出库动图":
 					LoadMdiForm(MainTabControl, text, typeof(出库动图));
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "出库动图", "进入出库动图页面", "");
+					break;
+				case "端口设置":
+					LoadMdiForm(MainTabControl, text, typeof(端口设置));
+					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "端口设置", "进入端口设置页面", "");
 					break;
 				default:
 					break;

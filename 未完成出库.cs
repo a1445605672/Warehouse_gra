@@ -1,6 +1,7 @@
 ﻿using Sunny.UI;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Windows.Forms;
 using Warehouse.工具窗体;
 
@@ -64,8 +65,8 @@ namespace Warehouse
 			BLL.out_storage out_Storage = new BLL.out_storage();
 
 			string SQL = "select out_id,out_mat_id,out_mat_name,out_account,out_batch_id,out_data,out_staff_id,out_staff_name,enter_id,out_sr_id FROM out_storage where out_if_accomplish=0";
-			datas = out_Storage.GetModelList(SQL);
-			this.uiPagination1.DataSource = datas;//绑定到在库数据绑定到datagridview
+			DataSet ds = out_Storage.getDataList(SQL);
+			this.uiPagination1.DataSource = ds.Tables[0];//绑定到在库数据绑定到datagridview
 			this.uiPagination1.ActivePage = 1;
 
 			#endregion

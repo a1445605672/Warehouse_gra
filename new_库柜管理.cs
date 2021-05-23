@@ -13,6 +13,8 @@ namespace Warehouse
 {
 	public partial class new_库柜管理 : UITitlePage
 	{
+		SystemLog log = new SystemLog();
+		int Dindex = -1;
 		public new_库柜管理()
 		{
 			InitializeComponent();
@@ -23,8 +25,8 @@ namespace Warehouse
 			search1.uiComboBox1.SelectedIndex = 0;
 			grid.ClearAll();
 			//窗体初始化绑定数据
-			grid.AddColumn("库柜id", "chest_id");
-			grid.AddColumn("库柜名", "chest_name");
+			grid.AddColumn("库柜ID", "chest_id");
+			grid.AddColumn("库柜名称", "chest_name");
 			grid.AddColumn("库柜剩余体积", "chest_remain_volume");
 			grid.AddColumn("库柜剩余库位", "chest_remain_seat");
 			grid.AddColumn("库柜创建时间", "chest_create_time");
@@ -71,14 +73,24 @@ namespace Warehouse
 			{
 				int f = search1.uiComboBox1.SelectedIndex;
 				string leixing = null;
+				string leixing_log = null;
 				if (f == 0)
 				{
-					leixing = "storage_id";
+					leixing = "chest_id";
+					leixing_log = "库柜ID";
 				}
 				if (f == 1)
 				{
-					leixing = "storage_name";
+					leixing = "chest_name";
+					leixing_log = "库柜名称";
 				}
+				string m = search1.SearchBox.Text.Trim();
+				string str = leixing.Trim() +
+				"=" + "\"" + search1.SearchBox.Text.Trim() + "\"";
+				BLL.chest dep = new BLL.chest();
+				uiPagination1.DataSource = dep.GetModelList(str);
+				grid.DataSource = dep.GetModelList(str);
+				log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "库柜管理", "查询" + leixing_log, "");
 			}
 		}
 		private void search1_AddEvent(object sender, EventArgs e)

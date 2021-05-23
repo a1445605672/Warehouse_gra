@@ -242,8 +242,6 @@ namespace Warehouse
             {
 				BLL.sr_info info = new BLL.sr_info();
 				bool w =  info.Update(edit_Sr.Sr_Info);
-
-			
 				AddRow();
             }
             else

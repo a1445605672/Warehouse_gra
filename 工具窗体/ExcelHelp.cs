@@ -114,13 +114,13 @@ namespace Warehouse.工具窗体
 
                 for (int i = headerRow.FirstCellNum; i < cellCount; i++)
                 {
-                    if (headerRow.GetCell(i) == null || headerRow.GetCell(i).StringCellValue.Trim() == "")
+                    if (headerRow.GetCell(i) == null ||Convert.ToString( headerRow.GetCell(i)).Trim() == "")
                     {
                         // 如果遇到第一个空列，则不再继续向后读取
                         cellCount = i + 1;
                         break;
                     }
-                    DataColumn column = new DataColumn(headerRow.GetCell(i).StringCellValue);
+                    DataColumn column = new DataColumn(Convert.ToString(headerRow.GetCell(i)));
                     table.Columns.Add(column);
                 }
 

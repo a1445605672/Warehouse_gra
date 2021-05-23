@@ -96,7 +96,7 @@ namespace Warehouse
             if (frmE.IsOK)
             {
                 BLL.in_storage info = new BLL.in_storage();
-                bool w = info.Update(frmE.in_storage);
+                bool w = info.Update(frmE.In_storage);
                 AddRow();
             }
             else

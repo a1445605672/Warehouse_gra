@@ -303,6 +303,10 @@ namespace Warehouse
             this.uiButton3.Size = new System.Drawing.Size(100, 35);
             this.uiButton3.TabIndex = 7;
             this.uiButton3.Text = "取消";
+<<<<<<< HEAD
+=======
+            this.uiButton3.Click += new System.EventHandler(this.uiButton3_Click);
+>>>>>>> c403e476c1874ba7cd13743debcf8f4bdcf37e98
             // 
             // uiRadioButton2
             // 
@@ -326,6 +330,10 @@ namespace Warehouse
             this.uiButton2.Size = new System.Drawing.Size(100, 35);
             this.uiButton2.TabIndex = 7;
             this.uiButton2.Text = "调拨";
+<<<<<<< HEAD
+=======
+            this.uiButton2.Click += new System.EventHandler(this.uiButton2_Click);
+>>>>>>> c403e476c1874ba7cd13743debcf8f4bdcf37e98
             // 
             // uiRadioButton1
             // 

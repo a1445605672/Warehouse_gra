@@ -37,6 +37,15 @@ namespace Warehouse.工具窗体
                 }
                 else
                 {
+                    in_storage.enter_num = txtInNum.Text.Trim();
+                    in_storage.mat_id = txtMatId.Text.Trim();
+                    in_storage.mat_name = txtMatName.Text.Trim();
+                    in_storage.sl_id = txtChestNum.Text.Trim();
+                    in_storage.in_time = Convert.ToDateTime(txtIntime1.Text.Trim());
+                    //decimal n=decimal.Parse(txtNum.Text.Trim());
+                    in_storage.in_amount = decimal.Parse(txtNum.Text.Trim());
+                    in_storage.in_weight = decimal.Parse(txtWeight.Text.Trim());
+                    in_storage.in_volume = decimal.Parse(txtVolu.Text.Trim());
                     return in_storage;
                 }
             }

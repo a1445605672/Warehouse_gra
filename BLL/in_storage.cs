@@ -31,6 +31,10 @@ namespace BLL
 		{
 			return dal.Add(model);
 		}
+		public bool AddSome(Model.in_storage model)
+		{
+			return dal.AddSome(model);
+		}
 
 		///<summary>
 		///画图用到的两个数据
@@ -38,6 +42,15 @@ namespace BLL
 		public DataSet Getdata1(string sql)
 		{
 			return dal.getDataChart(sql);
+		}
+		/// <summary>
+		/// 更新部分数据
+		/// </summary>
+		/// <param name="model"></param>
+		/// <returns></returns>
+		public bool UpdateSome(Model.in_storage model)
+		{
+			return dal.UpdateSome(model);
 		}
 
 		/// <summary>
