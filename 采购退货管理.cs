@@ -140,7 +140,7 @@ namespace Warehouse
 
         private void Load_Staff_Name()
         {
-            this.uiComboTreeView4.Nodes.Clear();
+            this.ProviderBox.Nodes.Clear();
             staffs = staff.GetModelList("");
 
             for (int i = 0; i < sr_Infos.Count; i++)
@@ -148,7 +148,7 @@ namespace Warehouse
                 TreeNode tree = new TreeNode();
                 tree.Name = staffs[i].staff_id.ToString();
                 tree.Text = staffs[i].staff_name.ToString();
-                this.uiComboTreeView4.Nodes.Add(tree);
+                this.ProviderBox.Nodes.Add(tree);
             }
         }
 
@@ -159,23 +159,23 @@ namespace Warehouse
             string id = node.Name;
             string Cha_xun = "mat_type_id = " + "\"" + id.Trim() + "\"";
             material_Infos = material_Info.GetModelList(Cha_xun);
-            this.uiComboTreeView2.Nodes.Clear();
+            this.Materialsbox.Nodes.Clear();
             for(int i = 0; i< material_Infos.Count; i++)
             {
                 TreeNode treenode = new TreeNode();
 
                 treenode.Name = material_Infos[i].mat_id;
                 treenode.Text = material_Infos[i].mat_name;
-                this.uiComboTreeView2.Nodes.Add(treenode);
+                this.Materialsbox.Nodes.Add(treenode);
             }
-            this.uiComboTreeView2.Enabled = true;
+            this.Materialsbox.Enabled = true;
             this.uiTextBox4.Enabled = true;
         }
 
         private void uiComboTreeView2_NodeSelected(object sender, TreeNode node)
         {
             this.uiComboTreeView3.Enabled = true;
-            this.uiComboTreeView4.Enabled = true;
+            this.ProviderBox.Enabled = true;
 
         }
 
@@ -185,41 +185,41 @@ namespace Warehouse
 
 
             //输入信息
-            String supplierIdSql = "SELECT sr_id FROM sr_info WHERE sr_type=\'供货商\' AND sr_name=\'" + ProviderBox.Text + "\'";
-            String enter_mat_id_sql = "SELECT mat_id FROM material_info WHERE mat_name=\'" + Materialsbox.Text.Trim() + "\'";
-            string staff_name_Sql = "SELECT staff_name FROM staff WHERE staff_id=\'" + staffBox.Text.Trim() + "\'";
-            storage.enter_id = InWarwhouseNumberBox.Text.Trim();//入库编号
-            storage.enter_sl_id = storageLocationBox.Text.Trim();//库位编号
-            storage.enter_amount = inWarehouseAmount.Text.Trim();//入库量
-            storage.enter_batch_id = batchNumberBox.Text.Trim();//批次编号
-            storage.enter_unit_bulk = volumeBox.Text.Trim();//单位体积
-            storage.supplier_id = enterStoeage.getDataList(supplierIdSql).Tables[0].Rows[0][0].ToString();//供应商ID
-            storage.enter_mat_id = enterStoeage.getDataList(enter_mat_id_sql).Tables[0].Rows[0][0].ToString();//物料物料id
-            storage.enter_mat_name = Materialsbox.Text.Trim();//物料名称
-            storage.enter_fengji_num = "";//封记号
-            storage.enter_date = edtDate.Text.Trim();//入库时间
-            storage.enter_agent_id = staffBox.Text.Trim();//经办人编号
-            storage.enter_agent_name = enterStoeage.getDataList(staff_name_Sql).Tables[0].Rows[0][0].ToString(); ;//经办人姓名
-            storage.enter_if_accomplish = 1;
+            //String supplierIdSql = "SELECT sr_id FROM sr_info WHERE sr_type=\'供货商\' AND sr_name=\'" + ProviderBox.Text + "\'";
+            //String enter_mat_id_sql = "SELECT mat_id FROM material_info WHERE mat_name=\'" + Materialsbox.Text.Trim() + "\'";
+            //string staff_name_Sql = "SELECT staff_name FROM staff WHERE staff_id=\'" + staffBox.Text.Trim() + "\'";
+            //storage.enter_id = InWarwhouseNumberBox.Text.Trim();//入库编号
+            //storage.enter_sl_id = storageLocationBox.Text.Trim();//库位编号
+            //storage.enter_amount = inWarehouseAmount.Text.Trim();//入库量
+            //storage.enter_batch_id = batchNumberBox.Text.Trim();//批次编号
+            //storage.enter_unit_bulk = volumeBox.Text.Trim();//单位体积
+            //storage.supplier_id = enterStoeage.getDataList(supplierIdSql).Tables[0].Rows[0][0].ToString();//供应商ID
+            //storage.enter_mat_id = enterStoeage.getDataList(enter_mat_id_sql).Tables[0].Rows[0][0].ToString();//物料物料id
+            //storage.enter_mat_name = Materialsbox.Text.Trim();//物料名称
+            //storage.enter_fengji_num = "";//封记号
+            //storage.enter_date = edtDate.Text.Trim();//入库时间
+            //storage.enter_agent_id = staffBox.Text.Trim();//经办人编号
+            //storage.enter_agent_name = enterStoeage.getDataList(staff_name_Sql).Tables[0].Rows[0][0].ToString(); ;//经办人姓名
+            //storage.enter_if_accomplish = 1;
 
-            //
-            in_Storage.mat_id = storage.enter_mat_id;//物料ID
-            in_Storage.mat_name = storage.enter_mat_name;//物料名称
-            in_Storage.in_time = Convert.ToDateTime(storage.enter_date);//入库时间
-            in_Storage.in_weight = Convert.ToDecimal(weightBox.Text.Trim());
-            in_Storage.in_volume = Convert.ToDecimal(storage.enter_unit_bulk);
-            in_Storage.enter_num = storage.enter_id;//入库ID
-            in_Storage.sl_id = storage.enter_sl_id;//库位编号
-            in_Storage.in_amount = Convert.ToDecimal(storage.enter_amount);
+            ////
+            //in_Storage.mat_id = storage.enter_mat_id;//物料ID
+            //in_Storage.mat_name = storage.enter_mat_name;//物料名称
+            //in_Storage.in_time = Convert.ToDateTime(storage.enter_date);//入库时间
+            //in_Storage.in_weight = Convert.ToDecimal(weightBox.Text.Trim());
+            //in_Storage.in_volume = Convert.ToDecimal(storage.enter_unit_bulk);
+            //in_Storage.enter_num = storage.enter_id;//入库ID
+            //in_Storage.sl_id = storage.enter_sl_id;//库位编号
+            //in_Storage.in_amount = Convert.ToDecimal(storage.enter_amount);
 
-            //入库
+            ////入库
 
-            if (inStorageEvent(storage, in_Storage, inStorageList))
-            {
-                ShowSuccessDialog("入库已完成，请及时查看");
-            }
-            //入库编号，批次编号
-            inStorageAndBranchNumber();
+            //if (inStorageEvent(storage, in_Storage, inStorageList))
+            //{
+            //    ShowSuccessDialog("入库已完成，请及时查看");
+            //}
+            ////入库编号，批次编号
+            //inStorageAndBranchNumber();
 
         }
 
@@ -371,6 +371,16 @@ namespace Warehouse
         }
 
         private void batchNumberBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uiButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uiComboTreeView4_NodeSelected(object sender, TreeNode node)
         {
 
         }

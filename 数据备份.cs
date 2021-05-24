@@ -22,7 +22,7 @@ namespace Warehouse
             
 			InitializeComponent();
             uiDatePicker1.Text = DateTime.Now.ToString("D");
-
+            this.uiRadioButton1.Enabled = true;
             
         }
 
@@ -129,6 +129,15 @@ namespace Warehouse
             else
             {
                 UIMessageBox.ShowWarning("请选择要恢复的日期");
+            }
+        }
+
+        private void uiRadioButton2_ValueChanged(object sender, bool value)
+        {
+            if (uiRadioButton2.Checked)
+            {
+                uiRadioButton1.Checked = false;
+                backup_button.Enabled = false;
             }
         }
     }

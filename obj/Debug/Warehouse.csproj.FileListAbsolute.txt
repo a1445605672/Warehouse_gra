@@ -458,10 +458,8 @@ C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyCo
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.exe
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.pdb
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.收货商管理.resources
-<<<<<<< HEAD
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.数据备份.resources
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.采购退货管理.resources
-=======
 E:\Warehouse_gra\obj\Debug\Warehouse.供应商管理.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.入库折线图.resources
 C:\Users\kui\Desktop\最新\Warehouse_gra\obj\Debug\Warehouse.csprojAssemblyReference.cache
@@ -552,4 +550,5 @@ C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmLimit1.re
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.收货商管理.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.部门管理.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.端口设置.resources
->>>>>>> c403e476c1874ba7cd13743debcf8f4bdcf37e98
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmLimit1.resources
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.端口设置.resources
