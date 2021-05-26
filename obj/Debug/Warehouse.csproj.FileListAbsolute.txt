@@ -457,7 +457,6 @@ C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.csproj.CoreCo
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyComplete
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.exe
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.pdb
-C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.收货商管理.resources
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.数据备份.resources
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.采购退货管理.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.供应商管理.resources
@@ -552,3 +551,4 @@ C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.部门管理.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.端口设置.resources
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmLimit1.resources
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.端口设置.resources
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.调拨计划管理.resources

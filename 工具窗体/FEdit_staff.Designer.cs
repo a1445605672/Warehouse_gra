@@ -225,6 +225,7 @@ namespace Warehouse.工具窗体
             this.idcard.Padding = new System.Windows.Forms.Padding(5);
             this.idcard.Size = new System.Drawing.Size(258, 39);
             this.idcard.TabIndex = 7;
+            this.idcard.Validated += new System.EventHandler(this.idcard_Validated);
             // 
             // hire_date
             // 
@@ -263,11 +264,11 @@ namespace Warehouse.工具窗体
             this.uiComboTreeView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiComboTreeView1.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboTreeView1.Name = "uiComboTreeView1";
-            treeNode1.Name = "节点0";
+            treeNode1.Name = "1";
             treeNode1.Text = "系统管理员";
-            treeNode2.Name = "节点1";
+            treeNode2.Name = "2";
             treeNode2.Text = "部门管理员";
-            treeNode3.Name = "节点2";
+            treeNode3.Name = "3";
             treeNode3.Text = "操作员";
             this.uiComboTreeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode1,
@@ -339,9 +340,9 @@ namespace Warehouse.工具窗体
         private Sunny.UI.UIRadioButton rbFemale;
         private Sunny.UI.UIComboBox cbDepartment;
         private Sunny.UI.UITextBox phone;
-        private Sunny.UI.UITextBox idcard;
         private Sunny.UI.UIDatePicker hire_date;
         private Sunny.UI.UILabel uiLabel8;
         private Sunny.UI.UIComboTreeView uiComboTreeView1;
+        public Sunny.UI.UITextBox idcard;
     }
 }

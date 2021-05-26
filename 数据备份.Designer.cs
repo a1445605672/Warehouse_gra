@@ -29,10 +29,15 @@ namespace Warehouse
 		/// </summary>
 		private void InitializeComponent()
 		{
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("节点0");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("节点1");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("节点2");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("1小时");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("6小时");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("24小时");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("7天");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("30天");
             this.uiGroupBox1 = new Sunny.UI.UIGroupBox();
+            this.uiRadioButton2 = new Sunny.UI.UIRadioButton();
+            this.uiRadioButton1 = new Sunny.UI.UIRadioButton();
+            this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiComboTreeView1 = new Sunny.UI.UIComboTreeView();
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.backup_button = new Sunny.UI.UIButton();
@@ -42,9 +47,6 @@ namespace Warehouse
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiDatePicker1 = new Sunny.UI.UIDatePicker();
             this.recover = new Sunny.UI.UIButton();
-            this.uiLabel3 = new Sunny.UI.UILabel();
-            this.uiRadioButton1 = new Sunny.UI.UIRadioButton();
-            this.uiRadioButton2 = new Sunny.UI.UIRadioButton();
             this.uiGroupBox1.SuspendLayout();
             this.uiGroupBox2.SuspendLayout();
             this.uiTitlePanel1.SuspendLayout();
@@ -68,6 +70,42 @@ namespace Warehouse
             this.uiGroupBox1.TabIndex = 0;
             this.uiGroupBox1.Text = "数据备份";
             // 
+            // uiRadioButton2
+            // 
+            this.uiRadioButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiRadioButton2.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiRadioButton2.Location = new System.Drawing.Point(25, 120);
+            this.uiRadioButton2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiRadioButton2.Name = "uiRadioButton2";
+            this.uiRadioButton2.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.uiRadioButton2.Size = new System.Drawing.Size(150, 29);
+            this.uiRadioButton2.TabIndex = 5;
+            this.uiRadioButton2.Text = "自动";
+            this.uiRadioButton2.ValueChanged += new Sunny.UI.UIRadioButton.OnValueChanged(this.uiRadioButton2_ValueChanged);
+            // 
+            // uiRadioButton1
+            // 
+            this.uiRadioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiRadioButton1.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiRadioButton1.Location = new System.Drawing.Point(25, 84);
+            this.uiRadioButton1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiRadioButton1.Name = "uiRadioButton1";
+            this.uiRadioButton1.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.uiRadioButton1.Size = new System.Drawing.Size(150, 29);
+            this.uiRadioButton1.TabIndex = 4;
+            this.uiRadioButton1.Text = "手动";
+            this.uiRadioButton1.ValueChanged += new Sunny.UI.UIRadioButton.OnValueChanged(this.uiRadioButton1_ValueChanged);
+            // 
+            // uiLabel3
+            // 
+            this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel3.Location = new System.Drawing.Point(19, 42);
+            this.uiLabel3.Name = "uiLabel3";
+            this.uiLabel3.Size = new System.Drawing.Size(144, 39);
+            this.uiLabel3.TabIndex = 3;
+            this.uiLabel3.Text = "备份方式：";
+            this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // uiComboTreeView1
             // 
             this.uiComboTreeView1.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
@@ -78,19 +116,26 @@ namespace Warehouse
             this.uiComboTreeView1.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboTreeView1.Name = "uiComboTreeView1";
             treeNode1.Name = "一小时";
-            treeNode1.Text = "节点0";
+            treeNode1.Text = "1小时";
             treeNode2.Name = "6小时";
-            treeNode2.Text = "节点1";
+            treeNode2.Text = "6小时";
             treeNode3.Name = "24小时";
-            treeNode3.Text = "节点2";
+            treeNode3.Text = "24小时";
+            treeNode4.Name = "节点0";
+            treeNode4.Text = "7天";
+            treeNode5.Name = "节点1";
+            treeNode5.Text = "30天";
             this.uiComboTreeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2,
-            treeNode3});
+            treeNode3,
+            treeNode4,
+            treeNode5});
             this.uiComboTreeView1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
             this.uiComboTreeView1.Size = new System.Drawing.Size(194, 39);
             this.uiComboTreeView1.TabIndex = 2;
             this.uiComboTreeView1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiComboTreeView1.NodeSelected += new Sunny.UI.UIComboTreeView.OnNodeSelected(this.uiComboTreeView1_NodeSelected);
             // 
             // uiLabel2
             // 
@@ -201,41 +246,6 @@ namespace Warehouse
             this.recover.TabIndex = 0;
             this.recover.Text = "恢复";
             this.recover.Click += new System.EventHandler(this.recover_Click);
-            // 
-            // uiLabel3
-            // 
-            this.uiLabel3.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel3.Location = new System.Drawing.Point(19, 42);
-            this.uiLabel3.Name = "uiLabel3";
-            this.uiLabel3.Size = new System.Drawing.Size(144, 39);
-            this.uiLabel3.TabIndex = 3;
-            this.uiLabel3.Text = "备份方式：";
-            this.uiLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // uiRadioButton1
-            // 
-            this.uiRadioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiRadioButton1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiRadioButton1.Location = new System.Drawing.Point(25, 84);
-            this.uiRadioButton1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiRadioButton1.Name = "uiRadioButton1";
-            this.uiRadioButton1.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.uiRadioButton1.Size = new System.Drawing.Size(150, 29);
-            this.uiRadioButton1.TabIndex = 4;
-            this.uiRadioButton1.Text = "手动";
-            // 
-            // uiRadioButton2
-            // 
-            this.uiRadioButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiRadioButton2.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiRadioButton2.Location = new System.Drawing.Point(25, 120);
-            this.uiRadioButton2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiRadioButton2.Name = "uiRadioButton2";
-            this.uiRadioButton2.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.uiRadioButton2.Size = new System.Drawing.Size(150, 29);
-            this.uiRadioButton2.TabIndex = 5;
-            this.uiRadioButton2.Text = "自动";
-            this.uiRadioButton2.ValueChanged += new Sunny.UI.UIRadioButton.OnValueChanged(this.uiRadioButton2_ValueChanged);
             // 
             // 数据备份
             // 

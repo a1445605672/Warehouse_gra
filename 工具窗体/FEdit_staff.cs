@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Sunny.UI;
 using MySql;
+using System.Text.RegularExpressions;
 
 namespace Warehouse.工具窗体
 {
@@ -21,6 +22,17 @@ namespace Warehouse.工具窗体
            
 
             InitializeComponent();
+
+            hire_date.Text = DateTime.Now.ToString();
+
+            if (!Warehouse.用户管理.Mode)
+            {
+                this.uiComboTreeView1.Text = Warehouse.用户管理.Sta_sx;
+               // this.uiComboTreeView1.SelectedNode.Name = Warehouse.用户管理.Sta_sx;
+            }
+
+            
+
             this.cbDepartment.Items.Clear();
             Get_dep_info();
         }
@@ -28,6 +40,9 @@ namespace Warehouse.工具窗体
         //输入检查
         protected override bool CheckData()
         {
+           
+            
+
             return CheckEmpty(edtName, "请输入姓名") 
                 && CheckRange(editAge,18,60, "输入年龄范围18~60")
                 && CheckEmpty(cbDepartment, "请选择部门")
@@ -111,11 +126,22 @@ namespace Warehouse.工具窗体
                 //查询部门信息
                 Model.department depz = new Model.department();
                 BLL.department dep = new BLL.department();
+                string m;
+                if(cbDepartment.SelectedText.Trim() == "")
+                {
+                    m = Warehouse.用户管理.dep_id.Trim();
+                    staff.staff_belong_dep_id = m;
+                    Warehouse.用户管理.dep_id = null;
+                }
+                else
+                {
+                    m = cbDepartment.SelectedText.Trim();
+                    depz = dep.GetModel_Name(m);
 
-                string m = cbDepartment.SelectedText.Trim();
-                depz =  dep.GetModel_Name(m);
+                    staff.staff_belong_dep_id = depz.dep_id;
 
-                staff.staff_belong_dep_id = depz.dep_id;
+                }
+               
                
                 staff.staff_identity_card = idcard.Text;
                 staff.staff_phone_number = phone.Text;
@@ -123,8 +149,9 @@ namespace Warehouse.工具窗体
 
                 //自定义用户id的命名方式
                 staff.staff_id = edtName.Text + phone.Text;
-                
 
+                staff.staff_sx = uiComboTreeView1.SelectedNode.Name;
+               
                 return staff;
                
                 
@@ -179,6 +206,22 @@ namespace Warehouse.工具窗体
             //nameField.Text = stu.Name;
             //sexField.SelectedIndex = stu.Sex ? 1 : 0;
             //phoneField.Text = stu.Phone;
+        }
+
+        private void idcard_Validated(object sender, EventArgs e)
+        {
+            if ((!Regex.IsMatch(this.idcard.Text, @"^(\d{15}$|^\d{18}$|^\d{17}(\d|X|x))$", RegexOptions.IgnoreCase)))
+            {
+                UIMessageBox.ShowError("身份证位数不符合规范");
+
+            }
+            else
+            {
+                if (!Warehouse.表单验证.formAuthentication.CheckIDCard18(this.idcard.Text))
+                {
+                    UIMessageBox.ShowWarning("身份证号不符合规范");
+                }
+            }
         }
     }
 }

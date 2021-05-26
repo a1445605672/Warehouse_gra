@@ -1,7 +1,7 @@
 ﻿
 namespace Warehouse
 {
-	partial class 收货商管理
+	partial class 调拨计划管理
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -169,9 +169,9 @@ namespace Warehouse
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.AutoScroll = true;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(12, 38);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 49);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(196, 173);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(205, 162);
             this.flowLayoutPanel3.TabIndex = 5;
             // 
             // uiTitlePanel2
@@ -191,9 +191,9 @@ namespace Warehouse
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(21, 38);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(19, 49);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(190, 173);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(190, 151);
             this.flowLayoutPanel2.TabIndex = 4;
             // 
             // uiTitlePanel4
@@ -316,6 +316,7 @@ namespace Warehouse
             this.uiRadioButton2.Size = new System.Drawing.Size(91, 29);
             this.uiRadioButton2.TabIndex = 4;
             this.uiRadioButton2.Text = "自动";
+            this.uiRadioButton2.ValueChanged += new Sunny.UI.UIRadioButton.OnValueChanged(this.uiRadioButton2_ValueChanged);
             // 
             // uiButton2
             // 
@@ -430,7 +431,7 @@ namespace Warehouse
             this.uiLabel11.Text = "选择目的仓库：";
             this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // 收货商管理
+            // 调拨计划管理
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -439,7 +440,7 @@ namespace Warehouse
             this.Controls.Add(this.uiGroupBox4);
             this.Controls.Add(this.uiGroupBox2);
             this.Controls.Add(this.uiGroupBox1);
-            this.Name = "收货商管理";
+            this.Name = "调拨计划管理";
             this.Text = "收货商管理";
             this.uiGroupBox1.ResumeLayout(false);
             this.uiTitlePanel3.ResumeLayout(false);

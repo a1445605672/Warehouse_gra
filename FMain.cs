@@ -200,7 +200,7 @@ namespace Warehouse
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "库存控制", "进入库存控制页面", "");
 					break;
 				case "调拨计划管理":
-					LoadMdiForm(MainTabControl, text, typeof(收货商管理));
+					LoadMdiForm(MainTabControl, text, typeof(调拨计划管理));
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "调拨计划管理", "进入调拨计划管理页面", "");
 					break;
 				case "数据备份":

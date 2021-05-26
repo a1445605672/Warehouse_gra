@@ -324,11 +324,11 @@
     <Compile Include="库位类型管理.Designer.cs">
       <DependentUpon>库位类型管理.cs</DependentUpon>
     </Compile>
-    <Compile Include="收货商管理.cs">
+    <Compile Include="调拨计划管理.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="收货商管理.Designer.cs">
-      <DependentUpon>收货商管理.cs</DependentUpon>
+    <Compile Include="调拨计划管理.Designer.cs">
+      <DependentUpon>调拨计划管理.cs</DependentUpon>
     </Compile>
     <Compile Include="更新数据窗体\UpdataInWarehouseFrm.cs">
       <SubType>Form</SubType>
@@ -515,8 +515,8 @@
     <EmbeddedResource Include="库存控制.resx">
       <DependentUpon>库存控制.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="收货商管理.resx">
-      <DependentUpon>收货商管理.cs</DependentUpon>
+    <EmbeddedResource Include="调拨计划管理.resx">
+      <DependentUpon>调拨计划管理.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="数据备份.resx">
       <DependentUpon>数据备份.cs</DependentUpon>

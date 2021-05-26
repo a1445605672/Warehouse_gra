@@ -11,7 +11,7 @@ using Sunny.UI;
 
 namespace Warehouse
 {
-	public partial class 收货商管理 : UIPage
+	public partial class 调拨计划管理 : UIPage
 	{
 		public string Mat_id = null;
 		//当前所选物品的库存数量
@@ -22,9 +22,14 @@ namespace Warehouse
 		//用于为入库提供信息
 		private Model.enter_storage ssss;
 
+		
+
+		private List<Model.storage> departments ;
+		private BLL.storage department ;
+
 		private string storage_id;
 
-		public 收货商管理()
+		public 调拨计划管理()
 		{
 
 
@@ -42,7 +47,7 @@ namespace Warehouse
 			int count = this.uiGroupBox4.Controls.Count;
 			for(int i =0; i<count; i++)
             {
-				if (this.uiGroupBox4.Controls[i].Name.Contains("Label"))
+				if (this.uiGroupBox4.Controls[i].Name.Contains("Label") || this.uiGroupBox4.Controls[i].Name.Contains("Button"))
                 {
 					this.uiGroupBox4.Controls[i].Enabled = true;
 				}
@@ -225,12 +230,14 @@ namespace Warehouse
 
 
 
-            //库位
-            UILight light1 = new UILight();
+			//库位
+			UILedBulb light1 = new UILedBulb();
             Label label1 = new Label();
             label1.Text = sl_belong_chest;
-            light1.State = UILightState.Blink;
-            this.flowLayoutPanel2.Controls.Add(label1);
+			label1.Font = new System.Drawing.Font("微软雅黑", 12F);
+			light1.Blink = true;
+			//light1.State = UILightState.Blink;
+			this.flowLayoutPanel2.Controls.Add(label1);
             this.flowLayoutPanel2.Controls.Add(light1);
 
 
@@ -413,7 +420,7 @@ namespace Warehouse
 
         private void uiComboTreeView5_NodeSelected(object sender, TreeNode node)
         {
-		    ssss.enter_sl_id =	node.Text;
+		    //ssss.enter_sl_id =	node.Text;
 
 
         }
@@ -460,6 +467,60 @@ namespace Warehouse
 
         private void uiButton2_Click(object sender, EventArgs e)
         {
+			//自动分配模式
+            if (uiRadioButton2.Checked)
+            {
+				int kk = uiTextBox1.Text.ToInt();
+				if (kk > 300)
+                {
+					UIMessageBox.ShowInfo("当前没有足够库位进行入库，请增加库位或联系管理员");
+                }
+                else
+                {
+					departments = new List<Model.storage>();
+					department = new BLL.storage();
+					departments = department.GetModelList("");
+					int m = departments.Count;
+					List<string> Dep_array = new List<string>();
+					for(int i =0;i<m; i++)
+                    {
+						Dep_array.Add(departments[i].storage_name);
+                    }
+					Random rd = new Random();
+					int f = rd.Next(0, m);
+
+					Amount = Amount - kk;
+
+					uiLedDisplay1.Text = Amount + "个";
+					
+					UIMessageBox.ShowInfo("调拨入库成功，分配仓库为 " + Dep_array[f].Trim());
+                }
+
+            }
+            else
+            {
+				int kk = uiTextBox1.Text.ToInt();
+				if (kk > 300)
+				{
+					UIMessageBox.ShowInfo("当前没有足够库位进行入库，请增加库位或联系管理员");
+				}
+                else
+                {
+					Amount = Amount - kk;
+
+					uiLedDisplay1.Text = Amount + "个";
+
+					UIMessageBox.ShowInfo("调拨入库成功，分配仓库为 " + uiComboTreeView3.SelectedNode.Text + "\n" +
+						"分配库柜为 " + uiComboTreeView4.SelectedNode.Text + "\n" +
+						"分配库位为 " + uiComboTreeView5.SelectedNode.Text + "\n"
+						);
+				}
+
+
+
+			}
+
+
 
         }
 
@@ -467,6 +528,21 @@ namespace Warehouse
         {
 
         }
+
+        private void uiRadioButton2_ValueChanged(object sender, bool value)
+        {
+            if (uiRadioButton2.Checked)
+            {
+				uiRadioButton1.Checked = false;
+				uiComboTreeView3.Text = "";
+				uiComboTreeView3.Enabled = false;
+				uiComboTreeView4.Text = "";
+				uiComboTreeView4.Enabled = false;
+				uiComboTreeView5.Text = "";
+				uiComboTreeView5.Enabled = false;
+			}
+			
+		}
     }
 
 
