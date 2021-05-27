@@ -135,7 +135,7 @@ namespace Warehouse.工具窗体
             this.uiTextBox2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTextBox2.Name = "uiTextBox2";
             this.uiTextBox2.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox2.Size = new System.Drawing.Size(150, 39);
+            this.uiTextBox2.Size = new System.Drawing.Size(150, 34);
             this.uiTextBox2.TabIndex = 10;
             // 
             // uiTextBox3
@@ -150,7 +150,7 @@ namespace Warehouse.工具窗体
             this.uiTextBox3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTextBox3.Name = "uiTextBox3";
             this.uiTextBox3.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox3.Size = new System.Drawing.Size(447, 39);
+            this.uiTextBox3.Size = new System.Drawing.Size(447, 34);
             this.uiTextBox3.TabIndex = 11;
             // 
             // uiTextBox4
@@ -165,7 +165,7 @@ namespace Warehouse.工具窗体
             this.uiTextBox4.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTextBox4.Name = "uiTextBox4";
             this.uiTextBox4.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox4.Size = new System.Drawing.Size(252, 39);
+            this.uiTextBox4.Size = new System.Drawing.Size(252, 34);
             this.uiTextBox4.TabIndex = 12;
             // 
             // uiLabel6
@@ -190,7 +190,7 @@ namespace Warehouse.工具窗体
             this.uiTextBox5.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTextBox5.Name = "uiTextBox5";
             this.uiTextBox5.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox5.Size = new System.Drawing.Size(150, 39);
+            this.uiTextBox5.Size = new System.Drawing.Size(150, 34);
             this.uiTextBox5.TabIndex = 14;
             // 
             // uiComboTreeView1
@@ -203,10 +203,10 @@ namespace Warehouse.工具窗体
             this.uiComboTreeView1.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboTreeView1.Name = "uiComboTreeView1";
             this.uiComboTreeView1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboTreeView1.Size = new System.Drawing.Size(150, 39);
+            this.uiComboTreeView1.Size = new System.Drawing.Size(150, 34);
             this.uiComboTreeView1.TabIndex = 15;
             this.uiComboTreeView1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.uiComboTreeView1.NodeSelected += new Sunny.UI.UIComboTreeView.OnNodeSelected(this.uiComboTreeView2_NodeSelected);
+            this.uiComboTreeView1.NodeSelected += new Sunny.UI.UIComboTreeView.OnNodeSelected(this.uiComboTreeView1_NodeSelected);
             // 
             // uiComboTreeView2
             // 
@@ -218,14 +218,14 @@ namespace Warehouse.工具窗体
             this.uiComboTreeView2.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboTreeView2.Name = "uiComboTreeView2";
             this.uiComboTreeView2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboTreeView2.Size = new System.Drawing.Size(150, 39);
+            this.uiComboTreeView2.Size = new System.Drawing.Size(150, 34);
             this.uiComboTreeView2.TabIndex = 16;
             this.uiComboTreeView2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiComboTreeView2.NodeSelected += new Sunny.UI.UIComboTreeView.OnNodeSelected(this.uiComboTreeView2_NodeSelected);
             // 
             // FEdit_sr
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.uiComboTreeView2);

@@ -217,6 +217,7 @@ namespace Warehouse.工具窗体
 
                     sr_Info.sr_id = GetPYString(uiTextBox3.Text.Trim()) + "_" + GetPYString(uiTextBox2.Text.Trim());
 
+                 
                     sr_Info.sr_resp_name = uiComboTreeView2.SelectedNode.Text.ToString(); ;
                     sr_Info.sr_resp_id = uiComboTreeView2.SelectedNode.Name.ToString();
 
@@ -280,13 +281,37 @@ namespace Warehouse.工具窗体
 
                 if(uiComboTreeView2.CheckBoxes == IsOK)
                 {
-                    UIMessageBox.Show(node.Text);
+                   // UIMessageBox.Show(node.Text);
                 }
                 else
                 {
                     UIMessageBox.ShowInfo("hah");
                 }
             }
+        }
+
+        private void uiComboTreeView1_NodeSelected(object sender, TreeNode node)
+        {
+            uiComboTreeView2.Nodes.Clear();
+
+            string dep_id = node.Name;
+
+
+            string Cha_xun = "staff_belong_dep_id = " + "\"" + dep_id.Trim() + "\"";
+
+            BLL.staff dep = new BLL.staff();
+            List<Model.staff> dep_list = dep.GetModelList("");
+
+            int length = dep_list.Count;
+
+            for (int i = 0; i < length; i++)
+            {
+                TreeNode tree = new TreeNode();
+                tree.Name = dep_list[i].staff_id.ToString();
+                tree.Text = dep_list[i].staff_name.ToString();
+                this.uiComboTreeView2.Nodes.Add(tree);
+            }
+
         }
     }
 }

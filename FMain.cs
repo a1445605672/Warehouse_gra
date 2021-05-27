@@ -14,6 +14,9 @@ namespace Warehouse
 	public partial class FMain : UIHeaderAsideMainFrame
 	{
 		SystemLog log = new SystemLog();
+
+		BLL.staff Staff = new BLL.staff();
+		Model.staff Staffs = new Model.staff();
 		
 
 		public FMain()
@@ -22,8 +25,11 @@ namespace Warehouse
 			TreeNode parent = Aside.CreateNode("首页", 61461, 24, 1);
 			int pageIndex = 1000;
 
-			//string quan = Quan_xian();
-			string quan = "1";
+
+			Staffs = Staff.GetModel_Name(Session.staffName);
+			
+
+			string quan = Staffs.staff_sx ;
 
 			if(quan == "1")
             {

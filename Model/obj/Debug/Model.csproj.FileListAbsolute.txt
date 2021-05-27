@@ -53,4 +53,3 @@ C:\Users\kui\Desktop\最新\Warehouse_gra\Model\obj\Debug\Model.csprojAssemblyRe
 C:\Users\kui\Desktop\最新\Warehouse_gra\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\kui\Desktop\最新\Warehouse_gra\Model\obj\Debug\Model.dll
 C:\Users\kui\Desktop\最新\Warehouse_gra\Model\obj\Debug\Model.pdb
-E:\0421\Warehouse_gra\Model\obj\Debug\Model.csprojAssemblyReference.cache
