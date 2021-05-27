@@ -36,17 +36,14 @@ C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\Model\obj\Debug\Model.csprojA
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\Model\obj\Debug\Model.dll
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\Model\obj\Debug\Model.pdb
-<<<<<<< HEAD
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\Model\bin\Debug\Model.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\Model\bin\Debug\Model.pdb
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\Model\obj\Debug\Model.dll
+C:\Users\qinrui\Documents\GitHub\Warehouse_gra\Model\obj\Debug\Model.pdb
 E:\0421\Warehouse_gra\Model\bin\Debug\Model.dll
 E:\0421\Warehouse_gra\Model\bin\Debug\Model.pdb
 E:\0421\Warehouse_gra\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 E:\0421\Warehouse_gra\Model\obj\Debug\Model.dll
 E:\0421\Warehouse_gra\Model\obj\Debug\Model.pdb
 E:\0421\Warehouse_gra\Model\obj\Debug\Model.csprojAssemblyReference.cache
-=======
-C:\Users\qinrui\Documents\GitHub\Warehouse_gra\Model\bin\Debug\Model.dll
-C:\Users\qinrui\Documents\GitHub\Warehouse_gra\Model\bin\Debug\Model.pdb
-C:\Users\qinrui\Documents\GitHub\Warehouse_gra\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
-C:\Users\qinrui\Documents\GitHub\Warehouse_gra\Model\obj\Debug\Model.dll
-C:\Users\qinrui\Documents\GitHub\Warehouse_gra\Model\obj\Debug\Model.pdb
->>>>>>> d29f3dda487c1ff4538050b581e40bb76c357995

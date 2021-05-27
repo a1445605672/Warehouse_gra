@@ -18,6 +18,10 @@ namespace Warehouse
 		public decimal Amount = 0;
 
 		List<KeyValuePair<string, double>> list;//存储库位大小
+
+		private Model.enter_storage sssss = new Model.enter_storage();
+		private BLL.enter_storage enter_Storage = new BLL.enter_storage();
+
 		public 收货商管理()
 		{
 
@@ -131,6 +135,13 @@ namespace Warehouse
 			List<Model.in_storage> in_Storages = new List<Model.in_storage>();
 			string Cha_xun = "mat_id = " + "\"" + Mat_id.Trim() + "\"";
 			in_Storages = in_Storage.GetModelList(Cha_xun);
+
+
+			//为入库增加值
+
+			  
+
+
 			int m = in_Storages.Count;
 			decimal amount = 0;
 			for(int i = 0; i< m; i++)
@@ -158,6 +169,22 @@ namespace Warehouse
 			//查询在哪个仓库
 			string kuwei = in_Storages[0].sl_id;
 			string batch = in_Storages[0].enter_num;
+
+
+
+			//
+			sssss.enter_unit_bulk = in_Storages[0].in_volume.ToString();
+
+			//供应商编号查询
+			sssss.supplier_id = in_Storages[0].enter_num;
+			sssss.enter_mat_id = in_Storages[0].mat_id;
+			sssss.enter_mat_name = in_Storages[0].mat_name;
+			sssss.enter_fengji_num = "";
+
+			sssss.enter_date = DateTime.Now.ToString().Trim();
+			sssss.enter_agent_id = 工具窗体.Session.staffId;
+			sssss.enter_agent_name = 工具窗体.Session.staffName;
+
 
 			string storage_name = Which_storage(kuwei);
 			
@@ -282,6 +309,7 @@ namespace Warehouse
 			
 			if(uiTextBox1.Text != null)
 			{
+				
 				decimal w = decimal.Parse(uiTextBox1.Text);
 				bool m = Warehouse.表单验证.formAuthentication.ShuZi_fanwei(uiTextBox1.Text);
 				if (m != true)
@@ -321,8 +349,11 @@ namespace Warehouse
 
         private void uiComboTreeView3_NodeSelected(object sender, TreeNode node)
         {
-			this.uiComboTreeView4.Enabled = true;
+		
 			string storage_id = node.Name.Trim();
+
+			uiRadioButton1.Enabled = true;
+			uiRadioButton2.Enabled = true;
 
 
 			//手动模式
@@ -407,7 +438,19 @@ namespace Warehouse
 
         private void uiComboTreeView5_NodeSelected(object sender, TreeNode node)
         {
+			sssss.enter_sl_id = node.Text;
+			BLL.storagelocation storagelocation = new BLL.storagelocation();
+			List<Model.storagelocation> storagelocation1 = new List<Model.storagelocation>();
+			
+			string Cha_xun = "sl_remain_bulk = " + "\"" + node.Text.Trim() + "\"";
+			storagelocation1 = storagelocation.GetModelList (Cha_xun);
 
+			//string sql="select * from"
+			//enter_Storage.getDataList()
+
+			KeyValuePair<string, double> assssss= new KeyValuePair<string, double>(node.Text,Convert.ToDouble(storagelocation1[0].sl_remain_bulk));
+			list = new List<KeyValuePair<string, double>>();
+			list.Add(assssss);
 
 
         }
@@ -432,6 +475,33 @@ namespace Warehouse
 
 
 				 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+			string inNum_where = "enter_date=";//入库时间
+			string time = "yyyy-MM-dd";
+			inNum_where += "'" + DateTime.Now.ToString(time) + "'";
+			string inNumber_Sql = "SELECT enter_id FROM enter_storage WHERE    " + inNum_where;
+			DataSet inNumber_ds = enter_Storage.getDataList(inNumber_Sql);
+			string inNumber = DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString().PadLeft(2, '0') + DateTime.Now.Day.ToString().PadLeft(2, '0');//获得今天日期
+			inNumber += (inNumber_ds.Tables[0].Rows.Count + 1).ToString().PadLeft(3, '0'); //获得当前行数
+			sssss.enter_id = "I" + inNumber;
+
+
+
+
+
+			
+
+
+			入库登记 kkkk = new 入库登记();
+			Model.in_storage ses = new Model.in_storage();
+
+		   kkkk.inStorageEvent(sssss, ses, list);
+
+
         }
     }
 

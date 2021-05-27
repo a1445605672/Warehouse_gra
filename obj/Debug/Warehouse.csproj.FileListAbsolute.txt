@@ -371,7 +371,6 @@ C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.new_物料盘存.resource
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmEditInstorage.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.物料盘存.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.综合统计分析.resources
-<<<<<<< HEAD
 E:\0421\Warehouse_gra\bin\Debug\Warehouse.exe.config
 E:\0421\Warehouse_gra\bin\Debug\Warehouse.exe
 E:\0421\Warehouse_gra\bin\Debug\Warehouse.pdb
@@ -410,7 +409,6 @@ E:\0421\Warehouse_gra\obj\Debug\Warehouse.new_物料盘存.resources
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.Properties.Resources.resources
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.入库汇总.resources
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.出库汇总.resources
-E:\0421\Warehouse_gra\obj\Debug\Warehouse.图形化展示.resources
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.在库汇总.resources
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FEdit_department.resources
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FEdit_sr.resources
@@ -449,7 +447,6 @@ E:\0421\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyComplete
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.exe
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.pdb
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.收货商管理.resources
-=======
 E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.DialogFrm.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.库存控制.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmLimit.resources
@@ -540,4 +537,9 @@ C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyCo
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.exe
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.pdb
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.收货商管理.resources
->>>>>>> d29f3dda487c1ff4538050b581e40bb76c357995
+E:\0421\Warehouse_gra\obj\Debug\Warehouse.供应商管理.resources
+E:\0421\Warehouse_gra\obj\Debug\Warehouse.入库折线图.resources
+E:\0421\Warehouse_gra\obj\Debug\Warehouse.出库动图.resources
+E:\0421\Warehouse_gra\obj\Debug\Warehouse.工具窗体.DialogFrm.resources
+E:\0421\Warehouse_gra\obj\Debug\Warehouse.库存控制.resources
+E:\0421\Warehouse_gra\obj\Debug\Warehouse.部门管理.resources

@@ -58,17 +58,6 @@ C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DBUtility\obj\Debug\DBUtility
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
-<<<<<<< HEAD
-E:\0421\Warehouse_gra\DBUtility\bin\Debug\DBUtility.dll
-E:\0421\Warehouse_gra\DBUtility\bin\Debug\DBUtility.pdb
-E:\0421\Warehouse_gra\DBUtility\bin\Debug\Harman.Utility.dll
-E:\0421\Warehouse_gra\DBUtility\bin\Debug\MySql.Data.dll
-E:\0421\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
-E:\0421\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
-E:\0421\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
-E:\0421\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
-E:\0421\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csprojAssemblyReference.cache
-=======
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\bin\Debug\DBUtility.dll
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\bin\Debug\DBUtility.pdb
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\bin\Debug\Harman.Utility.dll
@@ -77,4 +66,12 @@ C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csp
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb
->>>>>>> d29f3dda487c1ff4538050b581e40bb76c357995
+E:\0421\Warehouse_gra\DBUtility\bin\Debug\DBUtility.dll
+E:\0421\Warehouse_gra\DBUtility\bin\Debug\DBUtility.pdb
+E:\0421\Warehouse_gra\DBUtility\bin\Debug\Harman.Utility.dll
+E:\0421\Warehouse_gra\DBUtility\bin\Debug\MySql.Data.dll
+E:\0421\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csprojAssemblyReference.cache
+E:\0421\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CoreCompileInputs.cache
+E:\0421\Warehouse_gra\DBUtility\obj\Debug\DBUtility.csproj.CopyComplete
+E:\0421\Warehouse_gra\DBUtility\obj\Debug\DBUtility.dll
+E:\0421\Warehouse_gra\DBUtility\obj\Debug\DBUtility.pdb

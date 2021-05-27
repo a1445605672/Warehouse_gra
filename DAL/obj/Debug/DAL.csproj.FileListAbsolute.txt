@@ -80,20 +80,6 @@ C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DAL\obj\Debug\DAL.csproj.Core
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DAL\obj\Debug\DAL.dll
 C:\Users\kui\Desktop\新建文件夹\Warehouse_gra\DAL\obj\Debug\DAL.pdb
-<<<<<<< HEAD
-E:\0421\Warehouse_gra\DAL\bin\Debug\DAL.dll
-E:\0421\Warehouse_gra\DAL\bin\Debug\DAL.pdb
-E:\0421\Warehouse_gra\DAL\bin\Debug\DBUtility.dll
-E:\0421\Warehouse_gra\DAL\bin\Debug\Model.dll
-E:\0421\Warehouse_gra\DAL\bin\Debug\MySql.Data.dll
-E:\0421\Warehouse_gra\DAL\bin\Debug\DBUtility.pdb
-E:\0421\Warehouse_gra\DAL\bin\Debug\Model.pdb
-E:\0421\Warehouse_gra\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
-E:\0421\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
-E:\0421\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CopyComplete
-E:\0421\Warehouse_gra\DAL\obj\Debug\DAL.dll
-E:\0421\Warehouse_gra\DAL\obj\Debug\DAL.pdb
-=======
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DAL\bin\Debug\DAL.dll
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DAL\bin\Debug\DAL.pdb
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DAL\bin\Debug\DBUtility.dll
@@ -106,4 +92,15 @@ C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CoreComp
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DAL\obj\Debug\DAL.dll
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\DAL\obj\Debug\DAL.pdb
->>>>>>> d29f3dda487c1ff4538050b581e40bb76c357995
+E:\0421\Warehouse_gra\DAL\bin\Debug\DAL.dll
+E:\0421\Warehouse_gra\DAL\bin\Debug\DAL.pdb
+E:\0421\Warehouse_gra\DAL\bin\Debug\DBUtility.dll
+E:\0421\Warehouse_gra\DAL\bin\Debug\Model.dll
+E:\0421\Warehouse_gra\DAL\bin\Debug\MySql.Data.dll
+E:\0421\Warehouse_gra\DAL\bin\Debug\DBUtility.pdb
+E:\0421\Warehouse_gra\DAL\bin\Debug\Model.pdb
+E:\0421\Warehouse_gra\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+E:\0421\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\0421\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\0421\Warehouse_gra\DAL\obj\Debug\DAL.dll
+E:\0421\Warehouse_gra\DAL\obj\Debug\DAL.pdb

@@ -491,12 +491,10 @@
     <EmbeddedResource Include="库位类型管理.resx">
       <DependentUpon>库位类型管理.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
-=======
+
     <EmbeddedResource Include="库存控制.resx">
       <DependentUpon>库存控制.cs</DependentUpon>
     </EmbeddedResource>
->>>>>>> d29f3dda487c1ff4538050b581e40bb76c357995
     <EmbeddedResource Include="收货商管理.resx">
       <DependentUpon>收货商管理.cs</DependentUpon>
     </EmbeddedResource>
