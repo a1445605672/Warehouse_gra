@@ -549,3 +549,6 @@ C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmLimit1.re
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.收货商管理.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.部门管理.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.端口设置.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmLimit1.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.收货商管理.resources
+E:\Warehouse_gra\obj\Debug\Warehouse.端口设置.resources
