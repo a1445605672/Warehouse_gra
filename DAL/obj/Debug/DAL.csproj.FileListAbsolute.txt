@@ -116,3 +116,15 @@ C:\Users\kui\Desktop\最新\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CoreCompileIn
 C:\Users\kui\Desktop\最新\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\kui\Desktop\最新\Warehouse_gra\DAL\obj\Debug\DAL.dll
 C:\Users\kui\Desktop\最新\Warehouse_gra\DAL\obj\Debug\DAL.pdb
+E:\Warehouse_gra\Warehouse_gra\DAL\bin\Debug\DAL.dll
+E:\Warehouse_gra\Warehouse_gra\DAL\bin\Debug\DAL.pdb
+E:\Warehouse_gra\Warehouse_gra\DAL\bin\Debug\DBUtility.dll
+E:\Warehouse_gra\Warehouse_gra\DAL\bin\Debug\Model.dll
+E:\Warehouse_gra\Warehouse_gra\DAL\bin\Debug\MySql.Data.dll
+E:\Warehouse_gra\Warehouse_gra\DAL\bin\Debug\DBUtility.pdb
+E:\Warehouse_gra\Warehouse_gra\DAL\bin\Debug\Model.pdb
+E:\Warehouse_gra\Warehouse_gra\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+E:\Warehouse_gra\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\Warehouse_gra\Warehouse_gra\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\Warehouse_gra\Warehouse_gra\DAL\obj\Debug\DAL.dll
+E:\Warehouse_gra\Warehouse_gra\DAL\obj\Debug\DAL.pdb

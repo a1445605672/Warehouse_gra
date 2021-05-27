@@ -512,7 +512,6 @@
     <EmbeddedResource Include="库位类型管理.resx">
       <DependentUpon>库位类型管理.cs</DependentUpon>
     </EmbeddedResource>
-
     <EmbeddedResource Include="库存控制.resx">
       <DependentUpon>库存控制.cs</DependentUpon>
     </EmbeddedResource>
@@ -615,6 +614,10 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.jpg" />
+    <Content Include="表单验证\Logo.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

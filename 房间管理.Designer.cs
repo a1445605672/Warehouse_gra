@@ -1,7 +1,7 @@
 ﻿
 namespace Warehouse
 {
-	partial class Home
+	partial class 房间管理
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -29,20 +29,10 @@ namespace Warehouse
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.SuspendLayout();
-			// 
-			// Home
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+			this.components = new System.ComponentModel.Container();
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackgroundImage = global::Warehouse.Properties.Resources.Logo;
-			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Name = "Home";
-			this.Text = "Home";
-			this.Load += new System.EventHandler(this.Home_Load);
-			this.ResumeLayout(false);
-
+			this.Text = "房间管理";
 		}
 
 		#endregion
