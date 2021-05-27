@@ -12,20 +12,22 @@ namespace Warehouse
 {
 	public partial class 物料信息管理 : UITitlePage
 	{
+		SystemLog log = new SystemLog();
+		int Dindex = -1;
 		public 物料信息管理()
 		{
 			InitializeComponent();
 			//窗体初始化绑定数据
-			grid.AddColumn("物料id", "mat_id");
+			grid.AddColumn("物料ID", "mat_id");
 			grid.AddColumn("物料名", "mat_name");
-			grid.AddColumn("物料父类id", "mat_father_id");
+			grid.AddColumn("物料父类ID", "mat_father_id");
 			grid.AddColumn("创建时间", "mat_create_time");
 			grid.AddColumn("丰度", "mat_fengdu");
 			grid.AddColumn("物料状态", "mat_state");
 			grid.AddColumn("物料颜色", "mat_colour");
 			grid.AddColumn("物料气味", "mat_smell");
 			grid.AddColumn("物料类别", "mat_type");
-			grid.AddColumn("物料类别id", "mat_type_id");
+			grid.AddColumn("物料类别ID", "mat_type_id");
 			grid.AddColumn("物料用途", "mat_purpose");
 			grid.AddColumn("物料来源", "mat_source");
 			grid.AddColumn("物料酸碱性", "mat_suanjianxing");
@@ -51,8 +53,8 @@ namespace Warehouse
 			for (int i = 0; i < grid.ColumnCount; i++) { grid.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; }
 			AddRow();
 			//给search控件赋值
-			search1.uiComboBox1.Items.Add("房间ID");
-			search1.uiComboBox1.Items.Add("房子名字");
+			search1.uiComboBox1.Items.Add("物料ID");
+			search1.uiComboBox1.Items.Add("物料名");
 			//search1.uiComboBox1.Items.Add("负责人名称");
 			search1.uiComboBox1.SelectedIndex = 0;
 			//确定按钮和搜索按钮赋值
@@ -72,14 +74,24 @@ namespace Warehouse
 			{
 				int f = search1.uiComboBox1.SelectedIndex;
 				string leixing = null;
+				string leixing_log = null;
 				if (f == 0)
 				{
-					leixing = "storage_id";
+					leixing = "mat_id";
+					leixing_log = "物料ID";
 				}
 				if (f == 1)
 				{
-					leixing = "storage_name";
+					leixing = "mat_name";
+					leixing_log = "物料名";
 				}
+				string m = search1.SearchBox.Text.Trim();
+				string str = leixing.Trim() +
+				"=" + "\"" + search1.SearchBox.Text.Trim() + "\"";
+				BLL.material_info dep = new BLL.material_info();
+				uiPagination1.DataSource = dep.GetModelList(str);
+				grid.DataSource = dep.GetModelList(str);
+				log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "物料信息管理", "查询" + leixing_log, "");
 			}
 		}
 		private void search1_AddEvent(object sender, EventArgs e)

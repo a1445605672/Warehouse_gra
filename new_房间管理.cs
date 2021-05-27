@@ -28,7 +28,7 @@ namespace Warehouse
 			grid.AddColumn("房间ID", "storage_id");
 			grid.AddColumn("房间名称", "storage_name");
 			grid.AddColumn("房间创建时间", "storage_create_time");
-			grid.AddColumn("房间面积大小", "storage_area");
+			grid.AddColumn("房间面积大小(m²)", "storage_area");
 			grid.AddColumn("房间剩余库柜数", "storage_remain_chest");
 			grid.AddColumn("房间剩余库位", "storage_remain_seat");
 			grid.AddColumn("房间备注信息", "storage_comment");
@@ -165,20 +165,18 @@ namespace Warehouse
 			{
 				if (ShowAskDialog("此操作不可恢复。是否确认删除?"))
 				{
-					foreach (DataGridViewRow row in grid.SelectedRows)
+					int rowIndex = e.RowIndex;
+					string id = grid.CurrentRow.Cells[2].Value.ToString();
+					BLL.storage bllstorage = new BLL.storage();
+					bool die = bllstorage.Delete(id);
+					if (die)
 					{
-						string m = row.Cells[0].Value.ToString().Trim();
-						BLL.storage bllstorage = new BLL.storage();
-						bool die = bllstorage.Delete(m);
-						if (die)
-						{
-							ShowSuccessDialog("删除成功");
-							AddRow();
-						}
-						else
-						{
-							ShowErrorDialog("删除失败");
-						}
+						ShowSuccessDialog("删除成功");
+						AddRow();
+					}
+					else
+					{
+						ShowErrorDialog("删除失败");
 					}
 				}
 			}

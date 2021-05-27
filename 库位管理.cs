@@ -37,6 +37,7 @@ namespace Warehouse
 			but.HeaderText = "操作";  //设置列表头的名字
 			but.SetFixedMode(50);//设置按钮大小
 			but.Name = "UpDate";//设置按钮的名字
+
 			but.DefaultCellStyle.NullValue = "修改";
 			grid.Columns.Add(but);
 
@@ -90,13 +91,12 @@ namespace Warehouse
 		}
 		private void search1_AddEvent(object sender, EventArgs e)
 		{
-
 			FrmStorage str = new FrmStorage();
 			str.ShowDialog();
 			if (str.IsOK)
 			{
 				BLL.storagelocation sr_ = new BLL.storagelocation();
-				bool m = sr_.Add(str.storagelocationModel);
+				bool m = sr_.Add(str.StoragelocationModel);
 				if (m == true)
 				{
 					UIMessageBox.ShowSuccess("新增成功");
@@ -124,6 +124,8 @@ namespace Warehouse
 				Model.storagelocation sta = new Model.storagelocation();
 				sta.sl_id = id;
 				FrmStorage stor = new FrmStorage();
+				stor.uiButton1.Visible = false;
+				stor.uiListBox1.Visible = false;
 				bool m = stor.FuZhi(id);
 				if (m != true)
 				{
@@ -159,20 +161,18 @@ namespace Warehouse
 			{
 				if (ShowAskDialog("此操作不可恢复。是否确认删除?"))
 				{
-					foreach (DataGridViewRow row in grid.SelectedRows)
+					int rowindex = e.RowIndex;
+					string id = grid.CurrentRow.Cells[2].Value.ToString();
+					BLL.storagelocation bllstorage = new BLL.storagelocation();
+					bool die = bllstorage.Delete(id);
+					if (die)
 					{
-						string m = row.Cells[0].Value.ToString().Trim();
-						BLL.storagelocation bllstorage = new BLL.storagelocation();
-						bool die = bllstorage.Delete(m);
-						if (die)
-						{
-							ShowSuccessDialog("删除成功");
-							AddRow();
-						}
-						else
-						{
-							ShowErrorDialog("删除失败");
-						}
+						ShowSuccessDialog("删除成功");
+						AddRow();
+					}
+					else
+					{
+						ShowErrorDialog("删除失败");
 					}
 				}
 			}

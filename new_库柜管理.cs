@@ -129,6 +129,9 @@ namespace Warehouse
 				sta.chest_id = id;
 				//弹出对话框
 				kugui gui = new kugui();
+				gui.uiListBox1.Visible = false;
+				gui.uiButton1.Visible = false;
+
 				bool m = gui.FuZhi(id);
 				if (m != true)
 				{
@@ -164,21 +167,21 @@ namespace Warehouse
 			{
 				if (ShowAskDialog("此操作不可恢复。是否确认删除?"))
 				{
-					foreach (DataGridViewRow row in grid.SelectedRows)
+
+					int rowIndex = e.RowIndex;
+					string id = grid.CurrentRow.Cells[2].Value.ToString();
+					BLL.chest bllstorage = new BLL.chest();
+					bool die = bllstorage.Delete(id);
+					if (die)
 					{
-						string m = row.Cells[0].Value.ToString().Trim();
-						BLL.chest bllstorage = new BLL.chest();
-						bool die = bllstorage.Delete(m);
-						if (die)
-						{
-							ShowSuccessDialog("删除成功");
-							AddRow();
-						}
-						else
-						{
-							ShowErrorDialog("删除失败");
-						}
+						ShowSuccessDialog("删除成功");
+						AddRow();
 					}
+					else
+					{
+						ShowErrorDialog("删除失败");
+					}
+					
 				}
 			}
 		}
