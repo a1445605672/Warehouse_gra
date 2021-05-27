@@ -12,12 +12,14 @@ namespace Warehouse
 {
 	public partial class 库位管理 : UITitlePage
 	{
+		SystemLog log = new SystemLog();
+		int Dindex = -1;
 		public 库位管理()
 		{
 			InitializeComponent();
 			//给search控件赋值
-			search1.uiComboBox1.Items.Add("库柜类型ID");
-			search1.uiComboBox1.Items.Add("负责人名称");
+			search1.uiComboBox1.Items.Add("库位编号");
+			search1.uiComboBox1.Items.Add("库位类型");
 			search1.uiComboBox1.SelectedIndex = 0;
 			grid.ClearAll();
 			grid.AddColumn("库位ID", "sl_id");
@@ -67,11 +69,24 @@ namespace Warehouse
 			{
 				int f = search1.uiComboBox1.SelectedIndex;
 				string leixing = null;
+				string leixing_log = null;
 				if (f == 0)
 				{
-					leixing = "type_id";
+					leixing = "sl_id";
+					leixing_log = "库位编号";
 				}
-
+				if (f == 1)
+				{
+					leixing = "sl_store_type_id";
+					leixing_log = "库位类型";
+				}
+				string m = search1.SearchBox.Text.Trim();
+				string str = leixing.Trim() +
+				"=" + "\"" + search1.SearchBox.Text.Trim() + "\"";
+				BLL.storagelocation dep = new BLL.storagelocation();
+				uiPagination1.DataSource = dep.GetModelList(str);
+				grid.DataSource = dep.GetModelList(str);
+				log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "库位管理", "查询" + leixing_log, "");
 			}
 		}
 		private void search1_AddEvent(object sender, EventArgs e)

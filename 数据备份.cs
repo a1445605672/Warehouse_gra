@@ -20,9 +20,10 @@ namespace Warehouse
 		public 数据备份()
 		{
             
-			InitializeComponent();
+            InitializeComponent();
+            this.uiRadioButton1.Checked = true;
             uiDatePicker1.Text = DateTime.Now.ToString("D");
-
+           
             
         }
 
@@ -130,6 +131,30 @@ namespace Warehouse
             {
                 UIMessageBox.ShowWarning("请选择要恢复的日期");
             }
+        }
+
+        private void uiRadioButton2_ValueChanged(object sender, bool value)
+        {
+            if (uiRadioButton2.Checked)
+            {
+                uiComboTreeView1.Enabled = true;
+                uiRadioButton1.Checked = false;
+                backup_button.Enabled = false;
+            }
+        }
+
+        private void uiRadioButton1_ValueChanged(object sender, bool value)
+        {
+            if (uiRadioButton1.Checked)
+            {
+                uiRadioButton2.Checked = false;
+                uiComboTreeView1.Enabled = false;
+            }
+        }
+
+        private void uiComboTreeView1_NodeSelected(object sender, TreeNode node)
+        {
+            UIMessageBox.ShowInfo("当前备份频率为 " + node.Text);     
         }
     }
 }

@@ -32,17 +32,17 @@ namespace Warehouse.工具窗体
 
                     chest_typeModel.type_id = "E" + num;
                     //chest_typeModel.type_id = typeID.Text.Trim();
-                    chest_typeModel.type_length = length.IntValue;
-                    chest_typeModel.type_wide = wide.IntValue;
-                    chest_typeModel.type_high = high.IntValue;
+                    chest_typeModel.type_length = decimal.Parse(length.Text.Trim());
+                    chest_typeModel.type_wide = decimal.Parse(wide.Text.Trim());
+                    chest_typeModel.type_high = decimal.Parse(high.Text.Trim());
                     chest_typeModel.type_sx = beizhu.Text.Trim();
                     return chest_typeModel;
                 }
                 else
                 {
-                    chest_typeModel.type_length = length.IntValue;
-                    chest_typeModel.type_wide = wide.IntValue;
-                    chest_typeModel.type_high = high.IntValue;
+                    chest_typeModel.type_length = decimal.Parse(length.Text.Trim());
+                    chest_typeModel.type_wide = decimal.Parse(wide.Text.Trim());
+                    chest_typeModel.type_high =decimal.Parse(high.Text.Trim());
                     chest_typeModel.type_sx = beizhu.Text.Trim();
                     return chest_typeModel;
                 }

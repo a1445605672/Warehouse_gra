@@ -13,6 +13,8 @@ namespace Warehouse
 {
 	public partial class new_房间管理 : UITitlePage
 	{
+		SystemLog log = new SystemLog();
+		int Dindex = -1;
 		public new_房间管理()
 		{
 			InitializeComponent();
@@ -36,7 +38,7 @@ namespace Warehouse
 			but.HeaderText = "操作";  //设置列表头的名字
 			but.SetFixedMode(50);//设置按钮大小
 			but.Name = "UpDate";//设置按钮的名字
-			
+
 			but.DefaultCellStyle.NullValue = "修改";
 			grid.Columns.Add(but);
 
@@ -70,14 +72,25 @@ namespace Warehouse
 			{
 				int f = search1.uiComboBox1.SelectedIndex;
 				string leixing = null;
+				string leixing_log = null;
 				if (f == 0)
 				{
 					leixing = "storage_id";
+					leixing_log = "房间ID";
 				}
 				if (f == 1)
 				{
 					leixing = "storage_name";
+					leixing_log = "房间名称";
 				}
+				string m = search1.SearchBox.Text.Trim();
+				string str = leixing.Trim() +
+				"=" + "\"" + search1.SearchBox.Text.Trim() + "\"";
+
+				BLL.storage dep = new BLL.storage();
+				uiPagination1.DataSource = dep.GetModelList(str);
+				grid.DataSource = dep.GetModelList(str);
+				log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "房间管理", "查询" + leixing_log, "");
 			}
 		}
 		private void search1_AddEvent(object sender, EventArgs e)

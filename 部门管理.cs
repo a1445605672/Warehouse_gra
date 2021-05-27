@@ -49,7 +49,7 @@ namespace Warehouse
         private void search1_AddEvent(object sender, EventArgs e)
         {
             FEdit_department dep = new FEdit_department();
-			
+			dep.Text = "新增部门";
 			dep.ShowDialog();
 
             if (dep.IsOK)
@@ -226,6 +226,7 @@ namespace Warehouse
             // 弹出对话框
             
             FEdit_department dlg = new FEdit_department();
+			dlg.Text = "编辑部门";
             bool m = dlg.FuZhi(id);
             //dlg.Staff.staff_name = name;
 

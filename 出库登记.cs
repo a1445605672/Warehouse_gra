@@ -407,8 +407,12 @@ namespace Warehouse
 			}
 			
 		}
-		#endregion
+        #endregion
 
-	}
+        private void Materialsbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
 	

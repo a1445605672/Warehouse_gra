@@ -1,14 +1,14 @@
 ﻿using System;
 namespace Model
 {
-	/// <summary>
-	/// in_storage:实体类(属性说明自动提取数据库字段的描述信息)
-	/// </summary>
-	[Serializable]
-	public partial class in_storage
-	{
-		public in_storage()
-		{}
+    /// <summary>
+    /// in_storage:实体类(属性说明自动提取数据库字段的描述信息)
+    /// </summary>
+    [Serializable]
+    public partial class in_storage
+    {
+        public in_storage()
+        { }
         #region Model
         private string _enter_num;
         private string _mat_id;
@@ -18,6 +18,8 @@ namespace Model
         private decimal _in_amount;
         private decimal _in_weight;
         private decimal _in_volume;
+        private decimal? _maxpo;
+        private decimal? _minpo;
         /// <summary>
         /// 
         /// </summary>
@@ -82,10 +84,26 @@ namespace Model
             set { _in_volume = value; }
             get { return _in_volume; }
         }
+        /// <summary>
+		/// 
+		/// </summary>
+		public decimal? maxpo
+        {
+            set { _maxpo = value; }
+            get { return _maxpo; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public decimal? minpo
+        {
+            set { _minpo = value; }
+            get { return _minpo; }
+        }
         #endregion Model
 
-		
 
-	}
+
+    }
 }
 

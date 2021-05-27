@@ -5,13 +5,13 @@ using MySql.Data.MySqlClient;
 using DBUtility;//Please add references
 namespace DAL
 {
-	/// <summary>
-	/// 数据访问类:in_storage
-	/// </summary>
-	public partial class in_storage
-	{
-		public in_storage()
-		{}
+    /// <summary>
+    /// 数据访问类:in_storage
+    /// </summary>
+    public partial class in_storage
+    {
+        public in_storage()
+        { }
         #region  BasicMethod
 
         /// <summary>
@@ -23,10 +23,33 @@ namespace DAL
             strSql.Append("select count(1) from in_storage");
             strSql.Append(" where enter_num=@enter_num ");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@enter_num", MySqlDbType.VarChar,128)			};
+                    new MySqlParameter("@enter_num", MySqlDbType.VarChar,128)           };
             parameters[0].Value = enter_num;
 
             return DbHelperMySQL.Exists(strSql.ToString(), parameters);
+        }
+
+        public bool AddSome(Model.in_storage model)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("insert into in_storage(");
+            strSql.Append("maxpo,minpo)");
+            strSql.Append(" values (");
+            strSql.Append("@maxpo,@minpo)");
+            MySqlParameter[] parameters = {
+                   new MySqlParameter("@maxpo", MySqlDbType.Decimal,15),
+                   new MySqlParameter("@minpo", MySqlDbType.Decimal,15)};
+            parameters[0].Value = model.maxpo;
+            parameters[1].Value = model.minpo;
+            int rows = DbHelperMySQL.ExecuteSql(strSql.ToString(), parameters);
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
 
@@ -37,18 +60,20 @@ namespace DAL
         {
             StringBuilder strSql = new StringBuilder();
             strSql.Append("insert into in_storage(");
-            strSql.Append("enter_num,mat_id,mat_name,in_time,sl_id,in_amount,in_weight,in_volume)");
+            strSql.Append("enter_num,mat_id,mat_name,in_time,sl_id,in_amount,in_weight,in_volume,maxpo,minpo)");
             strSql.Append(" values (");
-            strSql.Append("@enter_num,@mat_id,@mat_name,@in_time,@sl_id,@in_amount,@in_weight,@in_volume)");
+            strSql.Append("@enter_num,@mat_id,@mat_name,@in_time,@sl_id,@in_amount,@in_weight,@in_volume,@maxpo,@minpo)");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@enter_num", MySqlDbType.VarChar,128),
-					new MySqlParameter("@mat_id", MySqlDbType.VarChar,128),
-					new MySqlParameter("@mat_name", MySqlDbType.VarChar,32),
-					new MySqlParameter("@in_time", MySqlDbType.DateTime),
-					new MySqlParameter("@sl_id", MySqlDbType.VarChar,128),
-					new MySqlParameter("@in_amount", MySqlDbType.Decimal,15),
-					new MySqlParameter("@in_weight", MySqlDbType.Decimal,10),
-					new MySqlParameter("@in_volume", MySqlDbType.Decimal,10)};
+                    new MySqlParameter("@enter_num", MySqlDbType.VarChar,128),
+                    new MySqlParameter("@mat_id", MySqlDbType.VarChar,128),
+                    new MySqlParameter("@mat_name", MySqlDbType.VarChar,32),
+                    new MySqlParameter("@in_time", MySqlDbType.DateTime),
+                    new MySqlParameter("@sl_id", MySqlDbType.VarChar,128),
+                    new MySqlParameter("@in_amount", MySqlDbType.Decimal,15),
+                    new MySqlParameter("@in_weight", MySqlDbType.Decimal,10),
+                    new MySqlParameter("@in_volume", MySqlDbType.Decimal,10),
+                    new MySqlParameter("@maxpo", MySqlDbType.Decimal,15),
+                    new MySqlParameter("@minpo", MySqlDbType.Decimal,15)};
             parameters[0].Value = model.enter_num;
             parameters[1].Value = model.mat_id;
             parameters[2].Value = model.mat_name;
@@ -57,6 +82,8 @@ namespace DAL
             parameters[5].Value = model.in_amount;
             parameters[6].Value = model.in_weight;
             parameters[7].Value = model.in_volume;
+            parameters[8].Value = model.maxpo;
+            parameters[9].Value = model.minpo;
 
             int rows = DbHelperMySQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -68,6 +95,37 @@ namespace DAL
                 return false;
             }
         }
+        /// <summary>
+        /// 更新部分数据
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public bool UpdateSome(Model.in_storage model)
+        {
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("update in_storage set ");
+            strSql.Append("mat_name=@mat_name,");
+            strSql.Append("maxpo=@maxpo,");
+            strSql.Append("minpo=@minpo");
+            strSql.Append(" where mat_id=@mat_id ");
+            MySqlParameter[] parameters = {
+                 new MySqlParameter("@mat_name", MySqlDbType.VarChar,32),
+                 new MySqlParameter("@maxpo", MySqlDbType.Decimal,15),
+                 new MySqlParameter("@minpo", MySqlDbType.Decimal,15) };
+            parameters[0].Value = model.mat_name;
+            parameters[1].Value = model.maxpo;
+            parameters[2].Value = model.minpo;
+            int rows = DbHelperMySQL.ExecuteSql(strSql.ToString(), parameters);
+            if (rows > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         /// <summary>
         /// 更新一条数据
         /// </summary>
@@ -81,17 +139,21 @@ namespace DAL
             strSql.Append("sl_id=@sl_id,");
             strSql.Append("in_amount=@in_amount,");
             strSql.Append("in_weight=@in_weight,");
-            strSql.Append("in_volume=@in_volume");
+            strSql.Append("in_volume=@in_volume,");
+            strSql.Append("maxpo=@maxpo,");
+            strSql.Append("minpo=@minpo");
             strSql.Append(" where enter_num=@enter_num ");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@mat_id", MySqlDbType.VarChar,128),
-					new MySqlParameter("@mat_name", MySqlDbType.VarChar,32),
-					new MySqlParameter("@in_time", MySqlDbType.DateTime),
-					new MySqlParameter("@sl_id", MySqlDbType.VarChar,128),
-					new MySqlParameter("@in_amount", MySqlDbType.Decimal,15),
-					new MySqlParameter("@in_weight", MySqlDbType.Decimal,10),
-					new MySqlParameter("@in_volume", MySqlDbType.Decimal,10),
-					new MySqlParameter("@enter_num", MySqlDbType.VarChar,128)};
+                    new MySqlParameter("@mat_id", MySqlDbType.VarChar,128),
+                    new MySqlParameter("@mat_name", MySqlDbType.VarChar,32),
+                    new MySqlParameter("@in_time", MySqlDbType.DateTime),
+                    new MySqlParameter("@sl_id", MySqlDbType.VarChar,128),
+                    new MySqlParameter("@in_amount", MySqlDbType.Decimal,15),
+                    new MySqlParameter("@in_weight", MySqlDbType.Decimal,10),
+                    new MySqlParameter("@in_volume", MySqlDbType.Decimal,10),
+                    new MySqlParameter("@maxpo", MySqlDbType.Decimal,15),
+                    new MySqlParameter("@minpo", MySqlDbType.Decimal,15),
+                    new MySqlParameter("@enter_num", MySqlDbType.VarChar,128)};
             parameters[0].Value = model.mat_id;
             parameters[1].Value = model.mat_name;
             parameters[2].Value = model.in_time;
@@ -99,7 +161,9 @@ namespace DAL
             parameters[4].Value = model.in_amount;
             parameters[5].Value = model.in_weight;
             parameters[6].Value = model.in_volume;
-            parameters[7].Value = model.enter_num;
+            parameters[7].Value = model.maxpo;
+            parameters[8].Value = model.minpo;
+            parameters[9].Value = model.enter_num;
 
             int rows = DbHelperMySQL.ExecuteSql(strSql.ToString(), parameters);
             if (rows > 0)
@@ -118,7 +182,7 @@ namespace DAL
         /// <param name="Sql"></param>
         /// <returns></returns>
         public bool Update(string Sql)
-		{
+        {
             int rows = DbHelperMySQL.ExecuteSql(Sql);
             if (rows > 0)
             {
@@ -128,8 +192,8 @@ namespace DAL
             {
                 return false;
             }
-           
-		}
+
+        }
 
         ///<summary>
         ///用于柱状图和折线图的绘制
@@ -149,7 +213,7 @@ namespace DAL
             strSql.Append("delete from in_storage ");
             strSql.Append(" where enter_num=@enter_num ");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@enter_num", MySqlDbType.VarChar,128)			};
+                    new MySqlParameter("@enter_num", MySqlDbType.VarChar,128)           };
             parameters[0].Value = enter_num;
 
             int rows = DbHelperMySQL.ExecuteSql(strSql.ToString(), parameters);
@@ -236,7 +300,7 @@ namespace DAL
             strSql.Append("select enter_num,mat_id,mat_name,in_time,sl_id,in_amount,in_weight,in_volume from in_storage ");
             strSql.Append(" where in_time=@in_time ");
             MySqlParameter[] parameters = {
-					new MySqlParameter("@in_time", MySqlDbType.VarChar,128)			};
+                    new MySqlParameter("@in_time", MySqlDbType.VarChar,128)         };
             parameters[0].Value = in_time;
 
             Model.in_storage model = new Model.in_storage();
@@ -296,7 +360,7 @@ namespace DAL
             return model;
         }
 
-        public DataSet GetList(string strWhere,int num)
+        public DataSet GetList(string strWhere, int num)
         {
             return DbHelperMySQL.Query(strWhere.ToString());
         }
@@ -306,7 +370,7 @@ namespace DAL
         public DataSet GetList(string strWhere)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append("select enter_num,mat_id,mat_name,in_time,sl_id,in_amount,in_weight,in_volume ");
+            strSql.Append("select enter_num,mat_id,mat_name,in_time,sl_id,in_amount,in_weight,in_volume,maxpo,minpo ");
             strSql.Append(" FROM in_storage ");
             if (strWhere.Trim() != "")
             {
@@ -388,9 +452,9 @@ namespace DAL
         }*/
 
         #endregion  BasicMethod
-		#region  ExtensionMethod
+        #region  ExtensionMethod
 
-		#endregion  ExtensionMethod
-	}
+        #endregion  ExtensionMethod
+    }
 }
 

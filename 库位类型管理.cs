@@ -12,6 +12,8 @@ namespace Warehouse
 {
 	public partial class 库位类型管理 : UITitlePage
 	{
+		SystemLog log = new SystemLog();
+		int Dindex = -1;
 		public 库位类型管理()
 		{
 			InitializeComponent();
@@ -42,7 +44,7 @@ namespace Warehouse
 			for (int i = 0; i < grid.ColumnCount; i++) { grid.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells; }
 			AddRow();
 			//给search控件赋值
-			search1.uiComboBox1.Items.Add("库柜类型ID");
+			search1.uiComboBox1.Items.Add("库位类型ID");
 			//search1.uiComboBox1.Items.Add("负责人名称");
 			search1.uiComboBox1.SelectedIndex = 0;
 			//确定按钮和搜索按钮赋值
@@ -66,11 +68,19 @@ namespace Warehouse
 			{
 				int f = search1.uiComboBox1.SelectedIndex;
 				string leixing = null;
+				string leixing_log = null;
 				if (f == 0)
 				{
 					leixing = "type_id";
+					leixing_log = "库位类型ID";
 				}
-				
+				string m = search1.SearchBox.Text.Trim();
+				string str = leixing.Trim() +
+				"=" + "\"" + search1.SearchBox.Text.Trim() + "\"";
+				BLL.storagelocation_type dep = new BLL.storagelocation_type();
+				uiPagination1.DataSource = dep.GetModelList(str);
+				grid.DataSource = dep.GetModelList(str);
+				log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "库位类型管理", "查询" + leixing_log, "");
 			}
 		}
 		//新增

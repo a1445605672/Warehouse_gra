@@ -91,6 +91,7 @@ namespace Warehouse
         {
 			string ooo = "";
 			FEdit_sr sr = new FEdit_sr();
+			sr.Text = "新增供收货商";
 			sr.ShowDialog();
 
             if (sr.IsOK)
@@ -224,6 +225,7 @@ namespace Warehouse
 			//string name = grid.Rows[rowIndex].Cells[1].Value.ToString().Trim();
 
 			FEdit_sr edit_Sr = new FEdit_sr();
+			edit_Sr.Text = "编辑供收货商";
 			bool m = edit_Sr.FuZhi(id);
 
 			if(m != true)
@@ -240,8 +242,6 @@ namespace Warehouse
             {
 				BLL.sr_info info = new BLL.sr_info();
 				bool w =  info.Update(edit_Sr.Sr_Info);
-
-			
 				AddRow();
             }
             else

@@ -136,6 +136,12 @@
     </Compile>
     <Compile Include="SumCount.cs" />
     <Compile Include="SystemLog.cs" />
+    <Compile Include="入库折线图.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="入库折线图.Designer.cs">
+      <DependentUpon>入库折线图.cs</DependentUpon>
+    </Compile>
     <Compile Include="入库汇总.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,12 @@
     </Compile>
     <Compile Include="工具窗体\FrmEditInstorage.Designer.cs">
       <DependentUpon>FrmEditInstorage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="工具窗体\FrmLimit1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="工具窗体\FrmLimit1.Designer.cs">
+      <DependentUpon>FrmLimit1.cs</DependentUpon>
     </Compile>
     <Compile Include="工具窗体\FrmmaterType.cs">
       <SubType>Form</SubType>
@@ -312,11 +324,11 @@
     <Compile Include="库位类型管理.Designer.cs">
       <DependentUpon>库位类型管理.cs</DependentUpon>
     </Compile>
-    <Compile Include="收货商管理.cs">
+    <Compile Include="调拨计划管理.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="收货商管理.Designer.cs">
-      <DependentUpon>收货商管理.cs</DependentUpon>
+    <Compile Include="调拨计划管理.Designer.cs">
+      <DependentUpon>调拨计划管理.cs</DependentUpon>
     </Compile>
     <Compile Include="更新数据窗体\UpdataInWarehouseFrm.cs">
       <SubType>Form</SubType>
@@ -372,6 +384,12 @@
     <Compile Include="用户管理.Designer.cs">
       <DependentUpon>用户管理.cs</DependentUpon>
     </Compile>
+    <Compile Include="端口设置.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="端口设置.Designer.cs">
+      <DependentUpon>端口设置.cs</DependentUpon>
+    </Compile>
     <Compile Include="系统日志.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -385,11 +403,11 @@
       <DependentUpon>综合统计分析.cs</DependentUpon>
     </Compile>
     <Compile Include="表单验证\formAuthentication.cs" />
-    <Compile Include="部门人员管理.cs">
+    <Compile Include="采购退货管理.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="部门人员管理.Designer.cs">
-      <DependentUpon>部门人员管理.cs</DependentUpon>
+    <Compile Include="采购退货管理.Designer.cs">
+      <DependentUpon>采购退货管理.cs</DependentUpon>
     </Compile>
     <Compile Include="部门管理.cs">
       <SubType>Form</SubType>
@@ -467,6 +485,9 @@
     <EmbeddedResource Include="工具窗体\FrmEditInstorage.resx">
       <DependentUpon>FrmEditInstorage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="工具窗体\FrmLimit1.resx">
+      <DependentUpon>FrmLimit1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="工具窗体\FrmmaterType.resx">
       <DependentUpon>FrmmaterType.cs</DependentUpon>
     </EmbeddedResource>
@@ -495,8 +516,11 @@
     <EmbeddedResource Include="库存控制.resx">
       <DependentUpon>库存控制.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="收货商管理.resx">
-      <DependentUpon>收货商管理.cs</DependentUpon>
+    <EmbeddedResource Include="调拨计划管理.resx">
+      <DependentUpon>调拨计划管理.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="数据备份.resx">
+      <DependentUpon>数据备份.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="更新数据窗体\UpdataInWarehouseFrm.resx">
       <DependentUpon>UpdataInWarehouseFrm.cs</DependentUpon>
@@ -543,14 +567,17 @@
     <EmbeddedResource Include="用户管理.resx">
       <DependentUpon>用户管理.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="端口设置.resx">
+      <DependentUpon>端口设置.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="系统日志.resx">
       <DependentUpon>系统日志.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="综合统计分析.resx">
       <DependentUpon>综合统计分析.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="部门人员管理.resx">
-      <DependentUpon>部门人员管理.cs</DependentUpon>
+    <EmbeddedResource Include="采购退货管理.resx">
+      <DependentUpon>采购退货管理.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="部门管理.resx">
       <DependentUpon>部门管理.cs</DependentUpon>
