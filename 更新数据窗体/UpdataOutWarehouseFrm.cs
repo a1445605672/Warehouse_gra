@@ -142,9 +142,7 @@ namespace Warehouse
 			if(Materialsbox.Text!="")
 			{
 			out_Storage_sql+= "out_mat_name=\'"+ Materialsbox.Text + "\',";
-			string mat_id_sql= "SELECT mat_id FROM material_info WHERE mat_name=\'"+ Materialsbox.Text + "\'";
-
-				
+			string mat_id_sql= "SELECT mat_id FROM material_info WHERE mat_name=\'"+ Materialsbox.Text + "\'";	
 			}			
 			if (ProviderBox.Text!="")
 			{

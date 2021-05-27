@@ -130,7 +130,7 @@ namespace Warehouse
 					//}
 					#endregion
 					#region 假删除   需要专门清除缓存
-					string deleteSql = "update out_storage set out_if_accomplish=3 where out_id=" + "\'" + uiDataGridView1.CurrentRow.Cells[2].Value.ToString() + "\'";
+					string deleteSql = "update out_storage set out_if_accomplish=3 where out_id=" + "\'" + uiDataGridView1.CurrentRow.Cells[3].Value.ToString() + "\'";
 					if (out_storage.Update(deleteSql))
 					{
 						ShowErrorTip("您已删除");
@@ -140,7 +140,7 @@ namespace Warehouse
 						ShowSuccessTip("删除失败");
 					}
 					#endregion
-					log.WriteLog(2, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "未完成出库", "删除物料", uiDataGridView1.CurrentRow.Cells[13].Value.ToString());
+					log.WriteLog(2, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "未完成出库", "删除物料", uiDataGridView1.CurrentRow.Cells[3].Value.ToString());
 				}
 				else
 				{

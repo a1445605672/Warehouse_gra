@@ -45,7 +45,7 @@ namespace Warehouse.更新数据窗体
 				sql += "enter_agent_name=\'" + staff_name + "\',enter_agent_id=\'" + staffBox.Text + "\' ,";
 			}
 
-			string provider_id_sql = "select sr_id from sr_info where sr_name=\'" + ProviderBox.Text + "\'and sr_type=\'供货商\'";
+			string provider_id_sql = "select sr_id from sr_info where sr_name=\'" + ProviderBox.Text + "\' and sr_type=\'供货商\'";
 			string Provider_id = enter_Storage.getDataList(provider_id_sql).Tables[0].Rows[0][0].ToString();
 			sql += "supplier_id=\'" + Provider_id + "\' ,";
 

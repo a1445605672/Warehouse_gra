@@ -55,7 +55,6 @@ namespace Warehouse
 			this.edtDate = new Sunny.UI.UIDatePicker();
 			this.uiLabel12 = new Sunny.UI.UILabel();
 			this.uiContextMenuStrip1 = new Sunny.UI.UIContextMenuStrip();
-			this.自动入库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.手动入库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.批量入库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.Way = new Sunny.UI.UISymbolButton();
@@ -466,18 +465,10 @@ namespace Warehouse
 			// 
 			this.uiContextMenuStrip1.Font = new System.Drawing.Font("微软雅黑", 12F);
 			this.uiContextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.自动入库ToolStripMenuItem,
             this.手动入库ToolStripMenuItem,
             this.批量入库ToolStripMenuItem});
 			this.uiContextMenuStrip1.Name = "uiContextMenuStrip1";
-			this.uiContextMenuStrip1.Size = new System.Drawing.Size(145, 82);
-			// 
-			// 自动入库ToolStripMenuItem
-			// 
-			this.自动入库ToolStripMenuItem.Name = "自动入库ToolStripMenuItem";
-			this.自动入库ToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-			this.自动入库ToolStripMenuItem.Text = "自动入库";
-			this.自动入库ToolStripMenuItem.Click += new System.EventHandler(this.自动入库ToolStripMenuItem_Click);
+			this.uiContextMenuStrip1.Size = new System.Drawing.Size(181, 78);
 			// 
 			// 手动入库ToolStripMenuItem
 			// 
@@ -568,7 +559,6 @@ namespace Warehouse
 		private Sunny.UI.UIDatePicker edtDate;
 		private Sunny.UI.UILabel uiLabel12;
 		private Sunny.UI.UIContextMenuStrip uiContextMenuStrip1;
-		private System.Windows.Forms.ToolStripMenuItem 自动入库ToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem 手动入库ToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem 批量入库ToolStripMenuItem;
 		private Sunny.UI.UISymbolButton Way;
