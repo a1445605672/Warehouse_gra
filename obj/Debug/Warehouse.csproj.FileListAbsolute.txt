@@ -396,7 +396,6 @@ E:\0421\Warehouse_gra\bin\Debug\ICSharpCode.SharpZipLib.pdb
 E:\0421\Warehouse_gra\bin\Debug\ICSharpCode.SharpZipLib.xml
 E:\0421\Warehouse_gra\bin\Debug\Newtonsoft.Json.xml
 E:\0421\Warehouse_gra\bin\Debug\DAL.pdb
-E:\0421\Warehouse_gra\obj\Debug\Warehouse.csprojAssemblyReference.cache
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.FLogin.resources
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.FMain.resources
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.Home.resources
@@ -439,13 +438,11 @@ E:\0421\Warehouse_gra\obj\Debug\Warehouse.物料类别管理.resources
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.用户管理.resources
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.系统日志.resources
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.综合统计分析.resources
-E:\0421\Warehouse_gra\obj\Debug\Warehouse.部门人员管理.resources
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.csproj.GenerateResource.cache
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.csproj.CoreCompileInputs.cache
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyComplete
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.exe
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.pdb
-E:\0421\Warehouse_gra\obj\Debug\Warehouse.收货商管理.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.工具窗体.DialogFrm.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.库存控制.resources
 C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.入库折线图.resources
@@ -533,7 +530,6 @@ C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.csproj.CoreCo
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.csproj.CopyComplete
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.exe
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.pdb
-<<<<<<< HEAD
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.收货商管理.resources
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.供应商管理.resources
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.入库折线图.resources
@@ -541,7 +537,6 @@ E:\0421\Warehouse_gra\obj\Debug\Warehouse.出库动图.resources
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.工具窗体.DialogFrm.resources
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.库存控制.resources
 E:\0421\Warehouse_gra\obj\Debug\Warehouse.部门管理.resources
-=======
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.数据备份.resources
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.采购退货管理.resources
 E:\Warehouse_gra\obj\Debug\Warehouse.供应商管理.resources
@@ -637,4 +632,9 @@ C:\Users\kui\Desktop\Warehouse_gra\obj\Debug\Warehouse.端口设置.resources
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmLimit1.resources
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.端口设置.resources
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\obj\Debug\Warehouse.调拨计划管理.resources
->>>>>>> 6d4fa88e477090ce5a2ddda0176717d94a959a33
+E:\0421\Warehouse_gra\obj\Debug\Warehouse.工具窗体.FrmLimit1.resources
+E:\0421\Warehouse_gra\obj\Debug\Warehouse.调拨计划管理.resources
+E:\0421\Warehouse_gra\obj\Debug\Warehouse.数据备份.resources
+E:\0421\Warehouse_gra\obj\Debug\Warehouse.端口设置.resources
+E:\0421\Warehouse_gra\obj\Debug\Warehouse.采购退货管理.resources
+E:\0421\Warehouse_gra\obj\Debug\Warehouse.csprojAssemblyReference.cache

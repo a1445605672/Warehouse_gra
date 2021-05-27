@@ -9,7 +9,7 @@ namespace DBUtility
     public class Config
     {
         //选择连接类型 0为远程，非0为本地
-        public static int connect_type = 0;
+        public static int connect_type = 1;
 
         //数据备份文件夹
         public static string Backup_folder = @"D:\db_backup";

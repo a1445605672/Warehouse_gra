@@ -113,10 +113,10 @@ namespace Warehouse
 				StatusFormStepIt();
 			#region  datagridview添加列
 			//第一个参数是列表头，第二个参数用于绑定数据
-			uiDataGridView1.AddColumn("入库编号", "enter_num").SetFixedMode(0);
+			uiDataGridView1.AddColumn("入库编号", "enter_num").SetFixedMode(-12);
 			uiDataGridView1.AddColumn("物料ID", "mat_id").SetFixedMode(0);
 			uiDataGridView1.AddColumn("物料名称", "mat_name").SetFixedMode(160);
-			uiDataGridView1.AddColumn("库位编号", "sl_id").SetFixedMode(100);
+			uiDataGridView1.AddColumn("库位编号", "sl_id").SetFixedMode(120);
 			uiDataGridView1.AddColumn("存量", "in_amount").SetFixedMode(60);
 			uiDataGridView1.ReadOnly = true;
 			#endregion
@@ -222,7 +222,7 @@ namespace Warehouse
 			int batchIdCount = OutBatchNumber_ds.Tables[0].Rows.Count;
 			for (int i = 0; i < batchIdCount; i++)
 			{
-				batchNumberBox.Items.Add(OutBatchNumber_ds.Tables[0].Rows[i][0].ToString());
+				batchNumberBox1.Items.Add(OutBatchNumber_ds.Tables[0].Rows[i][0].ToString());
 			}
 			#endregion
 

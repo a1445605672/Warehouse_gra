@@ -97,11 +97,14 @@ namespace Warehouse
         
         }
 
+
+        //恢复数据库
         private void recover_Click(object sender, EventArgs e)
         {
             if (uiListBox1.SelectedItem != null)
             {
-                string v_filepath = DBUtility.Config.Recover_bat + @"\mysql_recover" + ".bat";
+                //string v_filepath = DBUtility.Config.Recover_bat + @"\mysql_recover" + ".bat";
+                string v_filepath = DBUtility.Config.Recover_bat ;
                 string time = uiDatePicker1.Value.ToString("yyyyMMdd");
                 
                 //源文件夹
@@ -114,16 +117,25 @@ namespace Warehouse
 
                 if(s!= null)
                 {
-                    UIMessageBox.ShowSuccess("备份成功");
+                    UIMessageBox.ShowSuccess("恢复成功");
                 }
                 else
                 {
-                    UIMessageBox.ShowError("备份失败");
+                    UIMessageBox.ShowError("恢复失败");
                 }
 
                 File.WriteAllText(v_filepath,s, Encoding.Default);
 
                 Execute_bat(v_filepath);
+
+                if (s != null)
+                {
+                    UIMessageBox.ShowSuccess("恢复成功");
+                }
+                else
+                {
+                    UIMessageBox.ShowError("恢复失败");
+                }
 
 
             }
@@ -155,6 +167,21 @@ namespace Warehouse
         private void uiComboTreeView1_NodeSelected(object sender, TreeNode node)
         {
             UIMessageBox.ShowInfo("当前备份频率为 " + node.Text);     
+        }
+
+        private void uiSwitch1_ValueChanged(object sender, bool value)
+        {
+            if(DBUtility.Config.connect_type == 0)
+            {
+                DBUtility.Config.connect_type = 1;
+                UIMessageBox.ShowInfo("当前数据库更改为本地数据库，请重启物料管理软件");
+            }
+            else
+            {
+
+                DBUtility.Config.connect_type = 0;
+                UIMessageBox.ShowInfo("当前数据库更改为云数据库，请重启物料管理软件");
+            }
         }
     }
 }

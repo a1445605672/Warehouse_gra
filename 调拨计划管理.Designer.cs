@@ -57,7 +57,6 @@ namespace Warehouse
             this.uiLabel9 = new Sunny.UI.UILabel();
             this.uiLabel10 = new Sunny.UI.UILabel();
             this.uiLabel11 = new Sunny.UI.UILabel();
-            this.button1 = new System.Windows.Forms.Button();
             this.uiGroupBox1.SuspendLayout();
             this.uiTitlePanel3.SuspendLayout();
             this.uiTitlePanel2.SuspendLayout();
@@ -77,7 +76,7 @@ namespace Warehouse
             this.uiComboTreeView1.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboTreeView1.Name = "uiComboTreeView1";
             this.uiComboTreeView1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboTreeView1.Size = new System.Drawing.Size(150, 34);
+            this.uiComboTreeView1.Size = new System.Drawing.Size(150, 39);
             this.uiComboTreeView1.TabIndex = 1;
             this.uiComboTreeView1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiComboTreeView1.NodeSelected += new Sunny.UI.UIComboTreeView.OnNodeSelected(this.uiComboTreeView1_NodeSelected);
@@ -104,7 +103,7 @@ namespace Warehouse
             this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTextBox1.Name = "uiTextBox1";
             this.uiTextBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox1.Size = new System.Drawing.Size(150, 34);
+            this.uiTextBox1.Size = new System.Drawing.Size(150, 39);
             this.uiTextBox1.TabIndex = 3;
             this.uiTextBox1.TextChanged += new System.EventHandler(this.uiTextBox1_TextChanged);
             this.uiTextBox1.TabStopChanged += new System.EventHandler(this.uiTextBox1_TabStopChanged);
@@ -132,7 +131,7 @@ namespace Warehouse
             this.uiComboTreeView2.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboTreeView2.Name = "uiComboTreeView2";
             this.uiComboTreeView2.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboTreeView2.Size = new System.Drawing.Size(149, 34);
+            this.uiComboTreeView2.Size = new System.Drawing.Size(149, 39);
             this.uiComboTreeView2.TabIndex = 6;
             this.uiComboTreeView2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiComboTreeView2.NodeSelected += new Sunny.UI.UIComboTreeView.OnNodeSelected(this.uiComboTreeView2_NodeSelected);
@@ -273,11 +272,7 @@ namespace Warehouse
             // 
             // uiGroupBox4
             // 
-<<<<<<< HEAD:收货商管理.Designer.cs
-            this.uiGroupBox4.Controls.Add(this.button1);
-=======
             this.uiGroupBox4.Controls.Add(this.uiButton3);
->>>>>>> 6d4fa88e477090ce5a2ddda0176717d94a959a33:调拨计划管理.Designer.cs
             this.uiGroupBox4.Controls.Add(this.uiRadioButton2);
             this.uiGroupBox4.Controls.Add(this.uiButton2);
             this.uiGroupBox4.Controls.Add(this.uiRadioButton1);
@@ -368,7 +363,7 @@ namespace Warehouse
             this.uiComboTreeView5.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboTreeView5.Name = "uiComboTreeView5";
             this.uiComboTreeView5.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboTreeView5.Size = new System.Drawing.Size(150, 34);
+            this.uiComboTreeView5.Size = new System.Drawing.Size(150, 39);
             this.uiComboTreeView5.TabIndex = 1;
             this.uiComboTreeView5.Text = " ";
             this.uiComboTreeView5.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -384,7 +379,7 @@ namespace Warehouse
             this.uiComboTreeView4.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboTreeView4.Name = "uiComboTreeView4";
             this.uiComboTreeView4.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboTreeView4.Size = new System.Drawing.Size(150, 34);
+            this.uiComboTreeView4.Size = new System.Drawing.Size(150, 39);
             this.uiComboTreeView4.TabIndex = 1;
             this.uiComboTreeView4.Text = " ";
             this.uiComboTreeView4.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -400,7 +395,7 @@ namespace Warehouse
             this.uiComboTreeView3.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboTreeView3.Name = "uiComboTreeView3";
             this.uiComboTreeView3.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboTreeView3.Size = new System.Drawing.Size(150, 34);
+            this.uiComboTreeView3.Size = new System.Drawing.Size(150, 39);
             this.uiComboTreeView3.TabIndex = 1;
             this.uiComboTreeView3.Text = " ";
             this.uiComboTreeView3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
@@ -436,23 +431,9 @@ namespace Warehouse
             this.uiLabel11.Text = "选择目的仓库：";
             this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-<<<<<<< HEAD:收货商管理.Designer.cs
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(431, 113);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // 收货商管理
-=======
             // 调拨计划管理
->>>>>>> 6d4fa88e477090ce5a2ddda0176717d94a959a33:调拨计划管理.Designer.cs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(989, 701);
@@ -495,15 +476,11 @@ namespace Warehouse
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private Sunny.UI.UILabel uiLabel1;
-<<<<<<< HEAD:收货商管理.Designer.cs
-        private System.Windows.Forms.Button button1;
-=======
         private Sunny.UI.UITitlePanel uiTitlePanel1;
         private Sunny.UI.UITitlePanel uiTitlePanel3;
         private Sunny.UI.UITitlePanel uiTitlePanel2;
         private Sunny.UI.UITitlePanel uiTitlePanel4;
         private Sunny.UI.UIButton uiButton3;
         private Sunny.UI.UIButton uiButton2;
->>>>>>> 6d4fa88e477090ce5a2ddda0176717d94a959a33:调拨计划管理.Designer.cs
     }
 }

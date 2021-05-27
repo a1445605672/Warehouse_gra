@@ -47,6 +47,8 @@ namespace Warehouse
             this.uiLabel1 = new Sunny.UI.UILabel();
             this.uiDatePicker1 = new Sunny.UI.UIDatePicker();
             this.recover = new Sunny.UI.UIButton();
+            this.uiSwitch1 = new Sunny.UI.UISwitch();
+            this.uiLabel4 = new Sunny.UI.UILabel();
             this.uiGroupBox1.SuspendLayout();
             this.uiGroupBox2.SuspendLayout();
             this.uiTitlePanel1.SuspendLayout();
@@ -132,7 +134,7 @@ namespace Warehouse
             treeNode4,
             treeNode5});
             this.uiComboTreeView1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboTreeView1.Size = new System.Drawing.Size(194, 39);
+            this.uiComboTreeView1.Size = new System.Drawing.Size(194, 34);
             this.uiComboTreeView1.TabIndex = 2;
             this.uiComboTreeView1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiComboTreeView1.NodeSelected += new Sunny.UI.UIComboTreeView.OnNodeSelected(this.uiComboTreeView1_NodeSelected);
@@ -225,7 +227,7 @@ namespace Warehouse
             this.uiDatePicker1.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiDatePicker1.Name = "uiDatePicker1";
             this.uiDatePicker1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiDatePicker1.Size = new System.Drawing.Size(150, 39);
+            this.uiDatePicker1.Size = new System.Drawing.Size(150, 34);
             this.uiDatePicker1.SymbolDropDown = 61555;
             this.uiDatePicker1.SymbolNormal = 61555;
             this.uiDatePicker1.TabIndex = 1;
@@ -247,11 +249,34 @@ namespace Warehouse
             this.recover.Text = "恢复";
             this.recover.Click += new System.EventHandler(this.recover_Click);
             // 
+            // uiSwitch1
+            // 
+            this.uiSwitch1.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiSwitch1.Location = new System.Drawing.Point(210, 16);
+            this.uiSwitch1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSwitch1.Name = "uiSwitch1";
+            this.uiSwitch1.Size = new System.Drawing.Size(75, 29);
+            this.uiSwitch1.TabIndex = 2;
+            this.uiSwitch1.Text = "uiSwitch1";
+            this.uiSwitch1.ValueChanged += new Sunny.UI.UISwitch.OnValueChanged(this.uiSwitch1_ValueChanged);
+            // 
+            // uiLabel4
+            // 
+            this.uiLabel4.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.uiLabel4.Location = new System.Drawing.Point(110, 13);
+            this.uiLabel4.Name = "uiLabel4";
+            this.uiLabel4.Size = new System.Drawing.Size(100, 23);
+            this.uiLabel4.TabIndex = 3;
+            this.uiLabel4.Text = "打开本地数据库";
+            this.uiLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // 数据备份
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 633);
+            this.Controls.Add(this.uiLabel4);
+            this.Controls.Add(this.uiSwitch1);
             this.Controls.Add(this.uiGroupBox2);
             this.Controls.Add(this.uiGroupBox1);
             this.Name = "数据备份";
@@ -278,6 +303,8 @@ namespace Warehouse
         private Sunny.UI.UIRadioButton uiRadioButton2;
         private Sunny.UI.UIRadioButton uiRadioButton1;
         private Sunny.UI.UILabel uiLabel3;
+        private Sunny.UI.UISwitch uiSwitch1;
+        private Sunny.UI.UILabel uiLabel4;
     }
 }
 
