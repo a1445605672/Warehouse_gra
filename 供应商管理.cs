@@ -25,8 +25,8 @@ namespace Warehouse
 			grid.AddColumn("供收货商编号", "sr_id");
 			grid.AddColumn("供收货商名称", "sr_name");
 			grid.AddColumn("供收货商类型", "sr_type");
-			grid.AddColumn("负责人姓名（员工）", "sr_resp_name");
-			grid.AddColumn("负责人id(员工", "sr_resp_id");
+			grid.AddColumn("负责人姓名", "sr_resp_name");
+			grid.AddColumn("负责人ID", "sr_resp_id");
 			grid.AddColumn("联系人姓名", "sr_contact_name");
 			grid.AddColumn("联系人电话", "sr_contact_phone");
 			grid.AddColumn("地址", "sr_place");
@@ -91,6 +91,7 @@ namespace Warehouse
         {
 			string ooo = "";
 			FEdit_sr sr = new FEdit_sr();
+			sr.Text = "新增供收货商";
 			sr.ShowDialog();
 
             if (sr.IsOK)
@@ -224,6 +225,7 @@ namespace Warehouse
 			//string name = grid.Rows[rowIndex].Cells[1].Value.ToString().Trim();
 
 			FEdit_sr edit_Sr = new FEdit_sr();
+			edit_Sr.Text = "编辑供收货商";
 			bool m = edit_Sr.FuZhi(id);
 
 			if(m != true)

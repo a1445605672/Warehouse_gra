@@ -37,7 +37,6 @@ namespace Warehouse
 			but.HeaderText = "操作";  //设置列表头的名字
 			but.SetFixedMode(50);//设置按钮大小
 			but.Name = "UpDate";//设置按钮的名字
-
 			but.DefaultCellStyle.NullValue = "修改";
 			grid.Columns.Add(but);
 

@@ -188,7 +188,7 @@ namespace Warehouse
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "部门管理", "进入部门管理页面", "");
 					break;
 				case "采购退货管理":
-					LoadMdiForm(MainTabControl, text, typeof(部门人员管理));
+					LoadMdiForm(MainTabControl, text, typeof(采购退货管理));
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "采购退货管理", "进入采购退货管理页面", "");
 					break;
 				case "供收货商管理":
@@ -200,7 +200,7 @@ namespace Warehouse
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "库存控制", "进入库存控制页面", "");
 					break;
 				case "调拨计划管理":
-					LoadMdiForm(MainTabControl, text, typeof(收货商管理));
+					LoadMdiForm(MainTabControl, text, typeof(调拨计划管理));
 					log.WriteLog(4, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "调拨计划管理", "进入调拨计划管理页面", "");
 					break;
 				case "数据备份":

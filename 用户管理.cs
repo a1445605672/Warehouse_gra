@@ -14,6 +14,13 @@ namespace Warehouse
 {
     public partial class 用户管理 : UIPage
     {
+        private List<Model.staff> staffs;
+
+        public static string dep_id;
+        public static string Sta_sx;
+
+        public static bool Mode;
+
         public 用户管理()
         {
             InitializeComponent();
@@ -45,7 +52,27 @@ namespace Warehouse
             BLL.staff bsta = new BLL.staff();
 
             //this.grid.DataSource = bsta.GetModelList(""); 
-            uiPagination1.DataSource = bsta.GetModelList("");
+            
+            staffs = bsta.GetModelList("");
+            for(int i =0; i<staffs.Count; i++)
+            {
+                switch (staffs[i].staff_sx)
+                {
+                    case "1":
+                        staffs[i].staff_sx = "系统管理员";
+                        break;
+                    case "2":
+                        staffs[i].staff_sx = "部门管理员";
+                        break;
+                    case "3":
+                        staffs[i].staff_sx = "操作员";
+                        break;
+
+                }
+
+            }
+
+            uiPagination1.DataSource = staffs;
             uiPagination1.ActivePage = 1;
 
 
@@ -54,23 +81,30 @@ namespace Warehouse
         //新增员工
         private void uiButton1_Click(object sender, EventArgs e)
         {
+            Mode = true;
+
             FEdit_staff frm = new FEdit_staff();
+            frm.Text = "编辑用户";
             frm.ShowDialog();
             
             if (frm.IsOK)
             {
                 
-                BLL.staff sta = new BLL.staff();
-                bool m = sta.Add(frm.Staff);
+                
+                
+                    BLL.staff sta = new BLL.staff();
+                    bool m = sta.Add(frm.Staff);
 
-                if (m)
-                {
-                    this.ShowSuccessDialog("插入成功");
-                }
-                else
-                {
-                    this.ShowSuccessDialog("插入失败");
-                }
+                    if (m)
+                    {
+                        this.ShowSuccessDialog("插入成功");
+                    }
+                    else
+                    {
+                        this.ShowSuccessDialog("插入失败");
+                    }
+                
+               
             }
             frm.Dispose();
             AddRow();
@@ -207,12 +241,13 @@ namespace Warehouse
         //编辑功能
         private void MenuItem_update_Click(object sender, EventArgs e)
         {
+            Mode = false;
 
             // 当前行
             int rowIndex = grid.SelectedRows[0].Index;
             string id = grid.Rows[rowIndex].Cells[0].Value.ToString().Trim();
-           
-            
+            dep_id = grid.Rows[rowIndex].Cells[7].Value.ToString().Trim();
+            Sta_sx = grid.Rows[rowIndex].Cells[8].Value.ToString().Trim();
 
             Model.staff sta = new Model.staff();
             sta.staff_id = id;
@@ -223,6 +258,7 @@ namespace Warehouse
 
             // 弹出对话框
             FEdit_staff dlg = new FEdit_staff();
+            dlg.Text = "编辑用户";
             bool m = dlg.FuZhi(id);
             //dlg.Staff.staff_name = name;
 

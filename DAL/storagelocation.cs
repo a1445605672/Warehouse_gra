@@ -186,11 +186,29 @@ namespace DAL
         public Model.storagelocation GetModel(string sl_id)
         {
 
+     //       StringBuilder strSql = new StringBuilder();
+     //       strSql.Append("select sl_id,sl_store_type_id,sl_store_min,sl_store_max,sl_store_area,sl_comment,sl_remain_bulk,sl_belong_chest,sl_sx from storagelocation ");
+     //       strSql.Append(" where sl_id=@sl_id ");
+     //       MySqlParameter[] parameters = {
+					//new MySqlParameter("@sl_id", MySqlDbType.VarChar,128)			};
+     //       parameters[0].Value = sl_id;
+
+     //       Model.storagelocation model = new Model.storagelocation();
+     //       DataSet ds = DbHelperMySQL.Query(strSql.ToString(), parameters);
+     //       if (ds.Tables[0].Rows.Count > 0)
+     //       {
+     //           return DataRowToModel(ds.Tables[0].Rows[0]);
+     //       }
+     //       else
+     //       {
+     //           return null;
+     //       }
+
             StringBuilder strSql = new StringBuilder();
             strSql.Append("select sl_id,sl_store_type_id,sl_store_min,sl_store_max,sl_store_area,sl_comment,sl_remain_bulk,sl_belong_chest,sl_sx from storagelocation ");
-            strSql.Append(" where sl_id=@sl_id ");
+            strSql.Append(" where " + sl_id);
             MySqlParameter[] parameters = {
-					new MySqlParameter("@sl_id", MySqlDbType.VarChar,128)			};
+                    new MySqlParameter("@sl_id", MySqlDbType.VarChar,128)           };
             parameters[0].Value = sl_id;
 
             Model.storagelocation model = new Model.storagelocation();

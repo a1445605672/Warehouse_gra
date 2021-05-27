@@ -1,7 +1,7 @@
 ﻿
 namespace Warehouse
 {
-	partial class 收货商管理
+	partial class 调拨计划管理
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -169,9 +169,9 @@ namespace Warehouse
             // flowLayoutPanel3
             // 
             this.flowLayoutPanel3.AutoScroll = true;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(12, 38);
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 49);
             this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(196, 173);
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(205, 162);
             this.flowLayoutPanel3.TabIndex = 5;
             // 
             // uiTitlePanel2
@@ -191,9 +191,9 @@ namespace Warehouse
             // flowLayoutPanel2
             // 
             this.flowLayoutPanel2.AutoScroll = true;
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(21, 38);
+            this.flowLayoutPanel2.Location = new System.Drawing.Point(19, 49);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(190, 173);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(190, 151);
             this.flowLayoutPanel2.TabIndex = 4;
             // 
             // uiTitlePanel4
@@ -309,13 +309,14 @@ namespace Warehouse
             // 
             this.uiRadioButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiRadioButton2.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiRadioButton2.Location = new System.Drawing.Point(288, 123);
+            this.uiRadioButton2.Location = new System.Drawing.Point(315, 61);
             this.uiRadioButton2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiRadioButton2.Name = "uiRadioButton2";
             this.uiRadioButton2.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
             this.uiRadioButton2.Size = new System.Drawing.Size(91, 29);
             this.uiRadioButton2.TabIndex = 4;
             this.uiRadioButton2.Text = "自动";
+            this.uiRadioButton2.ValueChanged += new Sunny.UI.UIRadioButton.OnValueChanged(this.uiRadioButton2_ValueChanged);
             // 
             // uiButton2
             // 
@@ -333,18 +334,19 @@ namespace Warehouse
             // 
             this.uiRadioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.uiRadioButton1.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiRadioButton1.Location = new System.Drawing.Point(205, 123);
+            this.uiRadioButton1.Location = new System.Drawing.Point(215, 61);
             this.uiRadioButton1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiRadioButton1.Name = "uiRadioButton1";
             this.uiRadioButton1.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
             this.uiRadioButton1.Size = new System.Drawing.Size(94, 29);
             this.uiRadioButton1.TabIndex = 3;
             this.uiRadioButton1.Text = "手动";
+            this.uiRadioButton1.ValueChanged += new Sunny.UI.UIRadioButton.OnValueChanged(this.uiRadioButton1_ValueChanged);
             // 
             // uiLabel12
             // 
             this.uiLabel12.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel12.Location = new System.Drawing.Point(1, 114);
+            this.uiLabel12.Location = new System.Drawing.Point(3, 52);
             this.uiLabel12.Name = "uiLabel12";
             this.uiLabel12.Size = new System.Drawing.Size(198, 38);
             this.uiLabel12.TabIndex = 2;
@@ -388,7 +390,7 @@ namespace Warehouse
             this.uiComboTreeView3.DropDownStyle = Sunny.UI.UIDropDownStyle.DropDownList;
             this.uiComboTreeView3.FillColor = System.Drawing.Color.White;
             this.uiComboTreeView3.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiComboTreeView3.Location = new System.Drawing.Point(215, 51);
+            this.uiComboTreeView3.Location = new System.Drawing.Point(215, 115);
             this.uiComboTreeView3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.uiComboTreeView3.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboTreeView3.Name = "uiComboTreeView3";
@@ -402,7 +404,7 @@ namespace Warehouse
             // uiLabel9
             // 
             this.uiLabel9.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel9.Location = new System.Drawing.Point(46, 232);
+            this.uiLabel9.Location = new System.Drawing.Point(49, 232);
             this.uiLabel9.Name = "uiLabel9";
             this.uiLabel9.Size = new System.Drawing.Size(153, 35);
             this.uiLabel9.TabIndex = 0;
@@ -412,7 +414,7 @@ namespace Warehouse
             // uiLabel10
             // 
             this.uiLabel10.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel10.Location = new System.Drawing.Point(46, 173);
+            this.uiLabel10.Location = new System.Drawing.Point(49, 173);
             this.uiLabel10.Name = "uiLabel10";
             this.uiLabel10.Size = new System.Drawing.Size(153, 37);
             this.uiLabel10.TabIndex = 0;
@@ -422,14 +424,14 @@ namespace Warehouse
             // uiLabel11
             // 
             this.uiLabel11.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel11.Location = new System.Drawing.Point(3, 53);
+            this.uiLabel11.Location = new System.Drawing.Point(3, 115);
             this.uiLabel11.Name = "uiLabel11";
             this.uiLabel11.Size = new System.Drawing.Size(199, 37);
             this.uiLabel11.TabIndex = 0;
             this.uiLabel11.Text = "选择目的仓库：";
             this.uiLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // 收货商管理
+            // 调拨计划管理
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -438,7 +440,7 @@ namespace Warehouse
             this.Controls.Add(this.uiGroupBox4);
             this.Controls.Add(this.uiGroupBox2);
             this.Controls.Add(this.uiGroupBox1);
-            this.Name = "收货商管理";
+            this.Name = "调拨计划管理";
             this.Text = "收货商管理";
             this.uiGroupBox1.ResumeLayout(false);
             this.uiTitlePanel3.ResumeLayout(false);
