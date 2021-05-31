@@ -60,14 +60,14 @@ namespace DAL
 					new MySqlParameter("@mat_sx", MySqlDbType.VarChar,64)};
             parameters[0].Value = model.mat_id;
             parameters[1].Value = model.mat_name;
-            parameters[2].Value = model.mat_father_id;
+            parameters[2].Value = "材料";
             parameters[3].Value = model.mat_create_time;
             parameters[4].Value = model.mat_fengdu;
             parameters[5].Value = model.mat_state;
             parameters[6].Value = model.mat_colour;
             parameters[7].Value = model.mat_smell;
             parameters[8].Value = model.mat_type;
-            parameters[9].Value = model.mat_type_id;
+            parameters[9].Value = "213";
             parameters[10].Value = model.mat_purpose;
             parameters[11].Value = model.mat_source;
             parameters[12].Value = model.mat_suanjianxing;

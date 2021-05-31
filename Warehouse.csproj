@@ -104,6 +104,7 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="IniFile.cs" />
     <Compile Include="new 入库汇总.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +135,7 @@
     <Compile Include="new_物料盘存.Designer.cs">
       <DependentUpon>new_物料盘存.cs</DependentUpon>
     </Compile>
+    <Compile Include="Profile.cs" />
     <Compile Include="SumCount.cs" />
     <Compile Include="SystemLog.cs" />
     <Compile Include="入库折线图.cs">

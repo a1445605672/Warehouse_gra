@@ -66,7 +66,7 @@ namespace Warehouse.工具窗体
             this.uiTextBox1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTextBox1.Name = "uiTextBox1";
             this.uiTextBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox1.Size = new System.Drawing.Size(150, 39);
+            this.uiTextBox1.Size = new System.Drawing.Size(150, 34);
             this.uiTextBox1.TabIndex = 3;
             // 
             // uiLabel2
@@ -91,7 +91,7 @@ namespace Warehouse.工具窗体
             this.uiTextBox2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTextBox2.Name = "uiTextBox2";
             this.uiTextBox2.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox2.Size = new System.Drawing.Size(150, 39);
+            this.uiTextBox2.Size = new System.Drawing.Size(150, 34);
             this.uiTextBox2.TabIndex = 3;
             // 
             // uiLabel3
@@ -116,7 +116,7 @@ namespace Warehouse.工具窗体
             this.uiTextBox3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTextBox3.Name = "uiTextBox3";
             this.uiTextBox3.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox3.Size = new System.Drawing.Size(150, 39);
+            this.uiTextBox3.Size = new System.Drawing.Size(150, 34);
             this.uiTextBox3.TabIndex = 3;
             // 
             // uiLabel4
@@ -141,12 +141,12 @@ namespace Warehouse.工具窗体
             this.uiTextBox4.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTextBox4.Name = "uiTextBox4";
             this.uiTextBox4.Padding = new System.Windows.Forms.Padding(5);
-            this.uiTextBox4.Size = new System.Drawing.Size(150, 39);
+            this.uiTextBox4.Size = new System.Drawing.Size(150, 34);
             this.uiTextBox4.TabIndex = 3;
             // 
             // FrmmaterType
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(404, 414);
             this.Controls.Add(this.uiTextBox4);
@@ -175,12 +175,12 @@ namespace Warehouse.工具窗体
         #endregion
 
         private Sunny.UI.UILabel uiLabel1;
-        private Sunny.UI.UITextBox uiTextBox1;
         private Sunny.UI.UILabel uiLabel2;
         private Sunny.UI.UITextBox uiTextBox2;
         private Sunny.UI.UILabel uiLabel3;
         private Sunny.UI.UITextBox uiTextBox3;
         private Sunny.UI.UILabel uiLabel4;
         private Sunny.UI.UITextBox uiTextBox4;
+        public Sunny.UI.UITextBox uiTextBox1;
     }
 }

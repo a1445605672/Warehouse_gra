@@ -101,7 +101,7 @@ namespace Warehouse
 			if (mat.IsOK)
 			{
 				BLL.material_info sr_ = new BLL.material_info();
-				bool m = sr_.Add(mat.materialModel);
+				bool m = sr_.Add(mat.MaterialModel);
 				if (m == true)
 				{
 					UIMessageBox.ShowSuccess("新增成功");
@@ -130,6 +130,10 @@ namespace Warehouse
 				Model.material_info sta = new Model.material_info();
 				sta.mat_id = id;
 				Frmaterial mat = new Frmaterial();
+				mat.uiButton1.Enabled = false;
+				mat.uiButton1.Enabled = false;
+				mat.txtID.Enabled = false;
+				mat.txtInfo.Enabled = false;
 				bool m = mat.FuZhi(id);
 				if (m != true)
 				{

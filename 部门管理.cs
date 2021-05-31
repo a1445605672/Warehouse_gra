@@ -242,8 +242,8 @@ namespace Warehouse
 
             if (dlg.IsOK)
             {
-
-                BLL.department stt = new BLL.department();
+				this.ShowSuccessDialog("编辑成功");
+				BLL.department stt = new BLL.department();
                 stt.Update(dlg.Department);
                 AddRow();
 				log.WriteLog(3, Session.staffId, DateTime.Now.ToString("yyyy-MM-dd"), "部门管理", "编辑部门信息", "");

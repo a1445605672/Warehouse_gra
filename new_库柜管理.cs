@@ -129,9 +129,10 @@ namespace Warehouse
 				sta.chest_id = id;
 				//弹出对话框
 				kugui gui = new kugui();
-				gui.uiListBox1.Visible = false;
-				gui.uiButton1.Visible = false;
-
+				//gui.uiListBox1.Visible = false;
+				//gui.uiButton1.Visible = false;
+				gui.uiListBox1.Enabled = false;
+				gui.uiButton1.Enabled = false;
 				bool m = gui.FuZhi(id);
 				if (m != true)
 				{

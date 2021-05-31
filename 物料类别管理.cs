@@ -109,6 +109,8 @@ namespace Warehouse
 				sta.type_id = id;
 				//弹出对话框
 				FrmmaterType type = new FrmmaterType();
+				type.uiTextBox1.Enabled = false;
+				type.uiTextBox1.Text = "物料编号不能更改";
 				bool m= type.FuZhi(id);
 				if (m != true)
 				{
@@ -144,20 +146,19 @@ namespace Warehouse
 			{
 				if (ShowAskDialog("此操作不可恢复。是否确认删除?"))
 				{
-					foreach (DataGridViewRow row in grid.SelectedRows)
+					//获得选择的行
+					int rowIndex = e.RowIndex;
+					string id = grid.CurrentRow.Cells[2].Value.ToString();
+					BLL.material_type bllstorage = new BLL.material_type();
+					bool die = bllstorage.Delete(id);
+					if (die)
 					{
-						string m = row.Cells[0].Value.ToString().Trim();
-						BLL.material_type bllstorage = new BLL.material_type();
-						bool die = bllstorage.Delete(m);
-						if (die)
-						{
-							ShowSuccessDialog("删除成功");
-							AddRow();
-						}
-						else
-						{
-							ShowErrorDialog("删除失败");
-						}
+						ShowSuccessDialog("删除成功");
+						AddRow();
+					}
+					else
+					{
+						ShowErrorDialog("删除失败");
 					}
 				}
 			}

@@ -123,8 +123,8 @@ namespace Warehouse
 			if (grid.Columns[e.ColumnIndex].Name == "UpDate" && e.RowIndex >= 0)
 			{
 				//获得选择的行
-				int rowIndex =e.RowIndex;
-				string id= grid.CurrentRow.Cells[2].Value.ToString();
+				int rowIndex = e.RowIndex;
+				string id = grid.CurrentRow.Cells[2].Value.ToString();
 				//string id = grid.Rows[rowIndex].Cells[0].Value.ToString().Trim();
 				Model.storage sta = new Model.storage();
 				sta.storage_id = id;
@@ -142,7 +142,7 @@ namespace Warehouse
 				if (room.IsOK)
 				{
 					BLL.storage bllstorage = new BLL.storage();
-					bool k= bllstorage.Update(room.StorageModel);
+					bool k = bllstorage.Update(room.StorageModel);
 					//更改成功
 					if (k)
 					{

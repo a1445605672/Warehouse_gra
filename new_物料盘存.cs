@@ -52,13 +52,12 @@ namespace Warehouse
             {
 
 
-                foreach (DataGridViewRow row in uiDataGridView1.SelectedRows)
-                {
-                    string m = row.Cells[0].Value.ToString().Trim();
+                int rowIndex = uiDataGridView1.SelectedRows[0].Index;
+                string id = uiDataGridView1.Rows[rowIndex].Cells[0].Value.ToString().Trim();
 
 
-                    BLL.in_storage sta = new BLL.in_storage();
-                    bool dle = sta.Delete(m);
+                BLL.in_storage sta = new BLL.in_storage();
+                    bool dle = sta.Delete(id);
                     if (dle)
                     {
                         ShowSuccessDialog("删除成功");
@@ -68,7 +67,7 @@ namespace Warehouse
                     {
                         ShowErrorDialog("删除失败");
                     }
-                }
+                
             }
         }
         //编辑

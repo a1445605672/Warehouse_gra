@@ -25,7 +25,8 @@ namespace Warehouse
         {
             InitializeComponent();
 
-            
+
+            UIMessageBox.ShowWarning("没有权限操作此功能，请向系统管理员申请当前模块的操作权限");
             grid.AddColumn("员工id", "staff_id");
             grid.AddColumn("员工名", "staff_name");
             grid.AddColumn("性别", "staff_sex");

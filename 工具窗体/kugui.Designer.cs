@@ -65,7 +65,7 @@ namespace Warehouse.工具窗体
             // 
             this.RoomID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.RoomID.Enabled = false;
-            this.RoomID.FillColor = System.Drawing.Color.Silver;
+            this.RoomID.FillColor = System.Drawing.Color.White;
             this.RoomID.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.RoomID.Location = new System.Drawing.Point(461, 50);
             this.RoomID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -74,8 +74,7 @@ namespace Warehouse.工具窗体
             this.RoomID.MinimumSize = new System.Drawing.Size(1, 1);
             this.RoomID.Name = "RoomID";
             this.RoomID.Padding = new System.Windows.Forms.Padding(5);
-            this.RoomID.Size = new System.Drawing.Size(150, 39);
-            this.RoomID.Style = Sunny.UI.UIStyle.Custom;
+            this.RoomID.Size = new System.Drawing.Size(150, 34);
             this.RoomID.TabIndex = 4;
             this.RoomID.Text = "左侧选择房间";
             // 
@@ -95,7 +94,7 @@ namespace Warehouse.工具窗体
             this.chestID.BackColor = System.Drawing.Color.White;
             this.chestID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.chestID.Enabled = false;
-            this.chestID.FillColor = System.Drawing.Color.Silver;
+            this.chestID.FillColor = System.Drawing.Color.White;
             this.chestID.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.chestID.Location = new System.Drawing.Point(461, 99);
             this.chestID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -104,8 +103,7 @@ namespace Warehouse.工具窗体
             this.chestID.MinimumSize = new System.Drawing.Size(1, 1);
             this.chestID.Name = "chestID";
             this.chestID.Padding = new System.Windows.Forms.Padding(5);
-            this.chestID.Size = new System.Drawing.Size(150, 39);
-            this.chestID.Style = Sunny.UI.UIStyle.Custom;
+            this.chestID.Size = new System.Drawing.Size(150, 34);
             this.chestID.TabIndex = 4;
             this.chestID.Text = "库柜编号自动生成";
             // 
@@ -131,7 +129,7 @@ namespace Warehouse.工具窗体
             this.chestName.MinimumSize = new System.Drawing.Size(1, 1);
             this.chestName.Name = "chestName";
             this.chestName.Padding = new System.Windows.Forms.Padding(5);
-            this.chestName.Size = new System.Drawing.Size(150, 39);
+            this.chestName.Size = new System.Drawing.Size(150, 34);
             this.chestName.TabIndex = 4;
             // 
             // uiLabel3
@@ -156,7 +154,7 @@ namespace Warehouse.工具窗体
             this.tijileft.MinimumSize = new System.Drawing.Size(1, 1);
             this.tijileft.Name = "tijileft";
             this.tijileft.Padding = new System.Windows.Forms.Padding(5);
-            this.tijileft.Size = new System.Drawing.Size(150, 39);
+            this.tijileft.Size = new System.Drawing.Size(150, 34);
             this.tijileft.TabIndex = 4;
             // 
             // uiLabel4
@@ -181,7 +179,7 @@ namespace Warehouse.工具窗体
             this.kuweileft.MinimumSize = new System.Drawing.Size(1, 1);
             this.kuweileft.Name = "kuweileft";
             this.kuweileft.Padding = new System.Windows.Forms.Padding(5);
-            this.kuweileft.Size = new System.Drawing.Size(150, 39);
+            this.kuweileft.Size = new System.Drawing.Size(150, 34);
             this.kuweileft.TabIndex = 4;
             // 
             // uiLabel5
@@ -228,7 +226,7 @@ namespace Warehouse.工具窗体
             this.txtSuo1.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSuo1.Name = "txtSuo1";
             this.txtSuo1.Padding = new System.Windows.Forms.Padding(5);
-            this.txtSuo1.Size = new System.Drawing.Size(150, 39);
+            this.txtSuo1.Size = new System.Drawing.Size(150, 34);
             this.txtSuo1.TabIndex = 4;
             // 
             // uiComboBox1
@@ -240,7 +238,7 @@ namespace Warehouse.工具窗体
             this.uiComboBox1.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboBox1.Name = "uiComboBox1";
             this.uiComboBox1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboBox1.Size = new System.Drawing.Size(150, 39);
+            this.uiComboBox1.Size = new System.Drawing.Size(150, 34);
             this.uiComboBox1.TabIndex = 6;
             this.uiComboBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiComboBox1.SelectedIndexChanged += new System.EventHandler(this.uiComboBox1_SelectedIndexChanged);
@@ -264,7 +262,7 @@ namespace Warehouse.工具窗体
             // 
             // kugui
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.uiListBox1);
@@ -319,10 +317,10 @@ namespace Warehouse.工具窗体
         private Sunny.UI.UILabel uiLabel4;
         private Sunny.UI.UITextBox kuweileft;
         private Sunny.UI.UILabel uiLabel5;
-        private Sunny.UI.UIButton uiButton1;
         private Sunny.UI.UILabel uiLabel6;
         private Sunny.UI.UITextBox txtSuo1;
         private Sunny.UI.UIComboBox uiComboBox1;
-        private Sunny.UI.UIListBox uiListBox1;
+        public Sunny.UI.UIButton uiButton1;
+        public Sunny.UI.UIListBox uiListBox1;
     }
 }

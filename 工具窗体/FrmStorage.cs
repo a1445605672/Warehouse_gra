@@ -17,7 +17,7 @@ namespace Warehouse.工具窗体
         {
             InitializeComponent();
         }
-        public Model.storagelocation storagelocationModel;
+        public Model.storagelocation storagelocationModel = null;
         public Model.storagelocation StoragelocationModel
         {
             get
@@ -36,7 +36,7 @@ namespace Warehouse.工具窗体
                     string typeID = uiComboBox1.SelectedValue.ToString();
                     //找到num
                     BLL.storagelocation bllsta = new BLL.storagelocation();
-                    int num1=bllsta.GetRecordCount("1=1");
+                    int num1 = bllsta.GetRecordCount("1=1");
                     num1++;
                     storagelocationModel.sl_id = num + typeID + num1;
                     //storagelocationModel.sl_id = txtID.Text.Trim();
@@ -59,6 +59,37 @@ namespace Warehouse.工具窗体
                 }
                 else
                 {
+                    storagelocationModel = new Model.storagelocation();
+                    //s1_id，系统生成
+                    //生成规则: chestID+库位typeID+num
+                    //查询chestID
+                    BLL.chest blltype = new BLL.chest();
+                    DataSet ds = new DataSet();
+                    ds = blltype.GetList(0);
+                    string num = Convert.ToString(ds.Tables[0].Rows[0][0]);
+                    //找到typeID
+                    string typeID = uiComboBox1.SelectedValue.ToString();
+                    //找到num
+                    BLL.storagelocation bllsta = new BLL.storagelocation();
+                    int num1 = bllsta.GetRecordCount("1=1");
+                    num1++;
+                    storagelocationModel.sl_id = num + typeID + num1;
+                    //storagelocationModel.sl_id = txtID.Text.Trim();
+                    //库位类型
+                    storagelocationModel.sl_store_type_id = uiComboBox1.SelectedText;
+                    //所属库柜
+                    storagelocationModel.sl_belong_chest = txtBelongto.Text.Trim();
+                    //备注
+                    storagelocationModel.sl_comment = txtComment1.Text.Trim();
+                    //剩余量
+                    storagelocationModel.sl_remain_bulk = txtLeftVo.IntValue;
+                    //库存放量
+                    storagelocationModel.sl_store_area = txtArea.IntValue;
+                    //库位上限
+                    storagelocationModel.sl_store_max = txtMax.IntValue;
+                    //库位下限
+                    storagelocationModel.sl_store_min = txtMin.IntValue;
+
                     return storagelocationModel;
                 }
             }
@@ -98,7 +129,7 @@ namespace Warehouse.工具窗体
         {
             BLL.storagelocation sta = new BLL.storagelocation();
             storagelocationModel = sta.GetModel(id);
-            if (storagelocationModel!=null)
+            if (storagelocationModel != null)
             {
                 //storagelocationModel.sl_id = num + typeID + num1;
                 txtID.Text = storagelocationModel.sl_id;
@@ -109,7 +140,7 @@ namespace Warehouse.工具窗体
                 //备注
                 txtComment1.Text = storagelocationModel.sl_comment;
                 //剩余量
-                txtLeftVo.Text =Convert.ToString(storagelocationModel.sl_remain_bulk);
+                txtLeftVo.Text = Convert.ToString(storagelocationModel.sl_remain_bulk);
                 //库存放量
                 txtArea.Text = Convert.ToString(storagelocationModel.sl_store_area);
                 //库位上限

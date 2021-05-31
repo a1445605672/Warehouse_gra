@@ -15,6 +15,9 @@ namespace Warehouse.工具窗体
         private UIComboBox uiComboBox1;
         private UITextBox name_box;
 
+        private string principal_name;
+        private string principal_id;
+
         
         public FEdit_department()
         {
@@ -82,6 +85,7 @@ namespace Warehouse.工具窗体
             this.uiComboBox1.TabIndex = 6;
             this.uiComboBox1.Text = "请选择部门管理人";
             this.uiComboBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.uiComboBox1.SelectedIndexChanged += new System.EventHandler(this.uiComboBox1_SelectedIndexChanged);
             this.uiComboBox1.Load += new System.EventHandler(this.uiComboBox1_Load);
             // 
             // FEdit_department
@@ -117,21 +121,26 @@ namespace Warehouse.工具窗体
                 if(department == null)
                 {
                     department = new Model.department();
+
                 }
 
                 department.dep_name = name_box.Text.Trim();
 
                 //department.dep_principal_name =Convert.ToString( uiComboBox1.SelectedItem);
                 //没找到属性无法使用的原因，暂时用这种方式替代
-                string st = Convert.ToString(uiComboBox1.SelectedItem);
-                string[] sArray = st.Split(',');
-                department.dep_principal_name = sArray[0];
+                //string st = Convert.ToString(uiComboBox1.SelectedItem);
+                //string[] sArray = st.Split(',');
+                //department.dep_principal_name = sArray[0];
 
-               
-                BLL.staff sta = new BLL.staff();
-                Model.staff staff =  sta.GetModel_Name(sArray[0].Trim());
-                
-                department.dep_principal_id = staff.staff_id.Trim();
+
+                //BLL.staff sta = new BLL.staff();
+                //Model.staff staff =  sta.GetModel_Name(sArray[0].Trim());
+
+                //department.dep_principal_id = staff.staff_id.Trim();
+                department.dep_principal_id = principal_id.Trim();
+                department.dep_principal_name = principal_name.Trim();
+                principal_id = "";
+                principal_name = "";
 
                 ////查询数据表内数据行数
                 //BLL.department dep = new BLL.department();
@@ -187,6 +196,13 @@ namespace Warehouse.工具窗体
             {
                 return false;
             }
+        }
+
+        private void uiComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            principal_name = this.uiComboBox1.Text;
+            principal_id = this.uiComboBox1.SelectedValue.ToString();;
+           
         }
     }
 }

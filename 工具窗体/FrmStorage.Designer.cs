@@ -68,7 +68,7 @@ namespace Warehouse.工具窗体
             // 
             this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtID.Enabled = false;
-            this.txtID.FillColor = System.Drawing.Color.Silver;
+            this.txtID.FillColor = System.Drawing.Color.White;
             this.txtID.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.txtID.Location = new System.Drawing.Point(430, 120);
             this.txtID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -77,8 +77,7 @@ namespace Warehouse.工具窗体
             this.txtID.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtID.Name = "txtID";
             this.txtID.Padding = new System.Windows.Forms.Padding(5);
-            this.txtID.Size = new System.Drawing.Size(150, 39);
-            this.txtID.Style = Sunny.UI.UIStyle.Custom;
+            this.txtID.Size = new System.Drawing.Size(150, 34);
             this.txtID.TabIndex = 3;
             this.txtID.Text = "系统自动生成";
             // 
@@ -101,7 +100,7 @@ namespace Warehouse.工具窗体
             this.uiComboBox1.MinimumSize = new System.Drawing.Size(63, 0);
             this.uiComboBox1.Name = "uiComboBox1";
             this.uiComboBox1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.uiComboBox1.Size = new System.Drawing.Size(150, 39);
+            this.uiComboBox1.Size = new System.Drawing.Size(150, 34);
             this.uiComboBox1.TabIndex = 5;
             this.uiComboBox1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiComboBox1.Load += new System.EventHandler(this.uiComboBox1_Load);
@@ -129,7 +128,7 @@ namespace Warehouse.工具窗体
             this.txtMax.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtMax.Name = "txtMax";
             this.txtMax.Padding = new System.Windows.Forms.Padding(5);
-            this.txtMax.Size = new System.Drawing.Size(150, 39);
+            this.txtMax.Size = new System.Drawing.Size(150, 34);
             this.txtMax.TabIndex = 7;
             // 
             // uiLabel4
@@ -154,7 +153,7 @@ namespace Warehouse.工具窗体
             this.txtMin.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtMin.Name = "txtMin";
             this.txtMin.Padding = new System.Windows.Forms.Padding(5);
-            this.txtMin.Size = new System.Drawing.Size(150, 39);
+            this.txtMin.Size = new System.Drawing.Size(150, 34);
             this.txtMin.TabIndex = 7;
             // 
             // uiLabel5
@@ -179,7 +178,7 @@ namespace Warehouse.工具窗体
             this.txtArea.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtArea.Name = "txtArea";
             this.txtArea.Padding = new System.Windows.Forms.Padding(5);
-            this.txtArea.Size = new System.Drawing.Size(150, 39);
+            this.txtArea.Size = new System.Drawing.Size(150, 34);
             this.txtArea.TabIndex = 7;
             // 
             // uiLabel6
@@ -204,7 +203,7 @@ namespace Warehouse.工具窗体
             this.txtComment1.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtComment1.Name = "txtComment1";
             this.txtComment1.Padding = new System.Windows.Forms.Padding(5);
-            this.txtComment1.Size = new System.Drawing.Size(150, 39);
+            this.txtComment1.Size = new System.Drawing.Size(150, 34);
             this.txtComment1.TabIndex = 7;
             // 
             // uiLabel7
@@ -229,7 +228,7 @@ namespace Warehouse.工具窗体
             this.txtLeftVo.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtLeftVo.Name = "txtLeftVo";
             this.txtLeftVo.Padding = new System.Windows.Forms.Padding(5);
-            this.txtLeftVo.Size = new System.Drawing.Size(150, 39);
+            this.txtLeftVo.Size = new System.Drawing.Size(150, 34);
             this.txtLeftVo.TabIndex = 7;
             // 
             // uiButton1
@@ -258,7 +257,7 @@ namespace Warehouse.工具窗体
             // 
             this.txtBelongto.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtBelongto.Enabled = false;
-            this.txtBelongto.FillColor = System.Drawing.Color.Silver;
+            this.txtBelongto.FillColor = System.Drawing.Color.White;
             this.txtBelongto.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.txtBelongto.Location = new System.Drawing.Point(430, 72);
             this.txtBelongto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -267,8 +266,7 @@ namespace Warehouse.工具窗体
             this.txtBelongto.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtBelongto.Name = "txtBelongto";
             this.txtBelongto.Padding = new System.Windows.Forms.Padding(5);
-            this.txtBelongto.Size = new System.Drawing.Size(150, 39);
-            this.txtBelongto.Style = Sunny.UI.UIStyle.Custom;
+            this.txtBelongto.Size = new System.Drawing.Size(150, 34);
             this.txtBelongto.TabIndex = 11;
             this.txtBelongto.Text = "左侧选择库柜";
             // 
@@ -290,7 +288,7 @@ namespace Warehouse.工具窗体
             // 
             // FrmStorage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 555);
             this.Controls.Add(this.uiListBox1);
@@ -352,9 +350,9 @@ namespace Warehouse.工具窗体
         private Sunny.UI.UITextBox txtComment1;
         private Sunny.UI.UILabel uiLabel7;
         private Sunny.UI.UITextBox txtLeftVo;
-        private Sunny.UI.UIButton uiButton1;
         private Sunny.UI.UILabel uiLabel8;
         private Sunny.UI.UITextBox txtBelongto;
-        private Sunny.UI.UIListBox uiListBox1;
+        public Sunny.UI.UIButton uiButton1;
+        public Sunny.UI.UIListBox uiListBox1;
     }
 }

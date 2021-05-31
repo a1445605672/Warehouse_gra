@@ -43,7 +43,10 @@ namespace Warehouse
         //导出
         private void uiButton3_Click(object sender, EventArgs e)
         {
-
+            //文件位置
+            string a = "D:" + "\\出库汇总.xls";
+            //调用文件导出函数
+            ExportExcels(a, grid);
         }
         //查询
         private void uiButton2_Click(object sender, EventArgs e)
@@ -84,7 +87,7 @@ namespace Warehouse
             //用于判断经办人是否选择
             if (comStaffName.Text != "")
             {
-                strSql += "and out_storage.out_agent_name='" + comStaffName.SelectedValue.ToString() + "'";
+                strSql += "and out_storage.out_staff_name='" + comStaffName.SelectedValue.ToString() + "'";
             }
             //入库批次是否选择
             if (comBatch.Text != "")
@@ -130,9 +133,10 @@ namespace Warehouse
             //}
             //DataSet ds= bllout.GetAllList();
             //comMatName.DataSource = ds;
-            comMatName.DataSource = bllout.GetModelList("");
-            comMatName.DisplayMember = "out_mat_name";
-            comMatName.ValueMember = "out_mat_name";
+            BLL.material_info bllenter1 = new BLL.material_info();
+            comMatName.DataSource = bllenter1.GetModelList("");
+            comMatName.DisplayMember = "mat_name";
+            comMatName.ValueMember = "mat_name";
             //DataSet ds=new DataSet ();
             //ds = bllout.GetList("out_mat_name", 0);
             //int num = ds.Tables[0].Rows.Count;
@@ -156,9 +160,10 @@ namespace Warehouse
 
 
 
-            comStaffName.DataSource = bllout.GetModelList("");
-            comStaffName.DisplayMember = "out_staff_name";
-            comStaffName.ValueMember = "out_staff_name";
+            BLL.staff bllenter1 = new BLL.staff();
+            comStaffName.DataSource = bllenter1.GetModelList("");
+            comStaffName.DisplayMember = "staff_name";
+            comStaffName.ValueMember = "staff_name";
         }
         //加载批次编号
         private void comBatch_Load(object sender, EventArgs e)
@@ -166,6 +171,61 @@ namespace Warehouse
             comBatch.DataSource = bllout.GetModelList("");
             comBatch.DisplayMember = "out_batch_id";
             comBatch.ValueMember = "out_batch_id";
+        }
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="fileName">文件路径</param>
+        /// <param name="myDGV">控件DataGridView</param>
+        private void ExportExcels(string fileName, DataGridView myDGV)
+        {
+            string saveFileName = "";
+            SaveFileDialog saveDialog = new SaveFileDialog();
+            saveDialog.DefaultExt = "xls";
+            saveDialog.Filter = "Excel文件|*.xls";
+            saveDialog.FileName = fileName;
+            saveDialog.ShowDialog();
+            saveFileName = saveDialog.FileName;
+            if (saveFileName.IndexOf(":") < 0) return; //被点了取消
+            Microsoft.Office.Interop.Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
+            if (xlApp == null)
+            {
+                MessageBox.Show("无法创建Excel对象，可能您的机子未安装Excel");
+                return;
+            }
+            Microsoft.Office.Interop.Excel.Workbooks workbooks = xlApp.Workbooks;
+            Microsoft.Office.Interop.Excel.Workbook workbook = workbooks.Add(Microsoft.Office.Interop.Excel.XlWBATemplate.xlWBATWorksheet);
+            Microsoft.Office.Interop.Excel.Worksheet worksheet = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Worksheets[1];//取得sheet1
+                                                                                                                                  //写入标题
+            for (int i = 0; i < myDGV.ColumnCount; i++)
+            {
+                worksheet.Cells[1, i + 1] = myDGV.Columns[i].HeaderText;
+            }
+            //写入数值
+            for (int r = 0; r < myDGV.Rows.Count; r++)
+            {
+                for (int i = 0; i < myDGV.ColumnCount; i++)
+                {
+                    worksheet.Cells[r + 2, i + 1] = myDGV.Rows[r].Cells[i].Value;
+                }
+                System.Windows.Forms.Application.DoEvents();
+            }
+            worksheet.Columns.EntireColumn.AutoFit();//列宽自适应
+            if (saveFileName != "")
+            {
+                try
+                {
+                    workbook.Saved = true;
+                    workbook.SaveCopyAs(saveFileName);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("导出文件时出错,文件可能正被打开！\n" + ex.Message);
+                }
+            }
+            xlApp.Quit();
+            GC.Collect();//强行销毁
+            MessageBox.Show("文件： " + fileName + ".xls 保存成功", "信息提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

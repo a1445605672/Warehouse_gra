@@ -447,7 +447,7 @@ namespace Warehouse
             this.uiLabel2.Name = "uiLabel2";
             this.uiLabel2.Size = new System.Drawing.Size(110, 31);
             this.uiLabel2.TabIndex = 62;
-            this.uiLabel2.Text = "供应商：";
+            this.uiLabel2.Text = "退货商：";
             this.uiLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // InWarwhouseNumberBox
@@ -879,7 +879,7 @@ namespace Warehouse
             // 
             this.uiLabel20.AutoSize = true;
             this.uiLabel20.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.uiLabel20.Location = new System.Drawing.Point(37, 87);
+            this.uiLabel20.Location = new System.Drawing.Point(10, 87);
             this.uiLabel20.Name = "uiLabel20";
             this.uiLabel20.Size = new System.Drawing.Size(116, 31);
             this.uiLabel20.TabIndex = 65;

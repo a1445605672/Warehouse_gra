@@ -51,7 +51,7 @@ namespace Warehouse
 				Aside.CreateChildNode(SystemManagment, 61888, 24, "数据备份", ++pageIndex);
 				Aside.CreateChildNode(SystemManagment, 108, 24, "系统日志", ++pageIndex);
 				Aside.CreateChildNode(SystemManagment, 57483, 24, "用户管理", ++pageIndex);
-				Aside.CreateChildNode(SystemManagment, 62004, 24, "用户注册", ++pageIndex);
+				//Aside.CreateChildNode(SystemManagment, 62004, 24, "用户注册", ++pageIndex);
 
 
 				pageIndex = 3000;
@@ -78,6 +78,7 @@ namespace Warehouse
 				Aside.CreateChildNode(StatisticalStatementBut, 61585, 24, "出库动图", ++pageIndex);
 
 				Aside.SelectFirst();
+				return;
 			}
 			if(quan == "2")
             {

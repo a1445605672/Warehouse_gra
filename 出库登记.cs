@@ -282,7 +282,7 @@ namespace Warehouse
 			but.HeaderText = "";
 			but.Name = "AutoOtWarehouse";
 			but.DefaultCellStyle.NullValue = "自动";
-			//but.Visible = false;//控件先隐藏 
+			but.Visible = false;//控件先隐藏 
 			uiDataGridView1.Columns.Add(but);
 			#endregion
 

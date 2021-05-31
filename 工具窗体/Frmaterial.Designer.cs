@@ -87,7 +87,7 @@ namespace Warehouse.工具窗体
             // txtID
             // 
             this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtID.FillColor = System.Drawing.Color.Silver;
+            this.txtID.FillColor = System.Drawing.Color.White;
             this.txtID.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.txtID.Location = new System.Drawing.Point(438, 60);
             this.txtID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -96,8 +96,7 @@ namespace Warehouse.工具窗体
             this.txtID.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtID.Name = "txtID";
             this.txtID.Padding = new System.Windows.Forms.Padding(5);
-            this.txtID.Size = new System.Drawing.Size(150, 39);
-            this.txtID.Style = Sunny.UI.UIStyle.Custom;
+            this.txtID.Size = new System.Drawing.Size(150, 34);
             this.txtID.TabIndex = 5;
             this.txtID.Text = "系统自动生成";
             // 
@@ -114,7 +113,7 @@ namespace Warehouse.工具窗体
             // txtInfo
             // 
             this.txtInfo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtInfo.FillColor = System.Drawing.Color.Silver;
+            this.txtInfo.FillColor = System.Drawing.Color.White;
             this.txtInfo.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.txtInfo.Location = new System.Drawing.Point(438, 111);
             this.txtInfo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -123,8 +122,7 @@ namespace Warehouse.工具窗体
             this.txtInfo.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtInfo.Name = "txtInfo";
             this.txtInfo.Padding = new System.Windows.Forms.Padding(5);
-            this.txtInfo.Size = new System.Drawing.Size(150, 39);
-            this.txtInfo.Style = Sunny.UI.UIStyle.Custom;
+            this.txtInfo.Size = new System.Drawing.Size(150, 34);
             this.txtInfo.TabIndex = 5;
             this.txtInfo.Text = "左侧选择类型";
             // 
@@ -150,7 +148,7 @@ namespace Warehouse.工具窗体
             this.txtName.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtName.Name = "txtName";
             this.txtName.Padding = new System.Windows.Forms.Padding(5);
-            this.txtName.Size = new System.Drawing.Size(150, 39);
+            this.txtName.Size = new System.Drawing.Size(150, 34);
             this.txtName.TabIndex = 5;
             this.txtName.Text = "请输入物料名称";
             // 
@@ -176,7 +174,7 @@ namespace Warehouse.工具窗体
             this.txtFengdu.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtFengdu.Name = "txtFengdu";
             this.txtFengdu.Padding = new System.Windows.Forms.Padding(5);
-            this.txtFengdu.Size = new System.Drawing.Size(150, 39);
+            this.txtFengdu.Size = new System.Drawing.Size(150, 34);
             this.txtFengdu.TabIndex = 5;
             // 
             // uiLabel5
@@ -231,7 +229,7 @@ namespace Warehouse.工具窗体
             this.txtUseFor.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUseFor.Name = "txtUseFor";
             this.txtUseFor.Padding = new System.Windows.Forms.Padding(5);
-            this.txtUseFor.Size = new System.Drawing.Size(150, 39);
+            this.txtUseFor.Size = new System.Drawing.Size(150, 34);
             this.txtUseFor.TabIndex = 5;
             // 
             // uiLabel9
@@ -256,7 +254,7 @@ namespace Warehouse.工具窗体
             this.txtSource.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtSource.Name = "txtSource";
             this.txtSource.Padding = new System.Windows.Forms.Padding(5);
-            this.txtSource.Size = new System.Drawing.Size(150, 39);
+            this.txtSource.Size = new System.Drawing.Size(150, 34);
             this.txtSource.TabIndex = 5;
             // 
             // uiLabel10
@@ -291,7 +289,7 @@ namespace Warehouse.工具窗体
             this.txtPercent1.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPercent1.Name = "txtPercent1";
             this.txtPercent1.Padding = new System.Windows.Forms.Padding(5);
-            this.txtPercent1.Size = new System.Drawing.Size(150, 39);
+            this.txtPercent1.Size = new System.Drawing.Size(150, 34);
             this.txtPercent1.TabIndex = 5;
             // 
             // uiLabel12
@@ -316,7 +314,7 @@ namespace Warehouse.工具窗体
             this.txtRich.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtRich.Name = "txtRich";
             this.txtRich.Padding = new System.Windows.Forms.Padding(5);
-            this.txtRich.Size = new System.Drawing.Size(150, 39);
+            this.txtRich.Size = new System.Drawing.Size(150, 34);
             this.txtRich.TabIndex = 5;
             // 
             // comboxState
@@ -328,7 +326,7 @@ namespace Warehouse.工具窗体
             this.comboxState.MinimumSize = new System.Drawing.Size(63, 0);
             this.comboxState.Name = "comboxState";
             this.comboxState.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.comboxState.Size = new System.Drawing.Size(150, 39);
+            this.comboxState.Size = new System.Drawing.Size(150, 34);
             this.comboxState.TabIndex = 6;
             this.comboxState.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.comboxState.Load += new System.EventHandler(this.comboxState_Load);
@@ -342,7 +340,7 @@ namespace Warehouse.工具窗体
             this.comColor1.MinimumSize = new System.Drawing.Size(63, 0);
             this.comColor1.Name = "comColor1";
             this.comColor1.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.comColor1.Size = new System.Drawing.Size(150, 39);
+            this.comColor1.Size = new System.Drawing.Size(150, 34);
             this.comColor1.TabIndex = 6;
             this.comColor1.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.comColor1.Load += new System.EventHandler(this.comColor1_Load);
@@ -356,7 +354,7 @@ namespace Warehouse.工具窗体
             this.comSmell.MinimumSize = new System.Drawing.Size(63, 0);
             this.comSmell.Name = "comSmell";
             this.comSmell.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.comSmell.Size = new System.Drawing.Size(150, 39);
+            this.comSmell.Size = new System.Drawing.Size(150, 34);
             this.comSmell.TabIndex = 6;
             this.comSmell.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.comSmell.Load += new System.EventHandler(this.comSmell_Load);
@@ -370,7 +368,7 @@ namespace Warehouse.工具窗体
             this.comsuan.MinimumSize = new System.Drawing.Size(63, 0);
             this.comsuan.Name = "comsuan";
             this.comsuan.Padding = new System.Windows.Forms.Padding(0, 0, 30, 2);
-            this.comsuan.Size = new System.Drawing.Size(150, 39);
+            this.comsuan.Size = new System.Drawing.Size(150, 34);
             this.comsuan.TabIndex = 7;
             this.comsuan.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.comsuan.Load += new System.EventHandler(this.comsuan_Load);
@@ -393,7 +391,7 @@ namespace Warehouse.工具窗体
             // 
             // Frmaterial
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 736);
             this.Controls.Add(this.uiListBox1);
@@ -456,11 +454,8 @@ namespace Warehouse.工具窗体
         }
 
         #endregion
-        private Sunny.UI.UIButton uiButton1;
         private Sunny.UI.UILabel uiLabel1;
-        private Sunny.UI.UITextBox txtID;
         private Sunny.UI.UILabel uiLabel2;
-        private Sunny.UI.UITextBox txtInfo;
         private Sunny.UI.UILabel uiLabel3;
         private Sunny.UI.UITextBox txtName;
         private Sunny.UI.UILabel uiLabel4;
@@ -481,6 +476,9 @@ namespace Warehouse.工具窗体
         private Sunny.UI.UIComboBox comColor1;
         private Sunny.UI.UIComboBox comSmell;
         private Sunny.UI.UIComboBox comsuan;
-        private Sunny.UI.UIListBox uiListBox1;
+        public Sunny.UI.UIButton uiButton1;
+        public Sunny.UI.UITextBox txtID;
+        public Sunny.UI.UITextBox txtInfo;
+        public Sunny.UI.UIListBox uiListBox1;
     }
 }

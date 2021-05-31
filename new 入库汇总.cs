@@ -73,7 +73,7 @@ namespace Warehouse
                     //如果时间输入不合法则判断错误
                     DateTime time1 = DateTime.Parse(startTime1.Value.ToString());
                     DateTime time2 = DateTime.Parse(endTime1.Value.ToString());
-                    
+
                     if (time1 > time2)
                     {
                         //提示错误
@@ -82,7 +82,7 @@ namespace Warehouse
                 }
                 //strSql += "and date between '" + startTime1.Text.ToString() + " 00:00:00.000000' and '" + endTime1.Text.ToString() + " 00:00:00.000000";
                 //strSql += "and date between '"+ startTime1.Text.ToString() + "' and '"+ endTime1.Text.ToString() + "' ";
-                strSql += "UNIX_TIMESTAMP(enter_date) between UNIX_TIMESTAMP('"+(startTime1.Text.ToString())+"')and UNIX_TIMESTAMP('" + (endTime1.Text.ToString()) + "')";
+                strSql += "UNIX_TIMESTAMP(enter_date) between UNIX_TIMESTAMP('" + (startTime1.Text.ToString()) + "')and UNIX_TIMESTAMP('" + (endTime1.Text.ToString()) + "')";
             }
             //用于判断物品名称是否选择
             if (comMatName.Text != "")
@@ -97,7 +97,7 @@ namespace Warehouse
             //用于判断经办人是否选择
             if (comStaffName.Text != "")
             {
-                strSql += "and enter_storage.enter_agent_id='" + comStaffName.SelectedValue.ToString() + "'";
+                strSql += "and enter_storage.enter_agent_name='" + comStaffName.SelectedValue.ToString() + "'";
             }
             //入库批次是否选择
             if (comBatch.Text != "")
@@ -119,7 +119,7 @@ namespace Warehouse
             grid.AddColumn("经办人姓名", "enter_agent_name");
             grid.AddColumn("备注", "enter_comment");
             uiPagination1.DataSource = bllenter.GetModelList(strSql);
-            grid.DataSource= bllenter.GetModelList(strSql);
+            grid.DataSource = bllenter.GetModelList(strSql);
         }
         //重置
         private void uiButton1_Click(object sender, EventArgs e)
@@ -132,23 +132,29 @@ namespace Warehouse
         //加载物品名称
         private void comMatName_Load(object sender, EventArgs e)
         {
-            comMatName.DataSource = bllenter.GetModelList("");
-            comMatName.DisplayMember = "enter_mat_name";
-            comMatName.ValueMember = "enter_mat_name";
+            BLL.material_info bllenter1 = new BLL.material_info();
+            comMatName.DataSource = bllenter1.GetModelList("");
+            comMatName.DisplayMember = "mat_name";
+            comMatName.ValueMember = "mat_name";
         }
         //加载库位编号
         private void comStorage_Load(object sender, EventArgs e)
         {
-            comStorage.DataSource = bllenter.GetModelList("");
-            comStorage.DisplayMember = "enter_sl_id";
-            comStorage.ValueMember = "enter_sl_id";
+            BLL.storagelocation bllenter1 = new BLL.storagelocation();
+            comStorage.DataSource = bllenter1.GetModelList("");
+            comStorage.DisplayMember = "sl_id";
+            comStorage.ValueMember = "sl_id";
+            //comStorage.DataSource = bllenter.GetModelList("");
+            //comStorage.DisplayMember = "enter_sl_id";
+            //comStorage.ValueMember = "enter_sl_id";
         }
         //加载经办人
         private void comStaffName_Load(object sender, EventArgs e)
         {
-            comStaffName.DataSource = bllenter.GetModelList("");
-            comStaffName.DisplayMember = "enter_agent_id";
-            comStaffName.ValueMember = "enter_agent_id";
+            BLL.staff bllenter1 = new BLL.staff();
+            comStaffName.DataSource = bllenter1.GetModelList("");
+            comStaffName.DisplayMember = "staff_name";
+            comStaffName.ValueMember = "staff_name";
         }
         //加载入库批次编号
         private void comBatch_Load(object sender, EventArgs e)

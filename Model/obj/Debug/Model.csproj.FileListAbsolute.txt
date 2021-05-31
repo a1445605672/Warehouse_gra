@@ -36,11 +36,6 @@ C:\Users\qinrui\Documents\GitHub\Warehouse_gra\Model\bin\Debug\Model.pdb
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\Model\obj\Debug\Model.dll
 C:\Users\qinrui\Documents\GitHub\Warehouse_gra\Model\obj\Debug\Model.pdb
-E:\0421\Warehouse_gra\Model\bin\Debug\Model.dll
-E:\0421\Warehouse_gra\Model\bin\Debug\Model.pdb
-E:\0421\Warehouse_gra\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
-E:\0421\Warehouse_gra\Model\obj\Debug\Model.dll
-E:\0421\Warehouse_gra\Model\obj\Debug\Model.pdb
 E:\Warehouse_gra\Model\bin\Debug\Model.dll
 E:\Warehouse_gra\Model\bin\Debug\Model.pdb
 E:\Warehouse_gra\Model\obj\Debug\Model.csprojAssemblyReference.cache
@@ -53,4 +48,8 @@ C:\Users\kui\Desktop\最新\Warehouse_gra\Model\obj\Debug\Model.csprojAssemblyRe
 C:\Users\kui\Desktop\最新\Warehouse_gra\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\kui\Desktop\最新\Warehouse_gra\Model\obj\Debug\Model.dll
 C:\Users\kui\Desktop\最新\Warehouse_gra\Model\obj\Debug\Model.pdb
-E:\0421\Warehouse_gra\Model\obj\Debug\Model.csprojAssemblyReference.cache
+E:\0421\Warehouse_gra\Model\bin\Debug\Model.dll
+E:\0421\Warehouse_gra\Model\bin\Debug\Model.pdb
+E:\0421\Warehouse_gra\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+E:\0421\Warehouse_gra\Model\obj\Debug\Model.dll
+E:\0421\Warehouse_gra\Model\obj\Debug\Model.pdb

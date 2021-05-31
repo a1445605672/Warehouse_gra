@@ -317,6 +317,7 @@ namespace Warehouse
             this.uiRadioButton2.Size = new System.Drawing.Size(91, 29);
             this.uiRadioButton2.TabIndex = 4;
             this.uiRadioButton2.Text = "自动";
+            this.uiRadioButton2.Visible = false;
             this.uiRadioButton2.ValueChanged += new Sunny.UI.UIRadioButton.OnValueChanged(this.uiRadioButton2_ValueChanged);
             // 
             // uiButton2
